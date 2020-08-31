@@ -1,0 +1,2 @@
+Bobrossanibba - /mob/living/carbon/human/whitelisted/eldar/leader
+PresidentPutin = /mob/living/carbon/human/OHstormtrooper

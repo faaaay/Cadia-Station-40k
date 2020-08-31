@@ -1,0 +1,10 @@
+[SERVERS]
+## Simply enter a list of servers to poll. Be sure to specify a server name in parentheses.
+
+(Cadia) byond://73.178.13.81:51836
+
+
+[ADMINS]
+## Specify some standard Windows filepaths (you may use relative paths) for admin txt lists to poll.
+
+C:\SS13\config\admins.txt
