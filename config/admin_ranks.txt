@@ -30,7 +30,7 @@
 
 God Emperor		= +EVERYTHING
 
-Admin Director		= +Everything
+Inquisitor		= +Everything
 Partisan du Serveur 	= +ADMIN +BAN +REJUV +VAREDIT +SPAWN +SERVER +FUN +SOUND +DEBUG
 Admin			= +ADMIN +BAN +REJUV +VAREDIT +SPAWN +SERVER +FUN +SOUND
 Junior Admin            = +ADMIN +BAN +VAREDIT
