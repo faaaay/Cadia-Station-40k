@@ -1,8 +1,13 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
+<<<<<<< Updated upstream
 LAST_COMPILE_TIME: 1598987754
 DIR: _maps _maps\map_files _maps\map_files\backup code code\__DEFINES code\_globalvars\lists code\_onclick\hud code\datums\wires code\game\objects\structures code\modules code\modules\admin code\modules\admin\verbs code\modules\events code\modules\mining icons icons\obj icons\obj\clothing 
+=======
+LAST_COMPILE_TIME: 1599002296
+DIR: _maps _maps\map_files _maps\map_files\backup code code\__DEFINES code\__HELPERS code\_globalvars\lists code\_onclick\hud code\datums\wires code\game code\game\machinery code\game\objects code\game\objects\structures code\modules code\modules\mob code\modules\mob\dead code\modules\mob\dead\observer code\modules\mob\living code\modules\mob\living\simple_animal code\modules\mob\living\simple_animal\hostile code\modules\mob\living\simple_animal\hostile\retaliate code\modules\rtd 
+>>>>>>> Stashed changes
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 513.1528
