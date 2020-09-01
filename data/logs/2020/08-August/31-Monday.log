@@ -164,3 +164,555 @@ Adding game mode wizard (wizard) to configuration.
 [00:55:30]SAY: Carson Anderson/Bobrossnibba : testicles
 [00:55:32]SAY: Carson Anderson/Bobrossnibba : meme
 [00:55:35]ACCESS: Logout: Bobrossnibba[DC]/(Carson Anderson)
+
+
+Starting up. 01:30.36
+---------------------
+Adding game mode blob (blob) to configuration.
+Adding game mode changeling (changeling) to configuration.
+Adding game mode traitor+changeling (traitorchan) to configuration.
+Adding game mode double agents (double_agents) to configuration.
+Adding game mode traitor (traitor) to configuration.
+Adding game mode cult (cult) to configuration.
+Adding game mode extended (extended) to configuration.
+Adding game mode AI malfunction (malfunction) to configuration.
+Adding game mode meteor (meteor) to configuration.
+Adding game mode necron (necron) to configuration.
+Adding game mode Chaos Assault (nuclear) to configuration.
+Adding game mode revolution (revolution) to configuration.
+Adding game mode sandbox (sandbox) to configuration.
+Adding game mode wizard (wizard) to configuration.
+[01:30:36]ADMIN: Loading Banlistjob
+[01:30:36]ADMIN: Loading jobban_rank
+[01:30:36]ADMIN: jobban_keylist was empty
+[01:30:36]ADMIN: Loading appearance_rank
+[01:30:36]ADMIN: appearance_keylist was empty
+[01:30:36]ADMIN: Updating jobbanfile!
+[01:30:36]ADMIN: Loading Banlist
+[01:30:36]ADMIN: Loading RTD lists
+[01:33:07]ACCESS: Login: Bobrossnibba/(Bobrossnibba) from 73.178.13.81-1508471533 || BYOND v513
+[01:33:32]ADMIN: Bobrossnibba has started the game.
+[01:33:33]GAME: Bobrossnibba (ckey) has been selected as a Heretic
+[01:33:34]ACCESS: Logout: *no key*/(Bobrossnibba)
+[01:33:34]ACCESS: Login: Bobrossnibba/(Carson Anderson) from 73.178.13.81-1508471533 || BYOND v513
+[01:33:40]SAY: Carson Anderson/Bobrossnibba : test
+[01:33:42]SAY: Carson Anderson/Bobrossnibba : test
+[01:33:44]ACCESS: Logout: Bobrossnibba[DC]/(Carson Anderson)
+
+
+Starting up. 01:54.15
+---------------------
+Adding game mode blob (blob) to configuration.
+Adding game mode changeling (changeling) to configuration.
+Adding game mode traitor+changeling (traitorchan) to configuration.
+Adding game mode double agents (double_agents) to configuration.
+Adding game mode traitor (traitor) to configuration.
+Adding game mode cult (cult) to configuration.
+Adding game mode extended (extended) to configuration.
+Adding game mode AI malfunction (malfunction) to configuration.
+Adding game mode meteor (meteor) to configuration.
+Adding game mode necron (necron) to configuration.
+Adding game mode Chaos Assault (nuclear) to configuration.
+Adding game mode revolution (revolution) to configuration.
+Adding game mode sandbox (sandbox) to configuration.
+Adding game mode wizard (wizard) to configuration.
+[01:54:15]ADMIN: Loading Banlistjob
+[01:54:15]ADMIN: Loading jobban_rank
+[01:54:15]ADMIN: jobban_keylist was empty
+[01:54:15]ADMIN: Loading appearance_rank
+[01:54:15]ADMIN: appearance_keylist was empty
+[01:54:15]ADMIN: Updating jobbanfile!
+[01:54:15]ADMIN: Loading Banlist
+[01:54:15]ADMIN: Loading RTD lists
+[01:57:06]ACCESS: Login: Bobrossnibba/(Bobrossnibba) from 73.178.13.81-1508471533 || BYOND v513
+[01:57:27]ADMIN: Bobrossnibba has started the game.
+[01:57:28]GAME: Bobrossnibba (ckey) has been selected as a Heretic
+[01:57:29]ACCESS: Logout: *no key*/(Bobrossnibba)
+[01:57:29]ACCESS: Login: Bobrossnibba/(Carson Anderson) from 73.178.13.81-1508471533 || BYOND v513
+[01:57:38]SAY: Carson Anderson/Bobrossnibba : test
+[01:58:33]EMOTE: monkey (694)/ : <B>The monkey (694)</B> jumps!
+[01:58:33]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/whitelisted/um/leader
+[01:58:44]ADMIN: Bobrossnibba/(Carson Anderson) assumed direct control of Brother Augustus.
+[01:58:44]ACCESS: Logout: *no key*/(Carson Anderson)
+[01:58:44]ACCESS: Login: bobrossnibba/(Brother Augustus) from 73.178.13.81-1508471533 || BYOND v513
+[02:02:21]EMOTE: monkey (706)/ : <B>The monkey (706)</B> jumps!
+[02:04:16]EMOTE: monkey (753)/ : <B>The monkey (753)</B> jumps!
+[02:06:06]EMOTE: monkey (753)/ : <B>The monkey (753)</B> jumps!
+[02:07:46]ACCESS: Logout: bobrossnibba[DC]/(Brother Augustus)
+
+
+Starting up. 02:08.03
+---------------------
+Adding game mode blob (blob) to configuration.
+Adding game mode changeling (changeling) to configuration.
+Adding game mode traitor+changeling (traitorchan) to configuration.
+Adding game mode double agents (double_agents) to configuration.
+Adding game mode traitor (traitor) to configuration.
+Adding game mode cult (cult) to configuration.
+Adding game mode extended (extended) to configuration.
+Adding game mode AI malfunction (malfunction) to configuration.
+Adding game mode meteor (meteor) to configuration.
+Adding game mode necron (necron) to configuration.
+Adding game mode Chaos Assault (nuclear) to configuration.
+Adding game mode revolution (revolution) to configuration.
+Adding game mode sandbox (sandbox) to configuration.
+Adding game mode wizard (wizard) to configuration.
+[02:08:03]ADMIN: Loading Banlistjob
+[02:08:03]ADMIN: Loading jobban_rank
+[02:08:03]ADMIN: jobban_keylist was empty
+[02:08:03]ADMIN: Loading appearance_rank
+[02:08:03]ADMIN: appearance_keylist was empty
+[02:08:03]ADMIN: Updating jobbanfile!
+[02:08:03]ADMIN: Loading Banlist
+[02:08:03]ADMIN: Loading RTD lists
+[02:09:44]ACCESS: Login: Bobrossnibba/(Bobrossnibba) from 73.178.13.81-1508471533 || BYOND v513
+[02:09:54]ADMIN: Bobrossnibba has started the game.
+[02:09:55]GAME: Bobrossnibba (ckey) has been selected as a Heretic
+[02:09:56]ACCESS: Logout: *no key*/(Bobrossnibba)
+[02:09:56]ACCESS: Login: Bobrossnibba/(Carson Anderson) from 73.178.13.81-1508471533 || BYOND v513
+[02:10:00]SAY: Carson Anderson/Bobrossnibba : test
+[02:10:32]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/whitelisted/um/leader
+[02:10:42]ADMIN: Bobrossnibba/(Carson Anderson) assumed direct control of Brother Cephas.
+[02:10:42]ACCESS: Logout: *no key*/(Carson Anderson)
+[02:10:42]ACCESS: Login: bobrossnibba/(Brother Cephas) from 73.178.13.81-1508471533 || BYOND v513
+[02:10:47]EMOTE: monkey (692)/ : <B>The monkey (692)</B> jumps!
+[02:10:51]ACCESS: Logout: bobrossnibba[DC]/(Brother Cephas)
+
+
+Starting up. 02:31.27
+---------------------
+Adding game mode blob (blob) to configuration.
+Adding game mode changeling (changeling) to configuration.
+Adding game mode traitor+changeling (traitorchan) to configuration.
+Adding game mode double agents (double_agents) to configuration.
+Adding game mode traitor (traitor) to configuration.
+Adding game mode cult (cult) to configuration.
+Adding game mode extended (extended) to configuration.
+Adding game mode AI malfunction (malfunction) to configuration.
+Adding game mode meteor (meteor) to configuration.
+Adding game mode necron (necron) to configuration.
+Adding game mode Chaos Assault (nuclear) to configuration.
+Adding game mode revolution (revolution) to configuration.
+Adding game mode sandbox (sandbox) to configuration.
+Adding game mode wizard (wizard) to configuration.
+[02:31:27]ADMIN: Loading Banlistjob
+[02:31:27]ADMIN: Loading jobban_rank
+[02:31:27]ADMIN: jobban_keylist was empty
+[02:31:27]ADMIN: Loading appearance_rank
+[02:31:27]ADMIN: appearance_keylist was empty
+[02:31:27]ADMIN: Updating jobbanfile!
+[02:31:27]ADMIN: Loading Banlist
+[02:31:27]ADMIN: Loading RTD lists
+[02:33:04]ACCESS: Login: Bobrossnibba/(Bobrossnibba) from 73.178.13.81-1508471533 || BYOND v513
+[02:33:33]ADMIN: Bobrossnibba has started the game.
+[02:33:34]GAME: Bobrossnibba (ckey) has been selected as a Heretic
+[02:33:35]ACCESS: Logout: *no key*/(Bobrossnibba)
+[02:33:35]ACCESS: Login: Bobrossnibba/(Carson Anderson) from 73.178.13.81-1508471533 || BYOND v513
+[02:33:40]SAY: Carson Anderson/Bobrossnibba : kang shit
+[02:33:52]EMOTE: monkey (186)/ : <B>The monkey (186)</B> jumps!
+[02:34:00]SAY: Betsy/ : MOOOOOO
+[02:34:30]SAY: Carson Anderson/Bobrossnibba : s:e e
+[02:34:31]SAY: Carson Anderson/Bobrossnibba : e
+[02:34:36]ACCESS: Logout: *no key*/(Carson Anderson)
+[02:34:36]ACCESS: Login: Bobrossnibba/(Carson Anderson) from 73.178.13.81-1508471533 || BYOND v513
+[02:34:38]EMOTE: monkey (431)/ : <B>The monkey (431)</B> jumps!
+[02:36:35]EMOTE: monkey (902)/ : <B>The monkey (902)</B> jumps!
+[02:39:30]EMOTE: monkey (431)/ : <B>The monkey (431)</B> jumps!
+[02:39:46]EMOTE: monkey (431)/ : <B>The monkey (431)</B> jumps!
+[02:39:58]EMOTE: monkey (333)/ : <B>The monkey (333)</B> jumps!
+[02:40:41]EMOTE: monkey (438)/ : <B>The monkey (438)</B> jumps!
+[02:41:58]EMOTE: monkey (195)/ : <B>The monkey (195)</B> jumps!
+[02:43:09]EMOTE: monkey (333)/ : <B>The monkey (333)</B> jumps!
+[02:46:08]EMOTE: monkey (333)/ : <B>The monkey (333)</B> jumps!
+[02:50:31]EMOTE: monkey (195)/ : <B>The monkey (195)</B> jumps!
+[02:50:40]SAY: grey baby slime (861)/ : Blorble...
+[02:51:16]EMOTE: monkey (738)/ : <B>The monkey (738)</B> jumps!
+[02:51:45]EMOTE: monkey (694)/ : <B>The monkey (694)</B> jumps!
+[02:52:52]EMOTE: monkey (738)/ : <B>The monkey (738)</B> jumps!
+[02:53:02]EMOTE: monkey (431)/ : <B>The monkey (431)</B> jumps!
+[02:53:14]EMOTE: monkey (195)/ : <B>The monkey (195)</B> jumps!
+[02:53:28]EMOTE: monkey (333)/ : <B>The monkey (333)</B> jumps!
+[02:56:17]EMOTE: monkey (431)/ : <B>The monkey (431)</B> jumps!
+[02:56:51]SAY: grey baby slime (790)/ : Blorble...
+[02:57:22]EMOTE: monkey (438)/ : <B>The monkey (438)</B> jumps!
+[02:57:32]EMOTE: monkey (694)/ : <B>The monkey (694)</B> jumps!
+[02:57:44]EMOTE: monkey (438)/ : <B>The monkey (438)</B> jumps!
+[03:00:11]EMOTE: monkey (186)/ : <B>The monkey (186)</B> jumps!
+[03:02:43]EMOTE: monkey (186)/ : <B>The monkey (186)</B> jumps!
+[03:04:08]EMOTE: monkey (902)/ : <B>The monkey (902)</B> jumps!
+[03:04:20]EMOTE: monkey (738)/ : <B>The monkey (738)</B> jumps!
+[03:04:42]EMOTE: monkey (694)/ : <B>The monkey (694)</B> jumps!
+[03:05:06]EMOTE: monkey (694)/ : <B>The monkey (694)</B> jumps!
+[03:05:37]EMOTE: monkey (902)/ : <B>The monkey (902)</B> jumps!
+[03:06:52]EMOTE: monkey (431)/ : <B>The monkey (431)</B> jumps!
+[03:07:07]EMOTE: monkey (186)/ : <B>The monkey (186)</B> jumps!
+[03:07:19]EMOTE: monkey (195)/ : <B>The monkey (195)</B> jumps!
+[03:08:07]EMOTE: monkey (431)/ : <B>The monkey (431)</B> jumps!
+[03:09:00]EMOTE: monkey (431)/ : <B>The monkey (431)</B> jumps!
+[03:11:37]EMOTE: monkey (431)/ : <B>The monkey (431)</B> jumps!
+[03:12:39]ADMIN: Bobrossnibba/(Carson Anderson) has gibbed *no key*/(Carson Anderson)
+[03:12:48]ACCESS: Logout: *no key*/(Carson Anderson)
+[03:12:48]ACCESS: Login: Bobrossnibba/(#(57247)) from 73.178.13.81-1508471533 || BYOND v513
+[03:14:28]ACCESS: Logout: *no key*/(#(57247))
+[03:14:28]ACCESS: Login: Bobrossnibba/(#(57247)) from 73.178.13.81-1508471533 || BYOND v513
+[03:14:38]ACCESS: Logout: *no key*/(#(57247))
+[03:14:38]ACCESS: Login: Bobrossnibba/(#(57247)) from 73.178.13.81-1508471533 || BYOND v513
+[03:15:08]EMOTE: monkey (902)/ : <B>The monkey (902)</B> jumps!
+[03:15:20]EMOTE: monkey (186)/ : <B>The monkey (186)</B> jumps!
+[03:15:29]ACCESS: Logout: *no key*/(#(57247))
+[03:15:29]ACCESS: Login: Bobrossnibba/(#(57247)) from 73.178.13.81-1508471533 || BYOND v513
+[03:16:36]ACCESS: Logout: Bobrossnibba[DC]/(#(57247))
+
+
+Starting up. 13:50.33
+---------------------
+Adding game mode blob (blob) to configuration.
+Adding game mode changeling (changeling) to configuration.
+Adding game mode traitor+changeling (traitorchan) to configuration.
+Adding game mode double agents (double_agents) to configuration.
+Adding game mode traitor (traitor) to configuration.
+Adding game mode cult (cult) to configuration.
+Adding game mode extended (extended) to configuration.
+Adding game mode AI malfunction (malfunction) to configuration.
+Adding game mode meteor (meteor) to configuration.
+Adding game mode necron (necron) to configuration.
+Adding game mode Chaos Assault (nuclear) to configuration.
+Adding game mode revolution (revolution) to configuration.
+Adding game mode sandbox (sandbox) to configuration.
+Adding game mode wizard (wizard) to configuration.
+[13:50:33]ADMIN: Loading Banlistjob
+[13:50:33]ADMIN: Loading jobban_rank
+[13:50:33]ADMIN: jobban_keylist was empty
+[13:50:33]ADMIN: Loading appearance_rank
+[13:50:33]ADMIN: appearance_keylist was empty
+[13:50:33]ADMIN: Updating jobbanfile!
+[13:50:33]ADMIN: Loading Banlist
+[13:50:33]ADMIN: Loading RTD lists
+[13:52:20]ACCESS: Login: Bobrossnibba/(Bobrossnibba) from 73.178.13.81-1508471533 || BYOND v513
+[13:52:35]ADMIN: Bobrossnibba has started the game.
+[13:52:35]GAME: Bobrossnibba (ckey) has been selected as a Heretic
+[13:52:37]ACCESS: Logout: *no key*/(Bobrossnibba)
+[13:52:37]ACCESS: Login: Bobrossnibba/(Carson Anderson) from 73.178.13.81-1508471533 || BYOND v513
+[13:52:52]SAY: Carson Anderson/Bobrossnibba : cum
+[13:54:13]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/whitelisted/ironhand/regular
+[13:54:19]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/whitelisted/servitor
+[13:54:21]ADMIN: Bobrossnibba/(Carson Anderson) deleted Servitor (325) at (107,116,1)
+[13:54:26]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/whitelisted/sm/leader
+[13:54:27]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/whitelisted/um/leader
+[13:54:38]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/whitelisted/eldar/leader
+[13:54:48]ADMIN: Bobrossnibba/(Carson Anderson) deleted Outcast Marseus Kaeyla of Iyanden at (109,116,1)
+[13:54:49]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/whitelisted/ksons/leader
+[13:54:58]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/whitelisted/pmleader
+[13:55:12]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/elysian
+[13:55:14]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/kb
+[13:55:18]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/krieg
+[13:55:21]SAY: grey baby slime (402)/ : Rawr...
+[13:55:28]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/sob/cannoness
+[13:55:34]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/tau/leader
+[13:55:46]SAY: A familiar voice/ : I&#39;ve been watching you my entire life. I hate the air you breathe, your foolish decrees, your words so contrived and I hate the way our kin gathered outside. The Farseer told you to beware the iceworld and I&#39;d be lying if I said I wasn&#39;t wishing for your untimely death or demise or am I just wishing I could be like you? That the Archon would see me as a poet and not just the muse.
+[13:55:46]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/eventmob/darkeldarone
+[13:56:01]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/silicon/robot/necron/warrior/dead
+[13:56:08]ADMIN: Bobrossnibba/(Carson Anderson) deleted Shas Sen Jon at (108,114,1)
+[13:56:26]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/kriegofficer
+[13:56:29]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/valhallan
+[13:56:34]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/OHstormtrooper/leader
+[13:56:37]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/OHstormtrooper
+[13:56:42]ADMIN: Bobrossnibba/(Carson Anderson) deleted Unknown at (109,114,1)
+[13:56:51]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/OHinq/leader
+[13:56:57]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/ork/nob
+[13:57:05]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/ork/warboss/leader
+[13:57:16]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/ork/warboss/large
+[13:57:21]ADMIN: Bobrossnibba/(Carson Anderson) deleted Ork Warboss at (102,114,1)
+[13:57:26]ADMIN: Bobrossnibba/(Carson Anderson) deleted Ork Warboss at (103,114,1)
+[13:57:33]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/ork/gretchin
+[13:57:38]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/alien/larva/tyranid
+[13:57:41]ADMIN: Bobrossnibba/(Carson Anderson) deleted the alien larva (691) at (102,114,1)
+[13:57:48]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/alien/humanoid/tyranid/ravener
+[13:57:52]ADMIN: Bobrossnibba/(Carson Anderson) deleted the ravener (946) at (102,114,1)
+[13:57:53]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/alien/humanoid/tyranid/warrior
+[13:57:59]EMOTE: monkey (951)/ : <B>The monkey (951)</B> jumps!
+[13:57:59]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/alien/humanoid/tyranid/lictor/leader
+[13:58:07]EMOTE: monkey (472)/ : <B>The monkey (472)</B> jumps!
+[14:00:56]ADMIN: Bobrossnibba/(Carson Anderson) has gibbed Bobrossnibba/(Carson Anderson)
+[14:00:58]ACCESS: Logout: *no key*/(Carson Anderson)
+[14:00:58]ACCESS: Login: Bobrossnibba/(Carson Anderson) from 73.178.13.81-1508471533 || BYOND v513
+[14:01:03]EMOTE: monkey (660)/ : <B>The monkey (660)</B> jumps!
+[14:01:23]EMOTE: monkey (472)/ : <B>The monkey (472)</B> jumps!
+[14:02:12]EMOTE: monkey (791)/ : <B>The monkey (791)</B> jumps!
+[14:04:01]EMOTE: monkey (68)/ : <B>The monkey (68)</B> jumps!
+[14:04:22]SAY: grey baby slime (402)/ : Lonely...
+[14:05:08]EMOTE: monkey (660)/ : <B>The monkey (660)</B> jumps!
+[14:05:16]SAY: grey baby slime (100)/ : Blop...
+[14:09:10]EMOTE: monkey (791)/ : <B>The monkey (791)</B> jumps!
+[14:13:04]SAY: grey baby slime (402)/ : Lonely...
+[14:14:18]ACCESS: Logout: Bobrossnibba[DC]/(Carson Anderson)
+
+
+Starting up. 17:43.00
+---------------------
+Adding game mode blob (blob) to configuration.
+Adding game mode changeling (changeling) to configuration.
+Adding game mode traitor+changeling (traitorchan) to configuration.
+Adding game mode double agents (double_agents) to configuration.
+Adding game mode traitor (traitor) to configuration.
+Adding game mode cult (cult) to configuration.
+Adding game mode extended (extended) to configuration.
+Adding game mode AI malfunction (malfunction) to configuration.
+Adding game mode meteor (meteor) to configuration.
+Adding game mode necron (necron) to configuration.
+Adding game mode Chaos Assault (nuclear) to configuration.
+Adding game mode revolution (revolution) to configuration.
+Adding game mode sandbox (sandbox) to configuration.
+Adding game mode wizard (wizard) to configuration.
+[17:43:00]ADMIN: Loading Banlistjob
+[17:43:00]ADMIN: Loading jobban_rank
+[17:43:00]ADMIN: jobban_keylist was empty
+[17:43:00]ADMIN: Loading appearance_rank
+[17:43:00]ADMIN: appearance_keylist was empty
+[17:43:00]ADMIN: Updating jobbanfile!
+[17:43:00]ADMIN: Loading Banlist
+[17:43:00]ADMIN: Loading RTD lists
+[17:44:34]ACCESS: Login: Bobrossnibba/(Bobrossnibba) from 73.178.13.81-1508471533 || BYOND v513
+[17:45:01]ADMIN: Bobrossnibba has started the game.
+[17:45:01]GAME: Bobrossnibba (ckey) has been selected as a Heretic
+[17:45:02]ACCESS: Logout: *no key*/(Bobrossnibba)
+[17:45:02]ACCESS: Login: Bobrossnibba/(Carson Anderson) from 73.178.13.81-1508471533 || BYOND v513
+[17:45:11]ACCESS: Logout: *no key*/(Carson Anderson)
+[17:45:11]ACCESS: Login: Bobrossnibba/(Carson Anderson) from 73.178.13.81-1508471533 || BYOND v513
+[17:47:07]EMOTE: monkey (752)/ : <B>The monkey (752)</B> jumps!
+[17:48:34]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/whitelisted/um/leader
+[17:48:54]ADMIN: Bobrossnibba/(Carson Anderson) assumed direct control of Brother Fabius.
+[17:48:54]ACCESS: Logout: *no key*/(Carson Anderson)
+[17:48:54]ACCESS: Login: bobrossnibba/(Brother Fabius) from 73.178.13.81-1508471533 || BYOND v513
+[17:49:58]SAY: grey baby slime (945)/ : Rawr...
+[17:51:08]ADMIN: Bobrossnibba/(Brother Fabius) has remade the powernet. makepowernets() called.
+[17:51:13]ADMIN: Bobrossnibba/(Brother Fabius) has remade the powernet. makepowernets() called.
+[17:52:39]SAY: mouse/ : SQUEEK!
+[17:53:10]SAY: grey baby slime (945)/ : Blop...
+[17:53:30]EMOTE: monkey (752)/ : <B>The monkey (752)</B> jumps!
+[17:54:00]ACCESS: Logout: *no key*/(Brother Fabius)
+[17:54:00]ACCESS: Login: bobrossnibba/(Brother Fabius) from 73.178.13.81-1508471533 || BYOND v513
+[17:54:01]EMOTE: monkey (752)/ : <B>The monkey (752)</B> jumps!
+[17:54:11]ADMIN: bobrossnibba/(Brother Fabius) has gibbed *no key*/(Brother Fabius)
+[17:55:41]EMOTE: monkey (315)/ : <B>The monkey (315)</B> jumps!
+[17:57:45]SAY: grey baby slime (945)/ : Blorble...
+[17:59:37]EMOTE: monkey (231)/ : <B>The monkey (231)</B> jumps!
+[18:01:51]EMOTE: monkey (523)/ : <B>The monkey (523)</B> jumps!
+[18:03:33]EMOTE: monkey (523)/ : <B>The monkey (523)</B> jumps!
+[18:05:21]ACCESS: Logout: *no key*/(Brother Fabius)
+[18:05:21]ACCESS: Login: bobrossnibba/(#(55383)) from 73.178.13.81-1508471533 || BYOND v513
+[18:05:45]ACCESS: Logout: bobrossnibba[DC]/(#(55383))
+
+
+Starting up. 18:09.50
+---------------------
+Adding game mode blob (blob) to configuration.
+Adding game mode changeling (changeling) to configuration.
+Adding game mode traitor+changeling (traitorchan) to configuration.
+Adding game mode double agents (double_agents) to configuration.
+Adding game mode traitor (traitor) to configuration.
+Adding game mode cult (cult) to configuration.
+Adding game mode extended (extended) to configuration.
+Adding game mode AI malfunction (malfunction) to configuration.
+Adding game mode meteor (meteor) to configuration.
+Adding game mode necron (necron) to configuration.
+Adding game mode Chaos Assault (nuclear) to configuration.
+Adding game mode revolution (revolution) to configuration.
+Adding game mode sandbox (sandbox) to configuration.
+Adding game mode wizard (wizard) to configuration.
+[18:09:50]ADMIN: Loading Banlistjob
+[18:09:50]ADMIN: Loading jobban_rank
+[18:09:50]ADMIN: jobban_keylist was empty
+[18:09:50]ADMIN: Loading appearance_rank
+[18:09:50]ADMIN: appearance_keylist was empty
+[18:09:50]ADMIN: Updating jobbanfile!
+[18:09:50]ADMIN: Loading Banlist
+[18:09:50]ADMIN: Loading RTD lists
+[18:13:11]ACCESS: Login: Bobrossnibba/(Bobrossnibba) from 73.178.13.81-1508471533 || BYOND v513
+[18:14:39]GAME: Bobrossnibba (ckey) has been selected as a Heretic
+[18:14:40]ACCESS: Logout: *no key*/(Bobrossnibba)
+[18:14:40]ACCESS: Login: Bobrossnibba/(Carson Anderson) from 73.178.13.81-1508471533 || BYOND v513
+[18:14:58]SAY: Carson Anderson/Bobrossnibba : ye
+[18:15:01]ACCESS: Login: Conzie/(Conzie) from 216.36.149.51-959448058 || BYOND v513
+[18:15:29]SAY: grey baby slime (161)/ : Rawr...
+[18:15:45]ACCESS: Logout: *no key*/(Conzie)
+[18:15:45]ACCESS: Login: Conzie/(Danny Jones) from 216.36.149.51-959448058 || BYOND v513
+[18:15:56]ACCESS: Logout: *no key*/(Danny Jones)
+[18:15:56]ACCESS: Login: Conzie/(Danny Jones) from 216.36.149.51-959448058 || BYOND v513
+[18:17:21]EMOTE: monkey (509)/ : <B>The monkey (509)</B> jumps!
+[18:17:59]SAY: grey baby slime (617)/ : Blop...
+[18:18:43]ADMIN: Conzie/(Danny Jones) created a nuke team.
+[18:19:02]EMOTE: monkey (895)/ : <B>The monkey (895)</B> jumps!
+[18:19:28]ADMIN: Conzie/(Danny Jones) created a nuke team.
+[18:19:37]ADMIN: Conzie/(Danny Jones) checked antagonists.
+[18:19:41]ADMIN: Bobrossnibba/(Carson Anderson) : nuke team
+[18:19:43]SAY: grey baby slime (161)/ : Lonely...
+[18:19:48]ADMIN: Bobrossnibba/(Carson Anderson) : DOESNT WORK
+[18:20:32]ADMIN: Conzie/(Danny Jones) summoned SOB.
+[18:21:05]ACCESS: Logout: *no key*/(Danny Jones)
+[18:21:05]ACCESS: Login: Conzie/(Sister Julia) from 216.36.149.51-959448058 || BYOND v513
+[18:21:31]ADMIN: Conzie/(Sister Julia) : Yes
+[18:21:33]ADMIN: Conzie/(Sister Julia) : rip
+[18:23:31]EMOTE: monkey (571)/ : <B>The monkey (571)</B> jumps!
+[18:24:39]ADMIN: Bobrossnibba/(Carson Anderson) created a /mob/living/carbon/human/whitelisted/um/leader
+[18:24:50]ADMIN: Bobrossnibba/(Carson Anderson) assumed direct control of Brother Gabriel.
+[18:24:50]ACCESS: Logout: *no key*/(Carson Anderson)
+[18:24:50]ACCESS: Login: bobrossnibba/(Brother Gabriel) from 73.178.13.81-1508471533 || BYOND v513
+[18:24:54]EMOTE: monkey (108)/ : <B>The monkey (108)</B> jumps!
+[18:26:36]SAY: grey baby slime (617)/ : Rawr...
+[18:28:11]EMOTE: monkey (509)/ : <B>The monkey (509)</B> jumps!
+[18:28:42]EMOTE: monkey (91)/ : <B>The monkey (91)</B> jumps!
+[18:29:33]EMOTE: monkey (703)/ : <B>The monkey (703)</B> jumps!
+[18:30:16]SAY: grey baby slime (161)/ : Lonely...
+[18:32:30]ACCESS: Logout: *no key*/(Brother Gabriel)
+[18:32:30]ACCESS: Login: bobrossnibba/(Brother Gabriel) from 73.178.13.81-1508471533 || BYOND v513
+[18:32:50]EMOTE: monkey (703)/ : <B>The monkey (703)</B> jumps!
+[18:34:49]ADMIN: bobrossnibba/(Brother Gabriel) has gibbed *no key*/(Brother Gabriel)
+[18:34:59]ADMIN: bobrossnibba/(Brother Gabriel) has gibbed *no key*/(Carson Anderson)
+[18:35:03]SAY: grey baby slime (161)/ : Blop...
+[18:37:22]ACCESS: Logout: bobrossnibba[DC]/(Brother Gabriel)
+[18:37:29]ACCESS: Logout: Conzie[DC]/(Sister Julia)
+
+
+Starting up. 18:40.50
+---------------------
+Adding game mode blob (blob) to configuration.
+Adding game mode changeling (changeling) to configuration.
+Adding game mode traitor+changeling (traitorchan) to configuration.
+Adding game mode double agents (double_agents) to configuration.
+Adding game mode traitor (traitor) to configuration.
+Adding game mode cult (cult) to configuration.
+Adding game mode extended (extended) to configuration.
+Adding game mode AI malfunction (malfunction) to configuration.
+Adding game mode meteor (meteor) to configuration.
+Adding game mode necron (necron) to configuration.
+Adding game mode Chaos Assault (nuclear) to configuration.
+Adding game mode revolution (revolution) to configuration.
+Adding game mode sandbox (sandbox) to configuration.
+Adding game mode wizard (wizard) to configuration.
+[18:40:50]ADMIN: Loading Banlistjob
+[18:40:50]ADMIN: Loading jobban_rank
+[18:40:51]ADMIN: jobban_keylist was empty
+[18:40:51]ADMIN: Loading appearance_rank
+[18:40:51]ADMIN: appearance_keylist was empty
+[18:40:51]ADMIN: Updating jobbanfile!
+[18:40:51]ADMIN: Loading Banlist
+[18:40:51]ADMIN: Loading RTD lists
+[18:42:23]ACCESS: Login: Bobrossnibba/(Bobrossnibba) from 73.178.13.81-1508471533 || BYOND v513
+[18:42:34]ADMIN: Bobrossnibba has started the game.
+[18:42:34]GAME: Bobrossnibba (ckey) has been selected as a Heretic
+[18:42:35]ACCESS: Logout: *no key*/(Bobrossnibba)
+[18:42:35]ACCESS: Login: Bobrossnibba/(Carson Anderson) from 73.178.13.81-1508471533 || BYOND v513
+[18:42:40]SAY: Carson Anderson/Bobrossnibba : CAN I TALK IN CAPS
+[18:42:56]EMOTE: monkey (1)/ : <B>The monkey (1)</B> jumps!
+[18:43:25]SAY: Carson Anderson/Bobrossnibba : eee
+[18:43:55]EMOTE: monkey (755)/ : <B>The monkey (755)</B> jumps!
+[18:43:56]ACCESS: Logout: *no key*/(Carson Anderson)
+[18:43:56]ACCESS: Login: Bobrossnibba/(Carson Anderson) from 73.178.13.81-1508471533 || BYOND v513
+[18:44:10]ADMIN: Bobrossnibba/(Carson Anderson) has gibbed *no key*/(Carson Anderson)
+[18:44:38]EMOTE: monkey (468)/ : <B>The monkey (468)</B> jumps!
+[18:44:46]EMOTE: monkey (468)/ : <B>The monkey (468)</B> jumps!
+[18:44:54]EMOTE: monkey (509)/ : <B>The monkey (509)</B> jumps!
+[18:45:35]EMOTE: monkey (876)/ : <B>The monkey (876)</B> jumps!
+[18:45:35]EMOTE: monkey (509)/ : <B>The monkey (509)</B> jumps!
+[18:47:33]EMOTE: monkey (151)/ : <B>The monkey (151)</B> jumps!
+[18:47:37]SAY: grey baby slime (982)/ : Rawr...
+[18:47:55]EMOTE: monkey (151)/ : <B>The monkey (151)</B> jumps!
+[18:50:11]EMOTE: monkey (468)/ : <B>The monkey (468)</B> jumps!
+[18:51:47]EMOTE: monkey (876)/ : <B>The monkey (876)</B> jumps!
+[18:55:04]EMOTE: monkey (1)/ : <B>The monkey (1)</B> jumps!
+[18:55:16]EMOTE: monkey (1)/ : <B>The monkey (1)</B> jumps!
+[18:56:28]EMOTE: monkey (876)/ : <B>The monkey (876)</B> jumps!
+[19:00:06]EMOTE: monkey (1)/ : <B>The monkey (1)</B> jumps!
+[19:03:50]EMOTE: monkey (617)/ : <B>The monkey (617)</B> jumps!
+[19:04:31]ACCESS: Login: Conzie/(Conzie) from 216.36.149.51-959448058 || BYOND v513
+[19:04:56]ACCESS: Logout: *no key*/(Conzie)
+[19:04:56]ACCESS: Login: Conzie/(Danny Jones) from 216.36.149.51-959448058 || BYOND v513
+[19:05:02]ACCESS: Logout: *no key*/(Danny Jones)
+[19:05:02]ACCESS: Login: Conzie/(Danny Jones) from 216.36.149.51-959448058 || BYOND v513
+[19:05:46]ADMIN: Conzie/(Danny Jones) has gibbed *no key*/(Danny Jones)
+[19:05:53]ACCESS: Logout: *no key*/(Danny Jones)
+[19:05:53]ACCESS: Login: Conzie/(#(68698)) from 216.36.149.51-959448058 || BYOND v513
+[19:06:15]SAY: grey baby slime (424)/ : Blorble...
+[19:06:15]ACCESS: Logout: Bobrossnibba[DC]/(Carson Anderson)
+[19:08:27]ADMIN: Conzie/(#(68698)) has gibbed Conzie/(#(68698))
+[19:08:28]ACCESS: Logout: *no key*/(#(68698))
+[19:08:28]ACCESS: Login: Conzie/(#(68698)) from 216.36.149.51-959448058 || BYOND v513
+[19:10:08]EMOTE: monkey (876)/ : <B>The monkey (876)</B> jumps!
+[19:10:48]EMOTE: monkey (1)/ : <B>The monkey (1)</B> jumps!
+[19:11:08]EMOTE: monkey (617)/ : <B>The monkey (617)</B> jumps!
+[19:13:37]EMOTE: monkey (151)/ : <B>The monkey (151)</B> jumps!
+[19:14:18]EMOTE: monkey (1)/ : <B>The monkey (1)</B> jumps!
+[19:14:20]ACCESS: Logout: *no key*/(#(68698))
+[19:14:20]ACCESS: Login: Conzie/(#(81754)) from 216.36.149.51-959448058 || BYOND v513
+[19:14:52]EMOTE: monkey (509)/ : <B>The monkey (509)</B> jumps!
+[19:15:45]SAY: grey baby slime (424)/ : Blop...
+[19:16:51]EMOTE: monkey (509)/ : <B>The monkey (509)</B> jumps!
+[19:16:53]EMOTE: monkey (527)/ : <B>The monkey (527)</B> jumps!
+[19:18:55]EMOTE: monkey (509)/ : <B>The monkey (509)</B> jumps!
+[19:19:30]EMOTE: monkey (527)/ : <B>The monkey (527)</B> jumps!
+[19:20:48]EMOTE: monkey (1)/ : <B>The monkey (1)</B> jumps!
+[19:20:54]EMOTE: monkey (527)/ : <B>The monkey (527)</B> jumps!
+[19:21:47]SAY: grey baby slime (424)/ : Blorble...
+[19:23:37]EMOTE: monkey (1)/ : <B>The monkey (1)</B> jumps!
+[19:23:39]EMOTE: monkey (617)/ : <B>The monkey (617)</B> jumps!
+[19:24:12]EMOTE: monkey (876)/ : <B>The monkey (876)</B> jumps!
+[19:25:51]ACCESS: Logout: Conzie[DC]/(#(81754))
+
+
+Starting up. 19:46.52
+---------------------
+Adding game mode blob (blob) to configuration.
+Adding game mode changeling (changeling) to configuration.
+Adding game mode traitor+changeling (traitorchan) to configuration.
+Adding game mode double agents (double_agents) to configuration.
+Adding game mode traitor (traitor) to configuration.
+Adding game mode cult (cult) to configuration.
+Adding game mode extended (extended) to configuration.
+Adding game mode AI malfunction (malfunction) to configuration.
+Adding game mode meteor (meteor) to configuration.
+Adding game mode necron (necron) to configuration.
+Adding game mode Chaos Assault (nuclear) to configuration.
+Adding game mode revolution (revolution) to configuration.
+Adding game mode sandbox (sandbox) to configuration.
+Adding game mode wizard (wizard) to configuration.
+[19:46:52]ADMIN: Loading Banlistjob
+[19:46:52]ADMIN: Loading jobban_rank
+[19:46:52]ADMIN: jobban_keylist was empty
+[19:46:52]ADMIN: Loading appearance_rank
+[19:46:52]ADMIN: appearance_keylist was empty
+[19:46:52]ADMIN: Updating jobbanfile!
+[19:46:52]ADMIN: Loading Banlist
+[19:46:52]ADMIN: Loading RTD lists
+[19:49:35]ACCESS: Login: Bobrossnibba/(Bobrossnibba) from 73.178.13.81-1508471533 || BYOND v513
+[19:49:51]ACCESS: Logout: Bobrossnibba[DC]/(Bobrossnibba)
+
+
+Starting up. 19:55.29
+---------------------
+Adding game mode blob (blob) to configuration.
+Adding game mode changeling (changeling) to configuration.
+Adding game mode traitor+changeling (traitorchan) to configuration.
+Adding game mode double agents (double_agents) to configuration.
+Adding game mode traitor (traitor) to configuration.
+Adding game mode cult (cult) to configuration.
+Adding game mode extended (extended) to configuration.
+Adding game mode AI malfunction (malfunction) to configuration.
+Adding game mode meteor (meteor) to configuration.
+Adding game mode necron (necron) to configuration.
+Adding game mode Chaos Assault (nuclear) to configuration.
+Adding game mode revolution (revolution) to configuration.
+Adding game mode sandbox (sandbox) to configuration.
+Adding game mode wizard (wizard) to configuration.
+[19:55:29]ADMIN: Loading Banlistjob
+[19:55:29]ADMIN: Loading jobban_rank
+[19:55:29]ADMIN: jobban_keylist was empty
+[19:55:29]ADMIN: Loading appearance_rank
+[19:55:29]ADMIN: appearance_keylist was empty
+[19:55:29]ADMIN: Updating jobbanfile!
+[19:55:29]ADMIN: Loading Banlist
+[19:55:29]ADMIN: Loading RTD lists
+[19:57:26]ACCESS: Login: Bobrossnibba/(Bobrossnibba) from 73.178.13.81-1508471533 || BYOND v513
+[19:58:33]ACCESS: Login: Conzie/(Conzie) from 216.36.149.51-959448058 || BYOND v513
+[20:02:49]ACCESS: Logout: Bobrossnibba[DC]/(Bobrossnibba)
+[20:22:12]ACCESS: Logout: Conzie[DC]/(Conzie)
