@@ -11,3 +11,12 @@ config/admins.txt
 config
 GooseCode.int
 data/mode.txt
+*.log
+GooseCode.dmb
+GooseCode.dyn.rsc
+GooseCode.dyn.rsc.lk
+GooseCode.int
+GooseCode.rsc.lk
+GooseCode.int
+GooseCode.dyn.rsc
+GooseCode.dmb
