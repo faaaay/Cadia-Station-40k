@@ -5,3 +5,6 @@ data/investigate/singulo.html
 *.log
 data/logs/2020/08-August/31-Monday.log
 data/player_achievements.sav
+*.log
+data/logs/2020/08-August/31-Monday.log
+config/admins.txt
