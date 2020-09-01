@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1598913606
-DIR: _maps _maps\map_files _maps\map_files\backup code code\__DEFINES code\_globalvars\lists code\_onclick\hud code\datums\wires code\game\objects\structures code\modules code\modules\admin code\modules\admin\verbs code\modules\events code\modules\mining code\modules\mob code\modules\mob\dead code\modules\mob\dead\observer code\modules\mob\living code\modules\mob\living\simple_animal code\modules\mob\living\simple_animal\hostile code\modules\mob\living\simple_animal\hostile\retaliate code\modules\rtd 
+LAST_COMPILE_TIME: 1598987754
+DIR: _maps _maps\map_files _maps\map_files\backup code code\__DEFINES code\_globalvars\lists code\_onclick\hud code\datums\wires code\game\objects\structures code\modules code\modules\admin code\modules\admin\verbs code\modules\events code\modules\mining icons icons\obj icons\obj\clothing 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 513.1528
-WINDOW: code\world.dm;code\modules\rtd\RTDsystem.dm;code\__DEFINES\preferences.dm;code\__DEFINES\combat.dm;code\__DEFINES\admin.dm;code\modules\mob\living\simple_animal\hostile\retaliate\goose.dm;code\modules\mob\dead\observer\observer.dm
-FILE: code\modules\rtd\RTDsystem.dm
+WINDOW: icons\obj\clothing\suits.dmi
+FILE: icons\obj\clothing\suits.dmi
 */
 // END_INTERNALS
