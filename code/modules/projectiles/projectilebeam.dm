@@ -185,7 +185,7 @@
 	select_name = "gauss flayer"
 	irradiate = 60
 	stutter = 20
-	eyeblur = 10
+	eyeblur = 0
 	ex_power = 3
 
 /obj/item/ammo_casing/energy/beamshot/gauss/blaster
@@ -195,7 +195,7 @@
 	damage = 5
 	irradiate = 20
 	stutter = 5
-	eyeblur = 5
+	eyeblur = 0
 	ex_power = 2 //Less radiation and such, more raw force for destroying walls and such.
 
 /obj/item/ammo_casing/energy/beamshot/gauss/light
@@ -215,7 +215,7 @@
 	damage = 150
 	irradiate = 200
 	stutter = 100
-	eyeblur = 100
+	eyeblur = 0
 	ex_power = 1
 	collateral = 1
 	ex_on_hit = 1
@@ -231,7 +231,7 @@
 	select_name = "gauss flux beam"
 	irradiate = 60
 	stutter = 20
-	eyeblur = 10
+	eyeblur = 0
 	ex_power = 2
 	antivehicle = 1
 
@@ -247,7 +247,7 @@
 	weaken = 2
 	paralyze = 1
 	stutter = 10
-	eyeblur = 10
+	eyeblur = 0
 	drowsy = 5
 	ex_power = 3
 
