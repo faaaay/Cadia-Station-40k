@@ -88,9 +88,6 @@ This will let a new space marine chapter be showcased (and subsequently decimate
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/ironhands, slot_gloves)
 	equip_to_slot_or_del(new /obj/item/clothing/mask/breath/marine, slot_wear_mask)
 	equip_to_slot_or_del(new /obj/item/clothing/head/helmet/ironhands, slot_head)
-	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
-	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
-	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
 
 /mob/living/carbon/human/whitelisted/ironhand/Life()
 	..()
@@ -115,7 +112,9 @@ This will let a new space marine chapter be showcased (and subsequently decimate
 	equip_to_slot_or_del(new /obj/item/weapon/tank/oxygen/ironhands, slot_back)
 	equip_to_slot_or_del(new /obj/item/weapon/chainsword/generic_chainsword, slot_belt)
 	equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
-
+	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
+	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
+	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
 	var/namelist = list ("Roman", "Tias", "Tiberias", "Lukas", "Sabius", "Augustus", "Crasius", "Gabriel", "Achilles", "Benedictus", "Cadmus", "Cephas", "Diodorus", "Erastus", "Drusus", "Fabius", "Ferox", "Marcus")
 	var/rndname = pick(namelist)
 
@@ -140,7 +139,9 @@ This will let a new space marine chapter be showcased (and subsequently decimate
 	equip_to_slot_or_del(new /obj/item/weapon/tank/oxygen/ironhands, slot_back)
 	equip_to_slot_or_del(new /obj/item/weapon/storage/belt/medical/apothecary, slot_belt)
 	equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health/night, slot_glasses)
-
+	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
+	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
+	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
 	var/namelist = list ("Roman", "Tias", "Tiberias", "Lukas", "Sabius", "Augustus", "Crasius", "Gabriel", "Achilles", "Benedictus", "Cadmus", "Cephas", "Diodorus", "Erastus", "Drusus", "Fabius", "Ferox", "Marcus")
 	var/rndname = pick(namelist)
 
@@ -165,7 +166,9 @@ This will let a new space marine chapter be showcased (and subsequently decimate
 	equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/mechaclamp, slot_back)
 	equip_to_slot_or_del(new /obj/item/weapon/storage/belt/utility/full, slot_belt)
 	equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
-
+	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
+	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
+	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
 	var/namelist = list ("Roman", "Tias", "Tiberias", "Lukas", "Sabius", "Augustus", "Crasius", "Gabriel", "Achilles", "Benedictus", "Cadmus", "Cephas", "Diodorus", "Erastus", "Drusus", "Fabius", "Ferox", "Marcus")
 	var/rndname = pick(namelist)
 
