@@ -73,7 +73,7 @@
 /obj/item/projectile/beam/pulse2
 	name = "pulse"
 	icon_state = "tplasma"
-	damage = 30
+	damage = 10
 	trace_residue = "Considerable ablation and charring."
 	on_hit(var/atom/target, var/blocked = 0)
 		if(istype(target,/turf/)||istype(target,/obj/structure/)||istype(target,/obj/machinery/door/))
