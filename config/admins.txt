@@ -9,3 +9,4 @@ PresidentPutin = Inquisitor
 Conzie = Inquisitor
 Cre8me = Inquisitor
 stevemaybe = Adeptus Mechanicus
+Captainmojo47 = Inquisitor
