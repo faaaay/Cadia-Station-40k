@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1599004426
-DIR: _maps _maps\map_files _maps\map_files\backup code code\__DEFINES code\__HELPERS code\_globalvars\lists code\_onclick\hud code\datums\wires code\game code\game\machinery code\game\objects code\game\objects\structures code\modules code\modules\mob icons 
+LAST_COMPILE_TIME: 1599027817
+DIR: _maps _maps\map_files _maps\map_files\backup code code\__DEFINES code\__HELPERS code\_globalvars\lists code\_onclick\hud code\datums code\datums\wires code\game code\game\machinery code\game\objects code\game\objects\structures code\modules code\modules\mob code\modules\mob\living code\modules\mob\living\carbon code\modules\mob\living\carbon\human code\modules\mob\living\carbon\human\whitelisted code\modules\projectiles code\modules\projectiles\guns code\modules\projectiles\guns\projectile 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 513.1528
-WINDOW: code\__HELPERS\text.dm
-FILE: code\__HELPERS\text.dm
+WINDOW: code\__HELPERS\text.dm;code\datums\supplypacks.dm;code\datums\uplink_item.dm;code\modules\mob\living\carbon\human\whitelisted\thousandsons.dm;code\modules\projectiles\guns\projectile\automatic.dm
+FILE: code\modules\projectiles\guns\projectile\automatic.dm
 */
 // END_INTERNALS

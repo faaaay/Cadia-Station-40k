@@ -1,5 +1,5 @@
 /obj/mecha/combat/killakan
-	desc = "Is this...? What is this? I don't.... what the fuck is this?"
+	desc = "Da' finest killin' machine da mek boys could whip up on short notice."
 	name = "KillaKan"
 	icon = 'icons/migrated/alienqueen.dmi'
 	icon_state = "killakan"
@@ -68,7 +68,7 @@
 																			//we insert the new way to get in.
 /obj/mecha/combat/killakan/verb/ork_move_inside() 							//just a rehash of move_inside to stop the humans using kans debate.
 	set category = "Object"
-	set name = "Enter Exosuit"
+	set name = "Git in!"
 	set src in oview(1)
 	if (!isork(usr) && !isgretchin(usr))
 		usr << "\blue <B>You have no idea how to get inside a [src.name].</B>"
