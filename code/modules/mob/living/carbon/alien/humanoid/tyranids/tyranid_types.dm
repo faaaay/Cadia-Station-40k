@@ -92,8 +92,8 @@ Zoanthropes
 	icon = 'icons/mob/tyranidsmedium.dmi'
 	name = "zoanthropes"
 	icon_state = "zoanthropes"
-	maxHealth = 250
-	health = 250
+	maxHealth = 300
+	health = 300
 	layer = 5
 	ventcrawler = 0
 	var/inhibitor = 0
@@ -290,9 +290,9 @@ Warriors
 /mob/living/carbon/alien/humanoid/tyranid/warrior
 	name = "warrior"
 	icon_state = "warrior"
-	maxHealth = 225
-	health = 225
-	plasma_rate = 10
+	maxHealth = 325
+	health = 325
+	plasma_rate = 20
 	ventcrawler = 0
 	var/projectiletype = /obj/item/projectile/bullet/neurotoxin
 	var/list/unlocked = list("Neurotoxin Glands")
@@ -402,8 +402,8 @@ Ravener
 	icon = 'icons/mob/tyranidslarge.dmi'
 	name = "ravener"
 	icon_state = "ravener"
-	maxHealth = 360
-	health = 360
+	maxHealth = 400
+	health = 400
 	layer = 5
 	ventcrawler = 0
 	status_flags = 0
@@ -641,7 +641,7 @@ Lictor
 	icon_state = "lictor"
 	maxHealth = 325
 	health = 325
-	var/speed_bonus = 1
+	var/speed_bonus = 2
 	var/lingual = 0
 	var/piercing = 0
 
@@ -807,7 +807,7 @@ Lictor
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/lictor/proc/pierce)
 				src << "\red You adapt a piercing ability. This will temporarily raise attack power, and can be used against particularly strong enemies."
 			if(7)
-				src.plasma_rate = 10
+				src.plasma_rate = 20
 				src << "\red Your harvest rate increases."
 		adjustToxLoss(-800)
 	else
@@ -922,10 +922,10 @@ Hormagaunt
 /mob/living/carbon/alien/humanoid/tyranid/hormagaunt //A lot easier since I made the tyranid base class do a lot of things automatically.
 	name = "hormagaunt"
 	icon_state = "hormagaunt"
-	maxHealth =150
-	health = 150
-	plasma_rate = 20
-	var/speedmod = 1
+	maxHealth =200
+	health = 200
+	plasma_rate = 40
+	var/speedmod = 2
 
 /mob/living/carbon/alien/humanoid/tyranid/hormagaunt/movement_delay()
 	. = -speedmod
@@ -1360,7 +1360,7 @@ Venomthropes
 			if(3)
 				src.reagents.clear_reagents()
 				src.venom_sacs = 1
-				plasma_rate = 7
+				plasma_rate = 7.5
 				src << "<b>You grow additional venom sacs.</b>"
 			if(4)
 				src.strong_buildings = 1
@@ -1370,7 +1370,7 @@ Venomthropes
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/regrowth)
 				src << "<b>You develop regrowth. Your venom sacs also start flooding additional toxins into the air.</b>"
 			if(6)
-				plasma_rate = 10
+				plasma_rate = 15
 				src << "<b>You evolve a venom cannon! Use shift+click to fire.</b>"
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/venomthropes/proc/venomshot)
 		adjustToxLoss(-500)

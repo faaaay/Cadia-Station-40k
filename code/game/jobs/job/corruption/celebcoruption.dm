@@ -12,7 +12,7 @@ for the negative portions. -Norc
 /mob/living/carbon/human/proc/celebfall()
 	set category = "Celebrity"
 	set name = "Fuck Sobriety!"
-	set desc = "I didn't make it this far by following THIER rules."
+	set desc = "I didn't make it this far by following THEIR rules."
 	//set src in usr
 	var/mob/living/carbon/human/U = src
 	if(!ishuman(src))

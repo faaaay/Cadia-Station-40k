@@ -35,8 +35,8 @@ proc/specialedits(var/mob/living/carbon/alien/humanoid/tyranid/T)
 				new_xeno.adjustToxLoss(T.getPlasma()) //Any biomass on top of what you spend evolving you keep.
 				qdel(T)
 				new_xeno.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/empulse)
-				new_xeno.maxHealth = 400
-				new_xeno.health = 400
+				new_xeno.maxHealth = 600
+				new_xeno.health = 600
 				new_xeno.name = "red terror"
 				new_xeno.real_name = "red terror"
 			if("Zoanthropes")

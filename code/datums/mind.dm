@@ -173,15 +173,13 @@ datum/mind
 
 	proc/remove_all_antag() //For the Lazy amongst us.
 		remove_antag("Changeling")
-		remove_antag("Traitor")
 		remove_antag("NuclearOp")
-		remove_antag("Wizard")
 		remove_antag("Cultist")
 		remove_antag("Rev")
 		remove_antag("Malf")
 		remove_antag("Prisoner")
-		remove_antag("Celebrity")
-		remove_antag("Necron")
+		
+		
 
 	proc/show_memory(mob/recipient, window=1)
 		if(!recipient)
