@@ -747,7 +747,7 @@ Tau rapid fire
 	icon_state = "mecha_uac2"
 	equip_cooldown = 10
 	projectile = /obj/item/projectile/beam/pulse2
-	projectiles = 30000
+	projectiles = 15000
 	projectile_energy_cost = 20
 	var/projectiles_per_shot = 15
 	var/deviation = 0.3
@@ -800,7 +800,7 @@ Tau Flamer (god help us all)
 	icon_state = "mecha_uac2"
 	equip_cooldown = 10
 	projectile = /obj/item/projectile/bullet/fire
-	projectiles = 30000
+	projectiles = 15000
 	projectile_energy_cost = 20
 	var/projectiles_per_shot = 10
 	var/deviation = 0.3
@@ -849,7 +849,7 @@ Tau Flamer (god help us all)
 	icon_state = "mecha_uac2"
 	equip_cooldown = 10
 	projectile = /obj/item/projectile/bullet/fire
-	projectiles = 30000
+	projectiles = 15000
 	projectile_energy_cost = 20
 	var/projectiles_per_shot = 10
 	var/deviation = 0.3
