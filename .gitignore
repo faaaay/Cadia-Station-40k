@@ -29,3 +29,5 @@ GooseCode.dmb
 GooseCode.dyn.rsc
 GooseCode.int
 GooseCode.lk
+*.dmb
+*.rsc
