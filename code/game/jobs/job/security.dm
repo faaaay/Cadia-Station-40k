@@ -220,10 +220,12 @@ Security Officer
 		H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_r_store)
 		H.equip_to_slot_or_del(new /obj/item/weapon/melee/baton/loaded(H), slot_l_hand)
 		H.equip_to_slot_or_del(new /obj/item/weapon/book/manual/security_space_law(H), slot_in_backpack)
+		H.equip_to_slot_or_del(new /obj/item/flashlight/seclight, slot_in_backpack)
 	else
 		H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_in_backpack)
 		H.equip_to_slot_or_del(new /obj/item/weapon/melee/baton/loaded(H), slot_in_backpack)
 		H.equip_to_slot_or_del(new /obj/item/weapon/book/manual/security_space_law(H), slot_in_backpack)
+		H.equip_to_slot_or_del(new /obj/item/flashlight/seclight, slot_in_backpack)
 
 	spawn(10)
 		var/weaponchoice = input(H, "Select a weapon.","Weapon Selection") as null|anything in list("Guardsman's Sword", "Mercy Chainsword", "Lasgun (Fully Equipped)", "Long-Las", "Stubber Pistol", "Reinforced Flak Armor")
