@@ -206,12 +206,13 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		usr << "No area available."
 
 	usr.loc = pick(L)
-
+/*
 /mob/dead/observer/verb/enter_the_warp()
 	set category = "Ghost"
 	set name = "Enter the Warp"
 	set desc= "Enter the deep warp (warning, you won't be able to leave once you enter!)"
 	enter_warp(src)
+	*/ //if you enable this be ready for 8billion ahelps of people trapped and unable to get out
 
 /mob/dead/observer/verb/lookforgretchin()
 	set category = "Ghost"
@@ -388,7 +389,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /*
 New Whitelist. Because the old one sucks
-Update: What have we created?
+Update: What have we created? something awful -wel ard
 */
 
 /mob/dead/observer/verb/RTD()

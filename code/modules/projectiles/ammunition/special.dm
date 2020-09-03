@@ -1,6 +1,6 @@
 /obj/item/ammo_casing/magic
-	name = "magic casing"
-	desc = "I didn't even know magic needed ammo..."
+	name = "rocket"
+	desc = "a rocket for the rocket launcher"
 	projectile_type = /obj/item/projectile/magic
 
 /obj/item/ammo_casing/magic/change
