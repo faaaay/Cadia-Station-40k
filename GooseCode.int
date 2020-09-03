@@ -1,8 +1,8 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1599107724
-DIR: _maps _maps\map_files _maps\map_files\backup code code\_globalvars\lists code\_onclick\hud code\datums\wires code\game\machinery code\game\machinery\computer code\game\objects 
+LAST_COMPILE_TIME: 1599116044
+DIR: _maps _maps\map_files _maps\map_files\backup code code\_globalvars\lists code\_onclick\hud code\datums\wires code\game\machinery code\game\machinery\computer code\game\objects code\modules code\modules\admin code\modules\admin\verbs 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 513.1528
