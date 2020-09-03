@@ -22,7 +22,7 @@
 
 <p>7. Do not spam ahelp with mundane shit (IE. "Why didn't I get to spawn as x???"). Ahelp if you encounter a problem, or have a question (though try to ask these in Discord). Most of the time, Admins are busy dealing with multiple ahelps and monitoring events, so unneeded ahelps only clog up the screen.</p>
 
-<p>8. Until I can hardcode RTD delays in respawn, these are the new rules. All factions except kriegers, tau, nids and eldar must play 1 life as a Krieger after dying on their whitelist faction. This is to prevent respawn spamming. Do not go krieg and immediately suicide, you will lose your whitelist privileges.</p>
+<p>8. Until I can hardcode RTD delays in respawn, these are the new rules. All factions except kriegers, OH, nids and eldar must play 1 life as a Krieger after dying on their whitelist faction. This is to prevent respawn spamming. Do not go krieg and immediately suicide, you will lose your whitelist privileges.</p>
 
 <p>9. In the grim darkness of the far future, this is only a clusterfuck. Expect to die. </p>
 
