@@ -3,8 +3,8 @@ RavenGuard
 */
 
 /mob/living/carbon/human/whitelisted/ravenguardhead
-	name = "Sergeant Valocius Kyublai"
-	real_name = "Sergeant Valocius Kyublai"
+	name = "Shadow Captain Tylus Karvyn"
+	real_name = "Shadow Captain Tylus Karvyn"
 	universal_speak = 1
 	gender = "male"
 	status_flags = 0

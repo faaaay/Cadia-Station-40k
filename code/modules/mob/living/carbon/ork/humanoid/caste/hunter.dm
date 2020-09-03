@@ -2,8 +2,8 @@
 	name = "Ork Kommando"
 	icon = 'icons/mob/ork.dmi'
 	caste = "h"
-	maxHealth = 200
-	health = 200
+	maxHealth = 250
+	health = 250
 	storedwaagh = 150
 	max_waagh = 150
 	icon_state = "ork"

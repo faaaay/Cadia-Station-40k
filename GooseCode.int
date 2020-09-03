@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1599075968
-DIR: _maps _maps\map_files _maps\map_files\backup code code\__DEFINES code\__HELPERS code\_globalvars\lists code\_onclick\hud code\datums code\datums\wires code\game code\game\machinery code\game\machinery\computer code\game\objects code\modules code\modules\admin code\modules\admin\verbs 
+LAST_COMPILE_TIME: 1599107724
+DIR: _maps _maps\map_files _maps\map_files\backup code code\_globalvars\lists code\_onclick\hud code\datums\wires code\game\machinery code\game\machinery\computer code\game\objects 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 513.1528
-WINDOW: _maps\map_files\MetaStation.v39L.dmm;code\__DEFINES\clothing.dm;code\modules\admin\verbs\one_click_antag.dm
+WINDOW: _maps\map_files\MetaStation.v39L.dmm
 FILE: _maps\map_files\MetaStation.v39L.dmm
 */
 // END_INTERNALS

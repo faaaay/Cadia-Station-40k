@@ -4,8 +4,8 @@ Thousand Sons
 */
 
 /mob/living/carbon/human/whitelisted/ksons/leader
-	name = "Archeron the Eternal"
-	real_name = "Archeron the Eternal"
+	name = "Akmhenhut, the Victorious Curse"
+	real_name = "Akmhenhut, the Victorious Curse"
 	universal_speak = 1
 	gender = "male"
 	status_flags = 0

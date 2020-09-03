@@ -4,8 +4,8 @@ UltraMarines
 */
 
 /mob/living/carbon/human/whitelisted/um/leader
-	name = "Sergeant Tiberius"
-	real_name = "Sergeant Tiberius"
+	name = "Captain Helis Dallicus"
+	real_name = "Captain Helis Dallicus"
 	universal_speak = 1
 	gender = "male"
 	health = 250

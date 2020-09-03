@@ -49,28 +49,7 @@ Eventually they will be used in daemon contracts and such. Right now I can make 
 
 	factions = list("void")
 
-	Life()
-		..()
-		see_invisible = SEE_INVISIBLE_OBSERVER //Daemons can see into the immaterial world, I should think.
-		var/turf/T = get_turf(src)
-		if(T.flags & NOJAUNT)
-			adjustBruteLoss(20)
-			if(src.stat != DEAD)
-				src.visible_message("<span class='danger'>\the [src] hisses in agony over the holy water!</span>")
-		for(var/obj/item/clothing/tie/medal/gold/sealofpurity/S in range(1, T))
-			adjustBruteLoss(1)
-			if(prob(25))
-				if(src.stat != DEAD)
-					src.visible_message("<span class='danger'>\the [src] growls at the [S]!</span>")
-			if(prob(5))
-				if(invisibility != 0)
-					if(src.stat != DEAD)
-						src.visible_message("<span class='danger'>The holy power of the [S] forces \the [src] to materialize!</span>")
-						invisibility = 0
-						density = 1
-						spawn(25)
-							density = 0
-							invisibility = INVISIBILITY_OBSERVER
+
 
 	Move(NewLoc, direct) //Daemons are blocked by psychic walls too.
 		var/turf/destination = get_step(get_turf(src),direct)
@@ -248,12 +227,6 @@ Eventually they will be used in daemon contracts and such. Right now I can make 
 				if(prob(25))
 					H.visible_message("<span class='danger'>\the [src] curses [H]!</span>")
 					H.visible_message("<span class='danger'>The [N] protects [H] from \the [src]'s curse!</span>")
-					return
-			var/obj/item/clothing/tie/medal/gold/sealofpurity/S = locate() in H
-			if(S)
-				if(prob(25))
-					H.visible_message("<span class='danger'>\the [src] curses [H]!</span>")
-					H.visible_message("<span class='danger'>The [S] protects [H] from \the [src]'s curse!</span>")
 					return
 		..()
 		var/mob/living/carbon/L = target
