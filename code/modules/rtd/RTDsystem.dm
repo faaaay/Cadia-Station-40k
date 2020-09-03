@@ -42,6 +42,7 @@ var/list/ohsleader = list()
 	loadrgsave()
 	loadtyranidsave()
 	loadohsave()
+	loadohssave()
 	loadsobsave()
 	loadorksave()
 	loadksonssave()
@@ -774,9 +775,9 @@ Ordo Hereticus
 		if("Add a Stormtrooper Leader")
 			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 30) //No ckeys will be >30 chars... Right?
 			if(newname && trim(newname))
-				stormtrooper.Add(lowertext(newname))
-				var/savefile/ohsleader = new("data/rtd/ohsleader.sav")
-				ohsleader<<stormtrooper
+				ohsleader.Add(lowertext(newname))
+				var/savefile/ohsOVERSEER = new("data/rtd/ohsleader.sav")
+				ohsOVERSEER<<stormtrooper
 				return
 			else
 				alert("Something went wrong. Tell the coders ohing/proc/edit_faction_membership")
@@ -784,9 +785,9 @@ Ordo Hereticus
 		if("Remove a Stormtrooper Leader")
 			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 30)
 			if(removal && trim(removal))
-				stormtrooper.Remove(lowertext(removal))
-				var/savefile/ohsleader = new("data/rtd/ohsleader.sav")
-				ohsleader<<stormtrooper
+				ohsleader.Remove(lowertext(removal))
+				var/savefile/ohsOVERSEER = new("data/rtd/ohsleader.sav")
+				ohsOVERSEER<<stormtrooper
 				return
 		if("List Stormtroopers Leader(s)")
 			ohslDisplay()
