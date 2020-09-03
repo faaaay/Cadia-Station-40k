@@ -81,6 +81,7 @@ UltraMarines
 	name = "Brother [rndname]"
 	real_name = "Brother [rndname]"
 	equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
+	equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/umpowerarmor, slot_wear_suit)
 	equip_to_slot_or_del(new /obj/item/clothing/shoes/magboots/um, slot_shoes)
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/um, slot_gloves)

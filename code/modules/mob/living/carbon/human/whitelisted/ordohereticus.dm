@@ -23,6 +23,7 @@ Ordo Hereticus
 				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/DK, slot_shoes)
 				equip_to_slot_or_del(new /obj/item/clothing/gloves/black, slot_gloves)
+				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 				var/obj/item/weapon/card/id/ordohereticus/W = new
 				W.access = get_all_accesses()
 				W.access += get_centcom_access("Inquisitor")
@@ -39,6 +40,7 @@ Ordo Hereticus
 				equip_to_slot_or_del(new /obj/item/clothing/gloves/black, slot_gloves)
 				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/bodyguard, slot_wear_suit)
 				equip_to_slot_or_del(new /obj/item/clothing/head/bodyguard, slot_head)
+				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 				var/obj/item/weapon/card/id/ordohereticus/W = new
 				W.access = get_all_accesses()
 				W.access += get_centcom_access("Inquisitor")
@@ -53,6 +55,7 @@ Ordo Hereticus
 				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/DK, slot_shoes)
 				equip_to_slot_or_del(new /obj/item/clothing/gloves/black, slot_gloves)
+				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 				var/obj/item/weapon/card/id/ordohereticus/W = new
 				W.access = get_all_accesses()
 				W.access += get_centcom_access("Inquisitor")
@@ -73,6 +76,7 @@ Ordo Hereticus
 	equip_to_slot_or_del(new /obj/item/clothing/shoes/DK, slot_shoes)
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/black, slot_gloves)
 	equip_to_slot_or_del(new /obj/item/clothing/mask/gas/stormtroop, slot_wear_mask)
+	equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 	var/obj/item/weapon/card/id/ordohereticus/W = new
 	W.access = get_all_accesses()
 	W.access += get_centcom_access("Inquisitor")
@@ -102,6 +106,7 @@ Ordo Hereticus
 	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/inq, slot_wear_suit)
 	equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots, slot_shoes)
 	equip_to_slot_or_del(new /obj/item/clothing/head/inqhat, slot_head)
+	equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/laspistol2, slot_s_store)
 	equip_to_slot_or_del(new /obj/item/device/pda/lawyer, slot_in_backpack)
 	equip_to_slot_or_del(new /obj/item/weapon/powersword/pknife, slot_belt)

@@ -1,5 +1,5 @@
 /*
-RTD system- Goosecode.
+RTD system- Goosecode. For anyone reading this or hosting this code in the future, adding/removing/editing these sav files is done ingame by a mob named sprucegoose or Bruce - he is the all powerful admin goose. When you possess him you have access to a tab named RTD and a password button, the password is ADC - this will then allow you to edit factions.
 */
 
 var/list/availfaction = list("KRIEGER")

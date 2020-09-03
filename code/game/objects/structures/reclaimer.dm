@@ -58,12 +58,12 @@ var/tyranids = list() //You probably want to put this somewhere else I am just s
 							qdel(T)
 					if("Genestealer (1000)")
 						src << {"<span class='noticealien'>Disabled because Lazy coder</span>"}
-						/*if(T.powerc(1000))
+						if(T.powerc(1000))
 							T.adjustToxLoss(-900)
 							var/mob/living/carbon/alien/humanoid/new_xeno = new /mob/living/carbon/alien/humanoid/tyranid/genestealer(T.loc)
 							if(T.mind)	T.mind.transfer_to(new_xeno)
 							new_xeno.adjustToxLoss(T.getPlasma()) //Any biomass on top of what you spend evolving you keep.
-							qdel(T)*/
+							qdel(T)
 					if("Lictor (2500)")
 						if(T.powerc(2500))
 							T.adjustToxLoss(-2250)

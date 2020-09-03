@@ -4,8 +4,8 @@ Plague Marines
 */
 
 /mob/living/carbon/human/whitelisted/pmleader
-	name = "Lord Corpsus"
-	real_name = "Lord Corpsus"
+	name = "Kornus the Maledictor"
+	real_name = "Kornus the Maledictor"
 	universal_speak = 1
 	gender = "male"
 	maxHealth = 300

@@ -19,6 +19,7 @@ Imperial Guard
 	equip_to_slot_or_del(new /obj/item/clothing/shoes/DK, slot_shoes)
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/black, slot_gloves)
 	equip_to_slot_or_del(new /obj/item/clothing/mask/gas/sechailer/DK, slot_wear_mask)
+	equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 	equip_to_slot_or_del(new /obj/item/clothing/head/DKhelmet, slot_head)
 	equip_to_slot_or_del(new /obj/item/weapon/complexsword/DKsword, slot_belt)
 	equip_to_slot_or_del(new /obj/item/weapon/tank/emergency_oxygen/double/DK, slot_r_store)

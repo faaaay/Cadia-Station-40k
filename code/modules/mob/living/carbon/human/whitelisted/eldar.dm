@@ -30,6 +30,7 @@ Eldar
 	equip_to_slot_or_del(new /obj/item/device/radio/headset, slot_ears)
 	equip_to_slot_or_del(new /obj/item/clothing/under/color/lightpurple, slot_w_uniform)
 	equip_to_slot_or_del(new /obj/item/clothing/head/eldarhat, slot_head)
+	equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 	equip_to_slot_or_del(new /obj/item/clothing/shoes/space_ninja, slot_shoes)
 	equip_to_slot_or_del(new /obj/item/device/webwaysummons, slot_in_backpack)
 	equip_to_slot_or_del(new /obj/item/device/soulstone, slot_in_backpack)
