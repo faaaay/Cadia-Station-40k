@@ -171,7 +171,7 @@
 				U << text("<span class='notice'>Hm... Your costume is nearly complete. Once it is, you will be nearer to finalizing your oath to Cegorach. But now you need something to cap off your apparel... Something to protect you in battle and deliver the right performance at once. The coat of a true harlequin.\n\nNow, apparently the human's have a celebrity stationed at this place. I am sure they can help you with a matter of fashion like this. The autodrobe on that ship probably has something good for your needs. The celebrity though... You have an unexplainable sense of unease. Best be careful.</span>")
 				U.purity--
 			if(-26)
-				U << text("<span class='notice'>You don't remember how this got in your pocket... It might be the work of the laughing god. You have a feeling it will help you get the armor you need.</span>")
+				U << text("<span class='notice'>You don't remember how this got in your pocket... It might be the work of the laughing god. You have a feeling it will help you get the armor you need. Seek out the celebrity, the autodrobe on his ship can give you what you need.</span>")
 				U.visible_message("[U] fishes a strange coin out of \his pocket!")
 				new /obj/item/weapon/coin/harlequin(U.loc)
 				U.purity--

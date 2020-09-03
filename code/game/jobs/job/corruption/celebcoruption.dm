@@ -55,7 +55,7 @@ for the negative portions. -Norc
 				U << text("<span class='notice'>What the crap? This isn't beer. It has to be a beer- just like old times. A beer in a beer bottle with a label on it that says 'space beer'. AND you have to be holding it in your hand!")
 				return
 		if(-2)
-			U << text("<span class='notice'>Oh man that was nice! That really hit the spot. You know what would wash this down? Some blow. We need to get our hands on some laserbrain dust. I'm pretty sure there is some inside your ship some where.</span>")
+			U << text("<span class='notice'>Oh man that was nice! That really hit the spot. You know what would wash this down? Some blow. We need to get our hands on some laserbrain dust. Rumor is the pusher keeps his stock hidden somewhere in maintainance.</span>")
 			U.maxHealth = 150
 			U.health = 150
 			U.purity--
