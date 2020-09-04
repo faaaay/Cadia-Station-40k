@@ -513,7 +513,7 @@ Heavy Bolter
 	attack_verb = list("bludgeoned")
 	var/projectiles_per_shot = 3
 	var/deviation = 0
-	var/projectiles = 100000000
+	var/projectiles = 10000000000
 	var/cooldown = 1
 	var/projectile = /obj/item/projectile/bullet/gyro/heavy
 

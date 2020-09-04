@@ -341,7 +341,7 @@ Thousand Sons
 /mob/living/carbon/human/whitelisted/ksons/leader/proc/ksonsDisplay()
 	var/name = "Current Membership"
 
-	var/msg = "<b>Current Members: (MAKE SURE THESE CKEYS ARE EXACT!):</b>\n"
+	var/msg = "<b>Current Members: (MAKE SURE THESE CKEYS ARE EXACT AND LOWERCASE):</b>\n"
 
 	for(var/C in ksons)
 		msg += "\t[C]"

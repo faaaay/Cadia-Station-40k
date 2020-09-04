@@ -636,7 +636,7 @@ Update: What have we created? something awful -wel ard
 
 		if("SMLEADER")
 			message_admins("[usr.key] executed RTD faction: SalamanderMarine Leader.", 0)
-			usr << "\blue You are a Salamander Marine!"
+			usr << "\blue You are the leader of this Salamander squad!"
 			usr.loc = get_turf(locate("landmark*smstart"))
 			var/mob/living/carbon/human/whitelisted/sm/leader/new_character = new(usr.loc)
 			new_character.key = usr.key
@@ -644,7 +644,7 @@ Update: What have we created? something awful -wel ard
 
 		if("TAULEADER")
 			message_admins("[usr.key] executed RTD faction: Tau Leader.", 0)
-			usr << "\blue You are Tau!"
+			usr << "\blue You are the leader of this Tau cadre!"
 			usr.loc = get_turf(locate("landmark*taustart"))
 			var/mob/living/carbon/human/tau/leader/new_character = new(usr.loc)
 			new_character.key = usr.key

@@ -154,7 +154,7 @@ UltraMarines
 
 			if("For tah emparah")
 				qdel(src.head)
-
+											//this is a new experimental choose your own loadout build
 	/*spawn(20)
 				var/obj/item/weapon/card/id/W = new
 				W.icon_state = "umcard"

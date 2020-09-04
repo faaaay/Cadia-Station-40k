@@ -603,13 +603,13 @@ Ravener
 		src << "\blue You cannot devour nothing!"
 
 /mob/living/carbon/alien/humanoid/tyranid/ravener/verb/evolution() //High progression cost because raveners have a source of biomass, a short progression path, and significant buffs in this.
-	set name = "Evolution (1000)"
+	set name = "Evolution (900)"
 	set desc = "Adapt and become more powerful."
 	set category = "Alien"
 	if(evol_stage >= 5)
 		src << "\red You are already fully developed."
 		return
-	if(powerc(1000))
+	if(powerc(900))
 		evol_stage += 1
 		switch(evol_stage)
 			if(1)

@@ -1,3 +1,4 @@
+/* //testing to see if this fixs SM apoths not spawning with correct suit
 /mob/living/carbon/human/whitelisted/sm
 	name = "Unknown"
 	real_name = "Unknown"
@@ -45,4 +46,4 @@
 
 /mob/living/carbon/human/whitelisted/sm/adjustFireLoss(var/amount)
 	return
-
+*/
