@@ -161,12 +161,12 @@
 	return
 
 /mob/living/carbon/alien/humanoid/tyranid/proc/mine()
-	set name = "Spore Mine (750)"
+	set name = "Spore Mine (1000)"
 	set desc = "Produce an explosive spore mine."
 	set category = "Alien"
 
-	if(powerc(750))
-		adjustToxLoss(-750)
+	if(powerc(1000))
+		adjustToxLoss(-1000)
 		src << "<span class='userdanger'>You produce a spore mine.</span>"
 		for(var/mob/O in viewers(src, null))
 			O.show_message(text("<span class='userdanger'>[src] produces a spore mine!</span>"), 1)

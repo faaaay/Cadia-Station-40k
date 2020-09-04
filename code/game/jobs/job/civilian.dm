@@ -144,7 +144,7 @@ Cargo Technician
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the quartermaster and the Seneschal"
+	supervisors = "the Munitorum Priest and the Seneschal"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/cargo
@@ -170,7 +170,7 @@ Shaft Miner
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "the quartermaster and the Seneschal"
+	supervisors = "the Munitorum Priest and the Seneschal"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/shaftminer

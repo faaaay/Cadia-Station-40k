@@ -81,7 +81,7 @@
 	icon = 'icons/obj/largeprojectiles.dmi'
 	icon_state = "melta"
 	nodamage = 0
-	damage = 50
+	damage = 60
 	temperature = 30000
 	trace_residue = "Unfocused charring patterns."
 	piercing = 10

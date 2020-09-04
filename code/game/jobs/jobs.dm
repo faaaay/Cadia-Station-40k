@@ -46,10 +46,10 @@ var/const/ELDARSPY			=(1<<2)
 var/list/assistant_occupations = list(
 	"Assistant",
 	"Atmospheric Technician",
-	"Cargo Technician",
+	"Munitorum Adept",
 	"Chaplain",
 	"Lawyer",
-	"Librarian"
+	"Record Keeper"
 )
 
 
@@ -94,9 +94,9 @@ var/list/civilian_positions = list(
 	"Botanist",
 	"Chef",
 	"Janitor",
-	"Librarian",
-	"Quartermaster",
-	"Cargo Technician",
+	"Record Keeper",
+	"Munitorum Priest",
+	"Munitorum Adept",
 	"Shaft Miner",
 	"Inquisitor",
 	"Chaplain",

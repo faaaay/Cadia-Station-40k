@@ -157,7 +157,7 @@ client/proc/one_click_antag()
 	for(var/mob/dead/observer/G in player_list)
 		if(!jobban_isbanned(G, "wizard") && !jobban_isbanned(G, "Syndicate"))
 			spawn(0)
-				switch(alert(G, "Our spy has failed, it is your turn, wipe them all out. Will you accept the call?","Yes","No"))
+				switch(alert(G, "Our spy has failed, it is your turn, wipe them all out. Will you accept the call?","Please answer quickly!","Yes","No"))
 					if("Yes")
 						if((world.time-time_passed)>300)//If more than 30 game seconds passed.
 							return

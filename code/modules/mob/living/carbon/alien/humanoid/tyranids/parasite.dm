@@ -6,8 +6,8 @@
 	icon_living = "ripper"
 	icon_dead = "ripper_dead"
 	health = 30
-	melee_damage_lower = 3
-	melee_damage_upper = 3
+	melee_damage_lower = 0
+	melee_damage_upper = 0
 	attacktext = "bumps into"
 	speed = 0
 	wander = 1

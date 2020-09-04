@@ -115,7 +115,7 @@ Doesn't work on other aliens/AI.*/
 
 			adjustToxLoss(-100)
 			new /obj/effect/acid(get_turf(O), O)
-			visible_message("\green <B>[src] you begin to claw at the obkject before you. [O]. It begins to visibly weaken under your assault!</B>")
+			visible_message("\green <B>[src] you begin to claw at the object before you, the [O]. It begins to visibly weaken under your assault!</B>")
 		else
 			src << "\green Target is too far away."
 	return

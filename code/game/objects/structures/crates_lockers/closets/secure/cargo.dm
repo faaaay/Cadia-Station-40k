@@ -21,7 +21,7 @@
 		return
 
 /obj/structure/closet/secure_closet/quartermaster
-	name = "\proper quartermaster's locker"
+	name = "\proper munitorum priest's locker"
 	req_access = list(access_qm)
 	icon_state = "secureqm1"
 	icon_closed = "secureqm"

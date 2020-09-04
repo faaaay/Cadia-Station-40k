@@ -430,13 +430,13 @@
 
 	switch(target_strength - ticks)
 		if(6)
-			visible_message("<span class='warning'>[target] is holding up against the acid!</span>")
+			visible_message("<span class='warning'>[target] is holding up against your attack!</span>")
 		if(4)
-			visible_message("<span class='warning'>[target] is being melted by the acid!</span>")
+			visible_message("<span class='warning'>[target] is being cut to ribbons by your claws!</span>")
 		if(2)
-			visible_message("<span class='warning'>[target] is struggling to withstand the acid!</span>")
+			visible_message("<span class='warning'>[target] is struggling to withstand your claws!</span>")
 		if(0 to 1)
-			visible_message("<span class='warning'>[target] begins to crumble under the acid!</span>")
+			visible_message("<span class='warning'>[target] begins to crumble under your assault!</span>")
 
 	spawn(rand(150, 200))
 		if(src)

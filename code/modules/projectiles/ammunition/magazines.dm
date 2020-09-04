@@ -217,7 +217,7 @@
 	icon_state = "sicklemag"
 	ammo_type = /obj/item/ammo_casing/caseless/a75
 	caliber = "75"
-	max_ammo = 25
+	max_ammo = 30
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/bpistolmag
@@ -312,5 +312,5 @@
 	icon_state = "sicklemaginf"
 	ammo_type = /obj/item/ammo_casing/caseless/inferno
 	caliber = "75"
-	max_ammo = 25
+	max_ammo = 30
 	multiple_sprites = 2

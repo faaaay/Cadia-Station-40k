@@ -250,7 +250,7 @@ Bolters
 	chainb = 0
 	canscope = 1
 	canattach = 0
-	force = 32
+	force = 40
 	throwforce = 12
 	attack_verb = list("mauled" , "mutilated" , "lacerated" , "ripped" , "torn")
 
@@ -292,7 +292,7 @@ Flamer
 	var/projectiles_per_shot = 20
 	var/deviation = 0.5
 	var/projectile
-	var/projectiles = 100000000
+	var/projectiles = 1000000
 	var/cooldown = 1
 	var/lit = 0
 	projectile = /obj/item/projectile/bullet/fire
@@ -356,10 +356,10 @@ Hand Flamer
 	icon_state = "handflamer_off"
 	item_state = "handflamer_off"
 	w_class = 2 //Pocket sized!
-	var/projectiles_per_shot = 2
+	var/projectiles_per_shot = 5
 	var/deviation = 0
 	var/projectile
-	var/projectiles = 100000000
+	var/projectiles = 1000000
 	var/cooldown = 1
 	var/lit = 0
 	projectile = /obj/item/projectile/bullet/fire
@@ -427,9 +427,9 @@ Heavy Flamer
 	throw_range = 0
 	force = 15
 	attack_verb = list("bludgeoned")
-	var/projectiles_per_shot = 35
+	var/projectiles_per_shot = 25
 	var/deviation = 0.85
-	var/projectiles = 100000000
+	var/projectiles = 1000000
 	var/cooldown = 1
 	var/lit = 0
 	var/projectile = /obj/item/projectile/bullet/fire
@@ -509,11 +509,11 @@ Heavy Bolter
 	item_state = "hbolter"
 	w_class = 5
 	throw_range = 0
-	force = 30
+	force = 35
 	attack_verb = list("bludgeoned")
 	var/projectiles_per_shot = 3
 	var/deviation = 0
-	var/projectiles = 1000000000
+	var/projectiles = 100000000
 	var/cooldown = 1
 	var/projectile = /obj/item/projectile/bullet/gyro/heavy
 
@@ -630,7 +630,7 @@ Shoota
 	icon_state = "snazzgun"
 	item_state = "slugga"
 	w_class = 5
-	var/projectiles_per_shot = 10
+	var/projectiles_per_shot = 15
 	var/deviation = 0.5
 	var/projectile
 	var/projectiles = 100000000
@@ -697,7 +697,7 @@ Storm Bolter
 	var/projectiles_per_shot = 5
 	var/deviation = 0
 	var/projectile
-	var/projectiles = 100000000
+	var/projectiles = 10000000
 	var/cooldown = 0
 	projectile = /obj/item/projectile/bullet/gyro
 
