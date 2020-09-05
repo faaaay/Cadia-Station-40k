@@ -25,7 +25,7 @@ Ordo Hereticus
 				equip_to_slot_or_del(new /obj/item/clothing/gloves/combat/inquisitor, slot_gloves)
 				equip_to_slot_or_del(new /obj/item/clothing/mask/gas/stormtroop, slot_wear_mask)
 				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/shocktrooper, slot_wear_suit)
-				equip_to_slot_or_del(new /obj/item/clothing/head/cadianhelmet, slot_wear_head)
+				equip_to_slot_or_del(new /obj/item/clothing/head/cadianhelmet, slot_head)
 				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/stormtropper, slot_back)
 				equip_to_slot_or_del(new /obj/item/weapon/complexknife/combatknife, slot_in_backpack)
@@ -83,7 +83,8 @@ Ordo Hereticus
 	..()
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
 	R.set_frequency(1441)
-		equip_to_slot_or_del(R, slot_ears)
+	equip_to_slot_or_del(R, slot_ears)
+	spawn(20)
 		equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
 		equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
 		equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
@@ -93,7 +94,7 @@ Ordo Hereticus
 		equip_to_slot_or_del(new /obj/item/clothing/head/cadianhelmet, slot_head)
 		equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/stormtropper, slot_back)
 		equip_to_slot_or_del(new /obj/item/weapon/complexknife/combatknife, slot_in_backpack)
-		
+
 	var/obj/item/weapon/card/id/ordohereticus/W = new
 	W.access = get_all_accesses()
 	W.access += get_centcom_access("Inquisitor")
