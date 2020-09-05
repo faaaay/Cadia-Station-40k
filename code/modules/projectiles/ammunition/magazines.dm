@@ -260,16 +260,14 @@
 	ammo_type = /obj/item/ammo_casing/hellgun
 	caliber = "laser"
 	max_ammo = 25
-	multiple_sprites = 2
-
+	
 /obj/item/ammo_box/magazine/laspistolmag
 	name = "Laspistol Mag"
 	icon_state = "laspistolmag"
 	ammo_type = /obj/item/ammo_casing/lasgun
 	caliber = "laser"
 	max_ammo = 80
-	multiple_sprites = 2
-
+	
 /obj/item/ammo_box/magazine/lascannonmag
 	name = "Lascannon Power Pack"
 	icon_state = "lasgunmag"
