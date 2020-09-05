@@ -228,7 +228,7 @@ Security Officer
 		H.equip_to_slot_or_del(new /obj/item/device/flashlight/seclite, slot_in_backpack)
 
 	spawn(10)
-		var/weaponchoice = input(H, "Select a weapon.","Weapon Selection") as null|anything in list("Guardsman's Sword", "Mercy Chainsword", "Lasgun (Fully Equipped)", "Long-Las", "Stubber Pistol", "Reinforced Flak Armor")
+		var/weaponchoice = input(H, "Select a weapon.","Weapon Selection") as null|anything in list("Guardsman's Sword", "Mercy Chainsword", "Lasgun (Fully Equipped)", "Long-Las", "Stubber Pistol", "Autogun (Fully Equipped)", "Reinforced Flak Armor")
 		switch(weaponchoice)
 			if("Guardsman's Sword")
 				H.equip_to_slot_or_del(new /obj/item/weapon/complexsword/IGsword(H), slot_r_hand)
@@ -240,6 +240,9 @@ Security Officer
 				H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/longlas(H), slot_r_hand)
 			if("Stubber Pistol")
 				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/pistol(H), slot_r_hand)
+			if("Autogun (Fully Equipped)")
+				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/autogun2, slot_r_hand)
+				H.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/autogun, slot_r_store)
 			if("Reinforced Flak Armor")
 				if(!H.unEquip(H.wear_suit))
 					qdel(H.wear_suit)
