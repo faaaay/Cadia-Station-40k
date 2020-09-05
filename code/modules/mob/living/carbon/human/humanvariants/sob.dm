@@ -132,6 +132,7 @@ on death
 	var/mob/living/carbon/human/P = src
 	revive(P)
 	for(var/datum/reagent/R in P.reagents.reagent_list)
+		P.reagents.clear_reagents()
 		P.reagents.add_reagent("alkysine",5)
 	P.maxHealth = 5000
 	P.health = 5000
