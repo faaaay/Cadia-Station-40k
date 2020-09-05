@@ -46,7 +46,7 @@ Ordo Hereticus
 				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/bodyguard, slot_wear_suit)
 				equip_to_slot_or_del(new /obj/item/clothing/head/bodyguard, slot_head)
 				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
-				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/stormtropper, slot_back)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/inq, slot_back)
 				equip_to_slot_or_del(new /obj/item/weapon/complexknife/combatknife, slot_in_backpack)
 				var/obj/item/weapon/card/id/ordohereticus/W = new
 				W.access = get_all_accesses()
