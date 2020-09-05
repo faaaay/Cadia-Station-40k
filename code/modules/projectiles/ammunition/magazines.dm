@@ -226,7 +226,11 @@
 	ammo_type = /obj/item/ammo_casing/caseless/a75
 	caliber = "75"
 	max_ammo = 10
-	multiple_sprites = 2
+	multiple_sprites = 1
+
+/obj/item/ammo_box/magazine/bpistolmag/update_icon()
+	..()
+	icon_state = "[initial(icon_state)]-[round(ammo_count(),10)]"
 
 /obj/item/ammo_box/magazine/sluggamag
 	name = "Sickle Magazine"
