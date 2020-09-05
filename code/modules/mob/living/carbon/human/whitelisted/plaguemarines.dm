@@ -99,8 +99,8 @@ Plague Marines
 	var/namelist = list ("Nas", "Chod", "Keras", "Treg", "Lidacus", "Creasion", "Crasius", "Nabrus", "Soras", "Kylus", "Logren", "Crecep", "Meridian", "Davros", "Drusus", "Razal", "Ferox", "Nacret")
 	var/rndname = pick(namelist)
 
-	name = "Disciple [rndname]"
-	real_name = "Disciple [rndname]"
+	name = "Plaguebearer [rndname]"
+	real_name = "Plaguebearer [rndname]"
 	sleep(10)
 	regenerate_icons()
 	rename_self("[name]")
