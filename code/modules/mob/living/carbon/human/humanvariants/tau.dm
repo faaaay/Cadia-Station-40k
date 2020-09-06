@@ -42,6 +42,9 @@
 				equip_to_slot_or_del(new /obj/item/weapon/grenade/photon, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/weapon/grenade/photon, slot_l_store)
 				equip_to_slot_or_del(new /obj/item/weapon/gun/energy/pulse_rifle/tau/pistol, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel, slot_back)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/firstaid/regular, slot_in_backpack)
+
 				var/obj/item/weapon/card/id/tau/firecaste/W = new
 				W.icon_state = "shas"
 				W.assignment = "Tau Fire Warrior"
@@ -63,6 +66,7 @@
 				equip_to_slot_or_del(new /obj/item/weapon/grenade/photon, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/weapon/grenade/photon, slot_l_store)
 				equip_to_slot_or_del(new /obj/item/weapon/gun/energy/pulse_rifle/tau/pistol, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel, slot_back)
 				var/obj/item/weapon/card/id/tau/firecaste/W = new
 				W.icon_state = "shas"
 				W.assignment = "Tau Fire Warrior"
@@ -79,6 +83,7 @@
 				equip_to_slot_or_del(new /obj/item/device/tau/drone/controller, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/weapon/tau/drone/gun, slot_l_hand)
 				equip_to_slot_or_del(new /obj/item/weapon/gun/energy/pulse_rifle/tau/pistol, slot_r_hand)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel, slot_back)
 				real_name = "Por [rndname]"
 				var/obj/item/weapon/card/id/tau/watercaste/W = new
 				W.icon_state = "por"
@@ -95,6 +100,7 @@
 				equip_to_slot_or_del(new /obj/item/clothing/under/tau/watercaste, slot_w_uniform)
 				equip_to_slot_or_del(new /obj/item/device/tau/drone/controller, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/weapon/tau/drone/gun, slot_r_hand)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel, slot_back)
 				real_name = "Por [rndname]"
 				var/obj/item/weapon/card/id/tau/watercaste/W = new
 				W.icon_state = "por"
