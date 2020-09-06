@@ -2,7 +2,7 @@
 
 proc/specialedits(var/mob/living/carbon/alien/humanoid/tyranid/T)
 	//I want to make special character stuff application-based... Gonna encourage the faction members to apply for this stuff.
-	if(T.key == "DrakeMarshall")
+	if(T.key == "Bobrossnibba")
 		var/evolchoice
 		evolchoice = input("Choose what you wish to evolve into.","Tyranid Evolution") as null|anything in list("Hormagaunt","Warrior","Genestealer","Lictor","Ravener","Venomthropes","Zoanthropes")
 		switch(evolchoice)

@@ -28,14 +28,14 @@ Doesn't work on other aliens/AI.*/
 	else	return 1
 
 /mob/living/carbon/alien/humanoid/verb/plant()
-	set name = "Plant Weeds (50)"
-	set desc = "Plants some alien weeds"
+	set name = "Spread nest (50)"
+	set desc = "Grows the nest"
 	set category = "Alien"
 
 	if(powerc(50,1))
 		adjustToxLoss(-50)
 		for(var/mob/O in viewers(src, null))
-			O.show_message(text("\green <B>[src] has planted some alien weeds!</B>"), 1)
+			O.show_message(text("\green <B>[src] has expanded the nest!</B>"), 1)
 		new /obj/structure/alien/weeds/node(loc)
 	return
 
@@ -67,8 +67,8 @@ Doesn't work on other aliens/AI.*/
 	return
 
 /mob/living/carbon/alien/humanoid/verb/transfer_plasma(mob/living/carbon/alien/M as mob in oview())
-	set name = "Transfer Plasma"
-	set desc = "Transfer Plasma to another alien"
+	set name = "Transfer biomass"
+	set desc = "Transfers biomass to another alien"
 	set category = "Alien"
 
 	if(isalien(M))
@@ -79,16 +79,16 @@ Doesn't work on other aliens/AI.*/
 				if (get_dist(src,M) <= 1)
 					M.adjustToxLoss(amount)
 					adjustToxLoss(-amount)
-					M << "\green [src] has transfered [amount] plasma to you."
-					src << {"\green You have trasferred [amount] plasma to [M]"}
+					M << "\green [src] has transfered [amount] biomass to you."
+					src << {"\green You have trasferred [amount] biomass to [M]"}
 				else
 					src << "\green You need to be closer."
 	return
 
 
 /mob/living/carbon/alien/humanoid/proc/corrosive_acid(O as obj|turf in oview(1)) //If they right click to corrode, an error will flash if its an invalid target./N
-	set name = "Corrossive Acid (100)"
-	set desc = "Drench an object in acid, destroying it over time."
+	set name = "Tear through object (100)"
+	set desc = "You begin to tear through the object, you will be through it shortly."
 	set category = "Alien"
 
 	if(powerc(100))
@@ -97,25 +97,25 @@ Doesn't work on other aliens/AI.*/
 			if(isobj(O))
 				var/obj/I = O
 				if(I.unacidable)	//So the aliens don't destroy energy fields/singularies/other aliens/etc with their acid.
-					src << "\green You cannot dissolve this object."
+					src << "\green You cannot tear through this object."
 					return
 			// TURF CHECK
 			else if(istype(O, /turf/simulated))
 				var/turf/T = O
 				// R WALL
 				if(istype(T, /turf/simulated/wall/r_wall))
-					src << "\green You cannot dissolve this object."
+					src << "\green You cannot tear through object."
 					return
 				// R FLOOR
 				if(istype(T, /turf/simulated/floor/engine))
-					src << "\green You cannot dissolve this object."
+					src << "\green You cannot tear through object."
 					return
 			else// Not a type we can acid.
 				return
 
 			adjustToxLoss(-100)
 			new /obj/effect/acid(get_turf(O), O)
-			visible_message("\green <B>[src] vomits globs of vile stuff all over [O]. It begins to sizzle and melt under the bubbling mess of acid!</B>")
+			visible_message("\green <B>[src] you begin to claw at the object before you, the [O]. It begins to visibly weaken under your assault!</B>")
 		else
 			src << "\green Target is too far away."
 	return

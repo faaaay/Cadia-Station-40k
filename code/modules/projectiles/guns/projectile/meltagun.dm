@@ -8,7 +8,7 @@
 	var/projectiles_per_shot = 4
 	var/deviation = 0.7
 	var/projectile
-	var/projectiles = 100000000
+	var/projectiles = 1000000
 	var/cooldown = 1
 	projectile = /obj/item/projectile/temp/melta
 
@@ -82,7 +82,7 @@ Multi-Melta
 	attack_verb = list("bludgeoned")
 	var/projectiles_per_shot = 12
 	var/deviation = 0.8
-	var/projectiles = 100000000
+	var/projectiles = 1000000
 	var/cooldown = 1
 	var/projectile = /obj/item/projectile/temp/melta
 

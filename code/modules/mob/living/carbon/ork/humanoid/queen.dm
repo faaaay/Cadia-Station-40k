@@ -2,8 +2,8 @@
 	name = "ork warboss"
 	icon = 'icons/mob/ork.dmi'
 	caste = "q"
-	maxHealth = 250
-	health = 250
+	maxHealth = 450
+	health = 450
 	icon_state = "ork2"
 	status_flags = CANPARALYSE
 	storedwaagh = 500
@@ -62,7 +62,7 @@
 //warboss verbs
 /mob/living/carbon/human/ork/warboss/verb/seeds()
 
-	set name = "Distribute Spores (250)" //Given that every gretchin is now potentially going to get a player eventually, worth raising the price.
+	set name = "Grow sum Gretchez! (250)" //Given that every gretchin is now potentially going to get a player eventually, worth raising the price.
 	set desc = "Throw all this stuff on da ground!."
 	set category = "ork"
 

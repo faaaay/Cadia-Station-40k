@@ -20,6 +20,7 @@
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow, slot_gloves)
 	equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat, slot_wear_mask)
 	equip_to_slot_or_del(new /obj/item/clothing/head/helmet/KBpowerhelmet, slot_head)
+	equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 	equip_to_slot_or_del(new /obj/item/weapon/chainsword/chainaxe2, slot_belt)
 	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)

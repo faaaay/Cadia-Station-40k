@@ -206,12 +206,13 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		usr << "No area available."
 
 	usr.loc = pick(L)
-
+/*
 /mob/dead/observer/verb/enter_the_warp()
 	set category = "Ghost"
 	set name = "Enter the Warp"
 	set desc= "Enter the deep warp (warning, you won't be able to leave once you enter!)"
 	enter_warp(src)
+	*/ //if you enable this be ready for 8billion ahelps of people trapped and unable to get out
 
 /mob/dead/observer/verb/lookforgretchin()
 	set category = "Ghost"
@@ -388,7 +389,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /*
 New Whitelist. Because the old one sucks
-Update: What have we created?
+Update: What have we created? something awful -wel ard
 */
 
 /mob/dead/observer/verb/RTD()
@@ -404,9 +405,10 @@ Update: What have we created?
 	if(ticker.mode.name == "necron")
 		usr << "\blue Reinforcements are cut off! OH MY GOD!!!"
 		return
-	if(world.time - round_start_time < config.shuttle_refuel_delay)
+	/*if(world.time - round_start_time < config.shuttle_refuel_delay)
 		usr << "\blue The round has just begun! Please wait another [abs(round(((world.time - round_start_time) - config.shuttle_refuel_delay)/600))] minutes before trying again."
-		return  //don't want a delay for testing
+		return  *///don't want a delay for testing
+		
 	if(inmenu)
 		usr << "\blue I didn't learn to code yesterday. First- close the menu you already have open."
 		return
@@ -425,6 +427,7 @@ Update: What have we created?
 		inmenu = 1
 		researchavailable()
 		return
+		
 
 /mob/dead/observer/proc/researchavailable()
 	var/RTDoptions = list("")
@@ -513,7 +516,7 @@ Update: What have we created?
 
 		if("ULTRAMARINES")
 			message_admins("[usr.key] executed RTD faction: Ultramarine.", 0)
-			usr << "\blue You are an UltraMarine on your way back to Ultramar. There is a distress call from ArchAngel IV."
+			usr << "\blue You are an UltraMarine on your way back to Macragge. There is a distress call from ArchAngel IV."
 			usr.loc = get_turf(locate("landmark*UMteam"))
 			var/mob/living/carbon/human/whitelisted/um/new_character = new(usr.loc)
 			new_character.key = usr.key
@@ -618,7 +621,7 @@ Update: What have we created?
 
 		if("TYRANIDS")
 			message_admins("[usr.key] executed RTD faction: Tyranid.", 0)
-			usr << "\blue You are a Tyranid. ITS TIME FOR SUPPER!"
+			usr << "\blue You are a Tyranid. Devour all the biomass this world has to offer!"
 			usr.loc = get_turf(locate("landmark*wtyranidstart"))
 			var/mob/living/carbon/alien/larva/tyranid/new_character = new(usr.loc)
 			new_character.key = usr.key
@@ -634,7 +637,7 @@ Update: What have we created?
 
 		if("SMLEADER")
 			message_admins("[usr.key] executed RTD faction: SalamanderMarine Leader.", 0)
-			usr << "\blue You are a Salamander Marine!"
+			usr << "\blue You are the leader of this Salamander squad!"
 			usr.loc = get_turf(locate("landmark*smstart"))
 			var/mob/living/carbon/human/whitelisted/sm/leader/new_character = new(usr.loc)
 			new_character.key = usr.key
@@ -642,7 +645,7 @@ Update: What have we created?
 
 		if("TAULEADER")
 			message_admins("[usr.key] executed RTD faction: Tau Leader.", 0)
-			usr << "\blue You are Tau!"
+			usr << "\blue You are the leader of this Tau cadre!"
 			usr.loc = get_turf(locate("landmark*taustart"))
 			var/mob/living/carbon/human/tau/leader/new_character = new(usr.loc)
 			new_character.key = usr.key
@@ -650,7 +653,7 @@ Update: What have we created?
 
 		if("ELDARLEADER")
 			message_admins("[usr.key] executed RTD faction: Eldar Leader.", 0)
-			usr << "\blue You are an Eldar!"
+			usr << "\blue You are the leader of an Eldar strike force!"
 			usr.loc = get_turf(locate("landmark*eldarstart"))
 			var/mob/living/carbon/human/whitelisted/eldar/leader/new_character = new(usr.loc)
 			new_character.key = usr.key
@@ -658,7 +661,7 @@ Update: What have we created?
 
 		if("RAVENLEADER")
 			message_admins("[usr.key] executed RTD faction: RavenGuard Leader.", 0)
-			usr << "\blue You are a RavenGuard!"
+			usr << "\blue You are a Raven Guard!"
 			usr.loc = get_turf(locate("landmark*rgstart"))
 			var/mob/living/carbon/human/whitelisted/ravenguardhead/new_character = new(usr.loc)
 			new_character.key = usr.key
@@ -666,7 +669,7 @@ Update: What have we created?
 
 		if("TYRANIDLEADER")
 			message_admins("[usr.key] executed RTD faction: Tyranid Leader.", 0)
-			usr << "\blue You are a Tyranid!"
+			usr << "\blue You are a Tyranid! Devour all the biomass this world has to offer!"
 			usr.loc = get_turf(locate("landmark*wtyranidstart"))
 			var/mob/living/carbon/alien/humanoid/tyranid/lictor/leader/new_character = new(usr.loc)
 			new_character.key = usr.key

@@ -17,8 +17,8 @@
 
 
 /obj/item/clothing/under/rank/cargo
-	name = "quartermaster's jumpsuit"
-	desc = "It's a jumpsuit worn by the quartermaster. It's specially designed to prevent back injuries caused by pushing paper."
+	name = "Munitorum Priest's jumpsuit"
+	desc = "It's a jumpsuit worn by the Munitorum Priest. It's specially designed to prevent back injuries caused by pushing paper."
 	icon_state = "qm"
 	item_state = "lb_suit"
 	item_color = "qm"

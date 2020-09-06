@@ -4,10 +4,13 @@ Eldar
 */
 
 /mob/living/carbon/human/whitelisted/eldar/leader
-	name = "Outcast Marseus Kaeyla of Iyanden"
-	real_name = "Outcast Marseus Kaeyla of Iyanden"
+	name = "Aeldra, the Master Cataloger"
+	real_name = "Aeldra, the Master Cataloger"
 	universal_speak = 1
 	gender = "female"
+	maxHealth = 150
+	health = 150
+	status_flags = 0
 
 /mob/living/carbon/human/whitelisted/eldar
 	name = "Unknown"
@@ -16,6 +19,9 @@ Eldar
 	gender = "female"
 	var/instealth = 0
 	var/s_cooldown = 0
+	maxHealth = 150
+	health = 150
+	status_flags = 0
 
 /mob/living/carbon/human/whitelisted/eldar/New()
 	verbs.Add(/mob/living/carbon/human/whitelisted/eldar/verb/lungeat, /mob/living/carbon/human/whitelisted/eldar/verb/stealth)
@@ -24,6 +30,7 @@ Eldar
 	equip_to_slot_or_del(new /obj/item/device/radio/headset, slot_ears)
 	equip_to_slot_or_del(new /obj/item/clothing/under/color/lightpurple, slot_w_uniform)
 	equip_to_slot_or_del(new /obj/item/clothing/head/eldarhat, slot_head)
+	equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 	equip_to_slot_or_del(new /obj/item/clothing/shoes/space_ninja, slot_shoes)
 	equip_to_slot_or_del(new /obj/item/device/webwaysummons, slot_in_backpack)
 	equip_to_slot_or_del(new /obj/item/device/soulstone, slot_in_backpack)

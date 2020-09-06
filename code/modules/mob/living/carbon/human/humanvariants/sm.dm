@@ -1,3 +1,4 @@
+/* //testing to see if this fixs SM apoths not spawning with correct suit
 /mob/living/carbon/human/whitelisted/sm
 	name = "Unknown"
 	real_name = "Unknown"
@@ -13,7 +14,7 @@
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
 	R.set_frequency(1441)
 	equip_to_slot_or_del(R, slot_ears)
-	equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
+	equip_to_slot_or_del(new /obj/item/clothing/under/surgerycybernetic, slot_w_uniform)
 	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/spowerarmor, slot_wear_suit)
 	equip_to_slot_or_del(new /obj/item/clothing/shoes/magboots/sm, slot_shoes)
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/sm, slot_gloves)
@@ -45,4 +46,4 @@
 
 /mob/living/carbon/human/whitelisted/sm/adjustFireLoss(var/amount)
 	return
-
+*/

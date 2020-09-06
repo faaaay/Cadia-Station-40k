@@ -257,7 +257,7 @@ Zoanthropes
 	set name = "Evolution (1000)"
 	set desc = "Adapt and become more powerful."
 	set category = "Alien"
-	if(evol_stage == 5)
+	if(evol_stage == 6)
 		src << "\red You are already fully developed."
 		return
 	if(powerc(1000))
@@ -267,15 +267,18 @@ Zoanthropes
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/zoanthropes/proc/mindflayershot)
 				src << "<b>You can project mindflayer shots! Press shift+click to fire.</b>"
 			if(2)
+				src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
+				src << "<b>Your senses adapt to the dark!</b>"
+			if(3)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/zoanthropes/proc/berserk)
 				src << "\red You can psychically overwhelm opponents and drive them into a berserk rage."
-			if(3)
+			if(4)
 				src.inhibitor = 1
 				src << "<b>Your psychic presence now inhibits nearby WAAGH.</b>"
-			if(4)
+			if(5)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/zoanthropes/proc/imprison)
 				src << "\red You can surround opponents in psychic walls."
-			if(5)
+			if(6)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/zoanthropes/proc/psythrow)
 				src << "\red You can throw people telekinetically."
 		adjustToxLoss(-1000)
@@ -449,11 +452,11 @@ Ravener
 		user << "\red This tunnel seems to have collapsed."
 
 /mob/living/carbon/alien/humanoid/tyranid/ravener/verb/tunnel()  //Sort of a bizarre mix of spawning a tunnel and a wizard's teleport. -Drake Marshall
-	set name = "Tunnel (20)"
+	set name = "Tunnel (100)"
 	set desc = "Create a tunnel to quickly move tyranids around."
 	set category = "Alien"
 	var/turf/current_location = get_turf(usr)
-	if(powerc(20))
+	if(powerc(100))
 		for(var/turf/simulated/wall/W in range(1,src))
 			src << "\red You cannot dig through walls!"
 			return
@@ -512,7 +515,7 @@ Ravener
 			smoke.start()
 			sleep(10)
 			smoke.start()
-		adjustToxLoss(-50)
+		adjustToxLoss(-100)
 	else
 		src << "\red You need more biomass!"
 
@@ -600,22 +603,25 @@ Ravener
 		src << "\blue You cannot devour nothing!"
 
 /mob/living/carbon/alien/humanoid/tyranid/ravener/verb/evolution() //High progression cost because raveners have a source of biomass, a short progression path, and significant buffs in this.
-	set name = "Evolution (1000)"
+	set name = "Evolution (900)"
 	set desc = "Adapt and become more powerful."
 	set category = "Alien"
-	if(evol_stage >= 4)
+	if(evol_stage >= 5)
 		src << "\red You are already fully developed."
 		return
-	if(powerc(1000))
+	if(powerc(900))
 		evol_stage += 1
 		switch(evol_stage)
 			if(1)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/ravener/proc/grabthrow)
 				src << "\red You can throw opponents."
 			if(2)
+				src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
+				src << "<b>Your senses adapt to the dark!</b>"
+			if(3)
 				src.rending_claws = 1
 				src << "<b>You develop rending claws! Your claws are now able to force airlocks open, and completely ignore armor.</b>"
-			if(3)
+			if(4)
 				var/choice = alert(src, "Enter an option.",,"Toughened Carapace","Fireproofed Scales")
 				switch(choice)
 					if("Toughened Carapace")
@@ -624,7 +630,7 @@ Ravener
 					if("Fireproofed Scales")
 						src.firearmor += 2
 						src << "\red Your scales shield against heat."
-			if(4)
+			if(5)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/regrowth)
 				src << "\red You gain the ability to regenerate off spare biomass."
 		adjustToxLoss(-1000)
@@ -925,7 +931,7 @@ Hormagaunt
 	maxHealth =200
 	health = 200
 	plasma_rate = 40
-	var/speedmod = 2
+	var/speedmod = 1.8
 
 /mob/living/carbon/alien/humanoid/tyranid/hormagaunt/movement_delay()
 	. = -speedmod
@@ -984,7 +990,7 @@ Hormagaunt
 	set name = "Evolution (800)"
 	set desc = "Adapt and become more powerful."
 	set category = "Alien"
-	if(evol_stage >= 4)
+	if(evol_stage >= 5)
 		src << "\red You are already fully developed."
 		return
 	if(powerc(800))
@@ -994,12 +1000,15 @@ Hormagaunt
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/proc/corrosive_acid)
 				src << "\red You gain acid glands."
 			if(2)
+				src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
+				src << "<b>Your senses adapt to the dark!</b>"
+			if(3)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/hormagaunt/proc/talons)
 				src << "\red You adapt scything talons!"
-			if(3)
+			if(4)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/venom)
 				src << "\red You adapt a venomous bite! The venom will make targets react badly to harvest weeds, keeping them away from the hive."
-			if(4)
+			if(5)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/spikes, /mob/living/carbon/alien/humanoid/tyranid/proc/mine)
 				src << "\red You are now able to build spike defenses and spore mines."
 		adjustToxLoss(-800)
@@ -1345,7 +1354,7 @@ Venomthropes
 	set name = "Evolution (500)"
 	set desc = "Adapt and become more powerful."
 	set category = "Alien"
-	if(evol_stage >= 6)
+	if(evol_stage >= 7)
 		src << "\red You are already fully developed."
 		return
 	if(powerc(500))
@@ -1355,22 +1364,25 @@ Venomthropes
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/proc/corrosive_acid)
 				src << "\red You gain acid glands."
 			if(2)
+				src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
+				src << "<b>Your senses adapt to the dark!</b>"
+			if(3)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/venomthropes/proc/sting)
 				src << "\red Your tentacles develop a sting."
-			if(3)
+			if(4)
 				src.reagents.clear_reagents()
 				src.venom_sacs = 1
-				plasma_rate = 7.5
+				plasma_rate = 15
 				src << "<b>You grow additional venom sacs.</b>"
-			if(4)
+			if(5)
 				src.strong_buildings = 1
 				src << "<b>You become better at building walls.</b>"
-			if(5)
+			if(6)
 				src.autogas = 1
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/regrowth)
 				src << "<b>You develop regrowth. Your venom sacs also start flooding additional toxins into the air.</b>"
-			if(6)
-				plasma_rate = 15
+			if(7)
+				plasma_rate = 20
 				src << "<b>You evolve a venom cannon! Use shift+click to fire.</b>"
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/venomthropes/proc/venomshot)
 		adjustToxLoss(-500)

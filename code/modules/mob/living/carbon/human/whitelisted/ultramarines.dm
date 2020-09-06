@@ -4,8 +4,8 @@ UltraMarines
 */
 
 /mob/living/carbon/human/whitelisted/um/leader
-	name = "Sergeant Tiberius"
-	real_name = "Sergeant Tiberius"
+	name = "Captain Helis Dallicus"
+	real_name = "Captain Helis Dallicus"
 	universal_speak = 1
 	gender = "male"
 	health = 250
@@ -81,6 +81,7 @@ UltraMarines
 	name = "Brother [rndname]"
 	real_name = "Brother [rndname]"
 	equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
+	equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/umpowerarmor, slot_wear_suit)
 	equip_to_slot_or_del(new /obj/item/clothing/shoes/magboots/um, slot_shoes)
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/um, slot_gloves)
@@ -153,7 +154,7 @@ UltraMarines
 
 			if("For tah emparah")
 				qdel(src.head)
-
+											//this is a new experimental choose your own loadout build
 	/*spawn(20)
 				var/obj/item/weapon/card/id/W = new
 				W.icon_state = "umcard"

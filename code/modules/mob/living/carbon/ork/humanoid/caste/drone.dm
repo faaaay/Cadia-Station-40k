@@ -1,8 +1,8 @@
 /mob/living/carbon/human/ork/oddboy
 	name = "Ork Oddboy"
 	caste = "d"
-	maxHealth = 150
-	health = 150
+	maxHealth = 200
+	health = 200
 	icon = 'icons/mob/ork.dmi'
 	base_icon_state = "ork2"
 	icon_state = "ork2"

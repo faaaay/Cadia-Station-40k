@@ -75,18 +75,18 @@ Should be near done now.
 						spawn(30) H.emote("cough")
 					if("blind")
 						H << "<b>Your eyes sting!</b>"
-						H.eye_blurry += 5
+						H.eye_blurry += 2
 						H.eye_stat += 1
 						H.eye_blind += 1
 					if("bleeding")
 						if(H.getBruteLoss())
 							H << "<b>Your wounds bleed uncontrollably!</b>"
-							if(H.health > 35)
+							if(H.health > 20)
 								H.adjustOxyLoss(10)
 							var/turf/pos = get_turf(H)
 							pos.add_blood_floor(H)
 					if("necrosis")
-						if(H.health > 20)
+						if(H.health > 15)
 							H.adjustBruteLoss(1)
 					if("nurgling")
 						H << "\blue You feel as if Nurgle really does love you...."
@@ -121,8 +121,8 @@ Should be near done now.
 					if("bleeding")
 						if(H.getBruteLoss())
 							H << "<b>Your wounds bleed uncontrollably!</b>"
-							if(H.health > 35)
-								H.adjustOxyLoss(15)
+							if(H.health > 20)
+								H.adjustOxyLoss(10)
 								H.adjustBruteLoss(2)
 							var/turf/pos = get_turf(H)
 							pos.add_blood_floor(H)
@@ -141,7 +141,7 @@ Should be near done now.
 						H.Stun(1)
 						H.visible_message("<B>[H]</B> vomits on the floor!")
 						var/tox_dam = H.getToxLoss()
-						if(tox_dam < 50)
+						if(tox_dam < 30)
 							H.adjustToxLoss(3)
 						var/turf/pos = get_turf(H)
 						pos.add_blood_floor(H)
@@ -177,7 +177,7 @@ Should be near done now.
 					if("bleeding")
 						if(H.getBruteLoss())
 							H << "<b>Your wounds bleed uncontrollably! You feel lightheaded...</b>"
-							if(H.health > 35)
+							if(H.health > 30)
 								H.adjustOxyLoss(20)
 								H.adjustBruteLoss(5)
 							var/turf/pos = get_turf(H)

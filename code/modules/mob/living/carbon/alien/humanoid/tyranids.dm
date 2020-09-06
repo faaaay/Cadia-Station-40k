@@ -161,12 +161,12 @@
 	return
 
 /mob/living/carbon/alien/humanoid/tyranid/proc/mine()
-	set name = "Spore Mine (750)"
+	set name = "Spore Mine (1000)"
 	set desc = "Produce an explosive spore mine."
 	set category = "Alien"
 
-	if(powerc(750))
-		adjustToxLoss(-750)
+	if(powerc(1000))
+		adjustToxLoss(-1000)
 		src << "<span class='userdanger'>You produce a spore mine.</span>"
 		for(var/mob/O in viewers(src, null))
 			O.show_message(text("<span class='userdanger'>[src] produces a spore mine!</span>"), 1)
@@ -174,18 +174,18 @@
 	return
 
 /mob/living/carbon/alien/humanoid/tyranid/verb/plant2()
-	set name = "Plant Weeds (5)"
-	set desc = "Plants some alien weeds"
+	set name = "Spread the nest (5)"
+	set desc = "Further spreads the nest."
 	set category = "Alien"
 
 	if(locate(/obj/structure/alien/weeds/tyranid/node) in get_turf(src))
-		src << "There's already a weed node here."
+		src << "There's already a nest node here."
 		return
 
 	if(powerc(5,1))
 		adjustToxLoss(-5)
 		for(var/mob/O in viewers(src, null))
-			O.show_message(text("<span class='alertalien'>[src] has planted some alien weeds!</span>"), 1)
+			O.show_message(text("<span class='alertalien'>[src] has spread the nest!</span>"), 1)
 		new /obj/structure/alien/weeds/tyranid/node(loc)
 	return
 

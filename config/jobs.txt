@@ -16,7 +16,7 @@ Scientist=3
 Chemist=2
 
 Bartender=1
-Botanist=2
+Botanist=1
 Chef=1
 Janitor=1
 Quartermaster=1

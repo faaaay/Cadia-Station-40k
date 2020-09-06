@@ -127,6 +127,19 @@
 	icon_state = "llr_3"
 	full = 1
 
+/obj/machinery/rack/lasammo
+	name = "Lasgun ammo rack"
+	desc = "It holds lasgun ammo!"
+	icon_state = "lga_0"
+	holds_type = /obj/item/weapon/storage/box/lasgunmag
+	holds_name = "box of lasrifle ammunition"
+	base_icon = "lga"
+	capacity = 8
+
+/obj/machinery/rack/lasammo/full
+	icon_state = "lga_8"
+	full = 1
+
 /obj/machinery/rack/hellgun
 	name = "Hellgun rack"
 	desc = "It can hold four Hellguns."
@@ -150,6 +163,19 @@
 
 /obj/machinery/rack/hellpistol/full
 	icon_state = "hpr_3"
+	full = 1
+
+/obj/machinery/rack/hellammo
+	name = "Hellgun ammo rack"
+	desc = "It holds hellgun ammo!"
+	icon_state = "lga_0"
+	holds_type = /obj/item/weapon/storage/box/hellgunmag
+	holds_name = "hellgun ammunition"
+	base_icon = "lga"
+	capacity = 8
+
+/obj/machinery/rack/hellammo/full
+	icon_state = "lga_8"
 	full = 1
 
 /obj/machinery/rack/combatknife
@@ -239,6 +265,19 @@
 
 /obj/machinery/rack/autogun/full
 	icon_state = "agr_4"
+	full = 1
+
+/obj/machinery/rack/autoammo
+	name = "Autogun ammo rack"
+	desc = "It holds autogun ammo!"
+	icon_state = "lga_0"
+	holds_type = /obj/item/weapon/storage/box/autogunmag
+	holds_name = "autogun ammunition"
+	base_icon = "lga"
+	capacity = 8
+
+/obj/machinery/rack/autoammo/full
+	icon_state = "lga_8"
 	full = 1
 
 /obj/machinery/rack/shield

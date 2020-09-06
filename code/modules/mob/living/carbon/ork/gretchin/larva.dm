@@ -9,7 +9,7 @@
 	storedwaagh = 200
 	max_waagh = 200
 	var/isempty = 1
-	var/amount_grown = 0
+	var/amount_grown = 50
 	var/max_grown = 200
 	var/time_of_birth
 

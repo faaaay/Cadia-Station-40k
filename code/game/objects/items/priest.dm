@@ -39,7 +39,7 @@
 /obj/item/weapon/bible/attack(mob/living/M as mob, mob/living/user as mob)
 
 	var/chaplain = 0
-	if(user.mind && (user.mind.assigned_role == "Preacher"))
+	if(user.mind && (user.mind.assigned_role == "Ministorum Priest"))
 		chaplain = 1
 
 	add_logs(user, M, "attacked", object="[src.name]")
@@ -99,7 +99,7 @@
 /obj/item/weapon/storage/bible/afterattack(atom/A, mob/user as mob, proximity)
 	if(!proximity) return
 	var/chaplain = 0
-	if(user.mind && (user.mind.assigned_role == "Preacher"))
+	if(user.mind && (user.mind.assigned_role == "Ministorum Priest"))
 		chaplain = 1
 	if(istype(A, /mob/living/simple_animal/hostile/retaliate/daemon))
 		var/mob/living/simple_animal/hostile/retaliate/daemon/D = A
@@ -208,7 +208,7 @@
 			H.visible_message("[H] chants the prayers on the [src].")
 			praying = 1
 			var/chaplain = 0
-			if(user.mind && (user.mind.assigned_role == "Preacher"))
+			if(user.mind && (user.mind.assigned_role == "Ministorum Priest"))
 				chaplain = 1
 			if(chaplain)
 				H << "\red The emperor's light shows you a glimpse into the spiritual world!" //Better than making the preacher constantly a seer, I would think.

@@ -403,5 +403,5 @@
 			qdel(src)
 			return
 		else
-			user << "It's just nonsense about a plauge ridden father..."
+			user << "It's just nonsense about a plague ridden father..."
 			return

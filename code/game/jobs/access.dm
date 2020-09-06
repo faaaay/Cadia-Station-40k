@@ -337,7 +337,7 @@
 		if(access_cmo)
 			return "Sister Hospitaller Office"
 		if(access_qm)
-			return "Quartermaster"
+			return "Munitorum Priest"
 		if(access_surgery)
 			return "Surgery"
 		if(access_theatre)
@@ -403,8 +403,8 @@
 			return "Imperial Inquisition"
 
 /proc/get_all_jobs()
-	return list("Assistant", "Seneschal", "Bartender", "Chef", "Botanist", "Quartermaster", "Cargo Technician",
-				"Shaft Miner", "Mime", "Janitor", "Librarian", "Preacher",
+	return list("Assistant", "Seneschal", "Bartender", "Chef", "Botanist", "Munitorum Priest", "Munitorum Adept",
+				"Shaft Miner", "Mime", "Janitor", "Record Keeper", "Ministorum Priest",
 				"Trauma Medicus", "Pharmacologist", "Geneticist", "Virologist",
 				"Scientist", "Cybernetica Acolyte", "Enforcer", "Commissar", "Lord General", "Sergeant", "Tech Priest", "Adeptus Magos", "Sister Hospitaller", "Celebrity")
 

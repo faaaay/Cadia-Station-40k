@@ -255,7 +255,7 @@ Complex chainsword class.
 
 /obj/item/weapon/chainsword
 	name = "chainsword"
-	desc = "The Emporer's wrath made manifest."
+	desc = "The Emperor's wrath made manifest."
 	icon_state = "chainsword"
 	item_state = "chainsword"
 	hitsound = 'sound/weapons/chainsword.ogg'
