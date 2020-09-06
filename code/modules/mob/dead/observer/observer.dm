@@ -392,7 +392,7 @@ New Whitelist. Because the old one sucks
 Update: What have we created? something awful -wel ard
 */
 
-/mob/dead/observer/verb/RTD()
+/*/mob/dead/observer/verb/RTD()
 	set category = "Ghost"
 	set name = "RTD" // "Haunt"
 	set desc = "Allows a player who has been authorized to use a whitelisted role to respawn as that role."
@@ -427,6 +427,7 @@ Update: What have we created? something awful -wel ard
 		inmenu = 1
 		researchavailable()
 		return
+		*/
 
 /mob/dead/observer/proc/researchavailable()
 	var/RTDoptions = list("")
