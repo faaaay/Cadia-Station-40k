@@ -241,11 +241,11 @@
 	icon_state = "sicklemag"
 	ammo_type = /obj/item/ammo_casing/caseless/a74
 	caliber = "74"
-	max_ammo = 30
+	max_ammo = 25
 
 /obj/item/ammo_box/magazine/sluggamag/update_icon()
 	..()
-	icon_state = "[initial(icon_state)]-[round(ammo_count(),30)]"
+	icon_state = "[initial(icon_state)]-[round(ammo_count(),25)]"
 
 /obj/item/ammo_box/magazine/lasgunmag
 	name = "Lasgun Mag"
