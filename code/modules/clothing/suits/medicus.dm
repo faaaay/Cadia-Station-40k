@@ -107,7 +107,7 @@
 /obj/item/clothing/suit/bio_suit/medicus
 	name = "medicus suit"
 	desc = "It protects you against splashing blood. You'll see a lot of that in this proffession."
-	icon_state = "plaguedoctor2"
+	icon_state = "plaguedoctor"
 	item_state = "plaguedoctor"
 	var/usetime = 0
 	flags = NODROP
