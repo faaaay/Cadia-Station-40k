@@ -255,13 +255,13 @@ Zoanthropes
 		src << "\blue You cannot haunt nothing!"
 
 /mob/living/carbon/alien/humanoid/tyranid/zoanthropes/verb/evolution()
-	set name = "Evolution (1000)"
+	set name = "Evolution (800)"
 	set desc = "Adapt and become more powerful."
 	set category = "Alien"
 	if(evol_stage == 6)
 		src << "\red You are already fully developed."
 		return
-	if(powerc(1000))
+	if(powerc(800))
 		evol_stage += 1
 		switch(evol_stage)
 			if(1)
@@ -282,7 +282,7 @@ Zoanthropes
 			if(6)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/zoanthropes/proc/psythrow)
 				src << "\red You can throw people telekinetically."
-		adjustToxLoss(-1000)
+		adjustToxLoss(-800)
 	else
 		src << "\red You need more biomass."
 
