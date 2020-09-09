@@ -61,14 +61,12 @@
 						message += pick("return ", "var/", "proc/", "/mob/living/carbon/var/", "/datum/reagent/", "/mob/living/")
 						message += word
 						message += pick(" = ", " ", "; ", " / ", " * ", " ^ ", " + ", " - ")
-		if(prob(norc))
-			message = pick("ITS PATCH TIME! TIME FOR A PATCH!","....next patch.","Take it to the forums.","ITS NOT A BUG!","You are now an admin!","Downtime ETA- One minute.")
 
 		//Mimes dont speak! Changeling hivemind and emotes are allowed.
 		if(!IsVocal())
 			if(length(message) >= 2)
 				if(mind && mind.changeling)
-					if(copytext(message, 1, 2) != "*" && copytext(message, 1, 3) != ":g" && copytext(message, 1, 3) != ":G" && copytext(message, 1, 3) != ":ï")
+					if(copytext(message, 1, 2) != "*" && copytext(message, 1, 3) != ":g" && copytext(message, 1, 3) != ":G" && copytext(message, 1, 3) != ":ï¿½")
 						return
 					else
 						return ..(message)

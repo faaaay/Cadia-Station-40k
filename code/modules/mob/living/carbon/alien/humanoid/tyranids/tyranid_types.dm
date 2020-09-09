@@ -97,6 +97,7 @@ Zoanthropes
 	plasma_rate = 20
 	layer = 5
 	ventcrawler = 0
+	luminosity = 3
 	var/inhibitor = 0
 
 /mob/living/carbon/alien/humanoid/tyranid/zoanthropes/New()
@@ -297,6 +298,7 @@ Warriors
 	maxHealth = 325
 	health = 325
 	plasma_rate = 20
+	luminosity = 3
 	ventcrawler = 0
 	var/projectiletype = /obj/item/projectile/bullet/neurotoxin
 	var/list/unlocked = list("Neurotoxin Glands")
@@ -411,6 +413,7 @@ Ravener
 	layer = 5
 	ventcrawler = 0
 	status_flags = 0
+	luminosity = 3
 	brutearmor = 1
 	var/rending_claws = 0
 
