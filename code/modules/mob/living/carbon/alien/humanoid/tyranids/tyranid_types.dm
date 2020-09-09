@@ -94,6 +94,7 @@ Zoanthropes
 	icon_state = "zoanthropes"
 	maxHealth = 300
 	health = 300
+	plasma_rate = 20
 	layer = 5
 	ventcrawler = 0
 	var/inhibitor = 0
@@ -166,10 +167,10 @@ Zoanthropes
 		src << "\red You need more biomass."
 
 /mob/living/carbon/alien/humanoid/tyranid/zoanthropes/proc/psythrow()
-	set name = "Psyker Throw (500)"
+	set name = "Psyker Throw (300)"
 	set desc = "Send everyone nearby flying."
 	set category = "Alien"
-	if(powerc(500))
+	if(powerc(300))
 		src << "We send out pschic shock waves."
 		visible_message("\red <B>[src]'s eyes glow red!</B>")
 		visible_message("\red <B>A deafening mental shreik emanates from [src]!</B>")
@@ -183,16 +184,16 @@ Zoanthropes
 			var/atom/target = get_edge_target_turf(T, get_dir(src, get_step_away(T, src)))
 			T.throw_at(target, 200, 4)
 			shake_camera(T, 20, 1)
-		adjustToxLoss(-500)
+		adjustToxLoss(-300)
 	else
 		src << "\red You need more biomass."
 
 /mob/living/carbon/alien/humanoid/tyranid/zoanthropes/proc/mindflayershot(var/atom/T)
-	set name = "Mindflayer Ray (100)"
+	set name = "Mindflayer Ray (75)"
 	set desc = "Psychically project a mindflayer bolt."
 	set category = "Alien"
 
-	if(powerc(100))
+	if(powerc(75))
 		if(!T)
 			var/list/victims = list()
 			for(var/mob/living/carbon/human/C in oview(7))
@@ -214,7 +215,7 @@ Zoanthropes
 			A.current = curloc
 			A.yo = targloc.y - curloc.y
 			A.xo = targloc.x - curloc.x
-			adjustToxLoss(-100)
+			adjustToxLoss(-75)
 			A.process()
 		else
 			src << "\blue You cannot shoot at nothing!"
@@ -254,13 +255,13 @@ Zoanthropes
 		src << "\blue You cannot haunt nothing!"
 
 /mob/living/carbon/alien/humanoid/tyranid/zoanthropes/verb/evolution()
-	set name = "Evolution (1000)"
+	set name = "Evolution (800)"
 	set desc = "Adapt and become more powerful."
 	set category = "Alien"
 	if(evol_stage == 6)
 		src << "\red You are already fully developed."
 		return
-	if(powerc(1000))
+	if(powerc(800))
 		evol_stage += 1
 		switch(evol_stage)
 			if(1)
@@ -281,7 +282,7 @@ Zoanthropes
 			if(6)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/zoanthropes/proc/psythrow)
 				src << "\red You can throw people telekinetically."
-		adjustToxLoss(-1000)
+		adjustToxLoss(-800)
 	else
 		src << "\red You need more biomass."
 
