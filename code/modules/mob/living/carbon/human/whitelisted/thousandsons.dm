@@ -30,7 +30,7 @@ Thousand Sons
 	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/chaos/ksons, slot_s_store)
 	equip_to_slot_or_del(new /obj/item/weapon/shield/riot/ksons, slot_l_hand)
 	verbs += /mob/living/carbon/human/whitelisted/proc/ksonspell
-
+	
 /mob/living/carbon/human/whitelisted/ksons
 	name = "Unknown"
 	real_name = "Unknown"
@@ -59,6 +59,7 @@ Thousand Sons
 	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/chaos/ksons, slot_s_store)
 	equip_to_slot_or_del(new /obj/item/weapon/shield/riot/ksons, slot_l_hand)
 	verbs += /mob/living/carbon/human/whitelisted/proc/ksonspell
+
 
 	var/namelist = list ("Si'ryon", "Azugar", "Ereraz", "Elatoth", "Caorpudaran", "Guralock", "Jirah", "Furrulak", "Lostix", "Honnux", "Guragar", "Furfar", "Zydire", "Nazustix", "Buldaban", "Davrhaz", "Nazuphus", "Madaran")
 	var/rndname = pick(namelist)
