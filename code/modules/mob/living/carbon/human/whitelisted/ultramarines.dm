@@ -6,6 +6,9 @@ UltraMarines
 /mob/living/carbon/human/whitelisted/um/leader
 	name = "Captain Helis Dallicus"
 	real_name = "Captain Helis Dallicus"
+	icon = 'icons/mob/32x40/astartes.dmi'
+	name = "astartes"
+	icon_state = "astartes"
 	universal_speak = 1
 	gender = "male"
 	health = 250
@@ -55,6 +58,9 @@ UltraMarines
 /mob/living/carbon/human/whitelisted/um
 	name = "Unknown"
 	real_name = "Unknown"
+	icon = 'icons/mob/32x40/astartes.dmi'
+	name = "astartes"
+	icon_state = "astartes"
 	universal_speak = 1
 	gender = "male"
 	maxHealth = 250

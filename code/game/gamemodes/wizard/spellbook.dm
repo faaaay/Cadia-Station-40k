@@ -1,6 +1,6 @@
 /obj/item/weapon/spellbook
 	name = "spell book"
-	desc = "The legendary book of spells of the wizard."
+	desc = "The legendary book of spells torn from the warp!"
 	icon = 'icons/obj/library.dmi'
 	icon_state ="book"
 	throw_speed = 2

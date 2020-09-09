@@ -1064,6 +1064,7 @@
 #include "code\modules\mob\living\carbon\human\whitelisted\plaguemarines.dm"
 #include "code\modules\mob\living\carbon\human\whitelisted\ravenguard.dm"
 #include "code\modules\mob\living\carbon\human\whitelisted\salamanders.dm"
+#include "code\modules\mob\living\carbon\human\whitelisted\smurfs.dm"
 #include "code\modules\mob\living\carbon\human\whitelisted\tau.dm"
 #include "code\modules\mob\living\carbon\human\whitelisted\thousandsons.dm"
 #include "code\modules\mob\living\carbon\human\whitelisted\ultramarines.dm"
