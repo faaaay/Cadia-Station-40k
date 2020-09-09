@@ -1051,6 +1051,7 @@
 #include "code\modules\mob\living\carbon\human\humanvariants\krieg.dm"
 #include "code\modules\mob\living\carbon\human\humanvariants\simulation.dm"
 #include "code\modules\mob\living\carbon\human\humanvariants\sm.dm"
+#include "code\modules\mob\living\carbon\human\humanvariants\smurfs.dm"
 #include "code\modules\mob\living\carbon\human\humanvariants\sob.dm"
 #include "code\modules\mob\living\carbon\human\humanvariants\tau.dm"
 #include "code\modules\mob\living\carbon\human\humanvariants\trade.dm"

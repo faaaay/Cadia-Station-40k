@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1599626332
-DIR: _maps _maps\map_files _maps\map_files\backup code code\_globalvars\lists code\_onclick\hud code\datums code\datums\diseases code\datums\wires code\game code\game\machinery code\game\machinery\computer code\game\objects code\game\objects\effects icons icons\mob 
+LAST_COMPILE_TIME: 1599639353
+DIR: _maps _maps\map_files _maps\map_files\backup code code\_globalvars\lists code\_onclick\hud code\datums code\datums\diseases code\datums\wires code\game code\game\machinery code\game\machinery\computer code\game\objects code\game\objects\effects code\modules code\modules\mob code\modules\mob\living code\modules\mob\living\carbon code\modules\mob\living\carbon\human code\modules\mob\living\carbon\human\humanvariants 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 513.1528
-WINDOW: icons\mob\human.dmi
-FILE: icons\mob\human.dmi
+WINDOW: code\modules\mob\living\carbon\human\humanvariants\smurfs.dm
+FILE: code\modules\mob\living\carbon\human\humanvariants\smurfs.dm
 */
 // END_INTERNALS
