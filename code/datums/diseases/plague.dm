@@ -11,8 +11,8 @@ Should be near done now.
 	spread_type = CONTACT_GENERAL
 	cure = "Spaceacillin"
 	cure_id = "spaceacillin"
-	curable = 0 //Can't be cured without an actual cure administered.
-	cure_chance = 10 //Pretty high chance of curing the disease once you get the cure.
+	curable = 1 //Can't be cured without an actual cure administered.
+	cure_chance = 50 //Pretty high chance of curing the disease once you get the cure.
 	agent = "nurgle's blessings"
 	affected_species = list("Human")
 	permeability_mod = 0.75
