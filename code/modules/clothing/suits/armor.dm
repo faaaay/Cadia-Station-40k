@@ -333,6 +333,46 @@ Lord Inquisitor Armor
 	armor = list(melee = 80, bullet = 80, laser = 80, energy = 100, bomb = 80, bio = 80, rad = 95)
 	astartes = 1
 
+/obj/item/clothing/suit/armor/smurfparmor
+	name = "Ultra Marine Power Armor"
+	desc = "Ultra Marine Armor"
+	icon = 'icons/mob/32x40/suit.dmi'
+	icon_state = "astartes_um"
+	item_state = "astartes_um"
+	w_class = 4 //bulky item
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/weapon/tank/emergency_oxygen,/obj/item/weapon/gun/projectile/automatic/bolter)
+	flags = NODROP|THICKMATERIAL | STOPSPRESSUREDMAGE
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HANDS|CHEST|LEGS|FEET|ARMS|GROIN
+	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	blood_overlay_type = "armor"
+	slowdown = 1
+	armor = list(melee = 80, bullet = 80, laser = 80, energy = 100, bomb = 80, bio = 80, rad = 95)
+	astartes = 1
+
+/obj/item/clothing/suit/armor/smurfapoth
+	name = "Ultra Marine Apothecary Armor"
+	desc = "Ultra Marine Apothecary Armor"
+	icon = 'icons/mob/32x40/suit.dmi'
+	icon_state = "astartes_um_apotharmor"
+	item_state = "astartes_um_apotharmor"
+	w_class = 3 //bulky item
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/weapon/tank/emergency_oxygen,/obj/item/weapon/gun/projectile/automatic/bolter)
+	flags = NODROP|THICKMATERIAL | STOPSPRESSUREDMAGE
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HANDS|CHEST|LEGS|FEET|ARMS|GROIN
+	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	blood_overlay_type = "armor"
+	slowdown = 1
+	armor = list(melee = 80, bullet = 80, laser = 80, energy = 100, bomb = 80, bio = 80, rad = 95)
+	astartes = 1
+
 /obj/item/clothing/suit/armor/umpowerarmor/captain
 	name = "Ultra Marine Captain Power Armor"
 	desc = "Ultra Marine Captain Armor"
