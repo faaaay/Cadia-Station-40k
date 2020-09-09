@@ -616,14 +616,38 @@ Lord Inquisitor Armor
 /obj/item/clothing/suit/armor/thousandarmor/sorc
 	name = "Chaos Power Armor"
 	desc = "Chaos Power Armor"
-	icon_state = "1k_sorcarmor"
-	item_state = "1k_sorcarmor"
+	icon_state = "thousorc"
+	item_state = "thousorc"
+	w_class = 4//bulky item
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/weapon/tank/emergency_oxygen,/obj/item/weapon/gun/projectile/automatic/bolter)
+	flags = NODROP|THICKMATERIAL | STOPSPRESSUREDMAGE
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HANDS|CHEST|LEGS|FEET|ARMS|GROIN
+	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	blood_overlay_type = "armor"
+	slowdown = 1
+	armor = list(melee = 80, bullet = 80, laser = 80, energy = 100, bomb = 80, bio = 80, rad = 95)
 
 /obj/item/clothing/suit/armor/thousandarmor/captain
 	name = "Chaos Power Armor"
 	desc = "Chaos Power Armor"
-	icon_state = "1k_leadarmor"
-	item_state = "1k_leadarmor"
+	icon_state = "thoulead"
+	item_state = "thoulead"
+	w_class = 4//bulky item
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/weapon/tank/emergency_oxygen,/obj/item/weapon/gun/projectile/automatic/bolter)
+	flags = NODROP|THICKMATERIAL | STOPSPRESSUREDMAGE
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HANDS|CHEST|LEGS|FEET|ARMS|GROIN
+	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	blood_overlay_type = "armor"
+	slowdown = 1
+	armor = list(melee = 80, bullet = 80, laser = 80, energy = 100, bomb = 80, bio = 80, rad = 95)
 
 //plague marine
 /obj/item/clothing/suit/armor/pmpowerarmor
