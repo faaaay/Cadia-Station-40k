@@ -211,7 +211,7 @@ display round(lastgen) and plasmatank amount
 				icon_state = "OFF"
 				SetLuminosity(0)
 				src.updateUsrDialog()
-		if(href_list["action"] == "lower_power")
+		/*if(href_list["action"] == "lower_power")
 			if (power_output > 1)
 				boom()
 				power_output--
@@ -220,10 +220,10 @@ display round(lastgen) and plasmatank amount
 			if (power_output < 4 || emagged)
 				boom()
 				power_output++
-				src.updateUsrDialog()
+				src.updateUsrDialog() */
 		if (href_list["action"] == "close")
 			usr << browse(null, "window=plasmagen")
-			usr.unset_machine()
+			usr.unset_machine()  //Disabled to stop people from easily blowing up the gen and running away. If you blow it up you die now too.
 
 /obj/machinery/power/plasmagen/pgen/proc/boom()			//It's a proc and it's gonna freak you out!
 	if(active)

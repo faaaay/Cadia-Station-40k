@@ -13,7 +13,7 @@
 		user.set_machine(src)
 
 		var/dat = {"<br>Ready to build<br>
-		<a href='?src=\ref[src];SENT=1'>Sentinal</a><br>
+		<a href='?src=\ref[src];SENT=1'>Sentinel</a><br>
 		<a href='?src=\ref[src];CHIMAC2=1'>Chimera, Inquisition</a><br>
 		<a href='?src=\ref[src];CHIMAC=1'>Chimera, AutoCannon</a> |
 		<a href='?src=\ref[user];mach_close=computer'>Nothing</a>"}
