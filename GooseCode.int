@@ -1,8 +1,8 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1599714392
-DIR: _maps _maps\map_files _maps\map_files\backup code code\_globalvars\lists code\_onclick code\_onclick\hud code\datums code\datums\diseases code\datums\spells code\game code\game\gamemodes code\game\gamemodes\changeling code\modules code\modules\mob code\modules\mob\living code\modules\mob\living\carbon code\modules\mob\living\carbon\human code\modules\mob\living\carbon\human\whitelisted 
+LAST_COMPILE_TIME: 1599713483
+DIR: _maps _maps\map_files _maps\map_files\backup code code\_globalvars\lists code\_onclick\hud code\datums code\datums\diseases code\datums\wires code\game code\game\machinery code\game\machinery\computer code\game\objects code\game\objects\effects icons icons\mob 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 513.1532

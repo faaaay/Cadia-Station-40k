@@ -118,7 +118,7 @@
 				equip_to_slot_or_del(new /obj/item/aluminumtube4/clamp, slot_r_hand)
 				equip_to_slot_or_del(new /obj/item/clothing/mask/gas/TRAP, slot_wear_mask)
 				new /obj/item/weapon/snowshovel/ig970 (loc)
-				maxHealth = 175
+				maxHealth = 250
 				var/obj/item/weapon/card/id/W = new
 				W.icon_state = "umcard"
 				W.access = get_all_accesses()

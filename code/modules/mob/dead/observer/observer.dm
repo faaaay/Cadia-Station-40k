@@ -405,9 +405,9 @@ Update: What have we created? something awful -wel ard
 	if(ticker.mode.name == "necron")
 		usr << "\blue Reinforcements are cut off! OH MY GOD!!!"
 		return
-	/*if(world.time - round_start_time < config.shuttle_refuel_delay)
+	if(world.time - round_start_time < config.shuttle_refuel_delay)
 		usr << "\blue The round has just begun! Please wait another [abs(round(((world.time - round_start_time) - config.shuttle_refuel_delay)/600))] minutes before trying again."
-		return  *///don't want a delay for testing
+		return  //don't want a delay for testing
 		
 	if(inmenu)
 		usr << "\blue I didn't learn to code yesterday. First- close the menu you already have open."
