@@ -261,7 +261,7 @@ Ultramarines
 	editchoice = input("Select an action:","Faction Management") as null|anything in list("Add a Member","Remove a Member", "List members", "Cancel")	//surprise! var is input
 	switch(editchoice)
 		if("Add a Member")
-			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 30) //No ckeys will be >30 chars... Right?
+			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 32) //No ckeys will be >30 chars... Right?
 			if(newname && trim(newname))
 				umlist.Add(lowertext(newname))										//umlist is a constant so lets toss that name in there
 				var/savefile/umMember = new("data/rtd/umMember.sav")				//lets drag this variable back from the dead
@@ -271,7 +271,7 @@ Ultramarines
 				alert("Something went wrong. Tell the coders umleader/proc/edit_faction_membership")
 				return
 		if("Remove a Member")
-			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 30)
+			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 32)
 			if(removal && trim(removal))
 				umlist.Remove(lowertext(removal))
 				var/savefile/umMember = new("data/rtd/umMember.sav")
@@ -314,7 +314,7 @@ Thousand Sons
 	editchoice = input("Select an action:","Faction Management") as null|anything in list("Add a Member","Remove a Member", "List members", "Cancel")	//surprise! var is input
 	switch(editchoice)
 		if("Add a Member")
-			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 30) //No ckeys will be >30 chars... Right?
+			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 32) //No ckeys will be >30 chars... Right?
 			if(newname && trim(newname))
 				ksons.Add(lowertext(newname))										//umlist is a constant so lets toss that name in there
 				var/savefile/ksonsMember = new("data/rtd/ksonsMember.sav")				//lets drag this variable back from the dead
@@ -324,7 +324,7 @@ Thousand Sons
 				alert("Something went wrong. Tell the coders umleader/proc/edit_faction_membership")
 				return
 		if("Remove a Member")
-			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 30)
+			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 32)
 			if(removal && trim(removal))
 				ksons.Remove(lowertext(removal))
 				var/savefile/ksonsMember = new("data/rtd/ksonsMember.sav")
@@ -370,7 +370,7 @@ Salamander Marines
 	editchoice = input("Select an action:","Faction Management") as null|anything in list("Add a Member","Remove a Member", "List members", "Cancel")
 	switch(editchoice)
 		if("Add a Member")
-			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 30) //No ckeys will be >30 chars... Right?
+			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 32) //No ckeys will be >30 chars... Right? IT APPARENTLY CAN BE -wel
 			if(newname && trim(newname))
 				salamanders.Add(lowertext(newname))
 				var/savefile/smMember = new("data/rtd/smMember.sav")
@@ -380,7 +380,7 @@ Salamander Marines
 				alert("Something went wrong. Tell the coders smleader/proc/edit_faction_membership")
 				return
 		if("Remove a Member")
-			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 30)
+			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 32)
 			if(removal && trim(removal))
 				salamanders.Remove(lowertext(removal))
 				var/savefile/smMember = new("data/rtd/smMember.sav")
@@ -477,7 +477,7 @@ Tau
 	editchoice = input("Select an action:","Faction Management") as null|anything in list("Add a Member","Remove a Member", "List members", "Cancel")
 	switch(editchoice)
 		if("Add a Member")
-			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 30) //No ckeys will be >30 chars... Right?
+			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 32) //No ckeys will be >30 chars... Right?
 			if(newname && trim(newname))
 				tau.Add(lowertext(newname))
 				var/savefile/tauMember = new("data/rtd/tauMember.sav")
@@ -487,7 +487,7 @@ Tau
 				alert("Something went wrong. Tell the coders tau/proc/edit_faction_membership")
 				return
 		if("Remove a Member")
-			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 30)
+			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 32)
 			if(removal && trim(removal))
 				tau.Remove(lowertext(removal))
 				var/savefile/tauMember = new("data/rtd/tauMember.sav")
@@ -529,7 +529,7 @@ Eldar
 	editchoice = input("Select an action:","Faction Management") as null|anything in list("Add a Member","Remove a Member", "List members", "Cancel")
 	switch(editchoice)
 		if("Add a Member")
-			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 30) //No ckeys will be >30 chars... Right?
+			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 32) //No ckeys will be >30 chars... Right?
 			if(newname && trim(newname))
 				eldar.Add(lowertext(newname))
 				var/savefile/eldarMember = new("data/rtd/eldarMember.sav")
@@ -539,7 +539,7 @@ Eldar
 				alert("Something went wrong. Tell the coders eldar/proc/edit_faction_membership")
 				return
 		if("Remove a Member")
-			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 30)
+			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 32)
 			if(removal && trim(removal))
 				eldar.Remove(lowertext(removal))
 				var/savefile/eldarMember = new("data/rtd/eldarMember.sav")
@@ -581,7 +581,7 @@ Raven Guard
 	editchoice = input("Select an action:","Faction Management") as null|anything in list("Add a Member","Remove a Member", "List members", "Cancel")
 	switch(editchoice)
 		if("Add a Member")
-			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 30) //No ckeys will be >30 chars... Right?
+			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 32) //No ckeys will be >30 chars... Right?
 			if(newname && trim(newname))
 				ravenguard.Add(lowertext(newname))
 				var/savefile/rgMember = new("data/rtd/rgMember.sav")
@@ -591,7 +591,7 @@ Raven Guard
 				alert("Something went wrong. Tell the coders ravenguard/proc/edit_faction_membership")
 				return
 		if("Remove a Member")
-			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 30)
+			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 32)
 			if(removal && trim(removal))
 				ravenguard.Remove(lowertext(removal))
 				var/savefile/rgMember = new("data/rtd/rgMember.sav")
@@ -633,7 +633,7 @@ Tyranid
 	editchoice = input("Select an action:","Faction Management") as null|anything in list("Add a Member","Remove a Member", "List members", "Cancel")
 	switch(editchoice)
 		if("Add a Member")
-			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 30) //No ckeys will be >30 chars... Right?
+			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 32) //No ckeys will be >30 chars... Right?
 			if(newname && trim(newname))
 				tyranid.Add(lowertext(newname))
 				var/savefile/tyranidMember = new("data/rtd/tyranidMember.sav")
@@ -643,7 +643,7 @@ Tyranid
 				alert("Something went wrong. Tell the coders tyranid/proc/edit_faction_membership")
 				return
 		if("Remove a Member")
-			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 30)
+			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 32)
 			if(removal && trim(removal))
 				tyranid.Remove(lowertext(removal))
 				var/savefile/tyranidMember = new("data/rtd/tyranidMember.sav")
@@ -691,7 +691,7 @@ Ordo Hereticus
 	editchoice = input("Select an action:","Faction Management") as null|anything in list("Add a Stormtrooper", "Remove a Stormtrooper", "List Stormtroopers", "Cancel")
 	switch(editchoice)
 		if("Add a Stormtrooper")
-			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 30) //No ckeys will be >30 chars... Right?
+			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 32) //No ckeys will be >30 chars... Right?
 			if(newname && trim(newname))
 				stormtrooper.Add(lowertext(newname))
 				var/savefile/ohsMember = new("data/rtd/ohsMember.sav")
@@ -701,7 +701,7 @@ Ordo Hereticus
 				alert("Something went wrong. Tell the coders ohing/proc/edit_faction_membership")
 				return
 		if("Remove a Stormtrooper")
-			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 30)
+			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 32)
 			if(removal && trim(removal))
 				stormtrooper.Remove(lowertext(removal))
 				var/savefile/ohsMember = new("data/rtd/ohsMember.sav")
@@ -733,7 +733,7 @@ Ordo Hereticus
 	editchoice = input("Select an action:","Faction Management") as null|anything in list("Add a Member","Remove a Member", "List members", "Add a Stormtrooper", "Remove a Stormtrooper", "List Stormtroopers", "Add a Stormtrooper Leader", "Remove a Stormtrooper Leader", "List Stormtroopers Leader(s)", "Cancel")
 	switch(editchoice)
 		if("Add a Member")
-			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 30) //No ckeys will be >30 chars... Right?
+			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 32) //No ckeys will be >30 chars... Right?
 			if(newname && trim(newname))
 				ordohereticus.Add(lowertext(newname))
 				var/savefile/ohMember = new("data/rtd/ohMember.sav")
@@ -743,7 +743,7 @@ Ordo Hereticus
 				alert("Something went wrong. Tell the coders ohing/proc/edit_faction_membership")
 				return
 		if("Remove a Member")
-			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 30)
+			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 32)
 			if(removal && trim(removal))
 				ordohereticus.Remove(lowertext(removal))
 				var/savefile/ohMember = new("data/rtd/ohMember.sav")
@@ -753,7 +753,7 @@ Ordo Hereticus
 			ordohereticusDisplay()
 
 		if("Add a Stormtrooper")
-			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 30) //No ckeys will be >30 chars... Right?
+			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 32) //No ckeys will be >30 chars... Right?
 			if(newname && trim(newname))
 				stormtrooper.Add(lowertext(newname))
 				var/savefile/ohsMember = new("data/rtd/ohsMember.sav")
@@ -763,7 +763,7 @@ Ordo Hereticus
 				alert("Something went wrong. Tell the coders ohing/proc/edit_faction_membership")
 				return
 		if("Remove a Stormtrooper")
-			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 30)
+			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 32)
 			if(removal && trim(removal))
 				stormtrooper.Remove(lowertext(removal))
 				var/savefile/ohsMember = new("data/rtd/ohsMember.sav")
@@ -773,7 +773,7 @@ Ordo Hereticus
 			ohsDisplay()
 
 		if("Add a Stormtrooper Leader")
-			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 30) //No ckeys will be >30 chars... Right?
+			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 32) //No ckeys will be >30 chars... Right?
 			if(newname && trim(newname))
 				ohsleader.Add(lowertext(newname))
 				var/savefile/ohsOVERSEER = new("data/rtd/ohsleader.sav")
@@ -783,7 +783,7 @@ Ordo Hereticus
 				alert("Something went wrong. Tell the coders ohing/proc/edit_faction_membership")
 				return
 		if("Remove a Stormtrooper Leader")
-			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 30)
+			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 32)
 			if(removal && trim(removal))
 				ohsleader.Remove(lowertext(removal))
 				var/savefile/ohsOVERSEER = new("data/rtd/ohsleader.sav")
@@ -852,7 +852,7 @@ SOB
 	editchoice = input("Select an action:","Faction Management") as null|anything in list("Add a Member","Remove a Member", "List members", "Cancel")
 	switch(editchoice)
 		if("Add a Member")
-			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 30) //No ckeys will be >30 chars... Right?
+			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 32) //No ckeys will be >30 chars... Right?
 			if(newname && trim(newname))
 				sob.Add(lowertext(newname))
 				var/savefile/sobMember = new("data/rtd/sobMember.sav")
@@ -862,7 +862,7 @@ SOB
 				alert("Something went wrong. Tell the coders cannoness/proc/edit_faction_membership")
 				return
 		if("Remove a Member")
-			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 30)
+			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 32)
 			if(removal && trim(removal))
 				sob.Remove(lowertext(removal))
 				var/savefile/sobMember = new("data/rtd/sobMember.sav")
@@ -904,7 +904,7 @@ Orks
 	editchoice = input("Select an action:","Faction Management") as null|anything in list("Add a Member","Remove a Member", "List members", "Cancel")
 	switch(editchoice)
 		if("Add a Member")
-			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 30) //No ckeys will be >30 chars... Right?
+			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 32) //No ckeys will be >30 chars... Right?
 			if(newname && trim(newname))
 				ork.Add(lowertext(newname))
 				var/savefile/orkMember = new("data/rtd/orkMember.sav")
@@ -914,7 +914,7 @@ Orks
 				alert("Something went wrong. Tell the coders ork/proc/edit_faction_membership")
 				return
 		if("Remove a Member")
-			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 30)
+			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 32)
 			if(removal && trim(removal))
 				ork.Remove(lowertext(removal))
 				var/savefile/orkMember = new("data/rtd/orkMember.sav")
@@ -956,7 +956,7 @@ Plague Marines
 	editchoice = input("Select an action:","Faction Management") as null|anything in list("Add a Member","Remove a Member", "List members", "Cancel")	//surprise! var is input
 	switch(editchoice)
 		if("Add a Member")
-			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 30) //No ckeys will be >30 chars... Right?
+			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 32) //No ckeys will be >30 chars... Right?
 			if(newname && trim(newname))
 				pmlist.Add(lowertext(newname))										//umlist is a constant so lets toss that name in there
 				var/savefile/pmMember = new("data/rtd/pmMember.sav")				//lets drag this variable back from the dead
@@ -966,7 +966,7 @@ Plague Marines
 				alert("Something went wrong. Tell the coders umleader/proc/edit_faction_membership")
 				return
 		if("Remove a Member")
-			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 30)
+			var/removal = strip_html_simple(input("Enter the ckey of the member to remove:","Remove a Member","") as text, 32)
 			if(removal && trim(removal))
 				pmlist.Remove(lowertext(removal))
 				var/savefile/pmMember = new("data/rtd/pmMember.sav")
