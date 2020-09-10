@@ -904,7 +904,7 @@ Orks
 	editchoice = input("Select an action:","Faction Management") as null|anything in list("Add a Member","Remove a Member", "List members", "Cancel")
 	switch(editchoice)
 		if("Add a Member")
-			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 32) //No ckeys will be >30 chars... Right?
+			var/newname = strip_html_simple(input("Enter the ckey of the new member:","Add a Member","") as text, 32) //No ckeys will be >30 chars... Right? I have learned they can be -wel
 			if(newname && trim(newname))
 				ork.Add(lowertext(newname))
 				var/savefile/orkMember = new("data/rtd/orkMember.sav")
