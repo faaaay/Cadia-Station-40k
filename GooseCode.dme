@@ -1061,6 +1061,7 @@
 #include "code\modules\mob\living\carbon\human\whitelisted\eldar.dm"
 #include "code\modules\mob\living\carbon\human\whitelisted\helpers.dm"
 #include "code\modules\mob\living\carbon\human\whitelisted\ig.dm"
+#include "code\modules\mob\living\carbon\human\whitelisted\librarians.dm"
 #include "code\modules\mob\living\carbon\human\whitelisted\ordohereticus.dm"
 #include "code\modules\mob\living\carbon\human\whitelisted\plaguemarines.dm"
 #include "code\modules\mob\living\carbon\human\whitelisted\ravenguard.dm"
