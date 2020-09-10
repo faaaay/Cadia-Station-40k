@@ -363,4 +363,4 @@
 	icon_state = "bottle23"
 	New()
 		..()
-		reagents.add_reagent("conditioning", 10)
+		reagents.add_reagent("conditioning", 20)
