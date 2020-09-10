@@ -119,7 +119,7 @@ RavenGuard
 				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
 				equip_to_slot_or_del(new /obj/item/weapon/book/manual/astartes, slot_l_hand)
 				new /obj/item/weapon/snowshovel/ig970 (loc)
-			  var/obj/item/weapon/card/id/W = new
+				var/obj/item/weapon/card/id/W = new
 				W.icon_state = "smcard"
 				W.access = get_all_accesses()
 				W.access += get_centcom_access("UltraMarine")
