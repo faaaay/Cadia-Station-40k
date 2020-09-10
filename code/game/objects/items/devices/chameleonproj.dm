@@ -11,8 +11,9 @@
 	origin_tech = "syndicate=4;magnets=4"
 	var/can_use = 1
 	var/obj/effect/dummy/chameleon/active_dummy = null
-	var/saved_icon = 'icons/mob/hallucination.dmi'
-	var/saved_icon_state = "guard1"
+	var/saved_item = /obj/item/weapon/cigbutt
+	var/saved_icon = 'icons/obj/clothing/masks.dmi'
+	var/saved_icon_state = "cigbutt"
 	var/saved_overlays
 
 /obj/item/device/chameleon/dropped()
@@ -35,7 +36,7 @@
 			saved_overlays = target.overlays
 
 /obj/item/device/chameleon/proc/toggle()
-	if(!can_use || !saved_icon) return
+	if(!can_use || !saved_item) return
 	if(active_dummy)
 		eject_all()
 		playsound(get_turf(src), 'sound/effects/pop.ogg', 100, 1, -6)
@@ -48,7 +49,7 @@
 		spawn(8) T.delete()
 	else
 		playsound(get_turf(src), 'sound/effects/pop.ogg', 100, 1, -6)
-		var/obj/O = new saved_icon(src)
+		var/obj/O = new saved_item(src)
 		if(!O) return
 		var/obj/effect/dummy/chameleon/C = new/obj/effect/dummy/chameleon(usr.loc)
 		C.activate(O, usr, saved_icon, saved_icon_state, saved_overlays, src)
