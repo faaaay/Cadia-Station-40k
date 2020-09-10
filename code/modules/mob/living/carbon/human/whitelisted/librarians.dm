@@ -7,16 +7,14 @@
 
 /mob/living/carbon/human/whitelisted/Stat()
 	..()
-	if(maxPs>0)
+	if(maxPsy>0)
 		stat(null, "Psy: [Psy]/[maxPsy]")
 
 /mob/living/carbon/human/whitelisted/Life()
 	if(Psy < maxPsy)
 		Psy = min(Psy+Psy_rate, maxPsy)
 
-/mob/living/carbon/human/whitelisted/verb/imprison(var/mob/living/carbon/T in oview(7))
-	if(maxPsy<=0)
-		return
+/mob/living/carbon/human/whitelisted/proc/imprison(var/mob/living/carbon/T in oview(7))
 	set name = "Imprison (300)"
 	set desc = "Uses your psychic abilities to imprison someone in their own mental barriers."
 	set category = "Spells"
@@ -42,36 +40,69 @@
 	else
 		src << "\red You need more psy!"
 
-/mob/living/carbon/human/whitelisted/verb/haunt(var/mob/living/carbon/T in oview(7))
-	if(maxPsy<=0)
+/mob/living/carbon/human/whitelisted/proc/smite(var/atom/T)
+	set name = "Smite (60)"
+	set desc = "Smite your foes with a psychic bolt"
+	set category = "Spells"
+	if(Psy>=60)
+		Psy-=60
+		if(!T)
+			var/list/victims = list()
+			for(var/mob/living/carbon/C in oview(7))
+				victims += C
+			T = input(src, "Who should we shoot?") as null|anything in victims
+		if(T)
+			src.visible_message("<span class='danger'>[src] projects psychic energy!", "<span class='alertalien'>You project psychic energy.</span>")
+			var/turf/curloc = src.loc
+			var/atom/targloc
+			if(!istype(T, /turf/))
+				targloc = get_turf(T)
+			else
+				targloc = T
+			if (!targloc || !istype(targloc, /turf) || !curloc)
+				return
+			if (targloc == curloc)
+				return
+			var/obj/item/projectile/beam/mindflayer/A = new /obj/item/projectile/beam/mindflayer(src.loc)
+			A.current = curloc
+			A.yo = targloc.y - curloc.y
+			A.xo = targloc.x - curloc.x
+			A.process()
+		else
+			src << "\blue You cannot shoot at nothing!"
+	else
+		src << "\red You need more psy."
+
+/mob/living/carbon/human/whitelisted/proc/quickening()
+	set name = "Quickening (300)"
+	set desc = "Use your psychich energy to stimulate reflexes to insane levels and negate all knockouts."
+	set category = "Spells"
+	if(dodging)
+		src << "\red They are already active."
 		return
-	set name = "Haunt"
-	set desc = "Projects disturbing sounds to the victim."
+	if(Psy>=300)
+		Psy-=300
+		dodging = 1
+		status_flags = 0
+		src << "\red Adrenaline active."
+		spawn(90)
+			src << "\red Adrenaline no longer active."
+			dodging = 0
+			status_flags = CANPARALYSE|CANPUSH
+		return
+	else
+		src << "\red You need more psy."
+
+/mob/living/carbon/human/whitelisted/proc/telepath(mob/M as mob in orange(30,src)) //Like whisper but free, and much farther range.
+	set name = "Telepathy"
+	set desc = "Project your mind to others."
 	set category = "Spells"
 
-	if(!T)
-		var/list/victims = list()
-		for(var/mob/living/carbon/human/C in oview(7))
-			victims += C
-		T = input(src, "Who should we haunt?") as null|anything in victims
-	if(T)
-		if(!istype(T))
-			src << "\red We only haunt people!"
-			return
-		src << "We haunt [T]"
-		playsound(T.loc, pick('sound/hallucinations/behind_you1.ogg',\
-			'sound/hallucinations/behind_you2.ogg',\
-			'sound/hallucinations/i_see_you1.ogg',\
-			'sound/hallucinations/i_see_you2.ogg',\
-			'sound/hallucinations/im_here1.ogg',\
-			'sound/hallucinations/im_here2.ogg',\
-			'sound/hallucinations/look_up1.ogg',\
-			'sound/hallucinations/look_up2.ogg',\
-			'sound/hallucinations/over_here1.ogg',\
-			'sound/hallucinations/over_here2.ogg',\
-			'sound/hallucinations/over_here3.ogg',\
-			'sound/hallucinations/turn_around1.ogg',\
-			'sound/hallucinations/turn_around2.ogg',\
-			), 50, 1, -3)
-	else
-		src << "\blue You cannot haunt nothing!"
+	if(stat != CONSCIOUS)
+		return
+
+	var/msg = sanitize(input("Message:", "Whisper") as text|null)
+	if(msg)
+		log_say("Telepathy: [key_name(src)]->[M.key] : [msg]")
+		M << "<span class='noticealien'><b><i>You hear a strange voice in your head... [msg]</i></b></span>"
+		src << {"<span class='noticealien'>You said: "[msg]" to [M]</span>"}

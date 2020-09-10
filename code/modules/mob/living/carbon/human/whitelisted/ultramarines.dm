@@ -124,7 +124,6 @@ UltraMarines
 				equip_to_slot_or_del(new /obj/item/aluminumtube4/clamp, slot_r_hand)
 				equip_to_slot_or_del(new /obj/item/clothing/mask/gas/TRAP, slot_wear_mask)
 				new /obj/item/weapon/snowshovel/ig970 (loc)
-				maxHealth = 175
 				var/obj/item/weapon/card/id/W = new
 				W.icon_state = "umcard"
 				W.access = get_all_accesses()
@@ -179,6 +178,10 @@ UltraMarines
 				equip_to_slot_or_del(new /obj/item/clothing/mask/breath/marine, slot_wear_mask)
 				maxHealth = 240 //trait: nerd -10 hp
 				maxPsy += 1000
+				verbs += /mob/living/carbon/human/whitelisted/proc/imprison
+				verbs += /mob/living/carbon/human/whitelisted/proc/smite
+				verbs += /mob/living/carbon/human/whitelisted/proc/quickening
+				verbs += /mob/living/carbon/human/whitelisted/proc/telepath
 				var/obj/item/weapon/card/id/W = new
 				W.icon_state = "umcard"
 				W.access = get_all_accesses()

@@ -119,7 +119,6 @@ RavenGuard
 				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
 				equip_to_slot_or_del(new /obj/item/weapon/book/manual/astartes, slot_l_hand)
 				new /obj/item/weapon/snowshovel/ig970 (loc)
-				maxHealth = 175
 				var/obj/item/weapon/card/id/W = new
 				W.icon_state = "smcard"
 				W.access = get_all_accesses()
@@ -174,6 +173,10 @@ RavenGuard
 				equip_to_slot_or_del(new /obj/item/weapon/book/manual/astartes, slot_l_hand)
 				maxHealth = 240 //trait: nerd -10 hp
 				maxPsy += 1000
+				verbs += /mob/living/carbon/human/whitelisted/proc/imprison
+				verbs += /mob/living/carbon/human/whitelisted/proc/smite
+				verbs += /mob/living/carbon/human/whitelisted/proc/quickening
+				verbs += /mob/living/carbon/human/whitelisted/proc/telepath
 				var/obj/item/weapon/card/id/W = new
 				W.icon_state = "smcard"
 				W.access = get_all_accesses()
