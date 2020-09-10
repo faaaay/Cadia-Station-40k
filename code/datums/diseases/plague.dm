@@ -48,7 +48,7 @@ Should be near done now.
 					for(var/mob/living/carbon/human/C in view(H, 2))
 						if(C.viruses.len) continue
 						var/blockprob = 0
-						for(var/obj/item/clothing/A in C.get_equipped_items()) //A biosuit and hood will protect you.
+						for(var/obj/item/clothing/A in C.get_equipped_items()) //A biosuit and hood will protect you, so will gas masks.
 							if(istype(A, /obj/item/clothing/suit/bio_suit))
 								blockprob += 60
 							if(istype(A, /obj/item/clothing/suit/bio_suit/medicus))
@@ -57,6 +57,13 @@ Should be near done now.
 								blockprob += 80
 							if(istype(A, /obj/item/clothing/head/bio_hood))
 								blockprob += 40
+							if(istype(A, /obj/item/clothing/mask/gas/sechailer/DK))
+								blockprob += 80
+							if(istype(A, /obj/item/clothing/mask/breath/marine))
+								blockprob += 60	
+							if(istype(A, /obj/item/clothing/mask/gas))
+								blockprob += 60
+
 						if(prob(blockprob)) continue
 						var/datum/disease/plague/D = new /datum/disease/plague()
 						D.effect = src.effect
@@ -231,6 +238,12 @@ Should be near done now.
 							blockprob += 80
 						if(istype(A, /obj/item/clothing/head/bio_hood))
 							blockprob += 40
+						if(istype(A, /obj/item/clothing/mask/gas/sechailer/DK))
+							blockprob += 80
+						if(istype(A, /obj/item/clothing/mask/breath/marine))
+							blockprob += 60	
+						if(istype(A, /obj/item/clothing/mask/gas))
+							blockprob += 60
 					if(prob(blockprob)) continue
 					var/datum/disease/plague/D = new /datum/disease/plague()
 					D.effect = src.effect
@@ -295,6 +308,12 @@ Should be near done now.
 							blockprob += 80
 						if(istype(A, /obj/item/clothing/head/bio_hood))
 							blockprob += 40
+						if(istype(A, /obj/item/clothing/mask/gas/sechailer/DK))
+							blockprob += 80
+						if(istype(A, /obj/item/clothing/mask/breath/marine))
+							blockprob += 60	
+						if(istype(A, /obj/item/clothing/mask/gas))
+							blockprob += 60
 					if(prob(blockprob)) continue
 					var/datum/disease/plague/D = new /datum/disease/plague()
 					D.effect = src.effect

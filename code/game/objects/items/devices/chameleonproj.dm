@@ -11,9 +11,8 @@
 	origin_tech = "syndicate=4;magnets=4"
 	var/can_use = 1
 	var/obj/effect/dummy/chameleon/active_dummy = null
-	var/saved_item = /obj/item/weapon/cigbutt
-	var/saved_icon = 'icons/obj/clothing/masks.dmi'
-	var/saved_icon_state = "cigbutt"
+	var/saved_icon = 'icons/mob/hallucination.dmi'
+	var/saved_icon_state = "guard1"
 	var/saved_overlays
 
 /obj/item/device/chameleon/dropped()
@@ -31,13 +30,12 @@
 		if(istype(target,/obj/item) && !istype(target, /obj/item/weapon/disk/nuclear))
 			playsound(get_turf(src), 'sound/weapons/flash.ogg', 100, 1, -6)
 			user << "\blue Scanned [target]."
-			saved_item = target.type
 			saved_icon = target.icon
 			saved_icon_state = target.icon_state
 			saved_overlays = target.overlays
 
 /obj/item/device/chameleon/proc/toggle()
-	if(!can_use || !saved_item) return
+	if(!can_use || !saved_icon) return
 	if(active_dummy)
 		eject_all()
 		playsound(get_turf(src), 'sound/effects/pop.ogg', 100, 1, -6)
@@ -50,7 +48,7 @@
 		spawn(8) T.delete()
 	else
 		playsound(get_turf(src), 'sound/effects/pop.ogg', 100, 1, -6)
-		var/obj/O = new saved_item(src)
+		var/obj/O = new saved_icon(src)
 		if(!O) return
 		var/obj/effect/dummy/chameleon/C = new/obj/effect/dummy/chameleon(usr.loc)
 		C.activate(O, usr, saved_icon, saved_icon_state, saved_overlays, src)
