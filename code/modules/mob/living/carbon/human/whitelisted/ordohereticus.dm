@@ -49,12 +49,9 @@ Ordo Hereticus
 				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/stormtropper, slot_back)
 				equip_to_slot_or_del(new /obj/item/weapon/complexknife/combatknife, slot_in_backpack)
-<<<<<<< HEAD
-=======
 				equip_to_slot_or_del(new /obj/item/weapon/powersword/pknife, slot_in_backpack)
 				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/meltagun, slot_belt)
 				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/hellpistol, slot_in_backpack)
->>>>>>> master
 				var/obj/item/weapon/card/id/ordohereticus/W = new
 				W.access = get_all_accesses()
 				W.access += get_centcom_access("Inquisitor")
@@ -118,16 +115,9 @@ Ordo Hereticus
 				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/bodyguard, slot_wear_suit)
 				equip_to_slot_or_del(new /obj/item/clothing/head/bodyguard, slot_head)
 				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
-<<<<<<< HEAD
-<<<<<<< OHLoadouts
-				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/inq)
-=======
 				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/inq, slot_back)
->>>>>>> Auto stash before rebase of "refs/heads/master"
-=======
 				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/stormtropper, slot_back)
 				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/inq, slot_back)
->>>>>>> master
 				equip_to_slot_or_del(new /obj/item/weapon/complexknife/combatknife, slot_in_backpack)
 				var/obj/item/weapon/card/id/ordohereticus/W = new
 				W.access = get_all_accesses()
@@ -149,11 +139,8 @@ Ordo Hereticus
 				equip_to_slot_or_del(new /obj/item/clothing/head/cadianhelmet, slot_head)
 				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/stormtropper, slot_back)
 				equip_to_slot_or_del(new /obj/item/weapon/complexknife/combatknife, slot_in_backpack)
-<<<<<<< HEAD
-=======
 				equip_to_slot_or_del(new /obj/item/weapon/grenade/krak, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/weapon/grenade/krak, slot_l_store)
->>>>>>> master
 				var/obj/item/weapon/card/id/ordohereticus/W = new
 				W.access = get_all_accesses()
 				W.access += get_centcom_access("Inquisitor")
@@ -179,10 +166,6 @@ Ordo Hereticus
 		equip_to_slot_or_del(new /obj/item/clothing/head/cadianhelmet, slot_head)
 		equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/stormtropper, slot_back)
 		equip_to_slot_or_del(new /obj/item/weapon/complexknife/combatknife, slot_in_backpack)
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 	var/obj/item/weapon/card/id/ordohereticus/W = new
 	W.access = get_all_accesses()
 	W.access += get_centcom_access("Inquisitor")
