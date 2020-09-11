@@ -75,7 +75,7 @@
 
 /mob/living/carbon/human/psychic/proc/quickening()
 	set name = "Quickening (300)"
-	set desc = "Use your psychich energy to stimulate reflexes to insane levels and negate all knockouts."
+	set desc = "Use your psychic energy to stimulate reflexes to insane levels and negate all knockouts."
 	set category = "Spells"
 	if(dodging)
 		src << "\red They are already active."
