@@ -1,4 +1,3 @@
-
 /*
 Ordo Hereticus
 */
@@ -24,6 +23,8 @@ Ordo Hereticus
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/DK, slot_shoes)
 				equip_to_slot_or_del(new /obj/item/clothing/gloves/black, slot_gloves)
 				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/stormtropper, slot_back)
+				equip_to_slot_or_del(new /obj/item/weapon/complexknife/combatknife, slot_in_backpack)
 				var/obj/item/weapon/card/id/ordohereticus/W = new
 				W.access = get_all_accesses()
 				W.access += get_centcom_access("Inquisitor")
@@ -80,7 +81,7 @@ Ordo Hereticus
 	var/obj/item/weapon/card/id/ordohereticus/W = new
 	W.access = get_all_accesses()
 	W.access += get_centcom_access("Inquisitor")
-	W.assignment = "StormTrooper (Captin)"
+	W.assignment = "StormTrooper (Captain)"
 	W.registered_name = real_name
 	W.update_label()
 	equip_to_slot_or_del(W, slot_wear_id)
