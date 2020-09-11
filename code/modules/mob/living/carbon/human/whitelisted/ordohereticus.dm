@@ -46,7 +46,11 @@ Ordo Hereticus
 				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/bodyguard, slot_wear_suit)
 				equip_to_slot_or_del(new /obj/item/clothing/head/bodyguard, slot_head)
 				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
+<<<<<<< OHLoadouts
 				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/inq)
+=======
+				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/inq, slot_back)
+>>>>>>> Auto stash before rebase of "refs/heads/master"
 				equip_to_slot_or_del(new /obj/item/weapon/complexknife/combatknife, slot_in_backpack)
 				var/obj/item/weapon/card/id/ordohereticus/W = new
 				W.access = get_all_accesses()
