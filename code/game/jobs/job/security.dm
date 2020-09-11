@@ -313,7 +313,10 @@ Security Officer
 				H.equip_to_slot_or_del(new /obj/item/clothing/shoes/imperialboots/reinforced(H), slot_shoes)
 				H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/imperialarmor/reinforced(H), slot_wear_suit)
 				H.equip_to_slot_or_del(new /obj/item/clothing/head/imperialhelmet/reinforced(H), slot_head)
-				H.equip_to_slot_or_del(new /obj/item/weapon/twohanded/required/hbolter(H), slot_back)
+				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/l6_saw(H), slot_r_hand)
+				H.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/m762, slot_in_backpack)
+				H.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/m762, slot_in_backpack)
+				H.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/m762, slot_r_store)
 
 /datum/job/officer/get_access()
 	var/list/L = list()
