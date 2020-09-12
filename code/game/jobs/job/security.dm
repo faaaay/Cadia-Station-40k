@@ -180,6 +180,55 @@ Detective
 				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/lasgun(H), slot_r_hand)
 
 /*
+Primaris Psyker
+*/
+/datum/job/imperialpsyker
+	title = "Primaris Psyker"
+	flag = IMPPSYKER
+	department_head = list("Comissar")
+	department_flag = ENGSEC
+	faction = "Station"
+	total_positions = 1 // Might be changed in the future, probably not, we don't want the entire guard on the station to be psykers.
+	spawn_positions = 1
+	supervisors = "Commissar and your Platoon Sergeant."
+	selection_color = "#ffeeee"
+	minimal_player_age = 7 // This'll probably have to be changed in the future.
+	var/list/dep_access = null
+
+	default_pda = /obj/item/device/pda/security
+	default_headset = /obj/item/device/radio/headset/headset_sec
+	default_backpack = /obj/item/weapon/storage/backpack/impguard
+	default_satchel = /obj/item/weapon/storage/backpack/satchel_sec
+	default_id = /obj/item/weapon/card/id/dogtag
+
+	access = list(access_security, access_sec_doors, access_brig, access_court, access_maint_tunnels, access_morgue)
+	minimal_access = list(access_security, access_sec_doors, access_brig, access_court) //But see /datum/job/warden/get_access()
+
+/datum/job/imperialpsyker/equip_items(var/mob/living/carbon/human/H) // They'll need to get more Psyker-specific gear in the future.
+	H.verbs += /mob/living/carbon/human/proc/renderaid									 //This is how we get the verb!
+
+	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
+	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/imperialboots(H), slot_shoes)
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/imperium_monk(H), slot_wear_suit) // The idea behind no armor is that, Psykers shouldn't be able to engage in DIRECT combat, they should work together with their fellow Guardsmen to stay safe.
+	H.equip_to_slot_or_del(new /obj/item/clothing/head/chaplain_hood(H), slot_head)
+	H.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/imperialbelt(H), slot_belt)
+	H.equip_to_slot_or_del(new /obj/item/weapon/staff(H), slot_r_hand)
+
+	H.equip_to_slot_or_del(new /obj/item/weapon/bible(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/weapon/book/manual/security_space_law(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/device/flashlight/seclite, slot_in_backpack)
+
+	H.maxPsy += 500 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
+	H.verbs += /mob/living/carbon/human/psychic/proc/imprison
+	H.verbs += /mob/living/carbon/human/psychic/proc/smite
+	H.verbs += /mob/living/carbon/human/psychic/proc/quickening
+	H.verbs += /mob/living/carbon/human/psychic/proc/telepath
+
+	H.mutations.Add(TK)
+	H.update_mutations()
+
+/*
 Security Officer
 */
 /datum/job/officer
@@ -197,7 +246,7 @@ Security Officer
 
 	default_pda = /obj/item/device/pda/security
 	default_headset = /obj/item/device/radio/headset/headset_sec
-	default_backpack = /obj/item/weapon/storage/backpack/security
+	default_backpack = /obj/item/weapon/storage/backpack/impguard
 	default_satchel = /obj/item/weapon/storage/backpack/satchel_sec
 	default_id = /obj/item/weapon/card/id/dogtag
 
@@ -228,22 +277,33 @@ Security Officer
 		H.equip_to_slot_or_del(new /obj/item/device/flashlight/seclite, slot_in_backpack)
 
 	spawn(10)
-		var/weaponchoice = input(H, "Select a weapon.","Weapon Selection") as null|anything in list("Guardsman's Sword", "Mercy Chainsword", "Lasgun (Fully Equipped)", "Long-Las", "Stubber Pistol", "Autogun (Fully Equipped)", "Reinforced Flak Armor")
+		var/weaponchoice = input(H, "Select Class","Class Selection") as null|anything in list("Standard Guardsman", "Field Chiurgeon", "Sharpshooter", "Scout", "Shock Guardsman", "Heavy Guardsman")
 		switch(weaponchoice)
-			if("Guardsman's Sword")
-				H.equip_to_slot_or_del(new /obj/item/weapon/complexsword/IGsword(H), slot_r_hand)
-			if("Mercy Chainsword")
-				H.equip_to_slot_or_del(new /obj/item/weapon/twohanded/chainswordig(H), slot_r_hand)
-			if("Lasgun (Fully Equipped)")
+			if("Standard Guardsman")
 				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/lasgun(H), slot_r_hand)
-			if("Long-Las")
+			if("Field Chiurgeon")
+				if(!H.unEquip(H.gloves))
+					qdel(H.gloves)
+				H.equip_to_slot_or_del(new /obj/item/clothing/gloves/latex, slot_gloves)
+				H.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, slot_glasses)
+				H.equip_to_slot_or_del(new /obj/item/weapon/storage/pill_bottle/stimulant, slot_r_store)
+				H.equip_to_slot_or_del(new /obj/item/weapon/storage/firstaid/impguard, slot_in_backpack)
+				H.equip_to_slot_or_del(new /obj/item/weapon/storage/firstaid/impguard, slot_in_backpack)
+			if("Sharpshooter") // I couldn't think of anything else for this class, further expansion would be appreciated.
 				H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/longlas(H), slot_r_hand)
-			if("Stubber Pistol")
-				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/pistol(H), slot_r_hand)
-			if("Autogun (Fully Equipped)")
-				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/autogun2, slot_r_hand)
+			if("Scout")
+				H.equip_to_slot_or_del(new /obj/item/clothing/mask/bandana/red, slot_wear_mask)
+				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/pistol(H), slot_r_hand) // Currently a Stubber Pistol, might be switched out for a Laspistol if it's shit.
+				H.equip_to_slot_or_del(new /obj/item/weapon/complexsword/IGsword(H), slot_l_hand)
+				H.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/m10mm, slot_r_store)
+				H.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/m10mm, slot_in_backpack)
+				H.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/m10mm, slot_in_backpack)
+			if("Shock Guardsman")
+				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/autogun2(H), slot_r_hand)
 				H.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/autogun, slot_r_store)
-			if("Reinforced Flak Armor")
+				H.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/autogun, slot_in_backpack)
+				H.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/autogun, slot_in_backpack)
+			if("Heavy Weapons Specialist")
 				if(!H.unEquip(H.wear_suit))
 					qdel(H.wear_suit)
 				if(!H.unEquip(H.head))
@@ -253,6 +313,10 @@ Security Officer
 				H.equip_to_slot_or_del(new /obj/item/clothing/shoes/imperialboots/reinforced(H), slot_shoes)
 				H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/imperialarmor/reinforced(H), slot_wear_suit)
 				H.equip_to_slot_or_del(new /obj/item/clothing/head/imperialhelmet/reinforced(H), slot_head)
+				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/l6_saw(H), slot_r_hand)
+				H.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/m762, slot_in_backpack)
+				H.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/m762, slot_in_backpack)
+				H.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/m762, slot_r_store)
 
 /datum/job/officer/get_access()
 	var/list/L = list()
