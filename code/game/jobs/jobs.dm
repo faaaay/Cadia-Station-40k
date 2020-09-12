@@ -13,7 +13,6 @@ var/const/ROBOTICIST		=(1<<8)
 var/const/AI				=(1<<9)
 var/const/CYBORG			=(1<<10)
 var/const/UGOOSE			=(1<<11)
-var/const/IMPPSYKER			=(1<<12)
 
 var/const/MEDSCI			=(1<<1)
 
@@ -112,7 +111,6 @@ var/list/security_positions = list(
 	"Comissar",
 	"Sergeant",
 	"Enforcer",
-	"Primaris Psyker",
 	"Imperial Guard"
 )
 

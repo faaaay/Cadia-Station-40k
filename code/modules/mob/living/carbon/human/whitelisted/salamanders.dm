@@ -165,12 +165,10 @@ Salamanders
 				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
 				maxHealth = 175 //trait: nerd -10 hp
 				maxPsy += 1000
-				verbs += /mob/living/carbon/human/psychic/proc/imprison
-				verbs += /mob/living/carbon/human/psychic/proc/smite
-				verbs += /mob/living/carbon/human/psychic/proc/quickening
-				verbs += /mob/living/carbon/human/psychic/proc/telepath
-				mutations.Add(TK)
-				update_mutations()
+				verbs += /mob/living/carbon/human/whitelisted/proc/imprison
+				verbs += /mob/living/carbon/human/whitelisted/proc/smite
+				verbs += /mob/living/carbon/human/whitelisted/proc/quickening
+				verbs += /mob/living/carbon/human/whitelisted/proc/telepath
 				var/obj/item/weapon/card/id/W = new
 				W.icon_state = "smcard"
 				W.access = get_all_accesses()
