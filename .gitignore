@@ -41,3 +41,5 @@ GooseCode.dyn.rsc
 banlist.dbd
 *.dme
 *.int
+GooseCode.int
+*.int
