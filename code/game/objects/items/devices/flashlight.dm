@@ -118,6 +118,15 @@
 	hitsound = 'sound/weapons/genhit1.ogg'
 	brightness_on = 5 // A little better than the standard flashlight.
 
+/obj/item/device/flashlight/orklite //idc if this is lore inaccurate da BOYZ need dis
+	name = "GLOWY FING"
+	desc = "IT GLOWS 'AN 'ELPS US SEE IN 'DA DARK!"
+	icon_state = "torch"
+	item_state = "torch"
+	force = 1 //ow
+	attack_verb = list("beaten")
+	hitsound = 'sound/weapons/genhit1.ogg'
+	brightness_on = 5 // A little better than the standard flashlight.
 
 // the desk lamps are a bit special
 /obj/item/device/flashlight/lamp
