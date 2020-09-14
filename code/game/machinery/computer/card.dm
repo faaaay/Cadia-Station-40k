@@ -28,15 +28,15 @@ var/time_last_changed_position = 0
 		"Master Servitor",
 		"Assistant",
 		"Servitor",
-		"Lord General",
+		"Rogue Trader",
 		"Seneschal",
-		"Comissar",
+		"Commissar",
 		"Sergeant",
 		"Magos",
 		"Munitorum Priest",
 		"Lord Inquisitor, Ordo Xenos",
 		"Sister Hospitaller",
-		"Ministorum Priest")
+		"Missionary")
 
 	//The scaling factor of max total positions in relation to the total amount of people on board the station in %
 	var/max_relative_positions = 30 //30%: Seems reasonable, limit of 6 @ 20 players
@@ -351,7 +351,7 @@ var/time_last_changed_position = 0
 							get_subordinates("Sister Hospitaller")
 						if(access_hos in scan.access)
 							region_access += 2
-							get_subordinates("Comissar")
+							get_subordinates("Commissar")
 						if(region_access)
 							authenticated = 1
 			else if ((!( authenticated ) && (istype(usr, /mob/living/silicon))) && (!modify))

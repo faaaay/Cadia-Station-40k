@@ -3,14 +3,14 @@
 Chaplain
 */
 /datum/job/chaplain
-	title = "Ministorum Priest"
+	title = "Missionary"
 	flag = CHAPLAIN
-	department_head = list("The Ecclesiarchy")
+	department_head = list("The Ecclesiarchy, The Rogue Trader")
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Ecclesiarchy"
+	supervisors = "The Ecclesiarchy, The Rogue Trader"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/chaplain

@@ -39,7 +39,7 @@
 /obj/item/weapon/bible/attack(mob/living/M as mob, mob/living/user as mob)
 
 	var/chaplain = 0
-	if(user.mind && (user.mind.assigned_role == "Ministorum Priest"))
+	if(user.mind && (user.mind.assigned_role == "Missionary"))
 		chaplain = 1
 
 	add_logs(user, M, "attacked", object="[src.name]")
@@ -56,7 +56,7 @@
 //		return
 
 	if (M.stat !=2)
-		if(M.mind && (M.mind.assigned_role == "Chaplain"))
+		if(M.mind && (M.mind.assigned_role == "Missionary"))
 			user << "\red You can't heal yourself!"
 			return
 		/*if((M.mind in ticker.mode.cult) && (prob(20)))
@@ -99,7 +99,7 @@
 /obj/item/weapon/storage/bible/afterattack(atom/A, mob/user as mob, proximity)
 	if(!proximity) return
 	var/chaplain = 0
-	if(user.mind && (user.mind.assigned_role == "Ministorum Priest"))
+	if(user.mind && (user.mind.assigned_role == "Missionary"))
 		chaplain = 1
 	if(istype(A, /mob/living/simple_animal/hostile/retaliate/daemon))
 		var/mob/living/simple_animal/hostile/retaliate/daemon/D = A
@@ -112,9 +112,9 @@
 
 	if (istype(A, /turf/simulated/floor))
 		user << "\blue You hit the floor with the bible."
-		if(user.mind && (user.mind.assigned_role == "Chaplain"))
+		if(user.mind && (user.mind.assigned_role == "Missionary"))
 			call(/obj/effect/rune/proc/revealrunes)(src)
-	if(user.mind && (user.mind.assigned_role == "Chaplain"))
+	if(user.mind && (user.mind.assigned_role == "Missionary"))
 		if(A.reagents && A.reagents.has_reagent("water")) //blesses all the water in the holder
 			user << "\blue You bless [A]."
 			var/water2holy = A.reagents.get_reagent_amount("water")
@@ -208,7 +208,7 @@
 			H.visible_message("[H] chants the prayers on the [src].")
 			praying = 1
 			var/chaplain = 0
-			if(user.mind && (user.mind.assigned_role == "Ministorum Priest"))
+			if(user.mind && (user.mind.assigned_role == "Missionary"))
 				chaplain = 1
 			if(chaplain)
 				H << "\red The emperor's light shows you a glimpse into the spiritual world!" //Better than making the preacher constantly a seer, I would think.

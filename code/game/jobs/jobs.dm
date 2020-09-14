@@ -47,14 +47,14 @@ var/list/assistant_occupations = list(
 	"Assistant",
 	"Atmospheric Technician",
 	"Munitorum Adept",
-	"Chaplain",
+	"Missionary",
 	"Lawyer",
 	"Record Keeper"
 )
 
 
 var/list/command_positions = list(
-	"Lord General",
+	"Rogue Trader",
 	"Seneschal",
 	"Lord Inquisitor, Ordo Xenos",
 	"Sister Hospitaller",
@@ -99,7 +99,7 @@ var/list/civilian_positions = list(
 	"Munitorum Adept",
 	"Shaft Miner",
 	"Inquisitor",
-	"Chaplain",
+	"Missionary",
 	"Celebrity",
 	"Mime",
 	"Assistant",
@@ -108,7 +108,7 @@ var/list/civilian_positions = list(
 
 
 var/list/security_positions = list(
-	"Comissar",
+	"Commissar",
 	"Sergeant",
 	"Enforcer",
 	"Imperial Guard"
