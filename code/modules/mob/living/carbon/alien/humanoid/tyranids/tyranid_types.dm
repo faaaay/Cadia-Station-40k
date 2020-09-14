@@ -283,9 +283,18 @@ Zoanthropes
 			if(6)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/zoanthropes/proc/psythrow)
 				src << "\red You can throw people telekinetically."
+				if (lowertext(usr.key) in tyranid)
+					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
+					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-800)
 	else
 		src << "\red You need more biomass."
+
+/mob/living/carbon/alien/humanoid/tyranid/zoanthropes/Life()
+	..()
+	if(evol_stage >= 2)
+		src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
+
 
 /*
 Warriors
@@ -391,6 +400,9 @@ Warriors
 			if(4)
 				src.firearmor += 5
 				src << "<b>You grow fireproofed scales!</b>"
+				if (lowertext(usr.key) in tyranid)
+					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
+					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-400)
 	else
 		src << "\red You need more biomass."
@@ -637,9 +649,17 @@ Ravener
 			if(5)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/regrowth)
 				src << "\red You gain the ability to regenerate off spare biomass."
+				if (lowertext(usr.key) in tyranid)
+					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
+					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-1000)
 	else
 		src << "\red You need more biomass."
+
+/mob/living/carbon/alien/humanoid/tyranid/ravener/Life()
+	..()
+	if(evol_stage >= 2)
+		src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
 
 /*
 Lictor
@@ -819,6 +839,9 @@ Lictor
 			if(7)
 				src.plasma_rate = 20
 				src << "\red Your harvest rate increases."
+				if (lowertext(usr.key) in tyranid)
+					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
+					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-800)
 	else
 		src << "\red You need more biomass."
@@ -1014,10 +1037,19 @@ Hormagaunt
 				src << "\red You adapt a venomous bite! The venom will make targets react badly to harvest weeds, keeping them away from the hive."
 			if(5)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/spikes, /mob/living/carbon/alien/humanoid/tyranid/proc/mine)
+				if (lowertext(usr.key) in tyranid)
+					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
+					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 				src << "\red You are now able to build spike defenses and spore mines."
 		adjustToxLoss(-800)
 	else
 		src << "\red You need more biomass."
+
+/mob/living/carbon/alien/humanoid/tyranid/hormagaunt/Life()
+	..()
+	if(evol_stage >= 2)
+		src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
+
 
 /*
 Genestealer
@@ -1062,8 +1094,8 @@ Genestealer
 			T << "\red The [src] jabs you with its tongue!"
 			T.Paralyse(15)
 			spawn(1200)
-				T << "\red You are suddenly able to sense all the other tyranids on the outpost!"
-				T << "\red You are a member of the genestealer cult. Serve the tyranids at all costs."
+				T << "\red You are suddenly able to sense all the Tyranids on the outpost! You can communicate to them through the hivemind by using the prefix :a in messages."
+				T << "\red As a member of the genestealer cult, you must serve and obey the Tyranids, but follow the genestealer that converted you above all else!"
 				T.alien_talk_understand = 1
 				T.mind.special_role = "Genestealer Cult Member"
 				spawn(10)
@@ -1160,6 +1192,9 @@ Genestealer
 				src.health += 100
 				src.maxHealth += 100
 				src << "\red You have evolved into a brood lord!"
+				if (lowertext(usr.key) in tyranid)
+					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
+					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-800)
 	else
 		src << "\red You need more biomass."
@@ -1389,9 +1424,17 @@ Venomthropes
 				plasma_rate = 20
 				src << "<b>You evolve a venom cannon! Use shift+click to fire.</b>"
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/venomthropes/proc/venomshot)
+				if (lowertext(usr.key) in tyranid)
+					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
+					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-500)
 	else
 		src << "\red You need more biomass."
+
+/mob/living/carbon/alien/humanoid/tyranid/venomthropes/Life()
+	..()
+	if(evol_stage >= 2)
+		src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
 
 datum/reagent/toxin/venomthropes
 	name = "Tyranid Toxin"
