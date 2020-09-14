@@ -173,8 +173,8 @@
 	corpsebrute = 300
 	corpseoxy = 300
 	corpseid = 1
-	corpseidjob = "Missionary"
-	corpseidaccess = "Missionary"
+	corpseidjob = "Ministorum Priest"
+	corpseidaccess = "Ministorum Priest"
 	bloody = 1
 
 /obj/effect/landmark/corpse/guard

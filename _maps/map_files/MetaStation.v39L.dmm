@@ -6372,7 +6372,7 @@
 "csB" = (/obj/machinery/door_control{id = "DKimpoffice"; name = "Privacy Shutters Control"; pixel_x = 5; pixel_y = 5},/obj/structure/table/glasstable,/turf/unsimulated/floor/engine,/area/factions/deathkorps)
 "csC" = (/obj/machinery/nuclearbomb{r_code = "LOLNO"},/turf/unsimulated/floor/engine,/area/factions/deathkorps)
 "csD" = (/turf/unsimulated/wall/fakeglass{icon_state = "fakewindows2"; dir = 6},/area/factions/deathkorps)
-"csE" = (/obj/structure/cable/heavy{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/landmark/start{name = "Missionary"},/turf/simulated/floor{icon_state = "chapel"},/area/chapel/main)
+"csE" = (/obj/structure/cable/heavy{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/landmark/start{name = "Ministorum Priest"},/turf/simulated/floor{icon_state = "chapel"},/area/chapel/main)
 "csF" = (/obj/effect/step_trigger/thrower{affect_ghosts = 1; direction = 2; name = "thrower_throwdownside"; nostop = 1; stopper = 0; tiles = 0},/turf/space/transit/north/shuttlespace_ns3,/area/space)
 "csG" = (/turf/space/transit/north/shuttlespace_ns11,/area/shuttle/escape/transit)
 "csH" = (/turf/space/transit/north/shuttlespace_ns8,/area/shuttle/escape/transit)

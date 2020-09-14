@@ -403,8 +403,8 @@
 			return "Imperial Inquisition"
 
 /proc/get_all_jobs()
-	return list("Assistant", "Seneschal", "Bartender", "Chef", "Botanist", "Missionary", "Munitorum Adept",
-				"Shaft Miner", "Mime", "Janitor", "Record Keeper", "Missionary",
+	return list("Assistant", "Seneschal", "Bartender", "Chef", "Botanist", "Munitorum Priest", "Munitorum Adept",
+				"Shaft Miner", "Mime", "Janitor", "Record Keeper", "Ministorum Priest",
 				"Trauma Medicus", "Pharmacologist", "Geneticist", "Virologist",
 				"Scientist", "Cybernetica Acolyte", "Enforcer", "Commissar", "Rogue Trader", "Sergeant", "Tech Priest", "Adeptus Magos", "Sister Hospitaller", "Celebrity")
 

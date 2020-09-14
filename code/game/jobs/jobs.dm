@@ -47,7 +47,7 @@ var/list/assistant_occupations = list(
 	"Assistant",
 	"Atmospheric Technician",
 	"Munitorum Adept",
-	"Missionary",
+	"Ministorum Priest",
 	"Lawyer",
 	"Record Keeper"
 )
@@ -99,7 +99,7 @@ var/list/civilian_positions = list(
 	"Munitorum Adept",
 	"Shaft Miner",
 	"Inquisitor",
-	"Missionary",
+	"Ministorum Priest",
 	"Celebrity",
 	"Mime",
 	"Assistant",
