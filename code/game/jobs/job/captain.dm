@@ -33,7 +33,7 @@ Captain
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/imperialboots(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/caphat(H), slot_head)
 	H.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses(H), slot_glasses)
-	H.equip_to_slot_or_del(new 	/obj/item/clothing/gloves/lordcommander(H), slot_gloves)
+	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/lordcommander(H), slot_gloves)
 
 	//Equip ID box & telebaton
 	if(H.backbag == 1)
