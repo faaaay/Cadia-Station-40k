@@ -10,7 +10,7 @@ Chaplain
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Ecclesiarchy, The Rogue Trader"
+	supervisors = "The Ecclesiarchy and the The Rogue Trader"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/chaplain
