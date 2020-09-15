@@ -5,7 +5,7 @@ Chaplain
 /datum/job/chaplain
 	title = "Ministorum Priest"
 	flag = CHAPLAIN
-	department_head = list("The Ecclesiarchy, The Rogue Trader")
+	department_head = list("The Ecclesiarchy")
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 1
