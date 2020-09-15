@@ -27,7 +27,7 @@ Eldar
 	verbs.Add(/mob/living/carbon/human/whitelisted/eldar/verb/lungeat, /mob/living/carbon/human/whitelisted/eldar/verb/stealth)
 	..()
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
-	R.set_frequency(1445)
+	R.set_frequency(1487)
 	equip_to_slot_or_del(R, slot_ears)
 	equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/warlock, slot_back)
 	equip_to_slot_or_del(new /obj/item/device/radio/headset, slot_ears)
