@@ -8,8 +8,8 @@ Plague Marines
 	real_name = "Kornus the Maledictor"
 	universal_speak = 1
 	gender = "male"
-	maxHealth = 300
-	health = 300
+	maxHealth = 250
+	health = 250
 	status_flags = 0
 
 /mob/living/carbon/human/whitelisted/pmleader/New()
@@ -67,8 +67,8 @@ Plague Marines
 	real_name = "Unknown"
 	universal_speak = 1
 	gender = "male"
-	maxHealth = 300
-	health = 300
+	maxHealth = 250
+	health = 250
 	status_flags = 0
 
 /mob/living/carbon/human/whitelisted/pm/New()
