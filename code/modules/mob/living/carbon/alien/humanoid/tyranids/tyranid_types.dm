@@ -283,9 +283,18 @@ Zoanthropes
 			if(6)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/zoanthropes/proc/psythrow)
 				src << "\red You can throw people telekinetically."
+				if (lowertext(usr.key) in tyranid)
+					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
+					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-800)
 	else
 		src << "\red You need more biomass."
+
+/mob/living/carbon/alien/humanoid/tyranid/zoanthropes/Life()
+	..()
+	if(evol_stage >= 2)
+		src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
+
 
 /*
 Warriors
@@ -391,6 +400,9 @@ Warriors
 			if(4)
 				src.firearmor += 5
 				src << "<b>You grow fireproofed scales!</b>"
+				if (lowertext(usr.key) in tyranid)
+					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
+					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-400)
 	else
 		src << "\red You need more biomass."
@@ -637,9 +649,17 @@ Ravener
 			if(5)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/regrowth)
 				src << "\red You gain the ability to regenerate off spare biomass."
+				if (lowertext(usr.key) in tyranid)
+					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
+					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-1000)
 	else
 		src << "\red You need more biomass."
+
+/mob/living/carbon/alien/humanoid/tyranid/ravener/Life()
+	..()
+	if(evol_stage >= 2)
+		src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
 
 /*
 Lictor
@@ -819,6 +839,9 @@ Lictor
 			if(7)
 				src.plasma_rate = 20
 				src << "\red Your harvest rate increases."
+				if (lowertext(usr.key) in tyranid)
+					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
+					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-800)
 	else
 		src << "\red You need more biomass."
@@ -1014,10 +1037,19 @@ Hormagaunt
 				src << "\red You adapt a venomous bite! The venom will make targets react badly to harvest weeds, keeping them away from the hive."
 			if(5)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/spikes, /mob/living/carbon/alien/humanoid/tyranid/proc/mine)
+				if (lowertext(usr.key) in tyranid)
+					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
+					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 				src << "\red You are now able to build spike defenses and spore mines."
 		adjustToxLoss(-800)
 	else
 		src << "\red You need more biomass."
+
+/mob/living/carbon/alien/humanoid/tyranid/hormagaunt/Life()
+	..()
+	if(evol_stage >= 2)
+		src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
+
 
 /*
 Genestealer
@@ -1031,6 +1063,7 @@ Genestealer
 	health = 200
 	var/convert_range = 0
 	var/speedboost = 1
+	var/converting = 0
 
 /mob/living/carbon/alien/humanoid/tyranid/genestealer/movement_delay()
 	. = -speedboost
@@ -1051,27 +1084,43 @@ Genestealer
 			if(!istype(T))
 				src << "\red We only infect people!"
 				return
-			if(istype(T, /mob/living/carbon/human/whitelisted/))
+			if(istype(T, /mob/living/carbon/human/whitelisted/))   //This should have an exception for Eldar.
 				src << "\red No... it is too difficult! We must find another."
 				return
 			if(iscultist(T))
 				src << "\red This one's mind is already too closely bonded to immaterial forces!"
 				return
-			src << "We jab [T]. They will become one of us in approximately two minutes."
+			if(converting)
+				src << "\red We are already converting a cultist."  //Needs a new If statement so that you can't convert current cultists.
+				return
+			converting=1 //Got through all checks that stop conversion so conversion begins.
+			src << "We jab [T]. We must keep them by us for 10 seconds to convert them."
 			visible_message("\red <B>[src] jabs [T] with its tongue!</B>")
 			T << "\red The [src] jabs you with its tongue!"
-			T.Paralyse(15)
-			spawn(1200)
-				T << "\red You are suddenly able to sense all the other tyranids on the outpost!"
-				T << "\red You are a member of the genestealer cult. Serve the tyranids at all costs."
+			adjustToxLoss(-50) //Here rather than at the end so that the cost is taken when beginning rather than at the end of conversion.
+			T.Weaken(5)
+			spawn(0)
+				for(var/stage = 0, stage<=20, stage++)  //Must stay by them for 10 seconds. Hard to get someone if they're in a group as you'll be chased away. 20 stages so that it'll check frequently for the victim breaking free.
+					sleep(5)
+					if(prob(40))    //A lone target should be easy to capture. This could be reduced if nesting should be mandatory.
+						T.Weaken(5)
+					if(get_dist(get_turf(src),get_turf(T)) > convert_range)
+						src.visible_message("\red <b>The [src] withdraws its tongue from [T]!</b>")
+						converting = 0
+						return
+				src << "\red We convert [T]. They will now serve us loyally." //There isn't a delay after conversion is complete. Could be re-added but this saves having to nest someone after conversion.
+				T << "\red You are suddenly able to sense all the Tyranids on the outpost! You can communicate to them through the hivemind by using the prefix :a in messages."
+				T << "\red As a member of the genestealer cult, you must serve and obey the Tyranids, but follow the genestealer that converted you above all else!"
+				converting = 0  //Still haven't managed to fix the old runtime error so this will let the genestealer convert by setting converting to 0 first.
 				T.alien_talk_understand = 1
 				T.mind.special_role = "Genestealer Cult Member"
 				spawn(10)
 					for(var/mob/living/C in world)
-						if(isalien(C) || (C.mind && C.mind.special_role == "Genestealer Cult Member"))
+						if(isalien(C) || (C.mind && C.mind.special_role == "Genestealer Cult Member"))   //Right now, this makes the icon appear for Nids but not for the cultists.
 							var/I = image('icons/mob/alien.dmi', loc = T, icon_state = "genestealer")
+							if (isnull(C.client))
+								src << "Boop."
 							C.client.images += I
-			adjustToxLoss(-50)
 		else
 			src << "\blue No targets in range!"
 	else
@@ -1160,6 +1209,9 @@ Genestealer
 				src.health += 100
 				src.maxHealth += 100
 				src << "\red You have evolved into a brood lord!"
+				if (lowertext(usr.key) in tyranid)
+					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
+					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-800)
 	else
 		src << "\red You need more biomass."
@@ -1389,9 +1441,17 @@ Venomthropes
 				plasma_rate = 20
 				src << "<b>You evolve a venom cannon! Use shift+click to fire.</b>"
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/venomthropes/proc/venomshot)
+				if (lowertext(usr.key) in tyranid)
+					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
+					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-500)
 	else
 		src << "\red You need more biomass."
+
+/mob/living/carbon/alien/humanoid/tyranid/venomthropes/Life()
+	..()
+	if(evol_stage >= 2)
+		src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
 
 datum/reagent/toxin/venomthropes
 	name = "Tyranid Toxin"
