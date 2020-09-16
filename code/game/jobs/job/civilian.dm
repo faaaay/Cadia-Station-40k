@@ -116,7 +116,7 @@ Quartermaster
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the sector munitorium and the imperial guard"
+	supervisors = "The Sector Munitorium and the Seneschal"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/quartermaster
@@ -144,7 +144,7 @@ Cargo Technician
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Munitorum Priest and the Seneschal"
+	supervisors = "The Munitorum Priest and the Seneschal"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/cargo
@@ -170,7 +170,7 @@ Shaft Miner
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "the Munitorum Priest and the Seneschal"
+	supervisors = "The Munitorum Priest and the Seneschal"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/shaftminer
@@ -243,7 +243,7 @@ Mime
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Seneschal"
+	supervisors = "The Seneschal"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/mime
@@ -289,7 +289,7 @@ Janitor
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Seneschal"
+	supervisors = "The Seneschal"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/janitor
@@ -314,7 +314,7 @@ Librarian
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Seneschal"
+	supervisors = "The Seneschal"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/librarian

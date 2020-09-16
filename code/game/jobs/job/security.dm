@@ -10,12 +10,12 @@ Head of Shitcurity
 /datum/job/hos
 	title = "Commissar"
 	flag = HOS
-	department_head = list("Lord General")
+	department_head = list("Rogue Trader")
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Lord General"
+	supervisors = "The Rogue Trader"
 	selection_color = "#ffdddd"
 	req_admin_notify = 1
 	minimal_player_age = 14
@@ -71,7 +71,7 @@ Warden
 /datum/job/warden
 	title = "Sergeant"
 	flag = WARDEN
-	department_head = list("Comissar")
+	department_head = list("Commissar")
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
@@ -125,12 +125,12 @@ Detective
 /datum/job/detective
 	title = "Enforcer"
 	flag = DETECTIVE
-	department_head = list("Comissar")
+	department_head = list("Commissar")
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Adeptus Arbites"
+	supervisors = "Commissar"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
 
@@ -185,7 +185,7 @@ Security Officer
 /datum/job/officer
 	title = "Imperial Guard"
 	flag = OFFICER
-	department_head = list("Comissar")
+	department_head = list("Commissar")
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 500
