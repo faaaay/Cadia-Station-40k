@@ -14,7 +14,7 @@ Thousand Sons
 	..()
 
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
-	R.set_frequency(1441)
+	R.set_frequency(1479)
 	equip_to_slot_or_del(R, slot_ears)
 	equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
 	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/thousandarmor/captain, slot_wear_suit)
@@ -43,7 +43,7 @@ Thousand Sons
 /mob/living/carbon/human/whitelisted/ksons/New()
 	..()
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
-	R.set_frequency(1441)
+	R.set_frequency(1479)
 	equip_to_slot_or_del(R, slot_ears)
 	equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
 	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/thousandarmor/sorc, slot_wear_suit)

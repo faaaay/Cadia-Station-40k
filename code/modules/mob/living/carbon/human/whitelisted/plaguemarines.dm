@@ -16,7 +16,7 @@ Plague Marines
 	..()
 
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
-	R.set_frequency(1441)
+	R.set_frequency(1457)
 	equip_to_slot_or_del(R, slot_ears)
 	equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
 	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/pmpowerarmor, slot_wear_suit)
@@ -74,7 +74,7 @@ Plague Marines
 /mob/living/carbon/human/whitelisted/pm/New()
 	..()
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
-	R.set_frequency(1441)
+	R.set_frequency(1457)
 	equip_to_slot_or_del(R, slot_ears)
 	equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
 	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/pmpowerarmor, slot_wear_suit)

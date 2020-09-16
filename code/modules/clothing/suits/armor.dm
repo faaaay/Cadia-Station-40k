@@ -37,8 +37,8 @@
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 
 /obj/item/clothing/suit/armor/hos/comissar2
-	name = "comissar coat"
-	desc = "A large coat with comissar stripes and heavy reinforcements."
+	name = "Commissar coat"
+	desc = "A large coat with Commissar stripes and heavy reinforcements."
 	icon_state = "comissar3"
 	item_state = "comissar2"
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 50, rad = 50)
@@ -49,7 +49,7 @@
 	flags = THICKMATERIAL
 
 /obj/item/clothing/suit/armor/hos/commisar2/festive
-	name = "comissar festive coat"
+	name = "Commissar festive coat"
 	icon_state = "comissar2"
 
 /obj/item/clothing/suit/armor/vest/warden

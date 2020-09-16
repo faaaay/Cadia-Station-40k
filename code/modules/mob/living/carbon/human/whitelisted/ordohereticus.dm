@@ -51,7 +51,7 @@ Ordo Hereticus
 				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/stormtropper, slot_back)
 				equip_to_slot_or_del(new /obj/item/weapon/powersword/pknife, slot_in_backpack)
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/meltagun, slot_belt)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/shotgun/combat/voxlegis, slot_r_hand)
 				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/hellpistol, slot_in_backpack)
 				var/obj/item/weapon/card/id/ordohereticus/W = new
 				W.access = get_all_accesses()
