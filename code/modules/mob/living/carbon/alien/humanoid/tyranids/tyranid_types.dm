@@ -970,10 +970,10 @@ Hormagaunt
 	return
 
 /mob/living/carbon/alien/humanoid/tyranid/hormagaunt/proc/talons()
-	set name = "Scything Talons (50)"
+	set name = "Scything Talons (100)"
 	set desc = "Lash out in rapid succession at everyone nearby."
 	set category = "Alien"
-	if(powerc(50))
+	if(powerc(100))
 		playsound(loc, 'sound/weapons/slice.ogg', 25, 1, -1)
 		for(var/mob/living/carbon/human/C in oview(1))
 			visible_message("\red <B>[src] slashes [C] with scything talons!</B>")
@@ -982,9 +982,9 @@ Hormagaunt
 			var/armor_block = C.run_armor_check(affecting, "melee")
 			C.apply_damage(rand(15, 35), BRUTE, affecting, armor_block - 25)
 			new /obj/effect/gibspawner/blood(C.loc)
-			if(prob(50))
+			if(prob(25))
 				C.drop_item()
-			adjustToxLoss(-50)
+			adjustToxLoss(-100)
 	else
 		src << "\red You need more biomass."
 
@@ -1127,10 +1127,10 @@ Genestealer
 		src << "\red You need more biomass."
 
 /mob/living/carbon/alien/humanoid/tyranid/genestealer/proc/talons()
-	set name = "Scything Talons (50)"
+	set name = "Scything Talons (100)"
 	set desc = "Lash out in rapid succession at everyone nearby."
 	set category = "Alien"
-	if(powerc(50))
+	if(powerc(100))
 		playsound(loc, 'sound/weapons/slice.ogg', 25, 1, -1)
 		for(var/mob/living/carbon/human/C in oview(1))
 			visible_message("\red <B>[src] slashes [C] with scything talons!</B>")
@@ -1144,7 +1144,7 @@ Genestealer
 				var/armor_block = C.run_armor_check(affecting, "melee")
 				C.apply_damage(rand(15, 45), BRUTE, affecting, armor_block - 35)
 				new /obj/effect/gibspawner/blood(C.loc)
-			adjustToxLoss(-50)
+			adjustToxLoss(-100)
 	else
 		src << "\red You need more biomass."
 
