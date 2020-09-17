@@ -191,9 +191,6 @@
 	attack_verb = list("attacked", "chopped", "cleaved", "torn", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
-/obj/item/weapon/twohanded/bigchoppa/update_icon()  //Currently only here to fuck with the on-mob icons.
-	item_state = "fireaxe[wielded]"
-	return
 
 /obj/item/weapon/twohanded/bigchoppa/afterattack(atom/A as mob|obj|turf|area, mob/user as mob, proximity)
 	if(!proximity) return
@@ -208,6 +205,13 @@
 				new /obj/item/weapon/shard( W.loc )
 				if(W.reinf) new /obj/item/stack/rods( W.loc)
 		qdel(A)
+
+obj/item/weapon/twohanded/bigchoppa/attack(mob/living/M, mob/living/user, def_zone)
+	..()
+	if (M && wielded && (isliving(M)) && (M.stat != DEAD) && (M.stat != UNCONSCIOUS) && (!istype(M, /mob/living/carbon/human/ork))) //Everything before is default attack proc. . Wielding is necessary so you can't farm with doing a tiny bit of damage one handed.
+		user.adjustToxLoss(rand(10,20))
+
+
 
 //spears
 /obj/item/weapon/twohanded/spear
@@ -239,3 +243,8 @@
 /obj/item/weapon/twohanded/spear/sharpstikk/update_icon()
 	item_state = "spearglass[wielded]"
 	return
+
+/obj/item/weapon/twohanded/spear/sharpstikk/attack(mob/living/M, mob/living/user, def_zone)
+	..()
+	if (M && wielded && (isliving(M)) && (M.stat != DEAD) && (M.stat != UNCONSCIOUS) && (!istype(M, /mob/living/carbon/human/ork))) //Everything before is default attack proc. . Wielding is necessary so you can't farm with doing a tiny bit of damage one handed.
+		user.adjustToxLoss(rand(5,20))
