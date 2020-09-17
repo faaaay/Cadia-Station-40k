@@ -67,7 +67,7 @@ Salamanders
 	real_name = "Brother [rndname]"
 
 	spawn(20)
-		var/weaponchoice = input("Loadout.","Select a Loadout") as null|anything in list("Apothecary", "Techmarine", "Tactical")
+		var/weaponchoice = input("Loadout.","Select a Loadout") as null|anything in list("Apothecary", "Techmarine", "Tactical", "Librarian")
 		switch(weaponchoice)
 			if("Apothecary")
 				equip_to_slot_or_del(new /obj/item/weapon/tank/oxygen/smback, slot_back)
@@ -148,6 +148,7 @@ Salamanders
 				sleep(10)
 				regenerate_icons()
 				rename_self("[name]")
+
 
 /mob/living/carbon/human/whitelisted/sm/Life()
 	..()

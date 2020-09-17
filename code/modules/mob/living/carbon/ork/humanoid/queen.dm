@@ -24,7 +24,8 @@
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/ork, slot_gloves)
 	equip_to_slot_or_del(new /obj/item/clothing/head/soft/orkhat, slot_head)
 	equip_to_slot_or_del(new /obj/item/weapon/taperoll, slot_r_hand) //I'm just gonna stuff this in here. He needs this.
-	//there should only be one warboss
+	equip_to_slot_or_del(new /obj/item/device/flashlight/orklite, slot_r_store) //there should only be one warboss
+
 	playsound(loc, 'sound/voice/warboss.ogg', 75, 0)
 	for(var/mob/living/carbon/human/ork/warboss/Q in living_mob_list)
 		if(Q == src)		continue

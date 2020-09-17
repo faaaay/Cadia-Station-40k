@@ -118,9 +118,9 @@ var/global/datum/controller/supply_shuttle/supply_shuttle
 	var/iteration = 0
 	//supply points
 	var/points = 50
-	var/points_per_process = 1
-	var/points_per_slip = 2
-	var/points_per_crate = 5
+	var/points_per_process = 10
+	var/points_per_slip = 5
+	var/points_per_crate = 20
 	var/points_per_intel = 100
 	var/plasma_per_point = 0.2 //5 points per plasma sheet due to increased rarity
 	var/centcom_message = "" // Remarks from Centcom on how well you checked the last order.

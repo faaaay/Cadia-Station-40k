@@ -274,7 +274,7 @@
 
 	New()
 		..()
-		reagents.add_reagent("hacid", 50)
+		reagents.add_reagent("hacid", 25)
 
 /obj/item/projectile/bullet/dart/shrieker
 	name = "shrieker shuriken"

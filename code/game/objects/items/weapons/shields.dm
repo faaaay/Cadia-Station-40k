@@ -32,7 +32,7 @@
 
 /obj/item/weapon/shield/nob
 	name = "riot shield"
-	desc = "It looks like it was ripped off a sentinal."
+	desc = "It looks like it was ripped off a sentinel."
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "nobshield"
 	slot_flags = SLOT_BACK

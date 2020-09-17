@@ -11,8 +11,8 @@ Should be near done now.
 	spread_type = CONTACT_GENERAL
 	cure = "Spaceacillin"
 	cure_id = "spaceacillin"
-	curable = 0 //Can't be cured without an actual cure administered.
-	cure_chance = 10 //Pretty high chance of curing the disease once you get the cure.
+	curable = 1 //Can't be cured without an actual cure administered.
+	cure_chance = 50 //Pretty high chance of curing the disease once you get the cure.
 	agent = "nurgle's blessings"
 	affected_species = list("Human")
 	permeability_mod = 0.75
@@ -48,7 +48,7 @@ Should be near done now.
 					for(var/mob/living/carbon/human/C in view(H, 2))
 						if(C.viruses.len) continue
 						var/blockprob = 0
-						for(var/obj/item/clothing/A in C.get_equipped_items()) //A biosuit and hood will protect you.
+						for(var/obj/item/clothing/A in C.get_equipped_items()) //A biosuit and hood will protect you, so will gas masks.
 							if(istype(A, /obj/item/clothing/suit/bio_suit))
 								blockprob += 60
 							if(istype(A, /obj/item/clothing/suit/bio_suit/medicus))
@@ -57,6 +57,13 @@ Should be near done now.
 								blockprob += 80
 							if(istype(A, /obj/item/clothing/head/bio_hood))
 								blockprob += 40
+							if(istype(A, /obj/item/clothing/mask/gas/sechailer/DK))
+								blockprob += 80
+							if(istype(A, /obj/item/clothing/mask/breath/marine))
+								blockprob += 60	
+							if(istype(A, /obj/item/clothing/mask/gas))
+								blockprob += 60
+
 						if(prob(blockprob)) continue
 						var/datum/disease/plague/D = new /datum/disease/plague()
 						D.effect = src.effect
@@ -75,18 +82,18 @@ Should be near done now.
 						spawn(30) H.emote("cough")
 					if("blind")
 						H << "<b>Your eyes sting!</b>"
-						H.eye_blurry += 5
+						H.eye_blurry += 2
 						H.eye_stat += 1
 						H.eye_blind += 1
 					if("bleeding")
 						if(H.getBruteLoss())
 							H << "<b>Your wounds bleed uncontrollably!</b>"
-							if(H.health > 35)
+							if(H.health > 20)
 								H.adjustOxyLoss(10)
 							var/turf/pos = get_turf(H)
 							pos.add_blood_floor(H)
 					if("necrosis")
-						if(H.health > 20)
+						if(H.health > 15)
 							H.adjustBruteLoss(1)
 					if("nurgling")
 						H << "\blue You feel as if Nurgle really does love you...."
@@ -121,8 +128,8 @@ Should be near done now.
 					if("bleeding")
 						if(H.getBruteLoss())
 							H << "<b>Your wounds bleed uncontrollably!</b>"
-							if(H.health > 35)
-								H.adjustOxyLoss(15)
+							if(H.health > 20)
+								H.adjustOxyLoss(10)
 								H.adjustBruteLoss(2)
 							var/turf/pos = get_turf(H)
 							pos.add_blood_floor(H)
@@ -141,7 +148,7 @@ Should be near done now.
 						H.Stun(1)
 						H.visible_message("<B>[H]</B> vomits on the floor!")
 						var/tox_dam = H.getToxLoss()
-						if(tox_dam < 50)
+						if(tox_dam < 30)
 							H.adjustToxLoss(3)
 						var/turf/pos = get_turf(H)
 						pos.add_blood_floor(H)
@@ -177,7 +184,7 @@ Should be near done now.
 					if("bleeding")
 						if(H.getBruteLoss())
 							H << "<b>Your wounds bleed uncontrollably! You feel lightheaded...</b>"
-							if(H.health > 35)
+							if(H.health > 30)
 								H.adjustOxyLoss(20)
 								H.adjustBruteLoss(5)
 							var/turf/pos = get_turf(H)
@@ -231,6 +238,12 @@ Should be near done now.
 							blockprob += 80
 						if(istype(A, /obj/item/clothing/head/bio_hood))
 							blockprob += 40
+						if(istype(A, /obj/item/clothing/mask/gas/sechailer/DK))
+							blockprob += 80
+						if(istype(A, /obj/item/clothing/mask/breath/marine))
+							blockprob += 60	
+						if(istype(A, /obj/item/clothing/mask/gas))
+							blockprob += 60
 					if(prob(blockprob)) continue
 					var/datum/disease/plague/D = new /datum/disease/plague()
 					D.effect = src.effect
@@ -295,6 +308,12 @@ Should be near done now.
 							blockprob += 80
 						if(istype(A, /obj/item/clothing/head/bio_hood))
 							blockprob += 40
+						if(istype(A, /obj/item/clothing/mask/gas/sechailer/DK))
+							blockprob += 80
+						if(istype(A, /obj/item/clothing/mask/breath/marine))
+							blockprob += 60	
+						if(istype(A, /obj/item/clothing/mask/gas))
+							blockprob += 60
 					if(prob(blockprob)) continue
 					var/datum/disease/plague/D = new /datum/disease/plague()
 					D.effect = src.effect

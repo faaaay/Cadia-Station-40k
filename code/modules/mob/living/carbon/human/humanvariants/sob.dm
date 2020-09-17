@@ -51,6 +51,7 @@
 				equip_to_slot_or_del(new /obj/item/weapon/grenade/chem_grenade/incendiary, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/weapon/grenade/chem_grenade/incendiary, slot_l_store)
 				equip_to_slot_or_del(new /obj/item/weapon/storage/belt/imperialbelt/sob, slot_belt)
+				equip_to_slot_or_del(new /obj/item/weapon/shield/stormshield, slot_l_hand)
 			if("Battle Sister")
 				equip_to_slot_or_del(new /obj/item/weapon/chainsword, slot_belt)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
@@ -133,6 +134,7 @@ on death
 	revive(P)
 	for(var/datum/reagent/R in P.reagents.reagent_list)
 		P.reagents.clear_reagents()
+		P.reagents.add_reagent("alkysine",5)
 	P.maxHealth = 5000
 	P.health = 5000
 	P.status_flags = 0
