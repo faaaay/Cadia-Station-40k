@@ -1,6 +1,6 @@
 /mob/living/carbon/human/tau/leader
-	name = "Shas'O Ves'ya"
-	real_name = "Shas'O Ves'ya"
+	name = "Shas Ui Viorla Ripyka"
+	real_name = "Shas Ui Viorla Ripyka"
 	universal_speak = 1
 	gender = "male"
 	factions = list("tau")
