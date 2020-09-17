@@ -495,6 +495,8 @@ Lord Inquisitor Armor
 	item_state = "greatcoat"
 	blood_overlay_type = "armor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS | HEAD
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	armor = list(melee = 55, bullet = 35, laser = 55, energy = 15, bomb = 25, bio = 90, rad = 90)
 
 /obj/item/clothing/suit/armor/DKcoat/officer
