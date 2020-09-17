@@ -191,6 +191,9 @@
 	attack_verb = list("attacked", "chopped", "cleaved", "torn", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
+/obj/item/weapon/twohanded/bigchoppa/update_icon()  //Currently only here to fuck with the on-mob icons.
+	item_state = "fireaxe[wielded]"
+	return
 
 /obj/item/weapon/twohanded/bigchoppa/afterattack(atom/A as mob|obj|turf|area, mob/user as mob, proximity)
 	if(!proximity) return
