@@ -280,7 +280,7 @@
 //		return 1
 
 /obj/structure/mineral_door/ork/TryToSwitchState(atom/user)
-	if(isalien(user))
+	if(isork(user))
 		return ..()
 
 /obj/structure/mineral_door/ork/Dismantle(devastated = 0)
