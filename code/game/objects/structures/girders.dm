@@ -298,7 +298,7 @@
 		return
 
 /obj/structure/girder/construction						//one
-	desc = "The blueprints call for some wire."
+	desc = "The blueprints call for five lengths of wire."
 	icon_state = "scafold"
 	anchored = 1
 	density = 1
@@ -306,17 +306,22 @@
 
 /obj/structure/girder/construction/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/stack/cable_coil))
+		var/obj/item/stack/cable_coil/CC = W
+		if (CC.amount < 5)
+			user << "<span class='notice'>You need at least 5 in the stack to do this.</span>"
+			return
 		user << "<span class='notice'>Now adding wire...</span>"
 		playsound(src.loc, 'sound/items/Deconstruct.ogg', 100, 1)
 		if(do_after(user,40))
 			user << "<span class='notice'>You added wires.</span>"
 			new /obj/structure/girder/construction2(get_turf(src))
 			qdel(src)
+			CC.use(5)
 	else
 		user << "<span class='notice'>You may want to re-read the description.</span>"
 
 /obj/structure/girder/construction2						//two
-	desc = "The blueprints call for some metal."
+	desc = "The blueprints call for ten sheets of metal."
 	icon_state = "scafold2"
 	anchored = 1
 	density = 1
@@ -324,12 +329,17 @@
 
 /obj/structure/girder/construction2/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/stack/sheet/metal))
+		var/obj/item/stack/cable_coil/ME = W
+		if (ME.amount < 10)
+			user << "<span class='notice'>You need at least 10 in the stack to do this.</span>"
+			return
 		playsound(src.loc, 'sound/items/Deconstruct.ogg', 100, 1)
 		user << "<span class='notice'>Now adding metal...</span>"
 		if(do_after(user,40))
 			user << "<span class='notice'>You added metal.</span>"
 			new /obj/structure/girder/construction3(get_turf(src))
 			qdel(src)
+			ME.use(10)
 	else
 		user << "<span class='notice'>You may want to re-read the description.</span>"
 
