@@ -16,6 +16,7 @@
 	equip_to_slot_or_del(new /obj/item/clothing/under/rank/ork/under, slot_w_uniform)
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/ork, slot_gloves)
 	equip_to_slot_or_del(new /obj/item/clothing/head/soft/orkhat, slot_head)
+	equip_to_slot_or_del(new /obj/item/device/flashlight/orklite, slot_r_store)
 	src.name = text("Ork Oddboy ([rand(1, 1000)])")
 	src.real_name = src.name
 	verbs.Add(/mob/living/carbon/human/ork/oddboy/verb/waagh,/mob/living/carbon/human/ork/nob/verb/oddscav)

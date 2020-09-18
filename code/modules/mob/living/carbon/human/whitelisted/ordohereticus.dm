@@ -2,14 +2,12 @@
 /*
 Ordo Hereticus
 */
-
 /mob/living/carbon/human/OHstormtrooper
 	name = "Unknown"
 	real_name = "Unknown"
 	universal_speak = 1
 	gender = "male"
 	factions = list("imperium")
-
 /mob/living/carbon/human/OHstormtrooper/New()
 	..()
 	sleep (5)
@@ -17,9 +15,9 @@ Ordo Hereticus
 	R.set_frequency(1441)
 	equip_to_slot_or_del(R, slot_ears)
 	spawn(20)
-		var/weaponchoice = input("Loadout.","Select a Loadout") as null|anything in list("StormTrooper", "Body Guard", "Grenadier")
+		var/weaponchoice = input("Loadout.","Select a Loadout") as null|anything in list("Rifleman", "Close Quarters", "Marksman", "Medicae", "Body Guard", "Grenadier")
 		switch(weaponchoice)
-			if("StormTrooper")
+			if("Rifleman")
 				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
 				equip_to_slot_or_del(new /obj/item/clothing/gloves/combat/inquisitor, slot_gloves)
@@ -29,10 +27,80 @@ Ordo Hereticus
 				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/stormtropper, slot_back)
 				equip_to_slot_or_del(new /obj/item/weapon/complexknife/combatknife, slot_in_backpack)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/box/hellgunmag, slot_in_backpack)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/hellgun, slot_s_store)
 				var/obj/item/weapon/card/id/ordohereticus/W = new
 				W.access = get_all_accesses()
 				W.access += get_centcom_access("Inquisitor")
 				W.assignment = "StormTrooper"
+				W.registered_name = real_name
+				W.update_label()
+				equip_to_slot_or_del(W, slot_wear_id)
+				sleep(20)
+				regenerate_icons()
+				rename_self("[name]")
+			if("Close Quarters")
+				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
+				equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
+				equip_to_slot_or_del(new /obj/item/clothing/gloves/combat/inquisitor, slot_gloves)
+				equip_to_slot_or_del(new /obj/item/clothing/mask/gas/stormtroop, slot_wear_mask)
+				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/shocktrooper, slot_wear_suit)
+				equip_to_slot_or_del(new /obj/item/clothing/head/cadianhelmet, slot_head)
+				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/stormtropper, slot_back)
+				equip_to_slot_or_del(new /obj/item/weapon/powersword/pknife, slot_in_backpack)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/shotgun/combat/voxlegis, slot_r_hand)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/hellpistol, slot_in_backpack)
+				var/obj/item/weapon/card/id/ordohereticus/W = new
+				W.access = get_all_accesses()
+				W.access += get_centcom_access("Inquisitor")
+				W.assignment = "StormTrooper"
+				W.registered_name = real_name
+				W.update_label()
+				equip_to_slot_or_del(W, slot_wear_id)
+				sleep(20)
+				regenerate_icons()
+				rename_self("[name]")
+			if("Marksman")
+				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
+				equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
+				equip_to_slot_or_del(new /obj/item/clothing/gloves/combat/inquisitor, slot_gloves)
+				equip_to_slot_or_del(new /obj/item/clothing/mask/gas/stormtroop, slot_wear_mask)
+				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/shocktrooper, slot_wear_suit)
+				equip_to_slot_or_del(new /obj/item/clothing/head/cadianhelmet, slot_head)
+				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/stormtropper, slot_back)
+				equip_to_slot_or_del(new /obj/item/weapon/complexknife/combatknife, slot_in_backpack)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/hellpistol, slot_in_backpack)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/energy/longlas, slot_r_hand)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/box/lasgunmag, slot_in_backpack)
+				var/obj/item/weapon/card/id/ordohereticus/W = new
+				W.access = get_all_accesses()
+				W.access += get_centcom_access("Inquisitor")
+				W.assignment = "Stormtrooper"
+				W.registered_name = real_name
+				W.update_label()
+				equip_to_slot_or_del(W, slot_wear_id)
+				sleep(20)
+				regenerate_icons()
+				rename_self("[name]")
+			if("Medicae")
+				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
+				equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
+				equip_to_slot_or_del(new /obj/item/clothing/gloves/combat/inquisitor, slot_gloves)
+				equip_to_slot_or_del(new /obj/item/clothing/mask/gas/stormtroop, slot_wear_mask)
+				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/shocktrooper, slot_wear_suit)
+				equip_to_slot_or_del(new /obj/item/clothing/head/cadianhelmet, slot_head)
+				equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health/night, slot_glasses)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/stormtropper, slot_back)
+				equip_to_slot_or_del(new /obj/item/weapon/complexknife/combatknife, slot_in_backpack)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/firstaid/tactical, slot_in_backpack)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/firstaid/advanced, slot_in_backpack)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/firstaid/advanced, slot_in_backpack)
+				var/obj/item/weapon/card/id/ordohereticus/W = new
+				W.access = get_all_accesses()
+				W.access += get_centcom_access("Inquisitor")
+				W.assignment = "StormTrooper Medicae"
 				W.registered_name = real_name
 				W.update_label()
 				equip_to_slot_or_del(W, slot_wear_id)
@@ -80,7 +148,6 @@ Ordo Hereticus
 				sleep(20)
 				regenerate_icons()
 				rename_self("[name]")
-
 /mob/living/carbon/human/OHstormtrooper/leader/New()
 	..()
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
@@ -96,7 +163,6 @@ Ordo Hereticus
 		equip_to_slot_or_del(new /obj/item/clothing/head/cadianhelmet, slot_head)
 		equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/stormtropper, slot_back)
 		equip_to_slot_or_del(new /obj/item/weapon/complexknife/combatknife, slot_in_backpack)
-
 	var/obj/item/weapon/card/id/ordohereticus/W = new
 	W.access = get_all_accesses()
 	W.access += get_centcom_access("Inquisitor")
@@ -107,16 +173,13 @@ Ordo Hereticus
 	sleep(20)
 	regenerate_icons()
 	rename_self("[name]")
-
 /mob/living/carbon/human/OHinq
 	name = "Unknown"
 	real_name = "Unknown"
 	universal_speak = 1
 	gender = "male"
 	faction = "Inquisitor"
-
 /mob/living/carbon/human/OHinq/leader
-
 /mob/living/carbon/human/OHinq/New()
 	..()
 	sleep (5)
@@ -132,11 +195,9 @@ Ordo Hereticus
 	equip_to_slot_or_del(new /obj/item/weapon/powersword/pknife, slot_belt)
 	equip_to_slot_or_del(new /obj/item/device/hdetector, slot_in_backpack)
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/combat/inquisitor, slot_gloves)
-
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
 	R.set_frequency(1441)
 	equip_to_slot_or_del(R, slot_ears)
-
 	var/obj/item/weapon/card/id/ordohereticus/W = new
 	W.access = get_all_accesses()
 	W.access += get_centcom_access("Inquisitor")
@@ -146,11 +207,9 @@ Ordo Hereticus
 	sleep(20)
 	regenerate_icons()
 	rename_self("[name]")
-
 /*
 Shuttle verb
 */
-
 /mob/living/carbon/human/proc/ohshuttle()
 	set category = "Ordo Hereticus"
 	set name = "Move ship"

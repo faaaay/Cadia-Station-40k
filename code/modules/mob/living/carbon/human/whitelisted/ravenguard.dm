@@ -76,7 +76,7 @@ RavenGuard
 	real_name = "Brother [rndname]"
 
 	spawn(20)
-		var/weaponchoice = input("Loadout.","Select a Loadout") as null|anything in list("Apothecary", "Techmarine", "Tactical")
+		var/weaponchoice = input("Loadout.","Select a Loadout") as null|anything in list("Apothecary", "Techmarine", "Tactical",)
 		switch(weaponchoice)
 			if("Apothecary")
 				equip_to_slot_or_del(new /obj/item/clothing/under/surgerycybernetic, slot_w_uniform)
@@ -157,7 +157,6 @@ RavenGuard
 				sleep(10)
 				regenerate_icons()
 				rename_self("[name]")
-
 /mob/living/carbon/human/whitelisted/rg/Life()
 	..()
 	if(iscarbon(src))

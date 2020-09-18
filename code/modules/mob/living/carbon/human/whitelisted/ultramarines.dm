@@ -80,80 +80,88 @@ UltraMarines
 
 	name = "Brother [rndname]"
 	real_name = "Brother [rndname]"
-	equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
-	equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
-	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/umpowerarmor, slot_wear_suit)
-	equip_to_slot_or_del(new /obj/item/clothing/shoes/magboots/um, slot_shoes)
-	equip_to_slot_or_del(new /obj/item/clothing/gloves/um, slot_gloves)
-	equip_to_slot_or_del(new /obj/item/weapon/tank/oxygen/umback, slot_back)
-	equip_to_slot_or_del(new /obj/item/clothing/mask/breath/marine, slot_wear_mask)
-	var/obj/item/weapon/card/id/W = new
-	W.icon_state = "umcard"
-	W.access = get_all_accesses()
-	W.access += get_centcom_access("UltraMarine")
-	W.assignment = "Tactical UltraMarine"
-	W.registered_name = real_name
-	W.update_label()
-	equip_to_slot_or_del(W, slot_wear_id)
 	spawn(20)
-		var/loadoutweapon = input("Loadout.","Choose your Primary weapon!") as null|anything in list("Bolter", "Plasma gun", "Las-Cannon")
-		switch(loadoutweapon)
-			if("Bolter")
+		var/weaponchoice = input("Loadout.","Select a Loadout") as null|anything in list("Apothecary", "Techmarine", "Tactical",)
+		switch(weaponchoice)
+			if("Apothecary")
+				equip_to_slot_or_del(new /obj/item/clothing/under/surgerycybernetic, slot_w_uniform)
+				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/umpowerarmor/apoth, slot_wear_suit)
+				equip_to_slot_or_del(new /obj/item/clothing/shoes/magboots/um, slot_shoes)
+				equip_to_slot_or_del(new /obj/item/clothing/gloves/um, slot_gloves)
+				equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health/night, slot_glasses)
+				equip_to_slot_or_del(new /obj/item/clothing/head/helmet/umpowerhelmet/apoth, slot_head)
+				equip_to_slot_or_del(new /obj/item/weapon/chainsword/ultramarine_chainsword, slot_belt)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
+				equip_to_slot_or_del(new /obj/item/weapon/book/manual/astartes, slot_l_hand)
 				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/tank/oxygen/umback, slot_back)
+				equip_to_slot_or_del(new /obj/item/clothing/mask/breath/marine, slot_wear_mask)
+				var/obj/item/weapon/card/id/W = new
+				W.icon_state = "umcard"
+				W.access = get_all_accesses()
+				W.access += get_centcom_access("UltraMarine")
+				W.assignment = "UltraMarine Apothecary"
+				W.registered_name = real_name
+				W.update_label()
+				equip_to_slot_or_del(W, slot_wear_id)
 				sleep(10)
 				regenerate_icons()
 				rename_self("[name]")
-
-			if("Plasma Gun")
-				equip_to_slot_or_del(new /obj/item/weapon/gun/energy/plasma/rifle, slot_s_store)
-				sleep(10)
-				regenerate_icons()
-				rename_self("[name]")
-
-			if("Las-Cannon")
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/lascannon, slot_l_hand)
-				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/lascannonmag, slot_r_store)
-				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/lascannonmag, slot_l_store)
-				sleep(10)
-				regenerate_icons()
-				rename_self("[name]")
-	spawn(20)
-		var/loadoutsecond = input("Loadout.","Choose your Secondary weapon!") as null|anything in list("Chainsword", "Powerknife", "Plasma Pistol")
-		switch(loadoutsecond)
-			if("Chainsword")
+			if("Techmarine")
+				equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
+				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/umpowerarmor/tech, slot_wear_suit)
+				equip_to_slot_or_del(new /obj/item/clothing/shoes/magboots/um, slot_shoes)
+				equip_to_slot_or_del(new /obj/item/clothing/gloves/um, slot_gloves)
+				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
+				equip_to_slot_or_del(new /obj/item/clothing/head/helmet/umpowerhelmet/tech, slot_head)
 				equip_to_slot_or_del(new /obj/item/weapon/chainsword/ultramarine_chainsword, slot_belt)
+				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
+				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
+				equip_to_slot_or_del(new /obj/item/weapon/book/manual/astartes, slot_l_hand)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/industrial, slot_back)
+				equip_to_slot_or_del(new /obj/item/aluminumtube4/clamp, slot_r_hand)
+				equip_to_slot_or_del(new /obj/item/clothing/mask/gas/TRAP, slot_wear_mask)
+				new /obj/item/weapon/snowshovel/ig970 (loc)
+				maxHealth = 175
+				var/obj/item/weapon/card/id/W = new
+				W.icon_state = "umcard"
+				W.access = get_all_accesses()
+				W.access += get_centcom_access("UltraMarine")
+				W.assignment = "UltraMarine Techmarine"
+				W.registered_name = real_name
+				W.update_label()
+				equip_to_slot_or_del(W, slot_wear_id)
+				sleep(10)
 				regenerate_icons()
-
-			if("Powerknife")
-				equip_to_slot_or_del(new /obj/item/weapon/powersword/pknife, slot_belt)
-				regenerate_icons()
-
-			if("Plasma Pistol")
-				equip_to_slot_or_del(new /obj/item/weapon/gun/energy/plasma/pistol, slot_belt)
-				regenerate_icons()
-
-	spawn(20)
-		var/loadouthelmet = input("Loadout.","Choose your helmet!") as null|anything in list("Tactical", "Devastator", "Veteran", "For tah emparah")
-		switch(loadouthelmet)
+				rename_self("[name]")
 			if("Tactical")
+				equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
+				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/umpowerarmor, slot_wear_suit)
+				equip_to_slot_or_del(new /obj/item/clothing/shoes/magboots/um, slot_shoes)
+				equip_to_slot_or_del(new /obj/item/clothing/gloves/um, slot_gloves)
+				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 				equip_to_slot_or_del(new /obj/item/clothing/head/helmet/umpowerhelmet, slot_head)
-				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
+				equip_to_slot_or_del(new /obj/item/weapon/chainsword/ultramarine_chainsword, slot_belt)
+				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
+				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
+				equip_to_slot_or_del(new /obj/item/weapon/book/manual/astartes, slot_l_hand)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bpistol, slot_r_hand)
+				equip_to_slot_or_del(new /obj/item/weapon/tank/oxygen/umback, slot_back)
+				equip_to_slot_or_del(new /obj/item/clothing/mask/breath/marine, slot_wear_mask)
+				var/obj/item/weapon/card/id/W = new
+				W.icon_state = "umcard"
+				W.access = get_all_accesses()
+				W.access += get_centcom_access("UltraMarine")
+				W.assignment = "Tactical UltraMarine"
+				W.registered_name = real_name
+				W.update_label()
+				equip_to_slot_or_del(W, slot_wear_id)
+				sleep(10)
 				regenerate_icons()
-
-			if("Devastator")
-				equip_to_slot_or_del(new /obj/item/clothing/head/helmet/umpowerhelmet/devastator, slot_head)
-				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
-				regenerate_icons()
-
-			if("Veteran")
-				equip_to_slot_or_del(new /obj/item/clothing/head/helmet/umpowerhelmet/vet, slot_head)
-				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
-				regenerate_icons()
-
-			if("For tah emparah")
-				qdel(src.head)
+				rename_self("[name]")
 											//this is a new experimental choose your own loadout build
 	/*spawn(20)
 				var/obj/item/weapon/card/id/W = new
@@ -166,7 +174,7 @@ UltraMarines
 				equip_to_slot_or_del(W, slot_wear_id)
 				sleep(10)
 				regenerate_icons()
-				rename_self("[name]") *///if needed we can review old gits and get old system back 
+				rename_self("[name]") *///if needed we can review old gits and get old system back
 
 /mob/living/carbon/human/whitelisted/um/Life()
 	..()

@@ -21,7 +21,7 @@
 
 /mob/living/simple_animal/borer
 	name = "Bruul Parasite"
-	real_name = "cortical borer"
+	real_name = "Bruul Parasite"
 	desc = "A small, sluglike creature."
 	speak_emote = list("chirrups")
 	emote_hear = list("chirrups")

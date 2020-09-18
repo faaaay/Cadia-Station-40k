@@ -31,7 +31,6 @@
 		if(istype(target,/obj/item) && !istype(target, /obj/item/weapon/disk/nuclear))
 			playsound(get_turf(src), 'sound/weapons/flash.ogg', 100, 1, -6)
 			user << "\blue Scanned [target]."
-			saved_item = target.type
 			saved_icon = target.icon
 			saved_icon_state = target.icon_state
 			saved_overlays = target.overlays

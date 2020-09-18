@@ -149,6 +149,7 @@ Salamanders
 				regenerate_icons()
 				rename_self("[name]")
 
+
 /mob/living/carbon/human/whitelisted/sm/Life()
 	..()
 	if(iscarbon(src))

@@ -51,6 +51,7 @@
 				equip_to_slot_or_del(new /obj/item/weapon/grenade/chem_grenade/incendiary, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/weapon/grenade/chem_grenade/incendiary, slot_l_store)
 				equip_to_slot_or_del(new /obj/item/weapon/storage/belt/imperialbelt/sob, slot_belt)
+				equip_to_slot_or_del(new /obj/item/weapon/shield/stormshield, slot_l_hand)
 			if("Battle Sister")
 				equip_to_slot_or_del(new /obj/item/weapon/chainsword, slot_belt)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)

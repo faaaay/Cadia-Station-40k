@@ -62,7 +62,7 @@
 /obj/item/projectile/bullet/shurikan			//eldar special ammo
 	name = "shuriken"
 	icon_state = "shuriken"
-	damage = 15
+	damage = 20 
 	piercing = 5 //monomolecular and such
 	woundtype = null
 
@@ -274,7 +274,7 @@
 
 	New()
 		..()
-		reagents.add_reagent("hacid", 50)
+		reagents.add_reagent("hacid", 25)
 
 /obj/item/projectile/bullet/dart/shrieker
 	name = "shrieker shuriken"

@@ -17,6 +17,7 @@
 	equip_to_slot_or_del(new /obj/item/clothing/under/rank/ork/under, slot_w_uniform)
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/ork, slot_gloves)
 	equip_to_slot_or_del(new /obj/item/clothing/head/soft/orkhat, slot_head)
+	equip_to_slot_or_del(new /obj/item/device/flashlight/orklite, slot_r_store)
 	if(name == "ork commando")
 		name = text("ork commando ([rand(1, 1000)])")
 	real_name = name

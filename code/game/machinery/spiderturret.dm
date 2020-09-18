@@ -70,7 +70,7 @@ Interaction begins
 /obj/machinery/spiderturret/attackby(I as obj, user as mob)
 	if(istype(I, /obj/item/device/turretprobe))
 		playsound(src.loc, 'sound/items/timer.ogg', 50, 1)
-		sleep 5
+		sleep(5)
 		playsound(src.loc, 'sound/items/timer.ogg', 50, 1)
 		interact(user)
 		usr.visible_message("<span class='warning'>  [usr] uses a device to interface with the turret.</span>", "<span class='notice'>Lets have a look</span>", "<span class='warning>What was that sound?</span>")
@@ -98,13 +98,13 @@ Interaction begins
 
 	if(href_list["REPACK"])
 		usr.visible_message("<span class='warning'>  [usr] begins repackaging the turret.</span>", "<span class='notice'>You monitor the turret as it folds itself up.</span>", "<span class='warning>What was that sound?</span>")
-		sleep 30
+		sleep(30)
 		new boxedver(src.loc)
 		usr.visible_message("<span class='notice'>[usr] repackages the turret.</span>")
 		qdel(src)
 	else if(href_list["REPAIR"])
 		usr.visible_message("<span class='warning'>  [usr] begins repairing the turret.</span>", "<span class='notice'>You begin to repair the turret.</span>", "<span class='warning>What was that sound?</span>")
-		sleep 30
+		sleep (30)
 		health = 200
 		update_icon()
 		usr.visible_message("<span class='notice'>[usr] finishes the repairs.</span>")

@@ -39,3 +39,10 @@ GooseCode.lk
 *.dmb
 GooseCode.dyn.rsc
 banlist.dbd
+*.dme
+*.int
+GooseCode.int
+*.int
+*.int
+*.dme
+*.html

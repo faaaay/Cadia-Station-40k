@@ -10,6 +10,27 @@ Thousand Sons
 	gender = "male"
 	status_flags = 0
 
+/mob/living/carbon/human/whitelisted/ksons/leader/New()
+	..()
+
+	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
+	R.set_frequency(1479)
+	equip_to_slot_or_del(R, slot_ears)
+	equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
+	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/thousandarmor/captain, slot_wear_suit)
+	equip_to_slot_or_del(new /obj/item/clothing/shoes/magboots/ksons, slot_shoes)
+	equip_to_slot_or_del(new /obj/item/clothing/gloves/ksons, slot_gloves)
+	equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
+	equip_to_slot_or_del(new /obj/item/clothing/mask/breath/marine, slot_wear_mask)
+	equip_to_slot_or_del(new /obj/item/clothing/head/helmet/ksonshelmet, slot_head)
+	equip_to_slot_or_del(new /obj/item/weapon/chainsword/ksons_chainsword, slot_belt)
+	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag/inf, slot_r_store)
+	equip_to_slot_or_del(new /obj/item/weapon/spellbook/oneuse, slot_l_store)
+	equip_to_slot_or_del(new /obj/item/weapon/tank/oxygen/ksons, slot_back)
+	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/chaos/ksons, slot_s_store)
+	equip_to_slot_or_del(new /obj/item/weapon/shield/riot/ksons, slot_l_hand)
+	verbs += /mob/living/carbon/human/whitelisted/proc/ksonspell
+	
 /mob/living/carbon/human/whitelisted/ksons
 	name = "Unknown"
 	real_name = "Unknown"
@@ -22,10 +43,10 @@ Thousand Sons
 /mob/living/carbon/human/whitelisted/ksons/New()
 	..()
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
-	R.set_frequency(1441)
+	R.set_frequency(1479)
 	equip_to_slot_or_del(R, slot_ears)
 	equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
-	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/thousandarmor, slot_wear_suit)
+	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/thousandarmor/sorc, slot_wear_suit)
 	equip_to_slot_or_del(new /obj/item/clothing/shoes/magboots/ksons, slot_shoes)
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/ksons, slot_gloves)
 	equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
@@ -33,11 +54,12 @@ Thousand Sons
 	equip_to_slot_or_del(new /obj/item/clothing/head/helmet/ksonshelmet, slot_head)
 	equip_to_slot_or_del(new /obj/item/weapon/chainsword/ksons_chainsword, slot_belt)
 	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag/inf, slot_r_store)
-	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag/inf, slot_l_store)
+	equip_to_slot_or_del(new /obj/item/weapon/spellbook/oneuse, slot_l_store)
 	equip_to_slot_or_del(new /obj/item/weapon/tank/oxygen/ksons, slot_back)
 	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/chaos/ksons, slot_s_store)
 	equip_to_slot_or_del(new /obj/item/weapon/shield/riot/ksons, slot_l_hand)
 	verbs += /mob/living/carbon/human/whitelisted/proc/ksonspell
+
 
 	var/namelist = list ("Si'ryon", "Azugar", "Ereraz", "Elatoth", "Caorpudaran", "Guralock", "Jirah", "Furrulak", "Lostix", "Honnux", "Guragar", "Furfar", "Zydire", "Nazustix", "Buldaban", "Davrhaz", "Nazuphus", "Madaran")
 	var/rndname = pick(namelist)
