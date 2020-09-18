@@ -367,8 +367,7 @@ for reference:
 				else
 			if (src.health <= 0)
 				visible_message("\red <B>The barbed wire fence section falls apart!</B>")
-				new /obj/item/stack/sheet/mineral/wood(get_turf(src))
-				new /obj/item/stack/sheet/metal(get_turf(src))
+				new /obj/item/stack/rods(get_turf(src))
 				qdel(src)
 			..()
 
