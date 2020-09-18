@@ -39,6 +39,7 @@ Ordo Hereticus
 				sleep(20)
 				regenerate_icons()
 				rename_self("[name]")
+				verbs += /mob/living/carbon/human/proc/renderaid
 			if("Close Quarters")
 				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
@@ -61,6 +62,7 @@ Ordo Hereticus
 				sleep(20)
 				regenerate_icons()
 				rename_self("[name]")
+				verbs += /mob/living/carbon/human/proc/renderaid
 			if("Marksman")
 				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
@@ -84,6 +86,7 @@ Ordo Hereticus
 				sleep(20)
 				regenerate_icons()
 				rename_self("[name]")
+				verbs += /mob/living/carbon/human/proc/renderaid
 			if("Medicae")
 				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
@@ -107,6 +110,7 @@ Ordo Hereticus
 				sleep(20)
 				regenerate_icons()
 				rename_self("[name]")
+				verbs += /mob/living/carbon/human/proc/renderaid
 			if("Body Guard")
 				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
@@ -126,6 +130,7 @@ Ordo Hereticus
 				sleep(20)
 				regenerate_icons()
 				rename_self("[name]")
+				verbs += /mob/living/carbon/human/proc/renderaid
 			if("Grenadier")
 				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
@@ -148,6 +153,7 @@ Ordo Hereticus
 				sleep(20)
 				regenerate_icons()
 				rename_self("[name]")
+				verbs += /mob/living/carbon/human/proc/renderaid
 			if("Slaved Psyker")
 				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
@@ -233,6 +239,7 @@ Ordo Hereticus
 	sleep(20)
 	regenerate_icons()
 	rename_self("[name]")
+	verbs += /mob/living/carbon/human/proc/renderaid
 /*
 Shuttle verb
 */
