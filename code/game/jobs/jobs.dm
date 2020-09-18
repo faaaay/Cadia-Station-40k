@@ -41,7 +41,8 @@ var/const/CHAPLAIN			=(1<<10)
 var/const/CELEBRITY			=(1<<11)
 var/const/MIME				=(1<<12)
 var/const/ASSISTANT			=(1<<13)
-var/const/ELDARSPY			=(1<<2)
+var/const/ELDARSPY			=(1<<14)
+var/const/IMPPSYKER			=(1<<15)
 
 var/list/assistant_occupations = list(
 	"Assistant",
@@ -111,6 +112,7 @@ var/list/security_positions = list(
 	"Commissar",
 	"Sergeant",
 	"Enforcer",
+	"Primaris Psyker",
 	"Imperial Guard"
 )
 
