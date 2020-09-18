@@ -581,7 +581,7 @@ Update: What have we created? something awful -wel ard
 
 		if("THOUSANDSONS")
 			message_admins("[usr.key] executed RTD faction: ThousandSons.", 0)
-			usr << "\blue You are a Thousand Sons! M'kachen is trapped on ArchAngel IV. Find him. Free him."
+			usr << "\blue You are a brother of the Thousand Sons! Aboard this station is a powerful Psyker, capture him, he may yet be corrupted to our ways."
 			usr.loc = get_turf(locate("landmark*ksonsteam"))
 			var/mob/living/carbon/human/whitelisted/ksons/new_character = new(usr.loc)
 			new_character.key = usr.key
