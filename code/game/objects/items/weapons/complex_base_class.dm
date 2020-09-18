@@ -195,8 +195,8 @@ Complex sword class.
 				target.Weaken(6)
 				last_attacks = ""
 			playsound(get_turf(src), 'sound/effects/woodhit.ogg', 75, 1, -1)
-			if(T.reagents_speedmod <= 10)
-				T.reagents_speedmod += 5
+			if(T.reagents_speedmod <= 2)  //Reduced from 10.
+				T.reagents_speedmod += 1  //Reduced from 5.
 			src.add_fingerprint(user)
 			target.visible_message("<span class ='danger'>[user] sweeps at [target]'s legs with \the [src]!</span>")
 			if(!iscarbon(user))
@@ -402,8 +402,8 @@ Complex chainsword class.
 				target.Weaken(6)
 				last_attacks = ""
 			playsound(get_turf(src), 'sound/effects/woodhit.ogg', 75, 1, -1)
-			if(T.reagents_speedmod <= 30)
-				T.reagents_speedmod += 10
+			if(T.reagents_speedmod <= 3) //Reduced from 30.
+				T.reagents_speedmod += 1 //Reduced from 10
 			src.add_fingerprint(user)
 			target.visible_message("<span class ='danger'>[user] sweeps at [target]'s legs with \the [src], hamstringing them!</span>")
 			if(!iscarbon(user))
@@ -631,8 +631,8 @@ Power Sword Base Class
 				target.Weaken(6)
 				last_attacks = ""
 			playsound(get_turf(src), 'sound/effects/woodhit.ogg', 75, 1, -1)
-			if(T.reagents_speedmod <= 10)
-				T.reagents_speedmod += 5
+			if(T.reagents_speedmod <= 2) //Reduced from 10.
+				T.reagents_speedmod += 1 //Reduced from 5
 			src.add_fingerprint(user)
 			target.visible_message("<span class ='danger'>[user] sweeps at [target]'s legs with \the [src]!</span>")
 			if(!iscarbon(user))
