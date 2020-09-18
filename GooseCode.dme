@@ -924,6 +924,7 @@
 #include "code\modules\library\lib_items.dm"
 #include "code\modules\library\lib_machines.dm"
 #include "code\modules\library\lib_readme.dm"
+#include "code\modules\living\carbon\human\psyker\psyker_powers.dm"
 #include "code\modules\MachineSpirits\interpreter.dm"
 #include "code\modules\MachineSpirits\readme.dm"
 #include "code\modules\mining\equipment_locker.dm"

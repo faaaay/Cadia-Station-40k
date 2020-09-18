@@ -203,7 +203,7 @@ Primaris Psyker
 	access = list(access_security, access_sec_doors, access_brig, access_court, access_maint_tunnels, access_morgue)
 	minimal_access = list(access_security, access_sec_doors, access_brig, access_court) //But see /datum/job/warden/get_access()
 
-/datum/job/imperialpsyker/equip_items(var/mob/living/carbon/human/whitelisted/H) // They'll need to get more Psyker-specific gear in the future.
+/datum/job/imperialpsyker/equip_items(var/mob/living/carbon/human/H) // They'll need to get more Psyker-specific gear in the future.
 	H.verbs += /mob/living/carbon/human/proc/renderaid									 //This is how we get the verb!
 
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
@@ -218,11 +218,12 @@ Primaris Psyker
 	H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_in_backpack)
 	H.equip_to_slot_or_del(new /obj/item/device/flashlight/seclite, slot_in_backpack)
 
-	H.maxPsy += 500 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
-	H.verbs += /mob/living/carbon/human/whitelisted/proc/imprison
-	H.verbs += /mob/living/carbon/human/whitelisted/proc/smite
-	H.verbs += /mob/living/carbon/human/whitelisted/proc/quickening
-	H.verbs += /mob/living/carbon/human/whitelisted/proc/telepath
+	H.maxPsyk += 500 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
+	H.verbs += /mob/living/carbon/human/proc/imprisonn
+	H.verbs += /mob/living/carbon/human/proc/smitee
+	H.verbs += /mob/living/carbon/human/proc/quickeningg
+	H.verbs += /mob/living/carbon/human/proc/telepathh
+	//extra letters added on end to avoid duplicate definitions/clash with Librarians, real goose tape code I know - Wel
 
 	H.mutations.Add(TK)
 	H.update_mutations()
