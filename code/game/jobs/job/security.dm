@@ -218,7 +218,7 @@ Primaris Psyker
 	H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_in_backpack)
 	H.equip_to_slot_or_del(new /obj/item/device/flashlight/seclite, slot_in_backpack)
 
-	H.maxPsy += 500// Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
+	H.maxPsy += 500 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
 	H.verbs += /mob/living/carbon/human/whitelisted/proc/imprison
 	H.verbs += /mob/living/carbon/human/whitelisted/proc/smite
 	H.verbs += /mob/living/carbon/human/whitelisted/proc/quickening
@@ -227,7 +227,7 @@ Primaris Psyker
 	H.mutations.Add(TK)
 	H.update_mutations()
 
-
+// if this doesn't work then I may need to make separate psyker page to separate from Librarians as it may have issues with carbon humans and carbon whitelisted humans
 
 /*
 Security Officer
