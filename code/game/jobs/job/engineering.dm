@@ -41,6 +41,27 @@ Chief Engineer
 		H.equip_to_slot_or_del(new /obj/item/weapon/reagent_containers/syringe(H), slot_in_backpack)
 		H.equip_to_slot_or_del(new /obj/item/weapon/paper/magos(H), slot_in_backpack)
 
+	spawn(10)
+		var/augmentchoice = input(H, "Select augmented locations.","Augment selection") as null|anything in list("Head and Chest", "Arms", "Legs")
+		switch(augmentchoice)  //Based on the IG weapon selection code and surgical mechadendrite.
+			if("Head and Chest")
+				H.organs -= H.getlimb(/obj/item/organ/limb/head)  //Doesn't put it on the ground as this presumably happened already on a forge world.
+				H.organs += new /obj/item/organ/limb/robot/head()
+				H.organs -= H.getlimb(/obj/item/organ/limb/chest)
+				H.organs += new /obj/item/organ/limb/robot/chest()
+			if("Arms")
+				H.organs -= H.getlimb(/obj/item/organ/limb/l_arm)
+				H.organs += new /obj/item/organ/limb/robot/l_arm()
+				H.organs -= H.getlimb(/obj/item/organ/limb/r_arm)
+				H.organs += new /obj/item/organ/limb/robot/r_arm()
+			if("Legs")
+				H.organs -= H.getlimb(/obj/item/organ/limb/l_leg)
+				H.organs += new /obj/item/organ/limb/robot/l_leg()
+				H.organs -= H.getlimb(/obj/item/organ/limb/r_leg)
+				H.organs += new /obj/item/organ/limb/robot/r_leg()
+		H.update_damage_overlays(0)
+		H.update_augments()
+
 /datum/job/chief_engineer/get_access()
 	return get_all_accesses()
 
@@ -80,6 +101,31 @@ Station Engineer
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/rig(H), slot_head)
 	H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/laspistol2(H), slot_l_store)
 	H.faction = "Mechanicus"
+
+	spawn(10)
+		var/augmentchoice = input(H, "Select an augmented location.","Augment selection") as null|anything in list("Head", "Chest", "Left Arm", "Right Arm", "Left Leg", "Right Leg")
+		switch(augmentchoice)  //Based on the IG weapon selection code.
+			if("Head")
+				H.organs -= H.getlimb(/obj/item/organ/limb/head)  //Doesn't put it on the ground as this presumably happened already on a forge world.
+				H.organs += new /obj/item/organ/limb/robot/head()
+			if("Chest")
+				H.organs -= H.getlimb(/obj/item/organ/limb/chest)
+				H.organs += new /obj/item/organ/limb/robot/chest()
+			if("Left Arm")
+				H.organs -= H.getlimb(/obj/item/organ/limb/l_arm)
+				H.organs += new /obj/item/organ/limb/robot/l_arm()
+			if("Right Arm")
+				H.organs -= H.getlimb(/obj/item/organ/limb/r_arm)
+				H.organs += new /obj/item/organ/limb/robot/r_arm()
+			if("Left Leg")
+				H.organs -= H.getlimb(/obj/item/organ/limb/l_leg)
+				H.organs += new /obj/item/organ/limb/robot/l_leg()
+			if("Right Leg")
+				H.organs -= H.getlimb(/obj/item/organ/limb/r_leg)
+				H.organs += new /obj/item/organ/limb/robot/r_leg()
+		H.update_damage_overlays(0)
+		H.update_augments()
+
 /*
 Atmospheric Technician
 */
