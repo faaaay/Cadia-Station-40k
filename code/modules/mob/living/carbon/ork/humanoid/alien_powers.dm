@@ -46,20 +46,23 @@ Doesn't work on other orks/AI.*/
 */
 //warboss verbs
 /mob/living/carbon/human/ork/nob/verb/waagh()
-	set name = "Waaaaagh!!!(20)"
+	set name = "Waaaaagh!!!(15)"
 	set desc = "Heal"
 	set category = "Ork"
 
-	if(powerc(20))
+	if(powerc(20) && health < maxHealth)
 		visible_message("<span class='warning'>WAAAAAAAAAAAAAAAAAAAAAAAAGH!</span>")
 		playsound(loc, 'sound/effects/waagh1.ogg', 50) //keep it at 15% volume so people don't jump out of their skin too much
 		spawn(0)
 			for(var/i = 0, i<5,i++)
-				adjustBruteLoss(-5)
-				adjustOxyLoss(-5)
-				adjustFireLoss(-5)
-				adjustToxLoss(-20)
-				sleep(10)
+				if(powerc(20) && health < maxHealth) //Checks again so you won't get healed when you run out of waagh or spend more waagh if you're fully healed.
+					adjustBruteLoss(-5)
+					adjustOxyLoss(-5)
+					adjustFireLoss(-5)
+					adjustToxLoss(-15)
+					sleep(10)
+	else
+		src << "You can't use this ability if you're at full health or lack enough waagh."
 /*
  * Scavange
  */
@@ -108,48 +111,57 @@ Doesn't work on other orks/AI.*/
 	set desc = "Heal"
 	set category = "Ork"
 
-	if(powerc(20))
+	if(powerc(20) && health < maxHealth)
 		visible_message("<span class='warning'>WAAAAAAAAAAAAAAAAAAAAAAAAGH!</span>")
 		playsound(loc, 'sound/effects/waagh1.ogg', 50) //keep it at 15% volume so people don't jump out of their skin too much
 		spawn(0)
 			for(var/i = 0, i<5,i++)
-				adjustBruteLoss(-5)
-				adjustOxyLoss(-5)
-				adjustFireLoss(-5)
-				adjustToxLoss(-20)
-				sleep(10)
+				if(powerc(20) && health < maxHealth) //Checks again so you won't get healed when you run out of waagh or spend more waagh if you're fully healed.
+					adjustBruteLoss(-5)
+					adjustOxyLoss(-5)
+					adjustFireLoss(-5)
+					adjustToxLoss(-20)
+					sleep(10)
+	else
+		src << "You can't use this ability if you're at full health or lack enough waagh."
 
 /mob/living/carbon/human/ork/commando/verb/waagh()
 	set name = "Waaaaagh!!!(20)"
 	set desc = "Heal"
 	set category = "Ork"
 
-	if(powerc(20))
+	if(powerc(20) && health < maxHealth)
 		visible_message("<span class='warning'>WAAAAAAAAAAAAAAAAAAAAAAAAGH!</span>")
 		playsound(loc, 'sound/effects/waagh1.ogg', 50) //keep it at 15% volume so people don't jump out of their skin too much
 		spawn(0)
 			for(var/i = 0, i<5,i++)
-				adjustBruteLoss(-5)
-				adjustOxyLoss(-5)
-				adjustFireLoss(-5)
-				adjustToxLoss(-20)
-				sleep(10)
+				if(powerc(20) && health < maxHealth) //Checks again so you won't get healed when you run out of waagh or spend more waagh if you're fully healed.
+					adjustBruteLoss(-5)
+					adjustOxyLoss(-5)
+					adjustFireLoss(-5)
+					adjustToxLoss(-20)
+					sleep(10)
+	else
+		src << "You can't use this ability if you're at full health or lack enough waagh."
 
 /mob/living/carbon/human/ork/warboss/verb/waagh()
 	set name = "Waaaaagh!!!(20)"
 	set desc = "Heal"
 	set category = "Ork"
 
-	if(powerc(20))
+	if(powerc(20) && health < maxHealth)
 		visible_message("<span class='warning'>WAAAAAAAAAAAAAAAAAAAAAAAAGH!</span>")
-		playsound(loc, 'sound/effects/waagh1.ogg', 65) //keep it at 15% volume so people don't jump out of their skin too much //Now slightly louder because HE DA BOSS
+		playsound(loc, 'sound/effects/waagh1.ogg', 50) //keep it at 15% volume so people don't jump out of their skin too much
 		spawn(0)
 			for(var/i = 0, i<5,i++)
-				adjustBruteLoss(-5)
-				adjustOxyLoss(-5)
-				adjustFireLoss(-5)
-				adjustToxLoss(-20)
-				sleep(10)
+				if(powerc(20) && health < maxHealth) //Checks again so you won't get healed when you run out of waagh or spend more waagh if you're fully healed.
+					adjustBruteLoss(-6)
+					adjustOxyLoss(-6)
+					adjustFireLoss(-6)
+					adjustToxLoss(-20)
+					sleep(10)
+	else
+		src << "You can't use this ability if you're at full health or lack enough waagh."
 
 
 /* NOPE
