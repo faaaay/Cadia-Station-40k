@@ -117,6 +117,15 @@
 			user.visible_message("<span class='notice'>[user] [anchored ? "fastens" : "unfastens"] the [src].</span>", \
 								 "<span class='notice'>You have [anchored ? "fastened the [src] to" : "unfastened the [src] from"] the floor.</span>")
 			return
+	if(istype(W, /obj/item/weapon/snowshovel/ig970))
+		playsound(src.loc, 'sound/items/Ratchet.ogg', 100, 1)
+		user << "<span class='notice'>Now building fortifications...</span>"
+		if(do_after(user,40))
+			if(!src) return
+			user << "<span class='notice'>You construct fortifications!</span>"
+			var/obj/structure/barricade/barbedwire/B = new /obj/structure/barricade/barbedwire(get_turf(src))
+			B.dir = user.dir  //If possible, make it so the icon state changes if it's at a turn in the barbed wire.
+			qdel(src)
 
 //window placing begin
 	else if( istype(W,/obj/item/stack/sheet/rglass) || istype(W,/obj/item/stack/sheet/glass) )
