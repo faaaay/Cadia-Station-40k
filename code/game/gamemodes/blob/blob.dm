@@ -9,7 +9,7 @@ var/list/blob_nodes = list()
 /datum/game_mode/blob
 	name = "blob"
 	config_tag = "blob"
-	antag_flag = BE_XENO
+	antag_flag = BE_BLOB
 
 	required_players = 10
 	required_enemies = 1
