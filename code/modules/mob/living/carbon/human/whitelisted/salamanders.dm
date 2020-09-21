@@ -49,8 +49,8 @@ Salamanders
 	real_name = "Unknown"
 	universal_speak = 1
 	gender = "male"
-	maxHealth = 200
-	health = 200
+	maxHealth = 250
+	health = 250
 	status_flags = 0
 	factions = list("imperium")//new
 
