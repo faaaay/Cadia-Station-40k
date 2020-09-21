@@ -11,6 +11,7 @@
 		stat(null, "Psy: [Psy]/[maxPsy]")
 
 /mob/living/carbon/human/whitelisted/Life()
+	..()
 	if(Psy < maxPsy)
 		Psy = min(Psy+Psy_rate, maxPsy)
 

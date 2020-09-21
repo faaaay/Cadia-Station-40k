@@ -40,9 +40,9 @@
 	item_state = "labgreen"
 
 /obj/item/clothing/suit/labcoat/genetics
-	name = "geneticist labcoat"
-	desc = "A suit that protects against minor chemical spills. Has a blue stripe on the shoulder."
-	icon_state = "labcoat_gen"
+	name = "genetor garb"
+	desc = "An Adeptus Mechanicus garb that protects against minor chemical spills."
+	icon_state = "rig-engineering"
 
 /obj/item/clothing/suit/labcoat/chemist
 	name = "chemist labcoat"

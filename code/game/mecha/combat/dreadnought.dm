@@ -1,5 +1,5 @@
 /obj/mecha/combat/dreadnought
-	desc = "A Cybernetic walker of itermediate size used by by the Chapters of the Adeptus Astartes as heavy infantry support for their Space Marine companies."
+	desc = "A Cybernetic walker of intermediate size used by by the Chapters of the Adeptus Astartes as heavy infantry support for their Space Marine companies."
 	name = "Ultra Marine Dreadnought"
 	icon = 'icons/migrated/alienqueen.dmi'
 	icon_state = "dread2"
@@ -37,6 +37,7 @@
 	cell = new(src)
 	cell.charge = 9999999999999999999999999999999
 	cell.maxcharge = 9999999999999999999999999999999
+	src.verbs -= /obj/mecha/verb/start_move_inside
 	src.verbs -= /obj/mecha/verb/eject
 
 
@@ -60,3 +61,20 @@
 		if(M.firer == src)
 			return 1
 	return ..()
+
+
+/obj/mecha/combat/dreadnought/verb/dreadnought_move_inside() //Based on Ork killakan verb. Marine only (unlikely to come up) plus are you sure message.
+	set category = "Object"
+	set name = "Enter Dreadnought"
+	set src in oview(1)
+	if(istype(usr, /mob/living/carbon/human/whitelisted) && !istype(usr, /mob/living/carbon/human/whitelisted/eldar))
+		var/confirm = alert("If you enter the [src.name], you will be entombed in its ceramite casing until death. Are you sure?", "Enter?", "Yes", "No")
+		if(confirm == "Yes")
+			if(enter_after(40,usr))
+				if(!src.occupant)
+					move_inside(usr)
+				else if(src.occupant!=usr)
+					usr << "[src.occupant] has already been entombed in the dreadnought!."
+	else
+		usr << "\blue <B>You think [src.name] is only suitable for an Astartes.</B>"
+		return

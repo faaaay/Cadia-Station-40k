@@ -169,6 +169,7 @@ fakegoose
 RTD controller
 */
 
+/* Commented out due to moving to admin_verbs.dm
 /mob/living/simple_animal/hostile/retaliate/goose/sprucegoose
 	name = "Bruce"
 
@@ -209,6 +210,7 @@ RTD controller
 /mob/living/simple_animal/hostile/retaliate/goose/sprucegoose/proc/grantaccess()
 	src.verbs += /mob/living/simple_animal/hostile/retaliate/goose/sprucegoose/proc/factioncontroller
 	usr << text("<span class='notice'>Access Granted</span>")
+
 
 /mob/living/simple_animal/hostile/retaliate/goose/sprucegoose/proc/factioncontroller()
 	set category = "RTD"
@@ -890,3 +892,4 @@ RTD controller
 	msg += "[ork]"
 	msg += "<BR>"
 	usr << browse("<HTML><HEAD><TITLE>[name]</TITLE></HEAD><BODY>[msg]</BODY></HTML>", "window=[name]")
+*/

@@ -1569,5 +1569,5 @@ datum/reagent/tyranid/on_mob_life(var/mob/living/carbon/M) //Pretty high damage 
 				H.drop_item()
 				H.Dizzy(5)
 				shake_camera(H, 10, 1)
-				H.reagents.remove_reagent(src.id, 0.05)
+		H.reagents.remove_reagent(src.id, 0.05) //Removed indentation so the chem will still be processed when not on weeds.
 	return
