@@ -75,7 +75,7 @@ var/list/engineering_positions = list(
 var/list/medical_positions = list(
 	"Chief Medical Officer",
 	"Medical Doctor",
-	"Geneticist",	//Part of both medical and science
+	"Genetor",	//Part of both medical and science
 	"Virologist",
 	"Chemist"
 )
@@ -84,7 +84,7 @@ var/list/medical_positions = list(
 var/list/science_positions = list(
 	"Lord Inquisitor, Ordo Xenos",
 	"Scientist",
-	"Geneticist",	//Part of both medical and science
+	"Genetor",	//Part of both medical and science
 	"Roboticist"
 )
 

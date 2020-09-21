@@ -118,14 +118,14 @@ Chemist
 Geneticist
 */
 /datum/job/geneticist
-	title = "Geneticist"
+	title = "Genetor"
 	flag = GENETICIST
-	department_head = list("Sister Hospitaller", "Lord Inquisitor")
+	department_head = list("Sister Hospitaller") //Technically they're same rank as the other Magos but putting them under the SH avoids extra command bloat.
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "The Sister Hospitaller and Lord Inquisitor"
+	supervisors = "Sister Hospitaller, Magos"
 	selection_color = "#ffeef0"
 
 	default_pda = /obj/item/device/pda/geneticist
@@ -133,7 +133,7 @@ Geneticist
 	default_backpack = /obj/item/weapon/storage/backpack/medic
 	default_satchel = /obj/item/weapon/storage/backpack/satchel_gen
 
-	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_research)
+	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_research, access_construction) //Doesn't seem necessary to add engineering access despite being Admech.
 	minimal_access = list(access_medical, access_morgue, access_genetics, access_research)
 
 /datum/job/geneticist/equip_items(var/mob/living/carbon/human/H)

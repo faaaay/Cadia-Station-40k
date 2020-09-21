@@ -557,7 +557,10 @@
 /obj/mecha/proc/destroy()
 	spawn()
 		if(noescape)
-			src.occupant_message("\blue Integrity failed- you can't escape. You are incinerated!")
+			if (!isork(src.occupant))
+				src.occupant_message("\blue Da [src] is smashed ta bits an' ya can't git out! You are burnt ta death!") //My Ork lingo isn't great so this message could be better.
+			else
+				src.occupant_message("\blue Integrity failed- you can't escape. You are incinerated!")
 		else
 			go_out()
 		dump_pass()

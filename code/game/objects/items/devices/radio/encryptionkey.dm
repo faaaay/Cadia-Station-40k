@@ -60,9 +60,9 @@
 
 /obj/item/device/encryptionkey/headset_medsci
 	name = "medical research radio encryption key"
-	desc = "An encryption key for a radio headset.  To access the medical channel, use :m. For science, use :n."
+	desc = "An encryption key for a radio headset.  Channels are as follows: : e - engineering, :m - medical, :n - science."
 	icon_state = "medsci_cypherkey"
-	channels = list("Science" = 1, "Medical" = 1)
+	channels = list("Engineering" = 1, "Science" = 1, "Medical" = 1)
 
 /obj/item/device/encryptionkey/headset_com
 	name = "command radio encryption key"

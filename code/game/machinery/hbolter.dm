@@ -51,9 +51,10 @@
 	icon = 'icons/obj/machines/cannon.dmi'
 	icon_state = "bolter"
 	anchored = 1
+	maxloaded = 8
 
 	fire()
-		loaded = 0
+		loaded -= 1
 		if(dir == EAST || dir == WEST)
 			spawn(0)
 				src.pixel_x = 2
@@ -103,16 +104,22 @@
 			playsound(loc, 'sound/weapons/Gunshot_bolter.ogg', 75, 0)
 			var/obj/item/projectile/bullet/gyro/heavy/A = new /obj/item/projectile/bullet/gyro/heavy(src.loc)
 			A.current = U
-			A.yo = U.y - T.y
-			A.xo = U.x - T.x
+			if (U.y != T.y)   //If the shot is going above or below, then it'll randomise right/left direction.
+				A.xo = U.x - T.x + rand(1,100)/250 - 0.2
+			else
+				A.xo = U.x - T.x
+			if (U.x != T.x) //If the shot is going above or below, then it'll randomise right/left direction.
+				A.yo = U.y - T.y + rand(1,100)/250 - 0.2
+			else
+				A.yo = U.y - T.y
 			A.process()
 
 	attackby(obj/item/O, mob/user)
 		if(istype(O, /obj/item/cannonball/boltermag))
-			if(!loaded)
+			if(loaded==0)
 				user.visible_message("<span class='notice'>[user] begins loading the [src]...</span>","<span class='notice'>Loading the [src]...</span>")
 				if(do_after(user, 25))
-					loaded = 1
+					loaded = maxloaded
 					qdel(O)
 					user.visible_message("<span class='notice'>[user] loads ammunition into the [src].</span>", "<span class='notice'>You load ammunition into the [src].</span>")
 				else
