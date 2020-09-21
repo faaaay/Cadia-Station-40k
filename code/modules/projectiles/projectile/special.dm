@@ -117,7 +117,7 @@
 		target.ex_act(3)
 	if(istype(target,/obj/mecha/))
 		var/obj/mecha/mech = target
-		mech.take_damage(225)
+		mech.take_damage(150)
 	..()
 
 /obj/item/projectile/meteor
