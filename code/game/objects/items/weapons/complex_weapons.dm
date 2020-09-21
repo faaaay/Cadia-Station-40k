@@ -345,7 +345,7 @@ Eldar PSword
 	switchsound = 'sound/effects/eldar2.ogg'
 	slot_flags = SLOT_BELT
 	flags = CONDUCT | NOSHIELD
-	force = 30.0
+	force = 20
 	throwforce = 7
 	w_class = 3
 	origin_tech = "combat=8"
