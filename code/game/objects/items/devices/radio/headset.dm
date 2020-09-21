@@ -84,9 +84,9 @@
 	item_state = "headset"
 	keyslot2 = new /obj/item/device/encryptionkey/headset_sci
 
-/obj/item/device/radio/headset/headset_medsci
-	name = "medicus research radio headset"
-	desc = "A headset that is a result of the mating between medical and science. To access the medical channel, use :m. For science, use :n."
+/obj/item/device/radio/headset/headset_medsci  //Only used by Genetor so safe to rename.
+	name = "genetor radio headset"
+	desc = "A headset for the genetor, an adeptus mechanicus closely tied to medical and science. Channels are as follows: : e - engineering, :m - medical, :n - science."
 	icon_state = "medsci_headset"
 	item_state = "headset"
 	keyslot2 = new /obj/item/device/encryptionkey/headset_medsci
