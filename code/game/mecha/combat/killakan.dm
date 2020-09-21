@@ -80,7 +80,6 @@
 	else
 		var/confirm = alert("If ye git in da [src.name]], ye can't get back out. Are you a bad enuff grot?", "Git in?", "YEAH", "MAYBE LATA")
 		if(confirm == "YEAH")
-			visible_message("\green [usr] starts ta climb into da [src.name]")
 			if(enter_after(40,usr))
 				if(!src.occupant)
 					move_inside(usr)
