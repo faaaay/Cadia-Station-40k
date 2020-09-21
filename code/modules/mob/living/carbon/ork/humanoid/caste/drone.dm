@@ -1,5 +1,5 @@
 /mob/living/carbon/human/ork/oddboy
-	name = "Ork Oddboy"
+	name = "Ork Mekboy"
 	caste = "d"
 	maxHealth = 200
 	health = 200
@@ -26,29 +26,45 @@
 	. = ..()
 	. += 1
 
-/mob/living/carbon/human/ork/oddboy/verb/evolve()
-	set name = "Evolve (500)"
-	set desc = "Maybe now you DA boss?!?!?."
+/mob/living/carbon/human/ork/verb/plantt()
+	set name = "Da Waaaagh banna! (100)"
+	set desc = "Plants some ork weeds"
 	set category = "Ork"
 
-	if(powerc(500))
-		// Queen check
-		var/no_warboss = 1
-		for(var/mob/living/carbon/human/ork/warboss/Q in living_mob_list)
-			if(!Q.key || !Q.getorgan(/obj/item/organ/brain))
-				continue
-			no_warboss = 0
-
-		if(no_warboss)
-			adjustToxLoss(-500)
-			src << "\green HA! NOW YOU DA BOSS!!"
-			for(var/mob/O in viewers(src, null))
-				O.show_message(text("\green <B>[src] IS NOW DA BOSS! YOU LISTEN TO HIM!</B>"), 1)
-			var/mob/living/carbon/human/ork/warboss/new_xeno = new (loc)
-			mind.transfer_to(new_xeno)
-			for(var/obj/item/W in src) //Lets not delete everything... This is a lot easier than re-equipping it on the new mob though.
-				src.unEquip(W)
-			qdel(src)
-		else
-			src << "<span class='notice'>I don't think tha boss will like that.</span>"
+	if(powerc(100))
+		adjustToxLoss(-100)
+		for(var/mob/O in viewers(src, null))
+			O.show_message(text("\green <B>If it's a Waaagh [src] wants, it's a WAAAAAGH he'll get!</B>"), 1)
+		new /obj/structure/human/ork/waagh/node(loc)
+		playsound(loc, 'sound/voice/workwork.ogg', 75, 0)
 	return
+
+//for mekboys
+/mob/living/carbon/human/ork/proc/buildit()
+	set name = "Build Stuff (75)"
+	set desc = "Time to build stuff!"
+	set category = "Ork"
+
+	if(powerc(75))
+		var/choice = input("Choose what you wish to build.","Construct building") as null|anything in list("Door","Wall","Window","Pile-o-guns") //would do it through typesof but then the player choice would have the type path and we don't want the internal workings to be exposed ICly - Urist
+		if(!choice || !powerc(75))	return
+		adjustToxLoss(-75)
+		src << "\green You construct a [choice]."
+		for(var/mob/O in viewers(src, null))
+			O.show_message(text("\red <B>[src] starts building something!</B>"), 1)
+		switch(choice)
+			if("Door")
+				new /obj/structure/mineral_door/ork(loc)
+			if("Wall")
+				new /obj/structure/human/ork/construction/wall(loc)
+			if("Window")
+				new /obj/structure/human/ork/construction/window(loc)
+			if("Pile-o-guns")
+				var/announce = pick('sound/voice/gretpilo.ogg','sound/voice/gretpilo2.ogg')
+				playsound(loc, announce, 75, 0)
+				makegunpile()
+
+	return
+
+/mob/living/carbon/human/ork/proc/makegunpilee(mob/user as mob)
+	new /obj/structure/closet/ork/piloguns(src.loc)

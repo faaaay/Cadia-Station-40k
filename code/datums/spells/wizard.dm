@@ -236,7 +236,7 @@
 	invocation = "WARP FIRE!"
 	invocation_type = "shout"
 	range = 20
-	cooldown_min = 20 //10 deciseconds reduction per rank
+	cooldown_min = 200 //10 deciseconds reduction per rank
 
 	proj_icon_state = "fireball"
 	proj_name = "a fireball"

@@ -37,8 +37,8 @@
 		src << "\blue There are three to choose from:"
 		src << "<B>Commando</B> \blue are all sneaky like."
 		src << "<B>Nobs</B> \blue are the biggest and the strongest!"
-		src << "<B>Oddboy</B> \blue these gots can do things dat help boyz but they are not as good at fightin untill they can become a boss."
-		var/alien_caste = alert(src, "Pick one.",,"Commando","Nob","Oddboy")
+		src << "<B>Mekboy</B> \blue these gots can do things dat help boyz such az buildin' bannas and fortificashuns"
+		var/alien_caste = alert(src, "Pick one.",,"Commando","Nob","Mekboy")
 
 		var/mob/living/carbon/human/ork/new_xeno
 		switch(alien_caste)
@@ -46,7 +46,7 @@
 				new_xeno = new /mob/living/carbon/human/ork/commando(loc)
 			if("Nob")
 				new_xeno = new /mob/living/carbon/human/ork/nob(loc)
-			if("Oddboy")
+			if("Mekboy")
 				new_xeno = new /mob/living/carbon/human/ork/oddboy(loc)
 		if(mind)	mind.transfer_to(new_xeno)
 		for(var/obj/item/W in src) //Lets not delete everything... This is a lot easier than re-equipping it on the new mob though.
