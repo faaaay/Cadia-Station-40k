@@ -26,7 +26,7 @@ The Basic Cannon Template
 			spawn(20)
 				firing=0
 		else
-			usr << "You are just fired the [src]. Wait a moment fire again."
+			usr << "You are just fired the [src]. Wait a moment to fire again."
 
 /obj/machinery/cannon/proc/fire()
 	var/cannonsound = pick('sound/machines/cannon1.ogg','sound/machines/cannon2.ogg','sound/machines/cannon3.ogg')
