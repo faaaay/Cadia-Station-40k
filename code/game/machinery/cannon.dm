@@ -11,19 +11,27 @@ The Basic Cannon Template
 	anchored = 0
 	use_power = 0
 	var/loaded = 0
+	var/maxloaded = 0
+	var/firing = 0
 
 /obj/machinery/cannon/attack_hand(mob/user)
-	if(!loaded)
+	if(loaded==0)
 		user.visible_message("<span class='notice'>[user] opens the cannon's breach and inspects the chamber.</span>", "<span class='notice'>You check to see if it is loaded. NOPE! It's not.</span>")
 		return
 	else
-		user.visible_message("<span class='notice'>[user] fires the [src].</span>", "<span class='notice'>You fire the [src].</span>")
-		fire()
+		if (firing==0)
+			user.visible_message("<span class='notice'>[user] fires the [src].</span>", "<span class='notice'>You fire the [src].</span>")
+			firing=1
+			fire()
+			spawn(20)
+				firing=0
+		else
+			usr << "You are just fired the [src]. Wait a moment fire again."
 
 /obj/machinery/cannon/proc/fire()
 	var/cannonsound = pick('sound/machines/cannon1.ogg','sound/machines/cannon2.ogg','sound/machines/cannon3.ogg')
 	playsound(loc, cannonsound, 60, 0)
-	loaded = 0
+	loaded -= 1
 	switch(dir)
 		if(8)
 			spawn(0)
@@ -72,6 +80,7 @@ Nurgle Cannon
 	desc = "This resembles an artillery piece from the 31rd century, but it appears to have been in the warp for a long long time."
 	icon = 'icons/obj/machines/cannon.dmi'
 	icon_state = "pmcannon"
+	maxloaded = 1
 
 	fire()
 		..()
@@ -136,8 +145,8 @@ Nurgle Cannon
 
 	attackby(obj/item/O, mob/user)
 		if(istype(O, /obj/item/cannonball/nurgleround))
-			if(!loaded)
-				loaded = 1
+			if(loaded==0)
+				loaded = maxloaded //doesn't change the Nurgle cannon at all but supports adding more ammo like with hbolter/lascannon.
 				qdel(O)
 				user.visible_message("<span class='notice'>[user] loads a round into the cannon.</span>", "<span class='notice'>You load a round into the cannon.</span>")
 			else
