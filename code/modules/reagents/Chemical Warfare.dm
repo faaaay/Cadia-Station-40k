@@ -30,7 +30,6 @@ datum/reagent/toxin/tyranidkiller/reaction_mob(var/mob/living/M, var/method=TOUC
 	return
 
 datum/reagent/toxin/tyranidkiller/reaction_obj(var/obj/O)
-	O.visible_message("\red [O] exists!<")
 	if(istype(O,/obj/structure/alien/weeds/) || istype(O,/obj/structure/mineral_door/resin) || istype(O,/obj/structure/alien) || istype(O,/obj/structure/stool/bed/nest))
 		if(istype(O, /obj/structure/alien/resin/spore))
 			O.visible_message("\red The [O] deflates and dissolves into biomass harmlessly!<")
