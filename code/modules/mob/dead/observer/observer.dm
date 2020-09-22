@@ -246,6 +246,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			if(M.isempty == 1)
 				if(M.health > 0)
 					src << "\blue Found one!"
+					src << "\red Your mind enters the body of a skilled Skitarii Ranger! You serve and are commanded by the Adeptus Mechanicus. Obey them and carry out their will."
 					M.key = usr.key
 					M.isempty = 0
 					break

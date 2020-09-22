@@ -1,4 +1,4 @@
- //very big WIP testing ideas with
+ //very big WIP testing ideas with these boys - it seems to be much easier to get them functioning as humans rather than silicon as that entails a whole lot of craziness. Really need to make them unable to wear anything but give them base armor/biotic weps
 /mob/living/carbon/human/skitarii_ranger
 	name = "Unknown"
 	real_name = "Unknown"
