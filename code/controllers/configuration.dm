@@ -89,6 +89,7 @@
 	var/continuous_round_wiz = 0
 	var/continuous_round_malf = 0
 	var/shuttle_refuel_delay = 12000
+	var/RTDtime = 12000
 	var/show_game_type_odds = 0			//if set this allows players to see the odds of each roundtype on the get revision screen
 	var/mutant_races = 0				//players can choose their mutant race before joining the game
 

@@ -15,7 +15,7 @@ Ordo Hereticus
 	R.set_frequency(1441)
 	equip_to_slot_or_del(R, slot_ears)
 	spawn(20)
-		var/weaponchoice = input("Loadout.","Select a Loadout") as null|anything in list("Rifleman", "Close Quarters", "Marksman", "Medicae", "Body Guard", "Grenadier")
+		var/weaponchoice = input("Loadout.","Select a Loadout") as null|anything in list("Rifleman", "Close Quarters", "Marksman", "Medicae", "Body Guard", "Grenadier", "Slaved Psyker")
 		switch(weaponchoice)
 			if("Rifleman")
 				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
@@ -39,6 +39,7 @@ Ordo Hereticus
 				sleep(20)
 				regenerate_icons()
 				rename_self("[name]")
+				verbs += /mob/living/carbon/human/proc/renderaid
 			if("Close Quarters")
 				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
@@ -61,6 +62,7 @@ Ordo Hereticus
 				sleep(20)
 				regenerate_icons()
 				rename_self("[name]")
+				verbs += /mob/living/carbon/human/proc/renderaid
 			if("Marksman")
 				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
@@ -84,6 +86,7 @@ Ordo Hereticus
 				sleep(20)
 				regenerate_icons()
 				rename_self("[name]")
+				verbs += /mob/living/carbon/human/proc/renderaid
 			if("Medicae")
 				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
@@ -107,6 +110,7 @@ Ordo Hereticus
 				sleep(20)
 				regenerate_icons()
 				rename_self("[name]")
+				verbs += /mob/living/carbon/human/proc/renderaid
 			if("Body Guard")
 				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
@@ -126,6 +130,7 @@ Ordo Hereticus
 				sleep(20)
 				regenerate_icons()
 				rename_self("[name]")
+				verbs += /mob/living/carbon/human/proc/renderaid
 			if("Grenadier")
 				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
 				equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
@@ -148,6 +153,33 @@ Ordo Hereticus
 				sleep(20)
 				regenerate_icons()
 				rename_self("[name]")
+				verbs += /mob/living/carbon/human/proc/renderaid
+			if("Slaved Psyker")
+				equip_to_slot_or_del(new /obj/item/clothing/under/stormtroop, slot_w_uniform)
+				equip_to_slot_or_del(new /obj/item/clothing/shoes/cadianboots, slot_shoes)
+				equip_to_slot_or_del(new /obj/item/clothing/gloves/combat/inquisitor, slot_gloves)
+				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/bodyguard, slot_wear_suit)
+				equip_to_slot_or_del(new /obj/item/clothing/head/bodyguard, slot_head)
+				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/inq, slot_back)
+				equip_to_slot_or_del(new /obj/item/weapon/complexknife/combatknife, slot_in_backpack)
+				var/obj/item/weapon/card/id/ordohereticus/W = new
+				W.access = get_all_accesses()
+				W.access += get_centcom_access("Inquisitor")
+				W.assignment = "Slaved Psyker"
+				W.registered_name = real_name
+				W.update_label()
+				equip_to_slot_or_del(W, slot_wear_id)
+				sleep(20)
+				regenerate_icons()
+				rename_self("[name]")
+				verbs += /mob/living/carbon/human/proc/renderaid
+				maxPsyk += 500 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
+				verbs += /mob/living/carbon/human/proc/imprisonn
+				verbs += /mob/living/carbon/human/proc/smitee
+				verbs += /mob/living/carbon/human/proc/quickeningg
+				verbs += /mob/living/carbon/human/proc/telepathh
+	//extra letters added on end to avoid duplicate definitions/clash with Librarians, real goose tape code I know - Wel								 //This is how we get the verb!
 /mob/living/carbon/human/OHstormtrooper/leader/New()
 	..()
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
@@ -207,6 +239,7 @@ Ordo Hereticus
 	sleep(20)
 	regenerate_icons()
 	rename_self("[name]")
+	verbs += /mob/living/carbon/human/proc/renderaid
 /*
 Shuttle verb
 */

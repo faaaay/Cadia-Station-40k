@@ -398,17 +398,17 @@ Update: What have we created? something awful -wel ard
 	set desc = "Allows a player who has been authorized to use a whitelisted role to respawn as that role."
 	if(!ticker || !ticker.mode)
 		usr << "\blue The game hasn't started yet!"
-		return 
+		return
 	if(!can_rtd)
 		usr << "\red <b>The fealty of your soul is commanded by [master]. You are not free to go.</b>"
 		return
 	if(ticker.mode.name == "necron")
 		usr << "\blue Reinforcements are cut off! OH MY GOD!!!"
 		return
-	if(world.time - round_start_time < config.shuttle_refuel_delay)
-		usr << "\blue The round has just begun! Please wait another [abs(round(((world.time - round_start_time) - config.shuttle_refuel_delay)/600))] minutes before trying again."
+	if(world.time - round_start_time < config.RTDtime)
+		usr << "\blue The round has just begun! Please wait another [abs(round(((world.time - round_start_time) - config.RTDtime)/600))] minutes before trying again."
 		return  //don't want a delay for testing
-		
+
 	if(inmenu)
 		usr << "\blue I didn't learn to code yesterday. First- close the menu you already have open."
 		return
@@ -427,7 +427,7 @@ Update: What have we created? something awful -wel ard
 		inmenu = 1
 		researchavailable()
 		return
-		
+
 
 /mob/dead/observer/proc/researchavailable()
 	var/RTDoptions = list("")
@@ -581,7 +581,7 @@ Update: What have we created? something awful -wel ard
 
 		if("THOUSANDSONS")
 			message_admins("[usr.key] executed RTD faction: ThousandSons.", 0)
-			usr << "\blue You are a Thousand Sons! M'kachen is trapped on ArchAngel IV. Find him. Free him."
+			usr << "\blue You are a brother of the Thousand Sons! Aboard this station is a powerful Psyker, capture him, he may yet be corrupted to our ways."
 			usr.loc = get_turf(locate("landmark*ksonsteam"))
 			var/mob/living/carbon/human/whitelisted/ksons/new_character = new(usr.loc)
 			new_character.key = usr.key

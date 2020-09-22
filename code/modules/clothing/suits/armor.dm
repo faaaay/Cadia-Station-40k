@@ -330,7 +330,7 @@ Lord Inquisitor Armor
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	blood_overlay_type = "armor"
 	slowdown = 1
-	armor = list(melee = 80, bullet = 80, laser = 80, energy = 100, bomb = 80, bio = 80, rad = 95)
+	armor = list(melee = 60, bullet = 50, laser = 70, energy = 80, bomb = 80, bio = 80, rad = 95)
 	astartes = 1
 
 /obj/item/clothing/suit/armor/smurfparmor
@@ -378,7 +378,7 @@ Lord Inquisitor Armor
 	desc = "Ultra Marine Captain Armor"
 	icon_state = "umcap"
 	item_state = "umcpt_armor"
-	armor = list(melee = 85, bullet = 80, laser = 80, energy = 100, bomb = 80, bio = 90, rad = 95) //Very small stats bonus.
+	armor = list(melee = 85, bullet = 80, laser = 80, energy = 80, bomb = 80, bio = 90, rad = 95) //Very small stats bonus.
 
 /obj/item/clothing/suit/armor/umpowerarmor/apoth
 	name = "Ultra Marine Apothecary Power Armor"
@@ -408,7 +408,7 @@ Lord Inquisitor Armor
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	blood_overlay_type = "armor"
 	slowdown = 1
-	armor = list(melee = 80, bullet = 80, laser = 80, energy = 100, bomb = 80, bio = 80, rad = 95)
+	armor = list(melee = 80, bullet = 60, laser = 60, energy = 80, bomb = 80, bio = 80, rad = 95)
 	astartes = 1
 
 /obj/item/clothing/suit/armor/rgpowerarmor/apoth
@@ -531,7 +531,7 @@ Lord Inquisitor Armor
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	blood_overlay_type = "armor"
 	slowdown = 1
-	armor = list(melee = 80, bullet = 80, laser = 80, energy = 100, bomb = 80, bio = 80, rad = 95)
+	armor = list(melee = 80, bullet = 60, laser = 70, energy = 90, bomb = 80, bio = 80, rad = 95)
 	astartes = 1
 
 /obj/item/clothing/suit/armor/spowerarmor/captain
@@ -539,7 +539,7 @@ Lord Inquisitor Armor
 	desc = "Salamander Marine Captain Armor"
 	icon_state = "slcpt_armor"
 	item_state = "slcpt_armor"
-	armor = list(melee = 85, bullet = 80, laser = 80, energy = 100, bomb = 80, bio = 90, rad = 95) //Very small stats bonus.
+	armor = list(melee = 85, bullet = 60, laser = 70, energy = 80, bomb = 80, bio = 90, rad = 95) //Very small stats bonus.
 
 /obj/item/clothing/suit/armor/spowerarmor/apoth
 	name = "Salamander Marine Apothecary Power Armor"

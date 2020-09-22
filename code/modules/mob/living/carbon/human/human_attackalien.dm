@@ -98,11 +98,11 @@
 				apply_effect(4, WEAKEN, armor_block)
 			updatehealth()
 
-		if("disarm")
+		if("disarm")  //Odds changed from 50% push over, 49% disarm and 1% failure to 30%/30%/40%
 			if(prob(50))
 				step_away(src, M, 1)
 			var/randn = rand(1, 100)
-			if (randn <= 50) //Tackling is slightly less likely to work, but now has a chance to work on less stunnable mobs.
+			if (randn <= 30) //Tackling is slightly less likely to work, but now has a chance to work on less stunnable mobs.
 				playsound(loc, 'sound/weapons/pierce.ogg', 25, 1, -1)
 				drop_items()
 				Weaken(5)
@@ -112,7 +112,7 @@
 				visible_message("<span class='danger'>[M] has tackled down [src]!</span>", \
 					"<span class='userdanger'>[M] has tackled down [src]!</span>")
 			else
-				if (randn <= 99)
+				if (randn <= 60)
 					playsound(loc, 'sound/weapons/slash.ogg', 25, 1, -1)
 					drop_items()
 					visible_message("<span class='danger'>[M] disarmed [src]!</span>", \

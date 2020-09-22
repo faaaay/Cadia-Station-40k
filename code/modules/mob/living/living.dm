@@ -20,7 +20,7 @@
 	del(src)
 
 /mob/living/verb/succumb(var/whispered as null)
-	set hidden = 0
+	set hidden = 1
 	if (InCritical())
 		src.attack_log += "[src] has [whispered ? "whispered his final words" : "succumbed to death"] with [round(health, 0.1)] points of health!"
 		src.adjustOxyLoss(src.health + 200)

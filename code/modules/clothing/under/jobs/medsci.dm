@@ -59,7 +59,7 @@
 
 /obj/item/clothing/under/rank/geneticist
 	desc = "It's made of a special fiber that gives special protection against biohazards. It has a genetics rank stripe on it."
-	name = "geneticist's jumpsuit"
+	name = "genetor's jumpsuit"
 	icon_state = "genetics"
 	item_state = "w_suit"
 	item_color = "geneticswhite"
@@ -124,7 +124,7 @@
  */
 /obj/item/clothing/under/rank/geneticist_new
 	desc = "It's made of a special fiber which provides minor protection against biohazards."
-	name = "geneticist's jumpsuit"
+	name = "genetor's jumpsuit"
 	icon_state = "genetics_new"
 	item_state = "w_suit"
 	item_color = "genetics_new"

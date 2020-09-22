@@ -65,7 +65,7 @@
 
 	set name = "Grow sum Gretchez! (250)" //Given that every gretchin is now potentially going to get a player eventually, worth raising the price.
 	set desc = "Throw all this stuff on da ground!."
-	set category = "ork"
+	set category = "Ork"
 
 	if(locate(/obj/structure/human/ork/bush) in get_turf(src))
 		src << "Theres already stuff here!."

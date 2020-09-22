@@ -174,9 +174,10 @@ It's a series of tubes!
 		user.visible_message("<span class='notice'>[user] throws [M] with ease!</span>", "<span class='notice'>You throw [M] with your clamp!</span>")
 
 	if(istype(A,/turf/)||istype(A,/obj/structure/)||istype(A,/obj/machinery/door/)||istype(A,/obj/effect/fake_floor))
-		A.ex_act(2)
-		playsound(loc, 'sound/weapons/smash.ogg', 50, 1, -1)
-		user.visible_message("<span class='notice'>[user] destroys the [A] with a metal clamp!</span>", "<span class='notice'>You made short work of that [A] with your clamp!</span>")
+		if (!istype(A, /turf/unsimulated) && !istype(A, /obj/structure/caves_entrance) && !istype(A, /obj/structure/necron_entrance)) //Should hopefully stop marines breaking into the crisis support console. Any unexpected side effects? Should also include poddoor but that would break other stuff.
+			A.ex_act(2)  //The above also stops the clamp from destroying the entrance/exit to the necron tomb.
+			playsound(loc, 'sound/weapons/smash.ogg', 50, 1, -1)
+			user.visible_message("<span class='notice'>[user] destroys the [A] with a metal clamp!</span>", "<span class='notice'>You made short work of that [A] with your clamp!</span>")
 	..()
 
 /obj/item/weapon/melee/clamp/dropped()

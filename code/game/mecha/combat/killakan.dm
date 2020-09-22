@@ -25,6 +25,7 @@
 	ME.attach(src)
 	ME = new /obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster(src)
 	ME.attach(src)
+	noescape = 1
 	nominalsound = pick('sound/mecha/which.ogg')
 	return
 
@@ -36,7 +37,8 @@
 	cell = new(src)
 	cell.charge = 9999999999999999999999999999999
 	cell.maxcharge = 9999999999999999999999999999999
-	src.verbs -= /obj/mecha/verb/start_move_inside											//We remove the normal way to get in
+	src.verbs -= /obj/mecha/verb/start_move_inside ////We remove the normal way to get in
+	src.verbs -= /obj/mecha/verb/eject
 
 /obj/mecha/combat/killakan/bullet_act(var/obj/item/projectile/Proj) //wrapper
 	src.log_message("Hit by projectile. Type: [Proj.name]([Proj.flag]).",1)
@@ -70,8 +72,20 @@
 	set category = "Object"
 	set name = "Git in!"
 	set src in oview(1)
-	if (!isork(usr) && !isgretchin(usr))
+	if (!isork(usr))
 		usr << "\blue <B>You have no idea how to get inside a [src.name].</B>"
 		return
+	if (!isgretchin(usr))
+		usr << "\blue <B>Ye Git, Yer too fat ta' fit in dat [src.name]. GET A GROT TO DO IT!.</B>"
 	else
-		move_inside(usr)
+		var/confirm = alert("If ye git in da [src.name]], ye can't get back out. Are you a bad enuff grot?", "Git in?", "YEAH", "MAYBE LATA")
+		if(confirm == "YEAH")
+			if(enter_after(40,usr))
+				if(!src.occupant)
+					move_inside(usr)
+				else if(src.occupant!=usr)
+					usr << "[src.occupant] was fasta. Git in betta next time, runt!."
+			else
+				visible_message("\green [usr] looks at da killakan but bacs down like 'es scared or sumthin!") //I'm not good at Ork lingo so could be better."
+		else
+			usr.visible_message("\green [usr] looks at da killakan but backs down like 'es scared or sumthin!") //I'm not good at Ork lingo so could be better.

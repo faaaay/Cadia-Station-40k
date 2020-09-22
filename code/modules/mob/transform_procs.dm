@@ -338,7 +338,7 @@
 	for(var/t in organs)
 		qdel(t)
 
-	var/alien_caste = pick("Hunter","Sentinel","Drone")
+	var/alien_caste = pick("Hunter","Sentinel","Drone","Mekboy")
 	var/mob/living/carbon/alien/humanoid/new_xeno
 	switch(alien_caste)
 		if("Hunter")
