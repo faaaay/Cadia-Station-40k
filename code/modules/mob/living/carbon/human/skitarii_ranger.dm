@@ -26,12 +26,20 @@
 
 	name = "[rndname]"
 	real_name = "[rndname]"
+	var/obj/item/weapon/card/id/W = new
+	W.icon_state = "dogtag"
+	W.access = list(access_security, access_sec_doors, access_brig, access_court, access_maint_tunnels, access_morgue) //Skitarii are treated similar to Imp Guard
+	W.access += get_centcom_access("Captain") //They can have centcomm access though.
+	W.assignment = "Adeptus Mechanicus"
+	W.registered_name = real_name
+	W.update_label()
+	equip_to_slot_or_del(W, slot_wear_id)
+	sleep (20)
+	regenerate_icons()
 
 /mob/living/carbon/human/skitarii_ranger/Life()
 	..()
 	if(iscarbon(src))
-		var/mob/living/carbon/C = src
-		C.handcuffed = initial(C.handcuffed)
 		icon = 'icons/mob/skitarii.dmi'
 		icon_state = "skitarii-ranger"
 
