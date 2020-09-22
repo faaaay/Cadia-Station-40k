@@ -442,3 +442,17 @@ Power Armor Class Helmet
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	flash_protect = 1
+
+/obj/item/clothing/head/helmet/nmpowerhelmet
+	name = "Noise Marine Helmet"
+	desc = "Helm of the Noise Marines"
+	icon_state = "nm_helm"
+	flags = HEADCOVERSEYES|HEADCOVERSMOUTH|BLOCKHAIR||!CANSTUN|!CANWEAKEN
+	item_state = "nm_helm"
+	armor = list(melee = 70, bullet = 75, laser = 60, energy = 100, bomb = 55, bio = 55, rad = 95)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	flash_protect = 1

@@ -104,3 +104,11 @@
 	icon_state = "1k_boots"
 	magboot_state = "1k_boots"
 	flags = NODROP|THICKMATERIAL | STOPSPRESSUREDMAGE
+
+/obj/item/clothing/shoes/magboots/nm
+	desc = "Noise Marine Boots"
+	name = "Noise Marine Boots"
+	icon_state = "nm_boots"
+	magboot_state = "nm_boots"
+	slowdown_off = SHOES_SLOWDOWN
+	flags = NODROP|THICKMATERIAL | STOPSPRESSUREDMAGE

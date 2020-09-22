@@ -312,3 +312,13 @@ obj/item/projectile/kinetic/New()
 /obj/item/projectile/bullet/fusion/New()
 	spawn(3.5)
 		qdel(src)
+
+/obj/item/projectile/noise
+	name = "noise"
+	icon = 'icons/obj/projectiles.dmi'
+	icon_state = "Music"
+	damage = 25
+	damage_type = BRUTE
+	flag = "energy"
+	trace_residue = null
+	piercing = 10 //armor can't save you from sound
