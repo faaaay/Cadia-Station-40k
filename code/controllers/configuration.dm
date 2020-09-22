@@ -89,7 +89,6 @@
 	var/continuous_round_wiz = 0
 	var/continuous_round_malf = 0
 	var/shuttle_refuel_delay = 12000
-	var/RTDtime = 12000
 	var/show_game_type_odds = 0			//if set this allows players to see the odds of each roundtype on the get revision screen
 	var/mutant_races = 0				//players can choose their mutant race before joining the game
 
@@ -135,6 +134,22 @@
 	var/sandbox_autoclose = 0 // close the sandbox panel after spawning an item, potentially reducing griff
 
 	var/default_laws = 0 //Controls what laws the AI spawns with.
+
+	//RTD
+	var/RTDtime = 12000  //Time until RTDs can spawn
+	var/UMEnabled = 1 //Ultramarines enabled. These variables could be extended to have 2 as a value meaning that you don't need WL (events, etc.) but haven't included that.
+	var/SAEnabled = 1 //Salamanders ""
+	var/DKEnabled = 1 //Death Korps ""
+	var/TAEnabled = 1 //Tau ""
+	var/ELEnabled = 1 //Eldar ""
+	var/RGEnabled = 1 //Ravenguard ""
+	var/TYEnabled = 1 //Tyranids ""
+	var/OHEnabled = 1 //Ordo Hereticus ""
+	var/SBEnabled = 1 //Sisters of Battle ""
+	var/OREnabled = 1 //Orkz ""
+	var/PMEnabled = 1 //Plague Marines ""
+	var/KSEnabled = 1 //Thousand Sons ""
+
 
 /datum/configuration/New()
 	var/list/L = typesof(/datum/game_mode) - /datum/game_mode
