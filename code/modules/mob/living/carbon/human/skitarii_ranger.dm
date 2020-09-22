@@ -20,6 +20,7 @@
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_eng
 	R.set_frequency(1459)
 	equip_to_slot_or_del(R, slot_ears)
+	equip_to_slot_or_del(new /obj/item/clothing/gloves/skitarii, slot_gloves)
 
 	var/rndname = "Sy-Gex([rand(123, 789)])"
 
