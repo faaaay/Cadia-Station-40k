@@ -23,9 +23,7 @@ The Basic Cannon Template
 			user.visible_message("<span class='notice'>[user] fires the [src].</span>", "<span class='notice'>You fire the [src].</span>")
 			firing=1
 			fire()
-			spawn(20)
-				firing=0
-		else
+		else  //Firing needs to be set to 1 at the end of the cannon's firing so it scales to the burst.
 			usr << "You are just fired the [src]. Wait a moment to fire again."
 
 /obj/machinery/cannon/proc/fire()
@@ -90,7 +88,7 @@ Nurgle Cannon
 		var/obj/item/cannonball/nurgleround/A = new(B.loc)
 		var/newtonforce = 300 										//Force is equal to mass times velocity- THANKS NEWTON!
 		var/maxrange = 0
-
+		firing = 0
 		A.Move(get_step(B,movementdirection), movementdirection)	//Lets get clear of the cannon
 		A.Move(get_step(B,movementdirection), movementdirection)
 
