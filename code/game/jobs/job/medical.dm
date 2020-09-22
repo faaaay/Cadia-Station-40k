@@ -22,10 +22,10 @@ Chief Medical Officer
 
 	access = list(access_medical, access_morgue, access_genetics, access_heads, access_mineral_storeroom,
 			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
-			access_keycard_auth, access_sec_doors)
+			access_keycard_auth, access_sec_doors, access_heads)
 	minimal_access = list(access_medical, access_morgue, access_genetics, access_heads, access_mineral_storeroom,
 			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
-			access_keycard_auth, access_sec_doors)
+			access_keycard_auth, access_sec_doors, access_heads)
 
 /datum/job/cmo/equip_items(var/mob/living/carbon/human/H)
 	H.gender = "female"
