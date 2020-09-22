@@ -454,56 +454,58 @@ Update: What have we created? something awful -wel ard
 /mob/dead/observer/proc/researchavailable()
 	var/RTDoptions = list("")
 	RTDoptions += availfaction
-	if (lowertext(usr.key) in salamanders)
+	if (!config.DKEnabled)
+		RTDoptions-="KRIEGER" //Take away krieger if DK is disable by admin
+	if (config.SAEnabled && lowertext(usr.key) in salamanders)
 		RTDoptions += "SALAMANDERS"								//SALAMANDERS
-	if (lowertext(usr.key) in umlist)
+	if (config.UMEnabled && lowertext(usr.key) in umlist)
 		RTDoptions += "ULTRAMARINES"							//ULTRAMARINES
-	if (lowertext(usr.key) in kriegofficers)
+	if (config.DKEnabled && lowertext(usr.key) in kriegofficers)
 		RTDoptions += "KRIEGOFFICERS"							//KRIEGOFFICERS
-	if (lowertext(usr.key) in tau)
+	if (config.TAEnabled && lowertext(usr.key) in tau)
 		RTDoptions += "TAU"										//TAU
-	if (lowertext(usr.key) in eldar)
+	if (config.ELEnabled && lowertext(usr.key) in eldar)
 		RTDoptions += "ELDAR"									//ELDAR
-	if (lowertext(usr.key) in ravenguard)
+	if (config.RGEnabled && lowertext(usr.key) in ravenguard)
 		RTDoptions += "RAVENGUARD"								//RAVENGUARD
-	if (lowertext(usr.key) in sob)
+	if (config.SBEnabled && lowertext(usr.key) in sob)
 		RTDoptions += "SOB"										//SOB
-	if (lowertext(usr.key) in ork)
+	if (config.OREnabled && lowertext(usr.key) in ork)
 		RTDoptions += "ORK"										//ORK
-	if (lowertext(usr.key) in pmlist)
+	if (config.PMEnabled && lowertext(usr.key) in pmlist)
 		RTDoptions += "PLAGUEMARINES"							//PLAGUEMARINES
-	if (lowertext(usr.key) in ksons)
+	if (config.KSEnabled && lowertext(usr.key) in ksons)
 		RTDoptions += "THOUSANDSONS"							//THOUSANDSONS
-	if (lowertext(usr.key) in ordohereticus)
+	if (config.OHEnabled && lowertext(usr.key) in ordohereticus)
 		RTDoptions += "ORDOHERETICUS"							//ORDOHERETICUS
-	if (lowertext(usr.key) in stormtrooper)
+	if (config.OHEnabled && lowertext(usr.key) in stormtrooper)
 		RTDoptions += "STORMTROOPERS"							//STORMTROOPERS
-	if (lowertext(usr.key) in tyranid)
+	if (config.TYEnabled && lowertext(usr.key) in tyranid)
 		RTDoptions += "TYRANIDS"								//TYRANIDS
 										//So called 'Leaders'
-	if (lowertext(usr.key) in umleader)
+	if (config.UMEnabled && lowertext(usr.key) in umleader)
 		RTDoptions += "UMLEADER"								//UMLEADER
-	if (lowertext(usr.key) in smleader)
+	if (config.SAEnabled && lowertext(usr.key) in smleader)
 		RTDoptions += "SMLEADER"								//SMLEADER
-	if (lowertext(usr.key) in tauleader)
+	if (config.TAEnabled && lowertext(usr.key) in tauleader)
 		RTDoptions += "TAULEADER"								//TAULEADER
-	if (lowertext(usr.key) in eldarleader)
+	if (config.ELEnabled && lowertext(usr.key) in eldarleader)
 		RTDoptions += "ELDARLEADER"								//ELDARLEADER
-	if (lowertext(usr.key) in ravenleader)
+	if (config.RGEnabled && lowertext(usr.key) in ravenleader)
 		RTDoptions += "RAVENLEADER"								//RAVENLEADER
-	if (lowertext(usr.key) in tyranidleader)
+	if (config.TYEnabled && lowertext(usr.key) in tyranidleader)
 		RTDoptions += "TYRANIDLEADER"							//TYRANIDLEADER
-	if (lowertext(usr.key) in sobleader)
+	if (config.SBEnabled && lowertext(usr.key) in sobleader)
 		RTDoptions += "SOBLEADER"								//SOBLEADER
-	if (lowertext(usr.key) in orkleader)
+	if (config.OREnabled && lowertext(usr.key) in orkleader)
 		RTDoptions += "ORKLEADER"								//ORKLEADER
-	if (lowertext(usr.key) in pmleader)
+	if (config.PMEnabled && lowertext(usr.key) in pmleader)
 		RTDoptions += "PMLEADER"								//PMLEADER
-	if (lowertext(usr.key) in ksonsleader)
+	if (config.KSEnabled && lowertext(usr.key) in ksonsleader)
 		RTDoptions += "KSONSLEADER"								//KSONSLEADER
-	if (lowertext(usr.key) in ohleader)
+	if (config.OHEnabled && lowertext(usr.key) in ohleader)
 		RTDoptions += "OHLEADER"
-	if (lowertext(usr.key) in ohsleader)
+	if (config.OHEnabled && lowertext(usr.key) in ohsleader)
 		RTDoptions += "OHSTORMLEADER"
 	RTDoptions += "Cancel" 										//Gonna sneak this into the list so it'll pop up as an option in choosefromlist()
 	choosefromlist(RTDoptions)
@@ -516,6 +518,7 @@ Update: What have we created? something awful -wel ard
 	if(prob(10))
 		sound = 'sound/voice/rtdmenu5.ogg'
 	usr << sound(sound)
+	usr << "Please select an available faction from the list. If none appear, this is due to the admins choosing to disable all RTDs available to you."
 	var/editchoice																		//start the var
 	editchoice = input("Select an available faction:","Faction Selection") as null|anything in RTDoptions	//surprise! var is input
 	switch(editchoice)

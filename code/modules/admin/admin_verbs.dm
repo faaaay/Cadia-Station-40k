@@ -613,6 +613,7 @@ var/list/admin_verbs_hideable = list(
 
 		"Display all lists",
 		"Set RTD Timer",
+		"Enable/Disable RTD spawn",
 
 
 		"Cancel")
@@ -693,6 +694,8 @@ var/list/admin_verbs_hideable = list(
 			display_faction_membership()
 		if ("Set RTD Timer")
 			set_rtd_timer()
+		if ("Enable/Disable RTD spawn")
+			enable_faction_spawn()
 
 
 /client/proc/edit_faction_membership(thechooser)
@@ -1305,3 +1308,229 @@ var/list/admin_verbs_hideable = list(
 	if(!newTimer || isnull(newTimer))	return //Hopefully means "banana" being entered won't change it
 	config.RTDtime = newTimer*600
 	log_admin("[key_name(usr)] set RTD Timer to [newTimer].")
+
+
+
+/client/proc/enable_faction_spawn() //Covers both Enabling and disabling. Maybe there could be a more efficient way to do this.
+	var/choice															//start the var
+	var/confirm
+	choice = input("Select option:","Faction Management") as null|anything in list(
+		"Enable/Disable all RTDs",
+		"Enable/Disable all Imperial RTDs",
+		"Enable/Disable all non-Imperial RTDs",
+		"Enable/Disable Ultramarines",
+		"Enable/Disable Salamanders",
+		"Enable/Disable Death Korps of Krieg",
+		"Enable/Disable Tau",
+		"Enable/Disable Eldar",
+		"Enable/Disable RavenGuard",
+		"Enable/Disable Tyranids",
+		"Enable/Disable Ordo Hereticus",
+		"Enable/Disable Sisters of Battle",
+		"Enable/Disable Orks",
+		"Enable/Disable Plague Marines",
+		"Enable/Disable Thousand Sons",
+		"Cancel")
+
+	confirm = input("Select option:","[choice]") as null|anything in list("Enable", "Disable", "Cancel")
+	switch(choice)						//I have no idea what I'm doing.
+		if ("Enable/Disable all RTDs")
+			switch (confirm)
+				if("Enable")
+					config.UMEnabled = 1  //Ultramarines
+					config.SAEnabled = 1  //Salamanders
+					config.DKEnabled = 1  //Death Korps
+					config.TAEnabled = 1  //Tau
+					config.ELEnabled = 1  //Eldar
+					config.RGEnabled = 1  //Ravenguard
+					config.TYEnabled = 1  //Tyranids
+					config.OHEnabled = 1  //Ordo Hereticus
+					config.SBEnabled = 1  //Sisters of Battle
+					config.OREnabled = 1  //Orks
+					config.PMEnabled = 1  //Plague Marines
+					config.KSEnabled = 1  //Thousand Sons
+					log_admin("[key_name(usr)] [confirm]d all factions.")
+				if("Disable")
+					config.UMEnabled = 0  //Ultramarines
+					config.SAEnabled = 0  //Salamanders
+					config.DKEnabled = 0  //Death Korps
+					config.TAEnabled = 0  //Tau
+					config.ELEnabled = 0  //Eldar
+					config.RGEnabled = 0  //Ravenguard
+					config.TYEnabled = 0  //Tyranids
+					config.OHEnabled = 0  //Ordo Hereticus
+					config.SBEnabled = 0  //Sisters of Battle
+					config.OREnabled = 0  //Orks
+					config.PMEnabled = 0  //Plague Marines
+					config.KSEnabled = 0  //Thousand Sons
+					log_admin("[key_name(usr)] [confirm]d all factions.")
+				if("Cancel")
+					return
+
+		if ("Enable/Disable all Imperial RTDs")
+			switch (confirm)
+				if("Enable")
+					config.UMEnabled = 1  //Ultramarines
+					config.SAEnabled = 1  //Salamanders
+					config.DKEnabled = 1  //Death Korps
+					config.RGEnabled = 1  //Ravenguard
+					config.OHEnabled = 1  //Ordo Hereticus
+					config.SBEnabled = 1  //Sisters of Battle
+					log_admin("[key_name(usr)] [confirm]d all Imperial factions.")
+				if("Disable")
+					config.UMEnabled = 0  //Ultramarines
+					config.SAEnabled = 0  //Salamanders
+					config.DKEnabled = 0  //Death Korps
+					config.RGEnabled = 0  //Ravenguard
+					config.OHEnabled = 0  //Ordo Hereticus
+					config.SBEnabled = 0  //Sisters of Battle
+					log_admin("[key_name(usr)] [confirm]d all Imperial factions.")
+				if("Cancel")
+					return
+		if("Enable/Disable all non-Imperial RTDs")
+			switch (confirm)
+				if("Enable")
+					config.TAEnabled = 1  //Tau
+					config.ELEnabled = 1  //Eldar
+					config.TYEnabled = 1  //Tyranids
+					config.OREnabled = 1  //Orks
+					config.PMEnabled = 1  //Plague Marines
+					config.KSEnabled = 1  //Thousand Sons
+					log_admin("[key_name(usr)] [confirm]d all non-Imperial factions.")
+				if("Disable")
+					config.TAEnabled = 0  //Tau
+					config.ELEnabled = 0  //Eldar
+					config.TYEnabled = 0  //Tyranids
+					config.OREnabled = 0  //Orks
+					config.PMEnabled = 0  //Plague Marines
+					config.KSEnabled = 0  //Thousand Sons
+					log_admin("[key_name(usr)] [confirm]d all non-Imperial factions.")
+				if("Cancel")
+					return
+		if("Enable/Disable Ultramarines")
+			switch (confirm)
+				if("Enable")
+					config.UMEnabled = 1  //Ultramarines
+					log_admin("[key_name(usr)] [confirm]d Ultramarines.")
+				if("Disable")
+					config.UMEnabled = 0  //Ultramarines
+					log_admin("[key_name(usr)] [confirm]d Ultramarines.")
+				if("Cancel")
+					return
+		if("Enable/Disable Salamanders")
+			switch (confirm)
+				if("Enable")
+					config.SAEnabled = 1  //Salamanders
+					log_admin("[key_name(usr)] [confirm]d Salamanders.")
+				if("Disable")
+					config.SAEnabled = 0  //Salamanders
+					log_admin("[key_name(usr)] [confirm]d Salamanders.")
+				if("Cancel")
+					return
+		if("Enable/Disable Death Korps of Krieg")
+			switch (confirm)
+				if("Enable")
+					config.DKEnabled = 1  //Death Korps
+					log_admin("[key_name(usr)] [confirm]d Death Korps of Krieg.")
+				if("Disable")
+					config.DKEnabled = 0  //Death Korps
+					log_admin("[key_name(usr)] [confirm]d Death Korps of Krieg.")
+				if("Cancel")
+					return
+		if("Enable/Disable Tau")
+			switch (confirm)
+				if("Enable")
+					config.TAEnabled = 1  //Tau
+					log_admin("[key_name(usr)] [confirm]d Tau.")
+				if("Disable")
+					config.TAEnabled = 0  //Tau
+					log_admin("[key_name(usr)] [confirm]d Tau.")
+				if("Cancel")
+					return
+		if("Enable/Disable Eldar")
+			switch (confirm)
+				if("Enable")
+					config.ELEnabled = 1  //Eldar
+					log_admin("[key_name(usr)] [confirm]d Eldar.")
+				if("Disable")
+					config.ELEnabled = 0  //Eldar
+					log_admin("[key_name(usr)] [confirm]d Eldar.")
+				if("Cancel")
+					return
+		if("Enable/Disable RavenGuard")
+			switch (confirm)
+				if("Enable")
+					config.RGEnabled = 1  //RavenGuard
+					log_admin("[key_name(usr)] [confirm]d Ravenguard.")
+				if("Disable")
+					config.RGEnabled = 0  //RavenGuard
+					log_admin("[key_name(usr)] [confirm]d Ravenguard.")
+				if("Cancel")
+					return
+		if("Enable/Disable Tyranids")
+			switch (confirm)
+				if("Enable")
+					config.TYEnabled = 1  //Tyranids
+					log_admin("[key_name(usr)] [confirm]d Tyranids.")
+				if("Disable")
+					config.TYEnabled = 0  //Tyranids
+					log_admin("[key_name(usr)] [confirm]d Tyranids.")
+				if("Cancel")
+					return
+		if("Enable/Disable Ordo Hereticus")
+			switch (confirm)
+				if("Enable")
+					config.OHEnabled = 1  // Ordo Hereticus
+					log_admin("[key_name(usr)] [confirm]d Ordo Hereticus.")
+				if("Disable")
+					config.OHEnabled = 0  // Ordo Hereticus
+					log_admin("[key_name(usr)] [confirm]d Ordo Hereticus.")
+				if("Cancel")
+					return
+		if("Enable/Disable Sisters of Battle")
+			switch (confirm)
+				if("Enable")
+					config.SBEnabled = 1  // Sisters of Battle
+					log_admin("[key_name(usr)] [confirm]d Sisters of Battle.")
+				if("Disable")
+					config.SBEnabled = 0  // Sisters of Battle
+					log_admin("[key_name(usr)] [confirm]d Sisters of Battle.")
+				if("Cancel")
+					return
+		if("Enable/Disable Orks")
+			switch (confirm)
+				if("Enable")
+					config.OREnabled = 1  // Orks
+					log_admin("[key_name(usr)] [confirm]d Orks.")
+				if("Disable")
+					config.OREnabled = 0  // Orks
+					log_admin("[key_name(usr)] [confirm]d Orks.")
+				if("Cancel")
+					return
+		if("Enable/Disable Plague Marines")
+			switch (confirm)
+				if("Enable")
+					config.PMEnabled = 1  // Plague Marines
+					log_admin("[key_name(usr)] [confirm]d Plague Marines.")
+				if("Disable")
+					config.PMEnabled = 0  // Plague Marines
+					log_admin("[key_name(usr)] [confirm]d Plague Marines.")
+				if("Cancel")
+					return
+		if("Enable/Disable Thousand Sons")
+			switch (confirm)
+				if("Enable")
+					config.KSEnabled = 1  // Thousand Sons
+					log_admin("[key_name(usr)] [confirm]d Thousand Sons.")
+				if("Disable")
+					config.KSEnabled = 0  // Thousand Sons
+					log_admin("[key_name(usr)] [confirm]d Thousand Sons.")
+				if("Cancel")
+					return
+		if("Cancel")
+			return
+
+
+
+
+//remember admin log
