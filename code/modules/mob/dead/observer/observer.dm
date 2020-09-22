@@ -235,6 +235,27 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	else if (response == "No")
 		src << "\blue Then stop bothering me."
 
+/mob/dead/observer/verb/lookforskitarii()
+	set category = "Ghost"
+	set name = "Try to be a Skitarii Ranger"
+	set desc= "Look for a Skitarii Ranger to become (warning, this could overwrite all other RTD for the round.)"
+	var/response = alert(src, "Would like to search for an empty Skitarii Ranger to possess?", "Skitarii Ranger request", "Yes", "No")
+
+	if(response == "Yes")
+		for(var/mob/living/carbon/human/skitarii_ranger/M in world)
+			if(M.isempty == 1)
+				if(M.health > 0)
+					src << "\blue Found one!"
+					M.key = usr.key
+					M.isempty = 0
+					break
+				src << "\blue [M] is dead."
+			else
+				src << "\blue [M] is occupied."
+		src << "\blue They are all occupied!!"
+	else if (response == "No")
+		src << "\blue Then stop bothering me."
+
 /mob/dead/observer/verb/lookfortyranid()
 	set category = "Ghost"
 	set name = "Try to be a Tyranid"
