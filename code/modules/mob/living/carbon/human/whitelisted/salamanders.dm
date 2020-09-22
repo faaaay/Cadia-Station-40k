@@ -24,7 +24,6 @@ Salamanders
 	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
 	equip_to_slot_or_del(new /obj/item/weapon/tank/oxygen/smback, slot_back)
 	equip_to_slot_or_del(new /obj/item/weapon/twohanded/mjollnir/samander, slot_r_hand)
-	equip_to_slot_or_del(new /obj/item/weapon/book/manual/astartes, slot_l_hand)
 	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
 	regenerate_icons()
 
@@ -49,8 +48,8 @@ Salamanders
 	real_name = "Unknown"
 	universal_speak = 1
 	gender = "male"
-	maxHealth = 200
-	health = 200
+	maxHealth = 250
+	health = 250
 	status_flags = 0
 	factions = list("imperium")//new
 
@@ -81,7 +80,6 @@ Salamanders
 				equip_to_slot_or_del(new /obj/item/weapon/chainsword, slot_belt)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
-				equip_to_slot_or_del(new /obj/item/weapon/book/manual/astartes, slot_l_hand)
 				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
 				var/obj/item/weapon/card/id/W = new
 				W.icon_state = "smcard"
@@ -107,7 +105,6 @@ Salamanders
 				equip_to_slot_or_del(new /obj/item/weapon/chainsword, slot_belt)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
-				equip_to_slot_or_del(new /obj/item/weapon/book/manual/astartes, slot_l_hand)
 				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
 				new /obj/item/weapon/snowshovel/ig970 (loc)
 				maxHealth = 175
@@ -135,7 +132,6 @@ Salamanders
 				equip_to_slot_or_del(new /obj/item/weapon/chainsword, slot_belt)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
-				equip_to_slot_or_del(new /obj/item/weapon/book/manual/astartes, slot_l_hand)
 				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
 				var/obj/item/weapon/card/id/W = new
 				W.icon_state = "smcard"
@@ -161,7 +157,6 @@ Salamanders
 				equip_to_slot_or_del(new /obj/item/weapon/chainsword, slot_belt)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
-				equip_to_slot_or_del(new /obj/item/weapon/book/manual/astartes, slot_l_hand)
 				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
 				maxHealth = 240 //trait: nerd -10 hp
 				maxPsy += 1000

@@ -20,7 +20,7 @@ var/tyranids = list() //You probably want to put this somewhere else I am just s
 		var/choice = alert(T, "Enter an option.",,"Produce Ripper (80)", "Evolve", "Cont.")
 		switch(choice)
 			if("Cont.")
-				var/choice2 = alert(T, "Enter an option.",,"Produce Larva (1000)", "Produce Parasite (500)")
+				var/choice2 = alert(T, "Enter an option.",,"Produce Larva (1000)", "Produce Parasite (500)", "Cancel")
 				switch(choice2)
 					if("Produce Parasite (500)")
 						if(T.powerc(500))
@@ -30,6 +30,8 @@ var/tyranids = list() //You probably want to put this somewhere else I am just s
 						if(T.powerc(1000))
 							T.adjustToxLoss(-1000)
 							new /mob/living/carbon/alien/larva/tyranid(src.loc)
+					if("Cancel")
+						return
 			if("Produce Ripper (80)")
 				if(istype(T, /mob/living/carbon/alien/humanoid/tyranid/hormagaunt))
 					T << "\red You can't make rippers in this evolution."

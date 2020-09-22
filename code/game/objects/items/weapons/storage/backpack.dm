@@ -364,8 +364,8 @@
 	icon_state = "satchel-chem"
 
 /obj/item/weapon/storage/backpack/satchel_gen
-	name = "geneticist satchel"
-	desc = "A sterile satchel with geneticist colours."
+	name = "genetor satchel"
+	desc = "A sterile satchel with genetor colours."
 	icon_state = "satchel-gen"
 
 /obj/item/weapon/storage/backpack/satchel_tox

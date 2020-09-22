@@ -31,6 +31,8 @@ Eldar
 		equip_to_slot_or_del(new /obj/item/weapon/gun/energy/eldarpistol, slot_in_backpack)
 		equip_to_slot_or_del(new /obj/item/clothing/gloves/warlock, slot_gloves)
 		equip_to_slot_or_del(new /obj/item/weapon/powersword/eldar, slot_belt)
+		equip_to_slot_or_del(new /obj/item/weapon/card/id/syndicate, slot_wear_id)
+		equip_to_slot_or_del(new /obj/item/device/chameleon, slot_r_store)
 		sleep(5)
 		regenerate_icons()
 		rename_self("[name]")
@@ -73,6 +75,8 @@ Eldar
 				equip_to_slot_or_del(new /obj/item/weapon/gun/energy/eldarpistol, slot_in_backpack)
 				equip_to_slot_or_del(new /obj/item/clothing/gloves/corsair, slot_gloves)
 				equip_to_slot_or_del(new /obj/item/weapon/powersword/eldar, slot_belt)
+				equip_to_slot_or_del(new /obj/item/weapon/card/id/syndicate, slot_wear_id)
+				equip_to_slot_or_del(new /obj/item/device/chameleon, slot_r_store)
 				regenerate_icons()
 				rename_self("[name]")
 			if("Guardian") // Makes no difference right now; Waiting on sprites
@@ -89,6 +93,8 @@ Eldar
 				equip_to_slot_or_del(new /obj/item/weapon/gun/energy/eldarpistol, slot_in_backpack)
 				equip_to_slot_or_del(new /obj/item/clothing/gloves/corsair, slot_gloves)
 				equip_to_slot_or_del(new /obj/item/weapon/powersword/eldar, slot_belt)
+				equip_to_slot_or_del(new /obj/item/weapon/card/id/syndicate, slot_wear_id)
+				equip_to_slot_or_del(new /obj/item/device/chameleon, slot_r_store)
 				regenerate_icons()
 				rename_self("[name]") 
 		

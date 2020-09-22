@@ -235,6 +235,28 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	else if (response == "No")
 		src << "\blue Then stop bothering me."
 
+/mob/dead/observer/verb/lookforskitarii()
+	set category = "Ghost"
+	set name = "Try to be a Skitarii Ranger"
+	set desc= "Look for a Skitarii Ranger to become (warning, this could overwrite all other RTD for the round.)"
+	var/response = alert(src, "Would like to search for an empty Skitarii Ranger to possess?", "Skitarii Ranger request", "Yes", "No")
+
+	if(response == "Yes")
+		for(var/mob/living/carbon/human/skitarii_ranger/M in world)
+			if(M.isempty == 1)
+				if(M.health > 0)
+					src << "\blue Found one!"
+					src << "\red Your mind enters the body of a skilled Skitarii Ranger! You serve and are commanded by the Adeptus Mechanicus. Obey them and carry out their will."
+					M.key = usr.key
+					M.isempty = 0
+					break
+				src << "\blue [M] is dead."
+			else
+				src << "\blue [M] is occupied."
+		src << "\blue They are all occupied!!"
+	else if (response == "No")
+		src << "\blue Then stop bothering me."
+
 /mob/dead/observer/verb/lookfortyranid()
 	set category = "Ghost"
 	set name = "Try to be a Tyranid"
@@ -398,17 +420,17 @@ Update: What have we created? something awful -wel ard
 	set desc = "Allows a player who has been authorized to use a whitelisted role to respawn as that role."
 	if(!ticker || !ticker.mode)
 		usr << "\blue The game hasn't started yet!"
-		return 
+		return
 	if(!can_rtd)
 		usr << "\red <b>The fealty of your soul is commanded by [master]. You are not free to go.</b>"
 		return
 	if(ticker.mode.name == "necron")
 		usr << "\blue Reinforcements are cut off! OH MY GOD!!!"
 		return
-	if(world.time - round_start_time < config.shuttle_refuel_delay)
-		usr << "\blue The round has just begun! Please wait another [abs(round(((world.time - round_start_time) - config.shuttle_refuel_delay)/600))] minutes before trying again."
+	if(world.time - round_start_time < config.RTDtime)
+		usr << "\blue The round has just begun! Please wait another [abs(round(((world.time - round_start_time) - config.RTDtime)/600))] minutes before trying again."
 		return  //don't want a delay for testing
-		
+
 	if(inmenu)
 		usr << "\blue I didn't learn to code yesterday. First- close the menu you already have open."
 		return
@@ -427,7 +449,7 @@ Update: What have we created? something awful -wel ard
 		inmenu = 1
 		researchavailable()
 		return
-		
+
 
 /mob/dead/observer/proc/researchavailable()
 	var/RTDoptions = list("")
