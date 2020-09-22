@@ -105,14 +105,15 @@
 			var/obj/item/projectile/beam/lascannon/A = new /obj/item/projectile/beam/lascannon(src.loc)
 			A.current = U
 			if (U.y != T.y)   //If the shot is going above or below, then it'll randomise right/left direction. If it's divided by a lower number, it'll be less accurate (but also will need to have half the new average taken away rather than 0.2
-				A.xo = U.x - T.x + rand(1,100)/250 - 0.2
+				A.xo = U.x - T.x + rand(1,100)/400 - 0.125
 			else
 				A.xo = U.x - T.x
 			if (U.x != T.x) //If the shot is going above or below, then it'll randomise right/left direction.
-				A.yo = U.y - T.y + rand(1,100)/250 - 0.2
+				A.yo = U.y - T.y + rand(1,100)/400 - 0.125
 			else
 				A.yo = U.y - T.y
 			A.process()
+		firing=0
 
 	attackby(obj/item/O, mob/user)
 		if(istype(O, /obj/item/cannonball/lasermag))
