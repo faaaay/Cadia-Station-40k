@@ -296,3 +296,11 @@ Celebrity
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+
+/*skitarii
+*/
+/obj/item/clothing/suit/skitarii //should be basically transparent to avoid fucking with dope sprite, gives them some storage
+	name = "skitarii uniform"
+	desc = "Invisible!."
+	icon_state = "skitsuit"
+	item_state = "skitsuit"
