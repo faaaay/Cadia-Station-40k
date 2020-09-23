@@ -51,7 +51,7 @@ Thousand Sons
 	equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
 	equip_to_slot_or_del(new /obj/item/clothing/mask/breath/marine, slot_wear_mask)
 	equip_to_slot_or_del(new /obj/item/clothing/head/helmet/ksonshelmet, slot_head)
-	equip_to_slot_or_del(new /obj/item/weapon/chainsword/ksons_chainsword, slot_belt)
+	equip_to_slot_or_del(new /obj/item/weapon/khopesh, slot_belt)
 	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag/inf, slot_r_store)
 	equip_to_slot_or_del(new /obj/item/weapon/tank/oxygen/ksons, slot_back)
 	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/chaos/ksons, slot_s_store)

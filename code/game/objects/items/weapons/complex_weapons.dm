@@ -736,3 +736,18 @@ Make a warp conduit blade that is really effective against daemons and has null 
 		shock(M)
 	if(!istype(M, /mob/living/carbon/human/whitelisted))
 		M.Stun(1)
+
+/obj/item/weapon/khopesh
+	name = "Force Khopesh"
+	desc = "The legendary blade of the Thousand Sons"
+	icon_state = "khopesh"
+	item_state = "khopesh"
+	flags = CONDUCT
+	slot_flags = SLOT_BELT
+	force = 30
+	piercingpower = 30
+	throwforce = 20
+	throw_range = 4
+	w_class = 4
+	attack_speedmod = 4
+	origin_tech = "combat=5;powerstorage=5"
