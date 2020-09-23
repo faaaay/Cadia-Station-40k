@@ -474,7 +474,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 /datum/supply_packs/engineering/skitariiparts
 	name = "Box Of Parts (Skitarii Parts)"
 	contains = null
-	cost = 200
+	cost = 700
 	containertype = /obj/structure/skitariiparts
 	containername = "Adeptus Mechanicus, from Mars, Lot# 5743501"
 
