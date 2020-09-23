@@ -21,6 +21,7 @@
 	R.set_frequency(1459)
 	equip_to_slot_or_del(R, slot_ears)
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/skitarii, slot_gloves)
+	equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/security, slot_back)
 
 	var/rndname = "Sy-Gex([rand(123, 789)])"
 
