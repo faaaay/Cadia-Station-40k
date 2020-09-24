@@ -1,29 +1,29 @@
-//Librarians energy reserve code here
+//For all non-librarian psyker goodness, modified slightly to avoid duplicate errors with librarians
 
-/mob/living/carbon/human/whitelisted
-	var/Psy = 0
-	var/maxPsy = 0
-	var/Psy_rate = 20
+/mob/living/carbon/human/
+	var/Psyk = 0
+	var/maxPsyk = 0
+	var/Psyk_rate = 20
 
-/mob/living/carbon/human/whitelisted/Stat()
+/mob/living/carbon/human/Stat()
 	..()
-	if(maxPsy>0)
-		stat(null, "Psy: [Psy]/[maxPsy]")
+	if(maxPsyk>0)
+		stat(null, "Psy: [Psyk]/[maxPsyk]")
 
-/mob/living/carbon/human/whitelisted/Life()
+/mob/living/carbon/human/Life()
 	..()
-	if(Psy < maxPsy)
-		Psy = min(Psy+Psy_rate, maxPsy)
+	if(Psyk < maxPsyk)
+		Psyk = min(Psyk+Psyk_rate, maxPsyk)
 
-/mob/living/carbon/human/whitelisted/proc/imprison(var/mob/living/carbon/T in oview(7))
+/mob/living/carbon/human/proc/imprisonn(var/mob/living/carbon/T in oview(7))
 	set name = "Imprison (300)"
 	set desc = "Uses your psychic abilities to imprison someone in their own mental barriers."
 	set category = "Spells"
 	if (stat != CONSCIOUS)
 		src << "You must be conscious and alive to use psychic abilities."
 		return
-	if(Psy>=300)
-		Psy-=300
+	if(Psyk>=300)
+		Psyk-=300
 		if(!T)
 			var/list/victims = list()
 			for(var/mob/living/carbon/C in oview(7))
@@ -44,15 +44,15 @@
 	else
 		src << "\red You need more psy!"
 
-/mob/living/carbon/human/whitelisted/proc/smite(var/atom/T)
+/mob/living/carbon/human/proc/smitee(var/atom/T)
 	set name = "Smite (60)"
 	set desc = "Smite your foes with a psychic bolt"
 	set category = "Spells"
 	if (stat != CONSCIOUS)
 		src << "You must be conscious and alive to use psychic abilities."
 		return
-	if(Psy>=60)
-		Psy-=60
+	if(Psyk>=60)
+		Psyk-=60
 		if(!T)
 			var/list/victims = list()
 			for(var/mob/living/carbon/C in oview(7))
@@ -80,18 +80,18 @@
 	else
 		src << "\red You need more psy."
 
-/mob/living/carbon/human/whitelisted/proc/quickening()
+/mob/living/carbon/human/proc/quickeningg()
 	set name = "Quickening (300)"
 	set desc = "Use your psychich energy to stimulate reflexes to insane levels and negate all knockouts."
 	set category = "Spells"
-	if(dodging)
-		src << "\red They are already active."
-		return
 	if (stat != CONSCIOUS)
 		src << "You must be conscious and alive to use psychic abilities."
 		return
-	if(Psy>=300)
-		Psy-=300
+	if(dodging)
+		src << "\red They are already active."
+		return
+	if(Psyk>=300)
+		Psyk-=300
 		dodging = 1
 		status_flags = 0
 		src << "\red Adrenaline active."
@@ -103,7 +103,7 @@
 	else
 		src << "\red You need more psy."
 
-/mob/living/carbon/human/whitelisted/proc/telepath(mob/M as mob in orange(30,src)) //Like whisper but free, and much farther range.
+/mob/living/carbon/human/proc/telepathh(mob/M as mob in orange(30,src)) //Like whisper but free, and much farther range.
 	set name = "Telepathy"
 	set desc = "Project your mind to others."
 	set category = "Spells"
