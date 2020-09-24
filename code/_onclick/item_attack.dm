@@ -50,7 +50,10 @@ obj/item/proc/get_clamped_volume()
 		return Clamp(w_class * 6, 10, 100)	//Multiply the item's weight class by 6, then clamp the value between 10 and 100
 
 /obj/item/proc/attack(mob/living/M, mob/living/user, def_zone)
-
+	if(user.mind)
+		if(user.mind.special_role == "Genestealer Cult Member" && istype(M, /mob/living/carbon/alien/humanoid/tyranid))
+			user << "<font size='4' color='red'>You should not attempt to harm your masters!</b></font>"
+			return
 	if(!istype(M))	//not sure if this is the right thing...
 		return
 
