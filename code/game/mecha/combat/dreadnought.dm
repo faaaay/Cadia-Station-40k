@@ -4,7 +4,7 @@
 	icon = 'icons/migrated/alienqueen.dmi'
 	icon_state = "dread2"
 	//pixel_x = -10
-	bound_width = 64
+	bound_width = 32
 	step_in = 6
 	health = 1500
 	deflect_chance = 50

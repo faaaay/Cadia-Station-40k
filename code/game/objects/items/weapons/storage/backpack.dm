@@ -394,3 +394,62 @@
 	desc = "An exclusive satchel for Imperial officers."
 	icon_state = "satchel-cap"
 	item_state = "captainpack"
+
+/*
+Lets turn marine powersources into backpacks - wel
+*/
+
+/obj/item/weapon/storage/umbackpack
+	name = "Ultramarine Power Pack"
+	desc = "Powers the heavy armor of the Ultramarines."
+	icon = 'icons/obj/tank.dmi'
+	icon_state = "umback"
+	item_state = "umback"
+	w_class = 4.0
+	slot_flags = SLOT_BACK	//ERROOOOO
+	max_w_class = 3
+	max_combined_w_class = 16
+
+/obj/item/weapon/storage/smbackpack
+	name = "Salamander Power Pack"
+	desc = "Powers the heavy armor of the Salamanders"
+	icon = 'icons/obj/tank.dmi'
+	icon_state = "smback"
+	item_state = "smback"
+	w_class = 4.0
+	slot_flags = SLOT_BACK	//ERROOOOO
+	max_w_class = 3
+	max_combined_w_class = 16
+
+/obj/item/weapon/storage/rgbackpack
+	name = "Raven Guard Power Pack"
+	desc = "Powers the heavy armor of the Raven Guard."
+	icon = 'icons/obj/tank.dmi'
+	icon_state = "rgback"
+	item_state = "rgback"
+	w_class = 4.0
+	slot_flags = SLOT_BACK	//ERROOOOO
+	max_w_class = 3
+	max_combined_w_class = 16
+
+/obj/item/weapon/storage/pmbackpack
+	name = "Plague Marine Power Pack"
+	desc = "Powers the heavy armor of the Plague Marines"
+	icon = 'icons/obj/tank.dmi'
+	icon_state = "pmback"
+	item_state = "pmback"
+	w_class = 4.0
+	slot_flags = SLOT_BACK	//ERROOOOO
+	max_w_class = 3
+	max_combined_w_class = 16
+
+/obj/item/weapon/storage/ksonsbackpack
+	name = "Thousand Son Power Pack"
+	desc = "Powers the heavy armor of the Thousand Sons"
+	icon = 'icons/obj/tank.dmi'
+	icon_state = "ksonsback"
+	item_state = "ksonsback"
+	w_class = 4.0
+	slot_flags = SLOT_BACK	//ERROOOOO
+	max_w_class = 3
+	max_combined_w_class = 16

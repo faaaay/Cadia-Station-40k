@@ -276,6 +276,13 @@ Power Armor Class Helmet
 	item_state = "umcpt_helm"
 	armor = list(melee = 75, bullet = 75, laser = 60, energy = 100, bomb = 55, bio = 75, rad = 95)
 
+/obj/item/clothing/head/helmet/umpowerhelmet/veteran
+	name = "Ultra Marine Veteran Helmet"
+	desc = "Headwear of an UltraMarine Veteran"
+	icon_state = "um_vet"
+	item_state = "um_vet"
+	armor = list(melee = 75, bullet = 75, laser = 60, energy = 100, bomb = 55, bio = 75, rad = 95)
+
 /obj/item/clothing/head/helmet/rgpowerhelmet
 	name = "Raven Guard Helmet"
 	desc = "Headwear of the Raven Guard"

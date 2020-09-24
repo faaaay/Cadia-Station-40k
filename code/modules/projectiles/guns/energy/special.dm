@@ -267,7 +267,7 @@ Plasma Gun
 	name = "Heavy Plasma Rifle"
 	desc = "A very deadly weapon used by high ranking members of the Imperium..."
 	icon_state = "prifle"
-	w_class = 2.0
+	w_class = 4
 	item_state = "prifle"
 	m_amt = 2000
 	origin_tech = "combat=2"
