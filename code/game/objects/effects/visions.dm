@@ -184,7 +184,7 @@ proc/project_turf(var/mob/living/carbon/human/T,var/location) //Nothing to fancy
 	var/obj/effect/turf_projection/N = new /obj/effect/turf_projection
 	N.my_target = T
 	N.loc = location
-	N.currentimage = image('icons/turf/shuttle.dmi',N,"wall3",MOB_LAYER+1) //Should be above basically everything.
+	N.currentimage = image('icons/turf/walls.dmi',N,"rock_silver",MOB_LAYER+1) //Should be above basically everything.
 	spawn(N.lifetime)
 		qdel(N)
 	spawn
