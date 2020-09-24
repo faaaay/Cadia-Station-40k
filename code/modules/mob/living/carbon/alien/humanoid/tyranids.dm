@@ -243,11 +243,14 @@
 	qdel(src)
 	return
 
-/mob/living/carbon/alien/humanoid/tyranid/proc/rename()
+/mob/living/carbon/alien/humanoid/tyranid/verb/rename()
 	set name = "Rename"
 	set desc = "Take on a unique identity after fully evolving."
 	set category = "Alien"
 
-	src.rename_self("[name]")
-	src << "<b>Select a new name for this Tyranid</b>"  //Make this usable only once? Downside would be that spelling mistakes couldn't be changed and the admins couldn't make someone change an offensive or memey name.
+	if ((lowertext(usr.key) in tyranid)|| (lowertext(usr.key) in tyranidleader))
+		src.rename_self("[name]")
+		src << "<b>Select a new name for this Tyranid. This should follow a normal naming scheme for Tyranid characters.</b>"  //Make this usable only once? Downside would be that spelling mistakes couldn't be changed and the admins couldn't make someone change an offensive or memey name.
+	else
+		src << "This verb is only available to whitelisted Tyranids."
 	return

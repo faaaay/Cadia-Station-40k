@@ -283,9 +283,6 @@ Zoanthropes
 			if(6)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/zoanthropes/proc/psythrow)
 				src << "\red You can throw people telekinetically."
-				if (lowertext(usr.key) in tyranid)
-					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
-					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-800)
 	else
 		src << "\red You need more biomass."
@@ -400,9 +397,6 @@ Warriors
 			if(4)
 				src.firearmor += 5
 				src << "<b>You grow fireproofed scales!</b>"
-				if (lowertext(usr.key) in tyranid)
-					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
-					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-400)
 	else
 		src << "\red You need more biomass."
@@ -650,9 +644,6 @@ Ravener
 			if(5)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/regrowth)
 				src << "\red You gain the ability to regenerate off spare biomass."
-				if (lowertext(usr.key) in tyranid)
-					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
-					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-1000)
 	else
 		src << "\red You need more biomass."
@@ -840,9 +831,6 @@ Lictor
 			if(7)
 				src.plasma_rate = 20
 				src << "\red Your harvest rate increases."
-				if (lowertext(usr.key) in tyranid)
-					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
-					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-800)
 	else
 		src << "\red You need more biomass."
@@ -1038,9 +1026,6 @@ Hormagaunt
 				src << "\red You adapt a venomous bite! The venom will make targets react badly to harvest weeds, keeping them away from the hive."
 			if(5)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/spikes, /mob/living/carbon/alien/humanoid/tyranid/proc/mine)
-				if (lowertext(usr.key) in tyranid)
-					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
-					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 				src << "\red You are now able to build spike defenses and spore mines."
 		adjustToxLoss(-800)
 	else
@@ -1066,10 +1051,17 @@ Genestealer
 	var/speedboost = 1
 	var/converting = 0
 	var/convertstun = 0
+	var/lingual = 0
 
 /mob/living/carbon/alien/humanoid/tyranid/genestealer/movement_delay()
 	. = -speedboost
 	. += ..()
+
+/mob/living/carbon/alien/humanoid/tyranid/lictor/say_understands(var/other)
+	if (istype(other, /mob/living/carbon/alien))
+		return 1
+	if(src.lingual) return 1
+	..()
 
 /mob/living/carbon/alien/humanoid/tyranid/genestealer/verb/convert()
 	set name = "Convert (50)"
@@ -1105,7 +1097,7 @@ Genestealer
 
 			//Armour and augment defence against genestealer conversion. Unless nested, armour and augments will have a chance to stop conversion attempts. Maximum is 48% from augments and 50% from armour.
 			var/penchance = T.getarmor(null,"melee")/2 //Average melee armour halved.
-			src << "AO[penchance]"
+//			src << "AO[penchance]" Commented out debug message
 			if (T.getlimb(/obj/item/organ/limb/robot/chest)) // Adds 8% safety chance per limb so a fully augmented person gets 48%. More efficient way to check this then 6 if statements?
 				penchance += 8								 // Also, should augments be this important? Being made of metal should be major but perhaps armour should be more weighted as it's not as easy to max?
 			if (T.getlimb(/obj/item/organ/limb/robot/head))
@@ -1118,11 +1110,11 @@ Genestealer
 				penchance += 8
 			if (T.getlimb(/obj/item/organ/limb/robot/r_leg))
 				penchance += 8
-			src << "AaA[penchance]"
+//			src << "AaA[penchance]" Commented out debug message
 			penchance -= rand(1,100) //Roll a percentage and take it away from pen chance. If positive, the conversion is blocked.
 			if (T.buckled)  //If the target is buckled/nested, their armour doesn't matter. Allows for admech and other full conversions to be converted without a dozen attempts.
 				penchance = -1
-			src << "Chance[penchance]"
+//			src << "Chance[penchance]" Commented out debug message
 			if (penchance >= 20 && rand(1,5) == 5) //If you fail by at least twenty, 20% chance to be stunned.
 				convertstun = 1
 				spawn(200)
@@ -1138,12 +1130,12 @@ Genestealer
 				visible_message("\red <B>[src] tries to jab [T] with its tongue but is stopped by [T]'s armour!</B>")
 				return
 			converting=1 //Got through all checks that stop conversion so conversion begins.
-			src << "We jab [T]. We must keep them by us for 10 seconds to convert them."
+			src << "We jab [T]. We must keep them by us for 15 seconds to convert them."
 			visible_message("\red <B>[src] jabs [T] with its tongue!</B>")
 			T << "\red The [src] jabs you with its tongue!"
 			T.Weaken(5)
 			spawn(0)
-				for(var/stage = 0, stage<=20, stage++)  //Must stay by them for 10 seconds. Hard to get someone if they're in a group as you'll be chased away. 20 stages so that it'll check frequently for the victim breaking free.
+				for(var/stage = 0, stage<=30, stage++)  //Must stay by them for 15 seconds. Hard to get someone if they're in a group as you'll be chased away. 20 stages so that it'll check frequently for the victim breaking free.
 					sleep(5)
 					if(prob(40))    //A lone target should be easy to capture. This could be reduced if nesting should be mandatory.
 						T.Weaken(5)
@@ -1151,6 +1143,9 @@ Genestealer
 						src.visible_message("\red <b>The [src] withdraws its tongue from [T]!</b>")
 						converting = 0
 						return
+				if(!src.lingual)
+					src << "<b>You can now speak to and understand cultists!</b>"
+					src.lingual = 1
 				src << "\red We convert [T]. They will now serve us loyally." //There isn't a delay after conversion is complete. Could be re-added but this saves having to nest someone after conversion.
 				T << "<font size='4' color='red'>You are suddenly able to sense all the Tyranids on the outpost! You can communicate to them through the hivemind by using the prefix :a in messages<b>!</b></font>"
 				T << "<font size='4' color='red'>As a member of the genestealer cult, you must serve and obey the Tyranids, but follow the genestealer that converted you above all else<b>!</b></font>"
@@ -1164,7 +1159,12 @@ Genestealer
 							if (isnull(C.client))
 								src << "This is an error when the game tries to add the icon to a client that doesn't exist. The convert will be told that they are a cultist but will not see the icon."
 								src << C.client
-							C.client.images += I
+							else //should hopefully stop runtime errors.
+								C.client.images += I
+								for (var/mob/living/D in mob_list) //Should hopefully make it so new cultists can see the icon on old cultists.
+									if(D.mind && D.mind.special_role == "Genestealer Cult Member")
+										var/I2 = image('icons/mob/alien.dmi', loc = D, icon_state = "genestealer")
+										C.client.images += I2
 		else
 			src << "\blue No targets in range!"
 	else
@@ -1253,9 +1253,6 @@ Genestealer
 				src.health += 100
 				src.maxHealth += 100
 				src << "\red You have evolved into a brood lord!"
-				if (lowertext(usr.key) in tyranid)
-					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
-					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-800)
 	else
 		src << "\red You need more biomass."
@@ -1485,9 +1482,6 @@ Venomthropes
 				plasma_rate = 20
 				src << "<b>You evolve a venom cannon! Use shift+click to fire.</b>"
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/venomthropes/proc/venomshot)
-				if (lowertext(usr.key) in tyranid)
-					src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/rename)
-					src << "\red You are now able to rename yourself. This should follow a normal naming scheme for Tyranid characters."
 		adjustToxLoss(-500)
 	else
 		src << "\red You need more biomass."
