@@ -35,19 +35,19 @@
 
 	if(href_list["SENT"])
 		usr.visible_message("<span class='warning'>  [usr] begins constructing something elaborate.</span>", "<span class='notice'>You start to build a Sentinel</span>", "<span class='warning>What was that sound?</span>")
-		sleep 30
+		sleep (30)
 		new /obj/mecha/combat/sentinel/loaded(src.loc)
 		usr.visible_message("<span class='notice'>[usr] completes the Sentinel.</span>")
 		qdel(src)
 	else if(href_list["CHIMAC"])
 		usr.visible_message("<span class='warning'>  [usr] begins constructing something elaborate.</span>", "<span class='notice'>You start to build a Chimera</span>", "<span class='warning>What was that sound?</span>")
-		sleep 30
+		sleep (30)
 		new /obj/mecha/combat/chimera/AC/loaded(src.loc)
 		usr.visible_message("<span class='notice'>[usr] completes the Chimera.</span>")
 		qdel(src)
 	else if(href_list["CHIMAC2"])
 		usr.visible_message("<span class='warning'>  [usr] begins constructing something elaborate.</span>", "<span class='notice'>You start to build a Chimera</span>", "<span class='warning>What was that sound?</span>")
-		sleep 30
+		sleep (30)
 		new /obj/mecha/combat/chimera/inq/loaded(src.loc)
 		usr.visible_message("<span class='notice'>[usr] completes the Chimera.</span>")
 		qdel(src)
@@ -161,7 +161,7 @@ Repackaged Spider Turrets
 
 	if(href_list["RNGR"])
 		usr.visible_message("<span class='warning'>  [usr] begins constructing something elaborate.</span>", "<span class='notice'>You start to piece together a Skitarii Ranger</span>", "<span class='warning>What was that sound?</span>")
-		sleep 30
+		sleep (30)
 		new /mob/living/carbon/human/skitarii_ranger(src.loc)
 		usr.visible_message("<span class='notice'>[usr] completes the Skitarii Ranger.</span>")
 		qdel(src)

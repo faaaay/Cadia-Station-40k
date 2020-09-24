@@ -66,7 +66,7 @@
 	src.ckey = candidate.ckey
 	if(src.mind)
 		src.mind.assigned_role = "syndicate"
-		sleep 2
+		sleep (2)
 		src << "<font color='red'> You have not yet broken free from the warp. The person that summoned you needs to touch you with his sword. You are a minion of the warp. Khorne is your god. Your purpose is to find the biggest baddest mutha fucker and fight him in single combat, prefferably with your hands but melee weapons are also acceptable. When you are done with that, just kill everyone you can find. Then kill yourself! Then kill death itself! Also see if you can kill your own name. Bonus points if you can ride a Defiler while you are doing all this.</font>"
 
 /mob/living/simple_animal/kbspawn/attackby(obj/item/weapon/P as obj)
@@ -203,7 +203,7 @@ Chaosspawn
 	src.ckey = candidate.ckey
 	if(src.mind)
 		src.mind.assigned_role = "Nurgle Spawn"
-		sleep 2
+		sleep (2)
 		src << "<font color='red'> You are a warpling. Nurgle is your god. Your purpose is to support his cultists in this realm and ensure their victory.</font>"
 
 /mob/living/simple_animal/nspawn/verb/ventcrawl()
@@ -314,7 +314,7 @@ Warp Spawn
 	src.ckey = candidate.ckey
 	if(src.mind)
 		src.mind.assigned_role = "Warp Spawn"
-		sleep 2
+		sleep (2)
 		src << "<font color='red'> You are a warpling. Tzeentch is your god. Your purpose is to support his cultists in this realm and ensure their victory.</font>"
 
 /mob/living/simple_animal/chaosspawn/warpspawn/verb/ventcrawl()

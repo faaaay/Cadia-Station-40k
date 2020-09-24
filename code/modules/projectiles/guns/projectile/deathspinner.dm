@@ -44,7 +44,7 @@
 			A.process()
 			sleep(2)
 			cooldown = 0
-		sleep 10
+		sleep (10)
 		cooldown = 1
 	else
 		return

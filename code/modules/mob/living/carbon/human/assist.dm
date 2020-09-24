@@ -90,35 +90,35 @@ Basic First Aid
 							M.visible_message("[U] performs CPR on [M].")
 							U << "<span class='notice'>[M] is not breathing! You perform CPR on [t_him].</span>"
 							M << "<span class='unconscious'>[U] is trying to keep you alive.</span>"
-							sleep 40
+							sleep (40)
 						if(M.getBruteLoss() >= 50)
 							M.adjustBruteLoss(-5)
 							M.updatehealth()
 							M.visible_message("[U] begins to staunch the bleeding.")
 							U << "<span class='notice'>[M] bleeding all over the place! You apply pressure to the wounds.</span>"
 							M << "<span class='unconscious'>[U] is trying to keep you alive.</span>"
-							sleep 60
+							sleep (60)
 						if(M.getFireLoss() >= 50)
 							M.adjustFireLoss(-5)
 							M.updatehealth()
 							M.visible_message("[U] begins to pressure wrap [U]'s burns.")
 							U << "<span class='notice'>[M] is very badly burned. You begin pressure wrapping the wounds. You hope it will be enough.</span>"
 							M << "<span class='unconscious'>[U] is trying to keep you alive.</span>"
-							sleep 60
+							sleep (60)
 						if((M.oxyloss >= 30) && (M.oxyloss <= 49))
 							M.adjustOxyLoss(-7)
 							M.updatehealth()
 							M.visible_message("[U] performs CPR on [M].")
 							U << "<span class='notice'>[M] is still not breathing! You should continue CPR on [t_him].</span>"
 							M << "<span class='unconscious'>[U] is trying to keep you alive.</span>"
-							sleep 40
+							sleep (40)
 						if((M.getFireLoss() >= 30) && (M.fireloss <= 49))
 							M.adjustFireLoss(-5)
 							M.updatehealth()
 							M.visible_message("[U] begins to pressure wrap [U]'s burns.")
 							U << "<span class='notice'>[M] is burned. You begin pressure wrapping the wounds. This is so gross.</span>"
 							M << "<span class='unconscious'>[U] is trying to keep you alive.</span>"
-							sleep 60
+							sleep (60)
 						if((M.getBruteLoss() >= 30) && (M.bruteloss <= 49))
 							M.adjustBruteLoss(-5)
 							M.updatehealth()
@@ -129,7 +129,7 @@ Basic First Aid
 							M.adjustFireLoss(-5)
 							M.updatehealth()
 							M << "<span class='unconscious'>[U] is trying to keep you alive.</span>"
-							sleep 60
+							sleep (60)
 						if((M.getBruteLoss() >= 1) && (M.bruteloss <= 29))
 							M.adjustBruteLoss(-5)
 							M.updatehealth()
@@ -138,7 +138,7 @@ Basic First Aid
 							M.adjustOxyLoss(-7)
 							M.updatehealth()
 							M << "<span class='unconscious'>[U] is trying to keep you alive.</span>"
-							sleep 40
+							sleep (40)
 					else 																					//If either of you moves- it's over!
 						U << text("<span class='notice'>You stop binding [t_him]'s wounds.")
 						U.treating = 0
@@ -286,11 +286,11 @@ Medic
 				U << text("<span class='notice'>.Primer transfered: 1 Units.")
 				M.reagents.add_reagent("inaprovaline", 30)		//junk it up with inaprovaline
 				M.adjustOxyLoss(-99)
-				sleep 20
+				sleep (20)
 				if(do_after(U, 20))
 					U << text("<span class='notice'>.Inaprovaline transfered: 30 Units.")
 					U.visible_message(text("<span class='alert'>The tube between [U] and [M] pulses.</span>"))
-					sleep 20
+					sleep (20)
 					if(do_after(U, 20))
 						U << text("<span class='notice'>.Tricordrazine transfered: 30 Units.")
 						M.reagents.add_reagent("tricordrazine", 30)		//junk it up with tricordrazine
