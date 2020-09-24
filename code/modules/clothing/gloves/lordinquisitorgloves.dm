@@ -24,7 +24,7 @@
 			playsound(loc, science, 75, 0)
 			usr.visible_message("<span class='warning'>[usr] reminds you about the importance of science.</span>", "<span class='notice'>You remind everyone about the importance of science!.</span>", "<span class='warning>Some jackass is ranting about science.</span>")
 			can_toggle = 0
-			sleep 80
+			sleep (80)
 			can_toggle = 1
 
 	verb/toggletele()

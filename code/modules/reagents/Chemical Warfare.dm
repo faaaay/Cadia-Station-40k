@@ -71,9 +71,9 @@ datum/reagent/toxin/orkkiller/on_mob_life(var/mob/living/M as mob)
 	..()
 	return
 
-//datum/chemical_reaction/orkkiller
-//	name = "Anti-Orkoid Agent"
-//	id = "orkkiller"
-//	result = "orkkiller"
-//	required_reagents = list("pacid" = 3, "mutagen" = 2, "weedkiller" = 5)
-//	result_amount = 1
+/datum/chemical_reaction/orkkiller
+	name = "Anti-Orkoid Agent"
+	id = "orkkiller"
+	result = "orkkiller"
+	required_reagents = list("pacid" = 3, "mutagen" = 2, "weedkiller" = 5)
+	result_amount = 1

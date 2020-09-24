@@ -23,18 +23,18 @@
 	supply_shuttle.shuttle_loan = src
 	switch(dispatch_type)
 		if(HIJACK_SYNDIE)
-			priority_announce("The syndicate are trying to infiltrate your station. If you let them hijack your shuttle, you'll save us a headache.","Centcom Counter Intelligence")
+			priority_announce("Chaos cultists are trying to infiltrate your outpost. If you let them hijack your shuttle, you'll save us a headache.","Ordo Hereticus")
 		if(RUSKY_PARTY)
-			priority_announce("A group of angry russians want to have a party, can you send them your cargo shuttle then make them disappear?","Centcom Russian Outreach Program")
+			priority_announce("A group of angry Vostroyans want to have a party, can you send them your cargo shuttle then make them disappear?","Administratum Vostroyan Outreach Program")
 		if(SPIDER_GIFT)
-			priority_announce("The Spider Clan has sent us a mysterious gift, can we ship it to you to see what's inside?","Centcom Diplomatic Corps")
+			priority_announce("The Eldar have sent us a mysterious gift, can we ship it to you to see what's inside?","Administratum Diplomatic Corps")
 		if(DEPARTMENT_RESUPPLY)
-			priority_announce("Seems we've ordered doubles of our department resupply packages this month. Can we send them to you?","Centcom Supply Department")
+			priority_announce("Seems we've ordered doubles of our department resupply packages this month. Can we send them to you?","Departmento Munitorum")
 			thanks_msg = "The shuttle will be returned in 5 minutes."
 			bonus_points = 0
 
 /datum/round_event/shuttle_loan/proc/loan_shuttle()
-	priority_announce(thanks_msg, "Cargo shuttle commandeered by Centcom.")
+	priority_announce(thanks_msg, "Cargo shuttle commandeered by the Administratum.")
 
 	dispatched = 1
 	supply_shuttle.points += bonus_points
@@ -44,11 +44,11 @@
 
 	switch(dispatch_type)
 		if(HIJACK_SYNDIE)
-			supply_shuttle.centcom_message += "<font color=blue>Syndicate hijack team incoming.</font>"
+			supply_shuttle.centcom_message += "<font color=blue>Heretic hijack team incoming.</font>"
 		if(RUSKY_PARTY)
-			supply_shuttle.centcom_message += "<font color=blue>Partying Russians incoming.</font>"
+			supply_shuttle.centcom_message += "<font color=blue>Partying Vostroyans incoming.</font>"
 		if(SPIDER_GIFT)
-			supply_shuttle.centcom_message += "<font color=blue>Spider Clan gift incoming.</font>"
+			supply_shuttle.centcom_message += "<font color=blue>Eldar gift incoming.</font>"
 		if(DEPARTMENT_RESUPPLY)
 			supply_shuttle.centcom_message += "<font color=blue>Department resupply incoming.</font>"
 

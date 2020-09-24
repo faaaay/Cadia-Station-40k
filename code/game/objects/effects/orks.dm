@@ -256,7 +256,7 @@
 /obj/structure/human/ork/bush/proc/Grow()																	//stage 2, calls spawn gretchin
 	icon_state = "bush2"
 	status = GROWN
-	sleep 1000
+	sleep (1000)
 	spawngretchin()
 
 /obj/structure/human/ork/bush/proc/spawngretchin()
@@ -283,9 +283,9 @@
 /obj/structure/human/ork/starterbush/proc/Grow()																	//stage 2, calls spawn gretchin
 	icon_state = "bush2"
 	status = GROWN
-	sleep 13000																								//no idea how long this is
+	sleep (13000)																								//no idea how long this is
 	message_admins("Halfway Mark for Gretchin Spawn.")
-	sleep 13000																								//no idea how long this is
+	sleep (13000)																								//no idea how long this is
 	spawngretchin()																							//call it
 
 /obj/structure/human/ork/starterbush/proc/spawngretchin()

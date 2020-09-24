@@ -75,7 +75,7 @@
 		src << "\red You need more psy."
 
 /mob/living/carbon/human/proc/quickeningg()
-	set name = "Quickening (300)"
+	set name = "Mind Over Matter (300)"
 	set desc = "Use your psychich energy to stimulate reflexes to insane levels and negate all knockouts."
 	set category = "Spells"
 	if(dodging)

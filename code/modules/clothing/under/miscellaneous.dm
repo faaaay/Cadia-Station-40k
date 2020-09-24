@@ -514,3 +514,14 @@
 	body_parts_covered = GROIN|LEGS
 	fitted = 0
 	can_roll = 0
+
+/obj/item/clothing/under/skitunder
+	desc = "Invisible, don't remove!"
+	name = "Skit Jumpsuit"
+	icon_state = "skit_s"
+	item_state = "skit_s"
+	item_color = "skit_s"
+	gender = PLURAL
+	body_parts_covered = GROIN|LEGS
+	fitted = 0
+	can_roll = 0

@@ -20,17 +20,29 @@
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_eng
 	R.set_frequency(1459)
 	equip_to_slot_or_del(R, slot_ears)
+	equip_to_slot_or_del(new /obj/item/clothing/gloves/skitarii, slot_gloves)
+	equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/security, slot_back)
+	equip_to_slot_or_del(new /obj/item/clothing/under/skitunder, slot_w_uniform)
+	equip_to_slot_or_del(new /obj/item/clothing/shoes/skitshoes, slot_shoes)
 
 	var/rndname = "Sy-Gex([rand(123, 789)])"
 
 	name = "[rndname]"
 	real_name = "[rndname]"
+	var/obj/item/weapon/card/id/W = new
+	W.icon_state = "dogtag"
+	W.access = list(access_security, access_sec_doors, access_brig, access_court, access_maint_tunnels, access_morgue, access_engine, access_mining_station) //Skitarii are treated similar to Imp Guard
+	W.access += get_centcom_access("Captain") //They can have centcomm access though.
+	W.assignment = "Adeptus Mechanicus"
+	W.registered_name = real_name
+	W.update_label()
+	equip_to_slot_or_del(W, slot_wear_id)
+	sleep (10)
+	regenerate_icons()
 
 /mob/living/carbon/human/skitarii_ranger/Life()
 	..()
 	if(iscarbon(src))
-		var/mob/living/carbon/C = src
-		C.handcuffed = initial(C.handcuffed)
 		icon = 'icons/mob/skitarii.dmi'
 		icon_state = "skitarii-ranger"
 

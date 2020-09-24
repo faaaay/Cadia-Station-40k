@@ -231,7 +231,7 @@
 	desc = "This spell fires a fireball at a target and does not require wizard garb."
 
 	school = "evocation"
-	charge_max = 60
+	charge_max = 180
 	clothes_req = 0
 	invocation = "WARP FIRE!"
 	invocation_type = "shout"

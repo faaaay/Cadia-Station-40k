@@ -4,7 +4,7 @@
 	icon = 'icons/migrated/alienqueen.dmi'
 	icon_state = "dread2"
 	//pixel_x = -10
-	bound_width = 64
+	bound_width = 32
 	step_in = 6
 	health = 1500
 	deflect_chance = 50
@@ -15,7 +15,7 @@
 	wreckage = /obj/structure/mecha_wreckage/dreadnought
 	add_req_access = 0
 	internal_damage_threshold = 5
-	force = 20
+	force = 90
 	max_equip = 6
 
 /obj/mecha/combat/dreadnought/loaded/New()

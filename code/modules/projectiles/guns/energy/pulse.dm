@@ -172,7 +172,7 @@ Pulseblaster
 			A.xo = targloc.x - curloc.x
 			A.process()
 		cooldown = 0
-		sleep 9
+		sleep (9)
 		cooldown = 1
 	else
 		playsound(loc, 'sound/effects/sparks1.ogg', 60, 1)

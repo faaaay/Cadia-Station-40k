@@ -114,7 +114,7 @@ var/global/datum/controller/supply_shuttle/supply_shuttle
 
 /datum/controller/supply_shuttle
 	var/processing = 1
-	var/processing_interval = 300
+	var/processing_interval = 200
 	var/iteration = 0
 	//supply points
 	var/points = 50
@@ -133,7 +133,7 @@ var/global/datum/controller/supply_shuttle/supply_shuttle
 	var/list/supply_packs = list()
 	//shuttle movement
 	var/at_station = 0
-	var/movetime = 1200
+	var/movetime = 600
 	var/moving = 0
 	var/eta_timeofday
 	var/eta
