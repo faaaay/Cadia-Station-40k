@@ -5,7 +5,7 @@
 	icon_state = "dread2"
 	//pixel_x = -10
 	bound_width = 32
-	step_in = 6
+	step_in = 5
 	health = 1500
 	deflect_chance = 50
 	damage_absorption = list("brute"=0.3,"fire"=0.3,"bullet"=0.4,"laser"=0.5,"energy"=0.3,"bomb"=1)
