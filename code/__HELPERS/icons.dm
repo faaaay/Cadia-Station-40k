@@ -721,9 +721,9 @@ proc // Creates a single icon from a given /atom or /image.  Only the first argu
 		var/icon/add // Icon of overlay being added
 
 			// Current dimensions of flattened icon
-		var/{flatX1=1;flatX2=flat.Width();flatY1=1;flatY2=flat.Height()}
+		var/flata1=1,flata2=flat.Width(),flatb1=1,flatb2=flat.Height()
 			// Dimensions of overlay being added
-		var/{addX1;addX2;addY1;addY2}
+		var/adda1,adda2,addb1,addb2
 
 		for(var/I in layers)
 
@@ -737,19 +737,19 @@ proc // Creates a single icon from a given /atom or /image.  Only the first argu
 				add = getFlatIcon(new/image(I), curdir, curicon, curstate, curblend)
 
 			// Find the new dimensions of the flat icon to fit the added overlay
-			addX1 = min(flatX1, I:pixel_x+1)
-			addX2 = max(flatX2, I:pixel_x+add.Width())
-			addY1 = min(flatY1, I:pixel_y+1)
-			addY2 = max(flatY2, I:pixel_y+add.Height())
+			adda1 = min(flata1, I:pixel_x+1)
+			adda2 = max(flata2, I:pixel_x+add.Width())
+			addb1 = min(flatb1, I:pixel_y+1)
+			addb2 = max(flatb2, I:pixel_y+add.Height())
 
-			if(addX1!=flatX1 || addX2!=flatX2 || addY1!=flatY1 || addY2!=flatY2)
+			if(adda1!=flata1 || adda2!=flata2 || addb1!=flatb1 || addb2!=flatb2)
 				// Resize the flattened icon so the new icon fits
-				flat.Crop(addX1-flatX1+1, addY1-flatY1+1, addX2-flatX1+1, addY2-flatY1+1)
-				flatX1=addX1;flatX2=addX2
-				flatY1=addY1;flatY2=addY2
+				flat.Crop(adda1-flata1+1, addb1-flatb1+1, adda2-flata1+1, addb2-flatb1+1)
+				flata1=adda1;flata2=adda2
+				flatb1=addb1;flatb2=addb2
 
 			// Blend the overlay into the flattened icon
-			flat.Blend(add, blendMode2iconMode(curblend), I:pixel_x + 2 - flatX1, I:pixel_y + 2 - flatY1)
+			flat.Blend(add, blendMode2iconMode(curblend), I:pixel_x + 2 - flata1, I:pixel_y + 2 - flatb1)
 
 		if(A.color)
 			flat.Blend(A.color, ICON_MULTIPLY)

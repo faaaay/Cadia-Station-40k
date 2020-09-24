@@ -10,21 +10,23 @@
 	<p>Running around and shooting your fellow faction members at random.</p>
 	<p>Messing around with the station's electrical/atmospheric system unless you are an antagonist. </p>
 
-<p>2. Do not blatantly metagame outside of the game. While this is hard to enforce, if you are seen rushing to help your friend across the station without them calling out ingame for help, expect to be messaged. If you want to talk to friends while playing, try to be somewhat subtle about it. </p>
+<p>2. This is a heavy RP server, going forward all players will be expected to maintain high levels of role-play standards. This includes but is not limited to, naming, behavior and character motivations. This means that you can no longer shoot on sight with the exception of tyranids (who can also attack on sight), you need to either speak or give some sort of reaction to your situation. You can do this using say or me commands.</p> 
 
-<p>3. Due to respawns being an important part of this server, Newlife Rule will be expected to be abided by. This means that if you get your shit kicked in and die in engineering, you do not immediately beeline to it to get revenge on your killer as soon as you respawn. Furthermore, when you die, you are expected to behave like a completely new character who will not recognize the person who killed you. </p>
+<p>3. Do not blatantly metagame outside of the game. While this is hard to enforce, if you are seen rushing to help your friend across the station without them calling out ingame for help, expect to be messaged. If you want to talk to friends while playing, try to be somewhat subtle about it. </p>
 
-<p>4. Do your best to roleplay according to your character's background, and to perform your duties. For example, a Magos is unlikely to act like a guardsman from a hive city, while a Commissar is unlikely to be seen suggesting a retreat when facing a Necron incursion. If you are unsure of how each role should act, it is suggested that you do some brief research on 40k's vast and widely available wiki. Or ask in Discord. </p>
+<p>4. Due to respawns being an important part of this server, Newlife Rule will be expected to be abided by. This means that if you get your shit kicked in and die in engineering, you do not immediately beeline to it to get revenge on your killer as soon as you respawn. Furthermore, when you die, you are expected to behave like a completely new character who will not recognize the person who killed you. </p>
 
-<p>5. Do not complain if the station's high tier officers take a draconian approach to running the station, such as executions to boost morale, or taking hands from suspected thieves. However, if you are in this role, be aware that the Inquisition may consider such actions to be heretical! </p>
+<p>5. Do your best to roleplay according to your character's background, and to perform your duties. For example, a Magos is unlikely to act like a guardsman from a hive city, while a Commissar is unlikely to be seen suggesting a retreat when facing a Necron incursion. If you are unsure of how each role should act, it is suggested that you do some brief research on 40k's vast and widely available wiki. Or ask in Discord. </p>
 
-<p>6. No non-Slaaneshi cultist ERP. There is no time for cyber sex in this universe. </p>
+<p>6. Do not complain if the station's high tier officers take a draconian approach to running the station, such as executions to boost morale, or taking hands from suspected thieves. However, if you are in this role, be aware that the Inquisition may consider such actions to be heretical! </p>
 
-<p>7. Do not spam ahelp with mundane shit (IE. "Why didn't I get to spawn as x???"). Ahelp if you encounter a problem, or have a question (though try to ask these in Discord). Most of the time, Admins are busy dealing with multiple ahelps and monitoring events, so unneeded ahelps only clog up the screen.</p>
+<p>7. No non-Slaaneshi cultist ERP. There is no time for cyber sex in this universe. </p>
 
-<p>8. Until I can hardcode RTD delays in respawn, these are the new rules. All factions except kriegers, OH, nids and eldar must play 1 life as a Krieger after dying on their whitelist faction. This is to prevent respawn spamming. Do not go krieg and immediately suicide, you will lose your whitelist privileges.</p>
+<p>8. Do not spam ahelp with mundane shit (IE. "Why didn't I get to spawn as x???"). Ahelp if you encounter a problem, or have a question (though try to ask these in Discord). Most of the time, Admins are busy dealing with multiple ahelps and monitoring events, so unneeded ahelps only clog up the screen.</p>
 
-<p>9. In the grim darkness of the far future, this is only a clusterfuck. Expect to die. </p>
+<p>9. Until I can hardcode RTD delays in respawn, these are the new rules. All factions except kriegers, OH, nids and eldar must play 1 life as a Krieger after dying on their whitelist faction. This is to prevent respawn spamming. Do not go krieg and immediately suicide, you will lose your whitelist privileges.</p>
+
+<p>10. In the grim darkness of the far future, this is only a clusterfuck. Expect to die. </p>
 
 </body>
 </html>

@@ -35,19 +35,19 @@
 
 	if(href_list["SENT"])
 		usr.visible_message("<span class='warning'>  [usr] begins constructing something elaborate.</span>", "<span class='notice'>You start to build a Sentinel</span>", "<span class='warning>What was that sound?</span>")
-		sleep 30
+		sleep (30)
 		new /obj/mecha/combat/sentinel/loaded(src.loc)
 		usr.visible_message("<span class='notice'>[usr] completes the Sentinel.</span>")
 		qdel(src)
 	else if(href_list["CHIMAC"])
 		usr.visible_message("<span class='warning'>  [usr] begins constructing something elaborate.</span>", "<span class='notice'>You start to build a Chimera</span>", "<span class='warning>What was that sound?</span>")
-		sleep 30
+		sleep (30)
 		new /obj/mecha/combat/chimera/AC/loaded(src.loc)
 		usr.visible_message("<span class='notice'>[usr] completes the Chimera.</span>")
 		qdel(src)
 	else if(href_list["CHIMAC2"])
 		usr.visible_message("<span class='warning'>  [usr] begins constructing something elaborate.</span>", "<span class='notice'>You start to build a Chimera</span>", "<span class='warning>What was that sound?</span>")
-		sleep 30
+		sleep (30)
 		new /obj/mecha/combat/chimera/inq/loaded(src.loc)
 		usr.visible_message("<span class='notice'>[usr] completes the Chimera.</span>")
 		qdel(src)
@@ -124,3 +124,44 @@ Repackaged Spider Turrets
 	else
 		usr.visible_message("<span class='notice'>I think you need a Tech Priest to take a look at this.</span>")
 		return
+
+//Skitarii from a box!		
+
+/obj/structure/skitariiparts
+	name = "Skitarii Parts"
+	desc = "Fresh from the munitorum supply station."
+	icon = 'icons/obj/storage.dmi'
+	icon_state = "boxstuff"
+	density = 1
+
+/obj/structure/skitariiparts/attackby(var/obj/item/W as obj,mob/user as mob)
+	if(istype(W, /obj/item/device/allenwrench))
+		interact(user)
+		usr.visible_message("<span class='warning'>  [usr] takes a look in the box.</span>", "<span class='notice'>Lets have a look</span>", "<span class='warning>What was that sound?</span>")
+
+		user.set_machine(src)
+
+		var/dat = {"<br>Ready to build<br>
+		<a href='?src=\ref[src];RNGR=1'>Skitarii Ranger</a><br>"}
+
+		user << browse(dat, "window=computer;size=575x450")
+		onclose(user, "computer")
+		return
+	else
+		usr.visible_message("<span class='notice'>I think you need a Tech Priest to take a look at this.</span>")
+		return
+
+/obj/structure/skitariiparts/Topic(href, href_list)
+	if(..())
+		return
+
+	var/mob/living/user = usr
+
+	user.set_machine(src)
+
+	if(href_list["RNGR"])
+		usr.visible_message("<span class='warning'>  [usr] begins constructing something elaborate.</span>", "<span class='notice'>You start to piece together a Skitarii Ranger</span>", "<span class='warning>What was that sound?</span>")
+		sleep (30)
+		new /mob/living/carbon/human/skitarii_ranger(src.loc)
+		usr.visible_message("<span class='notice'>[usr] completes the Skitarii Ranger.</span>")
+		qdel(src)

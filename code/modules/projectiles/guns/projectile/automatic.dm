@@ -77,7 +77,7 @@ This is going to be the unsorted section
 			A.process()
 			sleep(2)
 		cooldown = 0
-		sleep 20
+		sleep (20)
 		cooldown = 1
 	else
 		playsound(loc, 'sound/weapons/shotgunpump.ogg', 60, 1)
@@ -341,7 +341,7 @@ Flamer
 			A.process()
 			sleep(1)
 		cooldown = 0
-		sleep 20
+		sleep (20)
 		cooldown = 1
 	else
 		return
@@ -616,7 +616,7 @@ Shoota
 				A.xo = targloc.x - curloc.x
 				A.process()
 				sleep(2)
-			sleep 10
+			sleep (10)
 			cooldown = 0
 	else
 		var/dakdak = pick('sound/voice/dakkashout.ogg','sound/voice/dakkashout2.ogg','sound/voice/dakkashout3.ogg','sound/voice/dakkashout4.ogg')
@@ -739,7 +739,7 @@ Storm Bolter
 				playsound(loc, 'sound/weapons/Gunshot_bolter.ogg', 75, 0)
 				A.process()
 				sleep(3)
-			sleep 10
+			sleep (10)
 			cooldown = 0
 	else
 		if(istype(user, /mob/living/carbon/human/whitelisted))
@@ -806,7 +806,7 @@ AutoCannon
 				playsound(loc, 'sound/weapons/ac.ogg', 85, 0)
 				A.process()
 				sleep(5)
-			sleep 30
+			sleep (30)
 			cooldown = 0
 	else
 		return
@@ -905,8 +905,8 @@ Autogun
 	fire_sound = 'sound/weapons/uzi.ogg'
 	var/select_fire = 6
 	var/bladed = 0
-	var/chambered.projectiles_per_shot = 6
-	var/chambered.variance = 0.25
+	var/chambered/projectiles_per_shot = 6
+	var/chambered/variance = 0.25
 
 /*AUTOGUN/obj/item/weapon/gun/projectile/automatic/autogun2/attack_self(mob/living/user as mob) //TODO: Redo rapid fire for all guns but flamers and ork guns. Redo gun attachments.
 	if(select_fire == 1)

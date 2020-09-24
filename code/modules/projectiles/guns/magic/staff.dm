@@ -48,6 +48,7 @@ obj/item/weapon/gun/magic/staff/door
 	icon = 'icons/obj/projectiles.dmi'
 	icon_state = "missilea"
 	w_class = 2
+	
 
 /obj/item/weapon/plasmisslea
 	name = "Plasma Missile"

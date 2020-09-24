@@ -471,6 +471,14 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 	containertype = /obj/structure/box
 	containername = "Imperium of Man Lot# 277301"
 
+/datum/supply_packs/engineering/skitariiparts
+	name = "Box Of Parts (Skitarii Parts)"
+	contains = null
+	cost = 700
+	containertype = /obj/structure/skitariiparts
+	containername = "Adeptus Mechanicus, from Mars, Lot# 5743501"
+
+
 /datum/supply_packs/engineering/tools		//the most robust crate
 	name = "Toolbox crate"
 	contains = list(/obj/item/weapon/storage/toolbox/electrical,

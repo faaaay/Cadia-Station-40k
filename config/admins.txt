@@ -10,3 +10,5 @@ Conzie = Inquisitor
 Cre8me = Inquisitor
 stevemaybe = Adeptus Mechanicus
 Captainmojo47 = Inquisitor
+mocatheporg1 = Junior Admin
+Alanii = Junior Admin

@@ -189,7 +189,7 @@ Ork Shotta
 			A.xo = targloc.x - curloc.x
 			A.process()
 		cooldown = 0
-		sleep 8
+		sleep (8)
 		cooldown = 1
 	else
 		if(!istype(user, /mob/living/carbon/human/ork/))

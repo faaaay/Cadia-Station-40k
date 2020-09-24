@@ -204,6 +204,31 @@ Plasma Gun
 			M.IgniteMob()
 	return
 
+/obj/item/weapon/gun/energy/plasma/arcrifle
+	name = "Arc Rifle"
+	desc = "A bionic implanted arc rifle that can summoned by a Skitarii Ranger at will."
+	icon_state = "ppistol"
+	w_class = 2.0
+	item_state = "plaspistol"
+	m_amt = 2000
+	origin_tech = "combat=2"
+	slot_flags = 0
+	flags = NODROP|THICKMATERIAL | STOPSPRESSUREDMAGE
+
+/obj/item/weapon/gun/energy/plasma/arcrifle/dropped()
+	qdel(src)
+
+/obj/item/weapon/gun/energy/plasma/arcrifle/afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, flag)
+	..()
+	if(prob(2-min((user.luck/50), 2))) //+100 luck and no venting action will ever happen, -100 luck and it is twice as lucky to happen.
+		if (isliving(loc))
+			var/mob/living/M = loc
+			M << "\red The [src] overheats and vents a small jet of plasma in your face!"
+			M.take_organ_damage(0, 5)
+			M.fire_stacks += 3
+			M.IgniteMob()
+	return
+
 /obj/item/weapon/gun/energy/plasma/pistol
 	name = "Plasma Pistol"
 	desc = "A very deadly weapon used by high ranking members of the Imperium..."
@@ -242,7 +267,7 @@ Plasma Gun
 	name = "Heavy Plasma Rifle"
 	desc = "A very deadly weapon used by high ranking members of the Imperium..."
 	icon_state = "prifle"
-	w_class = 2.0
+	w_class = 4
 	item_state = "prifle"
 	m_amt = 2000
 	origin_tech = "combat=2"

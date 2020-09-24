@@ -28,7 +28,7 @@
 	if(cooldown)
 		..()
 		cooldown = 0
-		sleep 10
+		sleep (10)
 		cooldown = 1
 	else
 		return

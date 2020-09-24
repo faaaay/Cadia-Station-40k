@@ -223,7 +223,7 @@ datum/preferences
 				if(GENETICIST)
 					clothes_s = new /icon('icons/mob/uniform.dmi', "geneticswhite_s")
 					clothes_s.Blend(new /icon('icons/mob/feet.dmi', "white"), ICON_UNDERLAY)
-					clothes_s.Blend(new /icon('icons/mob/suit.dmi', "labcoat_gen_open"), ICON_OVERLAY)
+					clothes_s.Blend(new /icon('icons/mob/suit.dmi', "rig-engineering"), ICON_OVERLAY)
 					if(backbag == 2)
 						clothes_s.Blend(new /icon('icons/mob/back.dmi', "medicalpack"), ICON_OVERLAY)
 					if(backbag == 3)

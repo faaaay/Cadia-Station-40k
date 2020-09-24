@@ -34,7 +34,7 @@
 			A.xo = targloc.x - curloc.x
 			A.process()
 		cooldown = 0
-		sleep 30
+		sleep (30)
 		cooldown = 1
 	else
 		playsound(loc, 'sound/weapons/shotgunpump.ogg', 60, 1)

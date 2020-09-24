@@ -1,4 +1,4 @@
-/var/const/OPEN = 1
+/var/const/OPENN = 1
 /var/const/CLOSED = 2
 
 /obj/machinery/door/firedoor
