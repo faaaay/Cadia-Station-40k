@@ -167,3 +167,4 @@
 	desc = "Reinforced uniform that protects against biological and chemical agents through a chemical impregnating process which gives it a pungent smell."
 	icon_state = "kuniform"
 	item_color = "kuniform"
+

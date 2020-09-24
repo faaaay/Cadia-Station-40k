@@ -301,6 +301,6 @@ Celebrity
 */
 /obj/item/clothing/suit/skitarii //should be basically transparent to avoid fucking with dope sprite, gives them some storage
 	name = "skitarii uniform"
-	desc = "Invisible!."
-	icon_state = "skitsuit"
-	item_state = "skitsuit"
+	desc = "Invisible!"
+	icon_state = "Skit_suit"
+	item_state = "Skit_suit"

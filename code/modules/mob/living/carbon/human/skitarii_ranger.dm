@@ -22,6 +22,8 @@
 	equip_to_slot_or_del(R, slot_ears)
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/skitarii, slot_gloves)
 	equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/security, slot_back)
+	equip_to_slot_or_del(new /obj/item/clothing/under/skitunder, slot_w_uniform)
+	equip_to_slot_or_del(new /obj/item/clothing/shoes/skitshoes, slot_shoes)
 
 	var/rndname = "Sy-Gex([rand(123, 789)])"
 
@@ -35,7 +37,7 @@
 	W.registered_name = real_name
 	W.update_label()
 	equip_to_slot_or_del(W, slot_wear_id)
-	sleep (20)
+	sleep (10)
 	regenerate_icons()
 
 /mob/living/carbon/human/skitarii_ranger/Life()
