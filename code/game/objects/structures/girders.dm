@@ -398,7 +398,7 @@
 			new /obj/structure/spiderturretbox/lasgun(get_turf(src))
 			qdel(W)
 			qdel(src)
-	if(istype(W, /obj/item/weapon/gun/energy/plasma))						//plasma
+	if(istype(W, /obj/item/weapon/gun/energy/plasma) && !istype(W, /obj/item/weapon/gun/energy/plasma/arcrifle))	//plasma. No limitless Skitarii turrets.
 		user << "<span class='notice'>Now adding a Plasma Pistol...</span>"
 		if(do_after(user,40))
 			user << "<span class='notice'>You added a Plasma Pistol.</span>"
