@@ -329,7 +329,7 @@
 /obj/item/projectile/bullet/chaingun
 	name = "bullet"
 	icon_state = "bullet"
-	damage = 5
+	damage = 10
 	damage_type = BRUTE
 	flag = "bullet"
 
