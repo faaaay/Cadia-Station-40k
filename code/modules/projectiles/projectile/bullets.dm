@@ -329,7 +329,14 @@
 /obj/item/projectile/bullet/chaingun
 	name = "bullet"
 	icon_state = "bullet"
-	damage = 10
+	damage = 5
+	damage_type = BRUTE
+	flag = "bullet"
+
+/obj/item/projectile/bullet/dreadgun
+	name = "bullet"
+	icon_state = "bullet"
+	damage = 15
 	damage_type = BRUTE
 	flag = "bullet"
 

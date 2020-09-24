@@ -367,7 +367,7 @@
 	desc = "A staple for dreadnaughts everywhere."
 	icon_state = "mecha_uac2"
 	equip_cooldown = 10
-	projectile = /obj/item/projectile/bullet/chaingun
+	projectile = /obj/item/projectile/bullet/dreadgun
 	projectiles = 30000
 	projectile_energy_cost = 20
 	var/projectiles_per_shot = 15
