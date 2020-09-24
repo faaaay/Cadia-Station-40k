@@ -19,6 +19,9 @@
 	set name = "Imprison (300)"
 	set desc = "Uses your psychic abilities to imprison someone in their own mental barriers."
 	set category = "Spells"
+	if (stat != CONSCIOUS)
+		src << "You must be conscious and alive to use psychic abilities."
+		return
 	if(Psy>=300)
 		Psy-=300
 		if(!T)
@@ -45,6 +48,9 @@
 	set name = "Smite (60)"
 	set desc = "Smite your foes with a psychic bolt"
 	set category = "Spells"
+	if (stat != CONSCIOUS)
+		src << "You must be conscious and alive to use psychic abilities."
+		return
 	if(Psy>=60)
 		Psy-=60
 		if(!T)
@@ -80,6 +86,9 @@
 	set category = "Spells"
 	if(dodging)
 		src << "\red They are already active."
+		return
+	if (stat != CONSCIOUS)
+		src << "You must be conscious and alive to use psychic abilities."
 		return
 	if(Psy>=300)
 		Psy-=300

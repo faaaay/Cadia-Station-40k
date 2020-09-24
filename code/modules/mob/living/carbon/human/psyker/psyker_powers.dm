@@ -19,6 +19,9 @@
 	set name = "Imprison (300)"
 	set desc = "Uses your psychic abilities to imprison someone in their own mental barriers."
 	set category = "Spells"
+	if (stat != CONSCIOUS)
+		src << "You must be conscious and alive to use psychic abilities."
+		return
 	if(Psyk>=300)
 		Psyk-=300
 		if(!T)
@@ -45,6 +48,9 @@
 	set name = "Smite (60)"
 	set desc = "Smite your foes with a psychic bolt"
 	set category = "Spells"
+	if (stat != CONSCIOUS)
+		src << "You must be conscious and alive to use psychic abilities."
+		return
 	if(Psyk>=60)
 		Psyk-=60
 		if(!T)
@@ -78,6 +84,9 @@
 	set name = "Mind Over Matter (300)"
 	set desc = "Use your psychich energy to stimulate reflexes to insane levels and negate all knockouts."
 	set category = "Spells"
+	if (stat != CONSCIOUS)
+		src << "You must be conscious and alive to use psychic abilities."
+		return
 	if(dodging)
 		src << "\red They are already active."
 		return
