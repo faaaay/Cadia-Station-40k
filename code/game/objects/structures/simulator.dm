@@ -51,8 +51,11 @@ TODO: Make this do something interesting when emagged.
 		if(on && simulated)
 			simulated.U.key = simulated.key
 			simulated.key = 0
-			for(var/mob/living/E in simulated.enemies)
-				qdel(E)
+			simcontroller.players-=1
+			if (simcontroller.players==0)
+				for(var/mob/living/E in simcontroller.enemies)
+					qdel(E)
+					simcontroller.enemies = list()
 			qdel(simulated)
 			on = 0
 		else if(!on && !simulated)
@@ -66,5 +69,6 @@ TODO: Make this do something interesting when emagged.
 			simulated.key = buckled_mob.key
 			buckled_mob.key = null
 			on = 1
+			simcontroller.players+=1
 	spawn(10) cooldown = 0
 	return
