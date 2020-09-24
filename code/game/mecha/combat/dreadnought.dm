@@ -15,7 +15,7 @@
 	wreckage = /obj/structure/mecha_wreckage/dreadnought
 	add_req_access = 0
 	internal_damage_threshold = 5
-	force = 20
+	force = 90
 	max_equip = 6
 
 /obj/mecha/combat/dreadnought/loaded/New()
